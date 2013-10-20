@@ -19,6 +19,7 @@
 		941A7630181494D50072089F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7618181494D50072089F /* UIKit.framework */; };
 		941A7638181494D50072089F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941A7636181494D50072089F /* InfoPlist.strings */; };
 		941A763A181494D50072089F /* TankCommanderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A7639181494D50072089F /* TankCommanderTests.m */; };
+		941A76481814982E0072089F /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76471814982E0072089F /* Tank.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		941A7635181494D50072089F /* TankCommanderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TankCommanderTests-Info.plist"; sourceTree = "<group>"; };
 		941A7637181494D50072089F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		941A7639181494D50072089F /* TankCommanderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TankCommanderTests.m; sourceTree = "<group>"; };
+		941A76461814982E0072089F /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tank.h; path = ../Tank.h; sourceTree = "<group>"; };
+		941A76471814982E0072089F /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tank.m; path = ../Tank.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				941A7623181494D50072089F /* RCAppDelegate.h */,
 				941A7624181494D50072089F /* RCAppDelegate.m */,
+				941A76461814982E0072089F /* Tank.h */,
+				941A76471814982E0072089F /* Tank.m */,
 				941A7626181494D50072089F /* Images.xcassets */,
 				941A761B181494D50072089F /* Supporting Files */,
 			);
@@ -242,6 +247,7 @@
 			files = (
 				941A7621181494D50072089F /* main.m in Sources */,
 				941A7625181494D50072089F /* RCAppDelegate.m in Sources */,
+				941A76481814982E0072089F /* Tank.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
