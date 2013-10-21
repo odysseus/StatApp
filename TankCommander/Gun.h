@@ -17,5 +17,7 @@
 @property (nonatomic) float rateOfFire;
 @property (nonatomic) float accuracy;
 @property (nonatomic) float aimTime;
+@property (nonatomic) BOOL stockModule;
+@property (nonatomic) BOOL topModule;
 
 @end

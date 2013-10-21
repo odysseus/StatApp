@@ -10,6 +10,6 @@
 
 @implementation Suspension
 
-@synthesize name, weightLimit;
+@synthesize name, loadLimit, traverseSpeed, weight, stockModule, topModule;
 
 @end

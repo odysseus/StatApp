@@ -10,6 +10,6 @@
 
 @implementation Radio
 
-@synthesize name, weight, signalRange;
+@synthesize name, weight, signalRange, stockModule, topModule;
 
 @end

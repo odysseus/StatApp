@@ -10,6 +10,6 @@
 
 @implementation Gun
 
-@synthesize name, weight, penetration, damage, accuracy, aimTime, rateOfFire;
+@synthesize name, weight, penetration, damage, accuracy, aimTime, rateOfFire, stockModule, topModule;
 
 @end

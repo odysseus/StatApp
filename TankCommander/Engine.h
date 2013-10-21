@@ -13,5 +13,7 @@
 @property (nonatomic) NSString *name;
 @property float weight;
 @property float horsepower;
+@property (nonatomic) BOOL stockModule;
+@property (nonatomic) BOOL topModule;
 
 @end

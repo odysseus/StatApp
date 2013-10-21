@@ -10,6 +10,6 @@
 
 @implementation Turret
 
-@synthesize name, weight, frontArmor, sideArmor, rearArmor;
+@synthesize name, weight, frontArmor, sideArmor, rearArmor, traverseSpeed, stockModule, topModule;
 
 @end

@@ -16,4 +16,5 @@
 - (float)effectiveThickness;
 float cosineWithDegrees(float radians);
 
+
 @end

@@ -11,6 +11,10 @@
 @interface Suspension : NSObject
 
 @property (nonatomic) NSString *name;
-@property (nonatomic) float weightLimit;
+@property (nonatomic) float loadLimit;
+@property (nonatomic) float weight;
+@property (nonatomic) int traverseSpeed;
+@property (nonatomic) BOOL stockModule;
+@property (nonatomic) BOOL topModule;
 
 @end

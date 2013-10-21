@@ -13,5 +13,7 @@
 @property (nonatomic) NSString *name;
 @property float weight;
 @property (nonatomic) float signalRange;
+@property (nonatomic) BOOL stockModule;
+@property (nonatomic) BOOL topModule;
 
 @end
