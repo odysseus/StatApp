@@ -19,7 +19,14 @@
 		941A7630181494D50072089F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7618181494D50072089F /* UIKit.framework */; };
 		941A7638181494D50072089F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 941A7636181494D50072089F /* InfoPlist.strings */; };
 		941A763A181494D50072089F /* TankCommanderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A7639181494D50072089F /* TankCommanderTests.m */; };
-		941A76481814982E0072089F /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76471814982E0072089F /* Tank.m */; };
+		941A764E1814B8E10072089F /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A764D1814B8E10072089F /* Tank.m */; };
+		941A76511814C4D40072089F /* Hull.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76501814C4D40072089F /* Hull.m */; };
+		941A76541814C4DB0072089F /* Turret.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76531814C4DB0072089F /* Turret.m */; };
+		941A76571814C4F70072089F /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76561814C4F70072089F /* Gun.m */; };
+		941A765A1814C4FF0072089F /* Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76591814C4FF0072089F /* Radio.m */; };
+		941A765D1814C5100072089F /* Suspension.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A765C1814C5100072089F /* Suspension.m */; };
+		941A76601814C5940072089F /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A765F1814C5940072089F /* Engine.m */; };
+		941A76631814EE260072089F /* Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76621814EE260072089F /* Armor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +56,22 @@
 		941A7635181494D50072089F /* TankCommanderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TankCommanderTests-Info.plist"; sourceTree = "<group>"; };
 		941A7637181494D50072089F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		941A7639181494D50072089F /* TankCommanderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TankCommanderTests.m; sourceTree = "<group>"; };
-		941A76461814982E0072089F /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tank.h; path = ../Tank.h; sourceTree = "<group>"; };
-		941A76471814982E0072089F /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tank.m; path = ../Tank.m; sourceTree = "<group>"; };
+		941A764C1814B8E10072089F /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
+		941A764D1814B8E10072089F /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
+		941A764F1814C4D40072089F /* Hull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hull.h; sourceTree = "<group>"; };
+		941A76501814C4D40072089F /* Hull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hull.m; sourceTree = "<group>"; };
+		941A76521814C4DB0072089F /* Turret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turret.h; sourceTree = "<group>"; };
+		941A76531814C4DB0072089F /* Turret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turret.m; sourceTree = "<group>"; };
+		941A76551814C4F70072089F /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
+		941A76561814C4F70072089F /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
+		941A76581814C4FF0072089F /* Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
+		941A76591814C4FF0072089F /* Radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radio.m; sourceTree = "<group>"; };
+		941A765B1814C5100072089F /* Suspension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Suspension.h; sourceTree = "<group>"; };
+		941A765C1814C5100072089F /* Suspension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Suspension.m; sourceTree = "<group>"; };
+		941A765E1814C5940072089F /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		941A765F1814C5940072089F /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
+		941A76611814EE260072089F /* Armor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Armor.h; sourceTree = "<group>"; };
+		941A76621814EE260072089F /* Armor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Armor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +133,22 @@
 			children = (
 				941A7623181494D50072089F /* RCAppDelegate.h */,
 				941A7624181494D50072089F /* RCAppDelegate.m */,
-				941A76461814982E0072089F /* Tank.h */,
-				941A76471814982E0072089F /* Tank.m */,
+				941A764C1814B8E10072089F /* Tank.h */,
+				941A764D1814B8E10072089F /* Tank.m */,
+				941A764F1814C4D40072089F /* Hull.h */,
+				941A76501814C4D40072089F /* Hull.m */,
+				941A76551814C4F70072089F /* Gun.h */,
+				941A76561814C4F70072089F /* Gun.m */,
+				941A765E1814C5940072089F /* Engine.h */,
+				941A765F1814C5940072089F /* Engine.m */,
+				941A76581814C4FF0072089F /* Radio.h */,
+				941A76591814C4FF0072089F /* Radio.m */,
+				941A765B1814C5100072089F /* Suspension.h */,
+				941A765C1814C5100072089F /* Suspension.m */,
+				941A76521814C4DB0072089F /* Turret.h */,
+				941A76531814C4DB0072089F /* Turret.m */,
+				941A76611814EE260072089F /* Armor.h */,
+				941A76621814EE260072089F /* Armor.m */,
 				941A7626181494D50072089F /* Images.xcassets */,
 				941A761B181494D50072089F /* Supporting Files */,
 			);
@@ -245,9 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941A76571814C4F70072089F /* Gun.m in Sources */,
+				941A765A1814C4FF0072089F /* Radio.m in Sources */,
+				941A76601814C5940072089F /* Engine.m in Sources */,
+				941A76631814EE260072089F /* Armor.m in Sources */,
+				941A76541814C4DB0072089F /* Turret.m in Sources */,
 				941A7621181494D50072089F /* main.m in Sources */,
 				941A7625181494D50072089F /* RCAppDelegate.m in Sources */,
-				941A76481814982E0072089F /* Tank.m in Sources */,
+				941A76511814C4D40072089F /* Hull.m in Sources */,
+				941A765D1814C5100072089F /* Suspension.m in Sources */,
+				941A764E1814B8E10072089F /* Tank.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

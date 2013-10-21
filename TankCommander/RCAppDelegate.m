@@ -18,11 +18,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    Tank *tank = [[Tank alloc] init];
-    [tank setArmorAngle:60.0];
-    [tank setArmorThickness:120.0];
-    NSLog(@"%.f", [tank normalizedEffectiveArmor]);
-    
     return YES;
 }
 
