@@ -1,0 +1,165 @@
+{
+    "version" : 20131021,
+    "tanks" : {
+        "tier 8" : {
+            "heavy tanks" : {
+                "tiger 2" : {
+                    "name" : "Tiger II",
+                    "nationality" : 4,
+                    "tier" : 8,
+                    "type" : 2,
+                    "premiumTank" : false,
+                    "experienceNeeded" : 78000,
+                    "cost" : 2450000,
+                    "hull" : {
+                        "frontArmor" : [ 150.0, 60.0 ],
+                        "sideArmor" : [ 80.0, 10.0 ],
+                        "rearArmor" : [ 80.0, 10.0 ],
+                        "weight" : 68000.0,
+                    },
+                    "turrets" : {
+                        "Tiger II Turm Nr. 1-50" : {
+                            "name" : "Tiger II Turm. Nr. 1-50",
+                            "viewRange" : 380.0,
+                            "traverseSpeed" : 27.0,
+                            "frontArmor" : [ 100.0, 10.0 ],
+                            "sideArmor" : [ 80.0, 10.0 ],
+                            "rearArmor" : [ 80.0, 10.0 ],
+                            "weight" : 9638.0,
+                            "stockModule" : true,
+                            "topModule" : false
+                            "experienceNeeded" : null,
+                            "cost" : null
+                        },
+                        "Tiger II Serienturm" : {
+                            "name" : "Tiger II Serienturm",
+                            "viewRange" : 390.0,
+                            "traverseSpeed" : 27.0,
+                            "frontArmor" : [ 185.0, 10.0 ],
+                            "sideArmor" : [ 80.0, 10.0 ],
+                            "rearArmor" : [ 80.0, 10.0 ],
+                            "weight" : 10935.0,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 22260,
+                            "cost" : 52370
+                        }
+                    },
+                    "guns" : {
+                        "8,8 cm KwK 43 L/71" : {
+                            "name" : "8,8 cm KwK 43 L/71",
+                            "shells" : [[203.0, 240.0], [237.0, 240.0], [44.0, 295.0]],
+                            "rateOfFire" : 8.22,
+                            "accuracy" : 0.34,
+                            "aimTime" : 2.9,
+                            "weight" : 2562.0,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : null,
+                            "cost" : null
+                        },
+                        "10,5 cm KwK 45 L/52" : {
+                            "name" : "10,5 cm KwK 45 L/52",
+                            "shells" : [[200.0, 320.0], [244.0, 320.0], [60.0, 420.0]],
+                            "rateOfFire" : 6.74,
+                            "accuracy" : 0.37,
+                            "aimTime" : 2.3,
+                            "weight" : 3000,
+                            "stockModule" : false,
+                            "topModule" : false,
+                            "experienceNeeded" : 16800,
+                            "cost" : 116490
+                        },
+                        "10,5 cm KwK 46 L/68" : {
+                            "name" : "10,5 cm KwK 46 L/68",
+                            "shells" : [[225.0, 320.0], [285.0, 320.0], [60.0, 420.0]],
+                            "rateOfFire" : 6.59,
+                            "accuracy" : 0.34,
+                            "aimTime" : 2.3,
+                            "weight" : 3600,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 46000,
+                            "cost" : 178500
+                        }
+                    },
+                    "engines" : {
+                        "Maybach HL 210 TRM P45" : {
+                            "name" : "Maybach HL 210 TRM P45",
+                            "horsepower" : 650,
+                            "fireChance": 0.20,
+                            "weight": 850,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : null,
+                            "cost" : null
+                        },
+                        "Maybach HL 230 TRM P45" : {
+                            "name" : "Maybach HL 230 TRM P45",
+                            "horsepower" : 700,
+                            "fireChance": 0.20,
+                            "weight": 1300,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 18800,
+                            "cost" : 54000
+                        }
+                    },
+                    "suspensions" : {
+                        "Tiger II Vesuchs-Serie" : {
+                            "name" : "Tiger II Vesuchs-Serie",
+                            "loadLimit" : 69.70,
+                            "traverseSpeed" : 26,
+                            "weight" : 22350,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : null,
+                            "cost" : null
+                        },
+                        "Tiger II" : {
+                            "name" : "Tiger II",
+                            "loadLimit" : 74,
+                            "traverseSpeed" : 28,
+                            "weight" : 22350,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 16940,
+                            "cost" : 37520
+                        }
+                    },
+                    "radios" : {
+                        "FuG 5" : {
+                            "name" : "FuG 5",
+                            "signalRange" : 310,
+                            "weight" : 50,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : null,
+                            "cost" : null
+                        },
+                        "FuG 7" : {
+                            "name" : "FuG 7",
+                            "signalRange" : 415,
+                            "weight" : 70,
+                            "stockModule" : false,
+                            "topModule" : false,
+                            "experienceNeeded" : 1360,
+                            "cost" : 8160
+                        },
+                        "FuG 12" : {
+                            "name" : "FuG 12",
+                            "signalRange" : 710,
+                            "weight" : 150,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 7200,
+                            "cost" : 43200
+                        },
+                    }
+                }
+            }
+        }
+    }
+}
+
+

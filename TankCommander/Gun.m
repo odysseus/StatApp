@@ -7,9 +7,15 @@
 //
 
 #import "Gun.h"
+#import "Shell.h"
 
 @implementation Gun
 
-@synthesize name, weight, penetration, damage, accuracy, aimTime, rateOfFire, stockModule, topModule;
+@synthesize name, weight, shells, accuracy, aimTime, rateOfFire, stockModule, topModule, experienceNeeded, cost;
+
+- (Shell *)selectedShell:(ShellType)type;
+{
+    return shells[ShellTypeNormal];
+}
 
 @end

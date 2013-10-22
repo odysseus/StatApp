@@ -10,6 +10,6 @@
 
 @implementation Engine
 
-@synthesize name, weight, horsepower, stockModule, topModule;
+@synthesize name, weight, horsepower, stockModule, topModule, experienceNeeded, cost;
 
 @end

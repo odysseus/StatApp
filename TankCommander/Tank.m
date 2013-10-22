@@ -17,6 +17,6 @@
 @implementation Tank
 
 @synthesize name, hull, turret, gun, engine, radio, suspension, availableEngines, availableGuns,
-    availableRadios, availableSuspensions, availableTurrets;
+    availableRadios, availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank;
 
 @end

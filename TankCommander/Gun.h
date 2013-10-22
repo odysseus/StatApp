@@ -7,17 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Shell.h"
 
 @interface Gun : NSObject
 
 @property (nonatomic) NSString *name;
-@property float weight;
-@property (nonatomic) float penetration;
-@property (nonatomic) float damage;
+
+@property (nonatomic) NSArray *shells;
 @property (nonatomic) float rateOfFire;
 @property (nonatomic) float accuracy;
 @property (nonatomic) float aimTime;
+
+@property float weight;
 @property (nonatomic) BOOL stockModule;
 @property (nonatomic) BOOL topModule;
+@property (nonatomic) int experienceNeeded;
+@property (nonatomic) int cost;
+
+- (Shell *)selectedShell:(ShellType)type;
 
 @end

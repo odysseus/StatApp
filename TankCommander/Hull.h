@@ -12,10 +12,10 @@
 
 @interface Hull : NSObject
 
-@property (nonatomic) NSString *name;
-@property float weight;
 @property (nonatomic) Armor *frontArmor;
 @property (nonatomic) Armor *sideArmor;
 @property (nonatomic) Armor *rearArmor;
+@property float weight;
+
 
 @end

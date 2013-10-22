@@ -12,17 +12,31 @@
 @interface Tank : NSObject
 
 typedef enum {
-    LightTank,
-    MediumTank,
-    HeavyTank,
-    TankDestroyer,
-    SPG
+    LightTank,      // 0
+    MediumTank,     // 1
+    HeavyTank,      // 2
+    TankDestroyer,  // 3
+    SPG             // 4
 } TankType;
+
+typedef enum {
+    American,   // 0
+    British,    // 1
+    Chinese,    // 2
+    French,     // 3
+    German,     // 4
+    Japanese,   // 5
+    Russian     // 6
+} TankNationality;
 
 // The tank name, type and tier
 @property (nonatomic) NSString *name;
+@property (nonatomic) TankNationality *nationality;
 @property (nonatomic) int tier;
 @property (nonatomic) TankType *type;
+@property (nonatomic) BOOL premiumTank;
+@property (nonatomic) int experienceNeeded;
+@property (nonatomic) int cost;
 
 // These arrays hold the equippable modules
 @property (nonatomic) NSArray *availableTurrets;

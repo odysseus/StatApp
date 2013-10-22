@@ -10,6 +10,6 @@
 
 @implementation Hull
 
-@synthesize name, weight, frontArmor, sideArmor, rearArmor;
+@synthesize weight, frontArmor, sideArmor, rearArmor;
 
 @end
