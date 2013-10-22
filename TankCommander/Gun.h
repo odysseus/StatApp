@@ -14,6 +14,7 @@
 @property (nonatomic) NSString *name;
 
 @property (nonatomic) NSArray *shells;
+@property (nonatomic) Shell *round;
 @property (nonatomic) float rateOfFire;
 @property (nonatomic) float accuracy;
 @property (nonatomic) float aimTime;
@@ -24,6 +25,8 @@
 @property (nonatomic) int experienceNeeded;
 @property (nonatomic) int cost;
 
-- (Shell *)selectedShell:(ShellType)type;
+- (void)setNormalRounds;
+- (void)setGoldRounds;
+- (void)setHERounds;
 
 @end

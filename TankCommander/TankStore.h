@@ -10,9 +10,12 @@
 
 @interface TankStore : NSObject
 {
-    NSMutableDictionary *tankDB;
+    NSDictionary *tankDB;
+    NSNumber *currentVersion;
 }
 
 + (TankStore *)allTanks;
+- (NSDictionary *)tankDB;
+- (void)loadTanks;
 
 @end

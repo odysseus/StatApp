@@ -8,6 +8,7 @@
 
 #import "RCAppDelegate.h"
 #import "Tank.h"
+#import "TankStore.h"
 
 @implementation RCAppDelegate
 
@@ -17,6 +18,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    TankStore *tankStore = [TankStore allTanks];
+    [tankStore loadTanks];
     
     return YES;
 }

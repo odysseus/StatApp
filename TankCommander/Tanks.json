@@ -1,8 +1,10 @@
 {
     "version" : 20131021,
     "tanks" : {
-        "tier 8" : {
-            "heavy tanks" : {
+        "tier8" : {
+            "lightTanks" : {},
+            "mediumTanks" : {},
+            "heavyTanks" : {
                 "tiger 2" : {
                     "name" : "Tiger II",
                     "nationality" : 4,
@@ -15,7 +17,7 @@
                         "frontArmor" : [ 150.0, 60.0 ],
                         "sideArmor" : [ 80.0, 10.0 ],
                         "rearArmor" : [ 80.0, 10.0 ],
-                        "weight" : 68000.0,
+                        "weight" : 68000.0
                     },
                     "turrets" : {
                         "Tiger II Turm Nr. 1-50" : {
@@ -27,7 +29,7 @@
                             "rearArmor" : [ 80.0, 10.0 ],
                             "weight" : 9638.0,
                             "stockModule" : true,
-                            "topModule" : false
+                            "topModule" : false,
                             "experienceNeeded" : null,
                             "cost" : null
                         },
@@ -154,10 +156,12 @@
                             "topModule" : true,
                             "experienceNeeded" : 7200,
                             "cost" : 43200
-                        },
+                        }
                     }
                 }
-            }
+            },
+            "tankDestroyers" : {},
+            "spgs" : {}
         }
     }
 }

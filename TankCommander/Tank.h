@@ -45,13 +45,17 @@ typedef enum {
 @property (nonatomic) NSArray *availableRadios;
 @property (nonatomic) NSArray *availableSuspensions;
 
-// The modules that are actually equipped will be stored in these variables
+// The modules that are currently equipped will be stored in these variables
 @property (nonatomic) Hull *hull;
 @property (nonatomic) Turret *turret;
 @property (nonatomic) Gun *gun;
 @property (nonatomic) Engine *engine;
 @property (nonatomic) Radio *radio;
 @property (nonatomic) Suspension *suspension;
+
+- (float)weight;
+- (float)specificPower;
+- (float)damagePerMinute;
 
 
 @end

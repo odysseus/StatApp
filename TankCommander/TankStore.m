@@ -24,4 +24,31 @@ static TankStore *allTanks = nil;
     return [self allTanks];
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        if (!currentVersion) {
+            currentVersion = 0;
+        }
+    }
+    return self;
+}
+
+- (NSDictionary *)tankDB
+{
+    return tankDB;
+}
+
+- (void)loadTanks
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Tanks" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    
+    id json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+
+    NSDictionary *tanks = [json objectForKey:@"tanks"];
+    NSLog(@"%@", tanks);
+}
+
 @end

@@ -19,4 +19,19 @@
 @synthesize name, hull, turret, gun, engine, radio, suspension, availableEngines, availableGuns,
     availableRadios, availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank;
 
+- (float)weight
+{
+    return (hull.weight + turret.weight + gun.weight + engine.weight + suspension.weight + radio.weight);
+}
+
+- (float)specificPower
+{
+    return (engine.horsepower / self.weight);
+}
+
+- (float)damagePerMinute
+{
+    return (gun.rateOfFire * gun.round.damage);
+}
+
 @end

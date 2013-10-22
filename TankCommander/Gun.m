@@ -11,11 +11,21 @@
 
 @implementation Gun
 
-@synthesize name, weight, shells, accuracy, aimTime, rateOfFire, stockModule, topModule, experienceNeeded, cost;
+@synthesize name, weight, shells, accuracy, aimTime, rateOfFire, stockModule, topModule, experienceNeeded, cost, round;
 
-- (Shell *)selectedShell:(ShellType)type;
+- (void)setNormalRounds
 {
-    return shells[ShellTypeNormal];
+    round = shells[ShellTypeNormal];
+}
+
+- (void)setGoldRounds
+{
+    round = shells[ShellTypeGold];
+}
+
+- (void)setHERounds
+{
+    round = shells[ShellTypeHE];
 }
 
 @end
