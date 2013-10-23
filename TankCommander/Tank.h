@@ -11,22 +11,24 @@
 
 @interface Tank : NSObject
 
-typedef enum {
+typedef enum TankType : NSUInteger {
     LightTank,      // 0
     MediumTank,     // 1
     HeavyTank,      // 2
     TankDestroyer,  // 3
-    SPG             // 4
+    SPG,            // 4
+    Vehicle         // 5
 } TankType;
 
-typedef enum {
-    American,   // 0
-    British,    // 1
-    Chinese,    // 2
-    French,     // 3
-    German,     // 4
-    Japanese,   // 5
-    Russian     // 6
+typedef enum TankNationality : NSUInteger {
+    American,       // 0
+    British,        // 1
+    Chinese,        // 2
+    French,         // 3
+    German,         // 4
+    Japanese,       // 5
+    Russian,        // 6
+    Nation          // 7
 } TankNationality;
 
 // The tank name, type and tier
@@ -56,6 +58,9 @@ typedef enum {
 - (float)weight;
 - (float)specificPower;
 - (float)damagePerMinute;
+
+- (TankType)fetchTankType:(int)index;
+- (TankNationality)fetchTankNationality:(int)index;
 
 
 @end

@@ -34,4 +34,44 @@
     return (gun.rateOfFire * gun.round.damage);
 }
 
+- (TankType)fetchTankType:(int)index;
+{
+    switch (index) {
+        case 0:
+            return LightTank;
+        case 1:
+            return MediumTank;
+        case 2:
+            return HeavyTank;
+        case 3:
+            return TankDestroyer;
+        case 4:
+            return SPG;
+        default:
+            return Vehicle;
+    }
+}
+
+- (TankNationality)fetchTankNationality:(int)index;
+{
+    switch (index) {
+        case 0:
+            return American;
+        case 1:
+            return British;
+        case 2:
+            return Chinese;
+        case 3:
+            return French;
+        case 4:
+            return German;
+        case 5:
+            return Japanese;
+        case 6:
+            return Russian;
+        default:
+            return Nation;
+    }
+}
+
 @end
