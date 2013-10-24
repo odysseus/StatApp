@@ -10,10 +10,12 @@
 
 @interface Tier : NSObject
 
-@property (nonatomic) NSDictionary *lightTanks;
-@property (nonatomic) NSDictionary *mediumTanks;
-@property (nonatomic) NSDictionary *heavyTanks;
-@property (nonatomic) NSDictionary *tankDestroyers;
-@property (nonatomic) NSDictionary *SPGs;
+@property (nonatomic) NSMutableArray *lightTanks;
+@property (nonatomic) NSMutableArray *mediumTanks;
+@property (nonatomic) NSMutableArray *heavyTanks;
+@property (nonatomic) NSMutableArray *tankDestroyers;
+@property (nonatomic) NSMutableArray *SPGs;
+
+- (id)initWithDict:(NSDictionary *)dict;
 
 @end

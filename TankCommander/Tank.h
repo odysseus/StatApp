@@ -39,6 +39,7 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) BOOL premiumTank;
 @property (nonatomic) int experienceNeeded;
 @property (nonatomic) int cost;
+@property (nonatomic) int hitPoints;
 
 // These arrays hold the equippable modules
 @property (nonatomic) NSMutableArray *availableTurrets;

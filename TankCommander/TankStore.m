@@ -37,7 +37,7 @@ static TankStore *allTanks = nil;
     return self;
 }
 
-- (NSDictionary *)tankDB
+- (NSMutableDictionary *)tankDB
 {
     return tankDB;
 }
@@ -53,13 +53,28 @@ static TankStore *allTanks = nil;
     // array or a dictionary, but in this case we know it's a dictionary
     id json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 
-    // Version is for version control, and the "tanks" key contains all the actual data
+    // Version is for DB version control, the JSON will only be loaded if the information is new
     NSNumber *version = [json objectForKey:@"version"];
-    NSDictionary *tanks = [json objectForKey:@"tanks"];
-    
     NSLog(@"%@", version);
     
-
+    NSDictionary *tanks = [json objectForKey:@"tanks"];
+    
+    NSArray *tiers = @[@"tier1",
+                       @"tier2",
+                       @"tier3",
+                       @"tier4",
+                       @"tier5",
+                       @"tier6",
+                       @"tier7",
+                       @"tier8",
+                       @"tier9",
+                       @"tier10"];
+    
+    tankDB = [[NSMutableDictionary alloc] init];
+    for (NSString *key in tiers) {
+        Tier *currentTier = [[Tier alloc] initWithDict:[tanks objectForKey:key]];
+        [tankDB setObject:currentTier forKey:key];
+    }    
 }
 
 @end

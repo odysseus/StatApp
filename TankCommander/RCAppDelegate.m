@@ -8,6 +8,7 @@
 
 #import "RCAppDelegate.h"
 #import "Tank.h"
+#import "Tier.h"
 #import "TankStore.h"
 
 @implementation RCAppDelegate
@@ -21,6 +22,13 @@
     
     TankStore *tankStore = [TankStore allTanks];
     [tankStore loadTanks];
+    
+    Tier *tier8 = [tankStore.tankDB objectForKey:@"tier8"];
+    
+    NSArray *filteredArray = [tier8.heavyTanks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.name == %@", @"Tiger II"]];
+    
+    Tank *tiger2 = filteredArray[0];
+    NSLog(@"Weight: %0.0f - Specific Power: %0.2f - Damage Per Minute: %0.0f", tiger2.weight, tiger2.specificPower, tiger2.damagePerMinute);
     
     return YES;
 }

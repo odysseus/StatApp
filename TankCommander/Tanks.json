@@ -62,11 +62,12 @@
                     "premiumTank" : false,
                     "experienceNeeded" : 78000,
                     "cost" : 2450000,
+                    "hitPoints" : 1500,
                     "hull" : {
                         "frontArmor" : [ 150.0, 60.0 ],
                         "sideArmor" : [ 80.0, 10.0 ],
                         "rearArmor" : [ 80.0, 10.0 ],
-                        "weight" : 68000.0
+                        "weight" : 40000.0
                     },
                     "turrets" : {
                         "Tiger II Turm Nr. 1-50" : {
@@ -79,8 +80,8 @@
                             "weight" : 9638.0,
                             "stockModule" : true,
                             "topModule" : false,
-                            "experienceNeeded" : null,
-                            "cost" : null
+                            "experienceNeeded" : 0,
+                            "cost" : 0
                         },
                         "Tiger II Serienturm" : {
                             "name" : "Tiger II Serienturm",
@@ -106,8 +107,8 @@
                             "weight" : 2562.0,
                             "stockModule" : true,
                             "topModule" : false,
-                            "experienceNeeded" : null,
-                            "cost" : null
+                            "experienceNeeded" : 0,
+                            "cost" : 0
                         },
                         "10,5 cm KwK 45 L/52" : {
                             "name" : "10,5 cm KwK 45 L/52",
@@ -142,8 +143,8 @@
                             "weight": 850,
                             "stockModule" : true,
                             "topModule" : false,
-                            "experienceNeeded" : null,
-                            "cost" : null
+                            "experienceNeeded" : 0,
+                            "cost" : 0
                         },
                         "Maybach HL 230 TRM P45" : {
                             "name" : "Maybach HL 230 TRM P45",
@@ -164,8 +165,8 @@
                             "weight" : 22350,
                             "stockModule" : true,
                             "topModule" : false,
-                            "experienceNeeded" : null,
-                            "cost" : null
+                            "experienceNeeded" : 0,
+                            "cost" : 0
                         },
                         "Tiger II" : {
                             "name" : "Tiger II",
@@ -185,8 +186,8 @@
                             "weight" : 50,
                             "stockModule" : true,
                             "topModule" : false,
-                            "experienceNeeded" : null,
-                            "cost" : null
+                            "experienceNeeded" : 0,
+                            "cost" : 0
                         },
                         "FuG 7" : {
                             "name" : "FuG 7",

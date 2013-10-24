@@ -31,6 +31,7 @@
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
         self.cost = [[dict objectForKey:@"cost"] integerValue];
+        self.hitPoints = [[dict objectForKey:@"hitPoints"] integerValue];
         
         // Add the hull
         self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"]];
@@ -102,7 +103,7 @@
 
 - (float)specificPower
 {
-    return (engine.horsepower / self.weight);
+    return (engine.horsepower / (self.weight / 1000.0));
 }
 
 - (float)damagePerMinute
