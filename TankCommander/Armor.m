@@ -12,6 +12,16 @@
 
 @synthesize thickness, angle;
 
+- (id)initWithArray:(NSArray *)arr
+{
+    self = [super init];
+    if (self) {
+        self.thickness = [arr[0] floatValue];
+        self.angle = [arr[1] floatValue];
+    }
+    return self;
+}
+
 float cosineWithDegrees(float radians)
 {
     return cosf(radians * 0.0174532925);

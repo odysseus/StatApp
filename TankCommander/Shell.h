@@ -10,7 +10,7 @@
 
 @interface Shell : NSObject
 
-typedef enum {
+typedef enum ShellType : NSUInteger {
     ShellTypeNormal,
     ShellTypeGold,
     ShellTypeHE
@@ -19,5 +19,8 @@ typedef enum {
 @property ShellType shellType;
 @property float penetration;
 @property float damage;
+
+- (id)initWithShellIndex:(int)index andArray:(NSArray *)arr;
+ShellType fetchShellType (int index);
 
 @end

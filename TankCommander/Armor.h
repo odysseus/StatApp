@@ -16,5 +16,6 @@
 - (float)effectiveThickness;
 float cosineWithDegrees(float radians);
 
+- (id)initWithArray:(NSArray *)arr;
 
 @end

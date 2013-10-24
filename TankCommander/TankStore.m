@@ -8,6 +8,7 @@
 
 #import "TankStore.h"
 #import "Tank.h"
+#import "Tier.h"
 
 static TankStore *allTanks = nil;
 
@@ -55,14 +56,28 @@ static TankStore *allTanks = nil;
     // Version is for version control, and the "tanks" key contains all the actual data
     NSNumber *version = [json objectForKey:@"version"];
     NSDictionary *tanks = [json objectForKey:@"tanks"];
-    NSDictionary *tiger2 = [[[tanks objectForKey:@"tier8"] objectForKey:@"heavyTanks"] objectForKey:@"tiger 2"];
     
-    NSLog(@"Version: %@", version);
-            
-    for (id key in tiger2) {
-        NSLog(@"%@", key);
-    }
+    NSLog(@"%@", version);
+    
 
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

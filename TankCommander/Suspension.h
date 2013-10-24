@@ -7,18 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Module.h"
 
-@interface Suspension : NSObject
-
-@property (nonatomic) NSString *name;
+@interface Suspension : Module
 
 @property (nonatomic) float loadLimit;
 @property (nonatomic) int traverseSpeed;
 
-@property (nonatomic) float weight;
-@property (nonatomic) BOOL stockModule;
-@property (nonatomic) BOOL topModule;
-@property (nonatomic) int experienceNeeded;
-@property (nonatomic) int cost;
+- (id)initWithDict:(NSDictionary *)dict;
 
 @end

@@ -33,19 +33,19 @@ typedef enum TankNationality : NSUInteger {
 
 // The tank name, type and tier
 @property (nonatomic) NSString *name;
-@property (nonatomic) TankNationality *nationality;
+@property (nonatomic) TankNationality nationality;
 @property (nonatomic) int tier;
-@property (nonatomic) TankType *type;
+@property (nonatomic) TankType type;
 @property (nonatomic) BOOL premiumTank;
 @property (nonatomic) int experienceNeeded;
 @property (nonatomic) int cost;
 
 // These arrays hold the equippable modules
-@property (nonatomic) NSArray *availableTurrets;
-@property (nonatomic) NSArray *availableGuns;
-@property (nonatomic) NSArray *availableEngines;
-@property (nonatomic) NSArray *availableRadios;
-@property (nonatomic) NSArray *availableSuspensions;
+@property (nonatomic) NSMutableArray *availableTurrets;
+@property (nonatomic) NSMutableArray *availableGuns;
+@property (nonatomic) NSMutableArray *availableEngines;
+@property (nonatomic) NSMutableArray *availableSuspensions;
+@property (nonatomic) NSMutableArray *availableRadios;
 
 // The modules that are currently equipped will be stored in these variables
 @property (nonatomic) Hull *hull;
@@ -55,12 +55,14 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) Radio *radio;
 @property (nonatomic) Suspension *suspension;
 
+- (id)initWithDict:(NSDictionary *)dict;
+
 - (float)weight;
 - (float)specificPower;
 - (float)damagePerMinute;
 
-- (TankType)fetchTankType:(int)index;
-- (TankNationality)fetchTankNationality:(int)index;
+TankNationality fetchTankNationality (int index);
+TankType fetchTankType (int index);
 
 
 @end

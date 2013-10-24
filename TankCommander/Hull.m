@@ -7,9 +7,22 @@
 //
 
 #import "Hull.h"
+#import "Armor.h"
 
 @implementation Hull
 
 @synthesize weight, frontArmor, sideArmor, rearArmor;
+
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [super init];
+    if (self) {
+        self.weight = [[dict objectForKey:@"weight"] floatValue];
+        self.frontArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"frontArmor"]];
+        self.sideArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"sideArmor"]];
+        self.rearArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"rearArmor"]];
+    }
+    return self;
+}
 
 @end

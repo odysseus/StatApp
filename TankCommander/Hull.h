@@ -17,5 +17,6 @@
 @property (nonatomic) Armor *rearArmor;
 @property float weight;
 
+- (id)initWithDict:(NSDictionary *)dict;
 
 @end

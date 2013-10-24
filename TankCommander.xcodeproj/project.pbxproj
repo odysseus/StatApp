@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941289C91818AC53008C69E7 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 941289C81818AC53008C69E7 /* Module.m */; };
 		941A7615181494D50072089F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7614181494D50072089F /* Foundation.framework */; };
 		941A7617181494D50072089F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7616181494D50072089F /* CoreGraphics.framework */; };
 		941A7619181494D50072089F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7618181494D50072089F /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		941289C71818AC53008C69E7 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		941289C81818AC53008C69E7 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
 		941A7611181494D50072089F /* TankCommander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankCommander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941A7614181494D50072089F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		941A7616181494D50072089F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -152,6 +155,8 @@
 				941A764D1814B8E10072089F /* Tank.m */,
 				941A764F1814C4D40072089F /* Hull.h */,
 				941A76501814C4D40072089F /* Hull.m */,
+				941289C71818AC53008C69E7 /* Module.h */,
+				941289C81818AC53008C69E7 /* Module.m */,
 				941A76521814C4DB0072089F /* Turret.h */,
 				941A76531814C4DB0072089F /* Turret.m */,
 				941A76551814C4F70072089F /* Gun.h */,
@@ -302,6 +307,7 @@
 				948C359F1816F1C500708761 /* Tier.m in Sources */,
 				941A76571814C4F70072089F /* Gun.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
+				941289C91818AC53008C69E7 /* Module.m in Sources */,
 				941A765A1814C4FF0072089F /* Radio.m in Sources */,
 				941A76601814C5940072089F /* Engine.m in Sources */,
 				941A76631814EE260072089F /* Armor.m in Sources */,

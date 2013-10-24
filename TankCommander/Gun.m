@@ -11,7 +11,24 @@
 
 @implementation Gun
 
-@synthesize name, weight, shells, accuracy, aimTime, rateOfFire, stockModule, topModule, experienceNeeded, cost, round;
+@synthesize shells, round, rateOfFire, accuracy, aimTime;
+
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [super initWithDict:dict];
+    if (self) {
+        NSArray *shellValues = [dict objectForKey:@"shells"];
+        Shell *normal = [[Shell alloc] initWithShellIndex:0 andArray:shellValues[0]];
+        Shell *gold = [[Shell alloc] initWithShellIndex:1 andArray:shellValues[1]];
+        Shell *he = [[Shell alloc] initWithShellIndex:2 andArray:shellValues[2]];
+        self.shells = [NSArray arrayWithObjects:normal, gold, he, nil];
+        self.rateOfFire = [[dict objectForKey:@"rateOfFire"] floatValue];
+        self.accuracy = [[dict objectForKey:@"accuracy"] floatValue];
+        self.aimTime = [[dict objectForKey:@"aimTime"] floatValue];
+        [self setNormalRounds];
+    }
+    return self;
+}
 
 - (void)setNormalRounds
 {

@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Shell.h"
+#import "Module.h"
 
-@interface Gun : NSObject
-
-@property (nonatomic) NSString *name;
+@interface Gun : Module
 
 @property (nonatomic) NSArray *shells;
 @property (nonatomic) Shell *round;
@@ -19,11 +18,8 @@
 @property (nonatomic) float accuracy;
 @property (nonatomic) float aimTime;
 
-@property float weight;
-@property (nonatomic) BOOL stockModule;
-@property (nonatomic) BOOL topModule;
-@property (nonatomic) int experienceNeeded;
-@property (nonatomic) int cost;
+
+- (id)initWithDict:(NSDictionary *)dict;
 
 - (void)setNormalRounds;
 - (void)setGoldRounds;

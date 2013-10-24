@@ -7,9 +7,23 @@
 //
 
 #import "Turret.h"
+#import "Armor.h"
 
 @implementation Turret
 
-@synthesize name, weight, frontArmor, sideArmor, rearArmor, traverseSpeed, stockModule, topModule, experienceNeeded, cost;
+@synthesize viewRange, traverseSpeed, frontArmor, sideArmor, rearArmor;
+
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [super initWithDict:dict];
+    if (self) {
+        self.viewRange = [[dict objectForKey:@"viewRange"] floatValue];
+        self.traverseSpeed = [[dict objectForKey:@"traverseSpeed"] floatValue];
+        self.frontArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"frontArmor"]];
+        self.sideArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"sideArmor"]];
+        self.rearArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"rearArmor"]];
+    }
+    return self;
+}
 
 @end

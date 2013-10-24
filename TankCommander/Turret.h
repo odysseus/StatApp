@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Module.h"
 
 @class Armor;
 
-@interface Turret : NSObject
-
-@property (nonatomic) NSString *name;
+@interface Turret : Module
 
 @property (nonatomic) float viewRange;
 @property (nonatomic) float traverseSpeed;
@@ -20,10 +19,8 @@
 @property (nonatomic) Armor *sideArmor;
 @property (nonatomic) Armor *rearArmor;
 
-@property (nonatomic) float weight;
-@property (nonatomic) BOOL stockModule;
-@property (nonatomic) BOOL topModule;
-@property (nonatomic) int experienceNeeded;
-@property (nonatomic) int cost;
+
+- (id)initWithDict:(NSDictionary *)dict;
+
 
 @end

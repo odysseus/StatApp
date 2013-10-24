@@ -10,6 +10,15 @@
 
 @implementation Radio
 
-@synthesize name, weight, signalRange, stockModule, topModule, experienceNeeded, cost;
+@synthesize signalRange;
+
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [super initWithDict:dict];
+    if (self) {
+        self.signalRange = [[dict objectForKey:@"signalRange"] floatValue];
+    }
+    return self;
+}
 
 @end

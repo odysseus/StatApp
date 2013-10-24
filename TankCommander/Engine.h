@@ -7,18 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Module.h"
 
-@interface Engine : NSObject
-
-@property (nonatomic) NSString *name;
+@interface Engine : Module
 
 @property (nonatomic) float horsepower;
 @property (nonatomic) float fireChance;
 
-@property (nonatomic) float weight;
-@property (nonatomic) BOOL stockModule;
-@property (nonatomic) BOOL topModule;
-@property (nonatomic) int experienceNeeded;
-@property (nonatomic) int cost;
+
+- (id)initWithDict:(NSDictionary *)dict;
+
 
 @end

@@ -10,6 +10,16 @@
 
 @implementation Suspension
 
-@synthesize name, loadLimit, traverseSpeed, weight, stockModule, topModule, experienceNeeded, cost;
+@synthesize loadLimit, traverseSpeed;
+
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [super initWithDict:dict];
+    if (self) {
+        self.loadLimit = [[dict objectForKey:@"loadLimit"] floatValue];
+        self.traverseSpeed = [[dict objectForKey:@"traverseSpeed"] floatValue];
+    }
+    return self;
+}
 
 @end

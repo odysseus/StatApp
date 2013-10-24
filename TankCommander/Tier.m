@@ -7,6 +7,7 @@
 //
 
 #import "Tier.h"
+#import "Tank.h"
 
 @implementation Tier
 

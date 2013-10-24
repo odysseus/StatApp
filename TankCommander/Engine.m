@@ -10,6 +10,16 @@
 
 @implementation Engine
 
-@synthesize name, weight, horsepower, stockModule, topModule, experienceNeeded, cost;
+@synthesize horsepower, fireChance;
+
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [super initWithDict:dict];
+    if (self) {
+        self.horsepower = [[dict objectForKey:@"horsepower"] floatValue];
+        self.fireChance = [[dict objectForKey:@"fireChance"] floatValue];
+    }
+    return self;
+}
 
 @end
