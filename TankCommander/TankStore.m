@@ -37,11 +37,6 @@ static TankStore *allTanks = nil;
     return self;
 }
 
-- (NSMutableDictionary *)tankDB
-{
-    return tankDB;
-}
-
 - (void)loadTanks
 {
     // Get the path to the JSON file
@@ -59,22 +54,17 @@ static TankStore *allTanks = nil;
     
     NSDictionary *tanks = [json objectForKey:@"tanks"];
     
-    NSArray *tiers = @[@"tier1",
-                       @"tier2",
-                       @"tier3",
-                       @"tier4",
-                       @"tier5",
-                       @"tier6",
-                       @"tier7",
-                       @"tier8",
-                       @"tier9",
-                       @"tier10"];
-    
-    tankDB = [[NSMutableDictionary alloc] init];
-    for (NSString *key in tiers) {
-        Tier *currentTier = [[Tier alloc] initWithDict:[tanks objectForKey:key]];
-        [tankDB setObject:currentTier forKey:key];
-    }    
+    // Add each tier
+    self.tier1 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier1"]];
+    self.tier2 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier2"]];
+    self.tier3 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier3"]];
+    self.tier4 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier4"]];
+    self.tier5 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier5"]];
+    self.tier6 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier6"]];
+    self.tier7 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier7"]];
+    self.tier8 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier8"]];
+    self.tier9 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier9"]];
+    self.tier10 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier10"]];
 }
 
 @end

@@ -15,17 +15,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"Did finish launching");
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    TankStore *tankStore = [TankStore allTanks];
-    [tankStore loadTanks];
+    TankStore *allTanks = [TankStore allTanks];
+    [allTanks loadTanks];
     
-    Tier *tier8 = [tankStore.tankDB objectForKey:@"tier8"];
-    
-    NSArray *filteredArray = [tier8.heavyTanks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.name == %@", @"Tiger II"]];
+    NSArray *filteredArray = [allTanks.tier8.heavyTanks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.name == %@", @"Tiger II"]];
     
     Tank *tiger2 = filteredArray[0];
     NSLog(@"Weight: %0.0f - Specific Power: %0.2f - Damage Per Minute: %0.0f", tiger2.weight, tiger2.specificPower, tiger2.damagePerMinute);

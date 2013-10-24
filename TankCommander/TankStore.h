@@ -8,14 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+@class Tier;
+
 @interface TankStore : NSObject
 {
-    NSMutableDictionary *tankDB;
     NSNumber *currentVersion;
 }
 
+@property (nonatomic) Tier *tier1;
+@property (nonatomic) Tier *tier2;
+@property (nonatomic) Tier *tier3;
+@property (nonatomic) Tier *tier4;
+@property (nonatomic) Tier *tier5;
+@property (nonatomic) Tier *tier6;
+@property (nonatomic) Tier *tier7;
+@property (nonatomic) Tier *tier8;
+@property (nonatomic) Tier *tier9;
+@property (nonatomic) Tier *tier10;
+
 + (TankStore *)allTanks;
-- (NSMutableDictionary *)tankDB;
 - (void)loadTanks;
 
 @end
