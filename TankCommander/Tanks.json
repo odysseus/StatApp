@@ -63,6 +63,7 @@
                     "experienceNeeded" : 78000,
                     "cost" : 2450000,
                     "hitPoints" : 1500,
+                    "gunArc" : 360.0,
                     "hull" : {
                         "frontArmor" : [ 150.0, 60.0 ],
                         "sideArmor" : [ 80.0, 10.0 ],
@@ -81,7 +82,8 @@
                             "stockModule" : true,
                             "topModule" : false,
                             "experienceNeeded" : 0,
-                            "cost" : 0
+                            "cost" : 0,
+                            "additionalHP" : 0
                         },
                         "Tiger II Serienturm" : {
                             "name" : "Tiger II Serienturm",
@@ -94,7 +96,8 @@
                             "stockModule" : false,
                             "topModule" : true,
                             "experienceNeeded" : 22260,
-                            "cost" : 52370
+                            "cost" : 52370,
+                            "additionalHP" : 50
                         }
                     },
                     "guns" : {

@@ -15,6 +15,7 @@
 
 @property (nonatomic) float viewRange;
 @property (nonatomic) float traverseSpeed;
+@property (nonatomic) int additionalHP;
 @property (nonatomic) Armor *frontArmor;
 @property (nonatomic) Armor *sideArmor;
 @property (nonatomic) Armor *rearArmor;

@@ -17,7 +17,7 @@
 @implementation Tank
 
 @synthesize name, hull, turret, gun, engine, radio, suspension, availableEngines, availableGuns,
-    availableRadios, availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank;
+    availableRadios, availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -32,6 +32,7 @@
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
         self.cost = [[dict objectForKey:@"cost"] integerValue];
         self.hitPoints = [[dict objectForKey:@"hitPoints"] integerValue];
+        self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
         
         // Add the hull
         self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"]];
@@ -94,6 +95,11 @@
         }
     }
     return self;
+}
+
+- (int)hitPoints
+{
+    return self.hitPoints + turret.additionalHP;
 }
 
 - (float)weight
