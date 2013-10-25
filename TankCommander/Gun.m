@@ -25,9 +25,16 @@
         self.rateOfFire = [[dict objectForKey:@"rateOfFire"] floatValue];
         self.accuracy = [[dict objectForKey:@"accuracy"] floatValue];
         self.aimTime = [[dict objectForKey:@"aimTime"] floatValue];
+        self.gunDepression = [[dict objectForKey:@"gunDepression"] floatValue];
+        self.gunElevation = [[dict objectForKey:@"gunElevation"] floatValue];
         [self setNormalRounds];
     }
     return self;
+}
+
+- (NSString *)description
+{
+    return self.name;
 }
 
 - (void)setNormalRounds

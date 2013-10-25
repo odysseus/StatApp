@@ -13,6 +13,7 @@
 @interface TankStore : NSObject
 {
     NSNumber *currentVersion;
+    BOOL tanksLoaded;
 }
 
 @property (nonatomic) Tier *tier1;

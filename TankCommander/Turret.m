@@ -8,10 +8,11 @@
 
 #import "Turret.h"
 #import "Armor.h"
+#import "Gun.h"
 
 @implementation Turret
 
-@synthesize viewRange, traverseSpeed, frontArmor, sideArmor, rearArmor, additionalHP;
+@synthesize viewRange, traverseSpeed, frontArmor, sideArmor, rearArmor, additionalHP, availableGuns, gun;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -23,8 +24,23 @@
         self.frontArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"frontArmor"]];
         self.sideArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"sideArmor"]];
         self.rearArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"rearArmor"]];
+        
+        availableGuns = [[NSMutableArray alloc] init];
+        NSDictionary *gunValues = [dict objectForKey:@"availableGuns"];
+        for (id key in gunValues) {
+            Gun *currentGun = [[Gun alloc] initWithDict: [gunValues objectForKey:key]];
+            [availableGuns addObject:currentGun];
+            if (currentGun.topModule) {
+                self.gun = currentGun;
+            }
+        }
     }
     return self;
+}
+
+- (NSString *)description
+{
+    return self.name;
 }
 
 @end

@@ -16,8 +16,9 @@
 
 @implementation Tank
 
-@synthesize name, hull, turret, gun, engine, radio, suspension, availableEngines, availableGuns,
-    availableRadios, availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc;
+@synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios,
+    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc;
+
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -31,7 +32,7 @@
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
         self.cost = [[dict objectForKey:@"cost"] integerValue];
-        self.hitPoints = [[dict objectForKey:@"hitPoints"] integerValue];
+        self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] integerValue];
         self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
         
         // Add the hull
@@ -52,16 +53,6 @@
             }
             // Finally, add it to the module array
             [availableTurrets addObject:currentTurret];
-        }
-        
-        NSDictionary *gunValues = [dict objectForKey:@"guns"];
-        availableGuns = [[NSMutableArray alloc] init];
-        for (id key in gunValues) {
-            Gun *currentGun = [[Gun alloc] initWithDict:[gunValues objectForKey:key]];
-            if (currentGun.topModule) {
-                self.gun = currentGun;
-            }
-            [availableGuns addObject:currentGun];
         }
         
         NSDictionary *engineValues = [dict objectForKey:@"engines"];
@@ -97,14 +88,24 @@
     return self;
 }
 
-- (int)hitPoints
+- (NSString *)description
 {
-    return self.hitPoints + turret.additionalHP;
+    return name;
+}
+
+- (Gun *)gun
+{
+    return turret.gun;
+}
+
+- (int)baseHitpoints
+{
+    return self.baseHitpoints + turret.additionalHP;
 }
 
 - (float)weight
 {
-    return (hull.weight + turret.weight + gun.weight + engine.weight + suspension.weight + radio.weight);
+    return (hull.weight + turret.weight + self.gun.weight + engine.weight + suspension.weight + radio.weight);
 }
 
 - (float)specificPower
@@ -114,7 +115,7 @@
 
 - (float)damagePerMinute
 {
-    return (gun.rateOfFire * gun.round.damage);
+    return (self.gun.rateOfFire * self.gun.round.damage);
 }
 
 TankType fetchTankType (int index)

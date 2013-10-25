@@ -17,9 +17,13 @@
 @property (nonatomic) float rateOfFire;
 @property (nonatomic) float accuracy;
 @property (nonatomic) float aimTime;
+@property (nonatomic) float gunDepression;
+@property (nonatomic) float gunElevation;
 
 
 - (id)initWithDict:(NSDictionary *)dict;
+
+- (NSString *)description;
 
 - (void)setNormalRounds;
 - (void)setGoldRounds;

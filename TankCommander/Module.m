@@ -26,4 +26,9 @@
     return self;
 }
 
+- (NSString *)description
+{
+    return name;
+}
+
 @end

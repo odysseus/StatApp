@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Module.h"
 
-@class Armor;
+@class Armor, Gun;
 
 @interface Turret : Module
 
@@ -19,9 +19,11 @@
 @property (nonatomic) Armor *frontArmor;
 @property (nonatomic) Armor *sideArmor;
 @property (nonatomic) Armor *rearArmor;
-
+@property (nonatomic) NSMutableArray *availableGuns;
+@property (nonatomic) Gun *gun;
 
 - (id)initWithDict:(NSDictionary *)dict;
 
+- (NSString *)description;
 
 @end

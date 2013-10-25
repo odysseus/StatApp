@@ -62,7 +62,7 @@
                     "premiumTank" : false,
                     "experienceNeeded" : 78000,
                     "cost" : 2450000,
-                    "hitPoints" : 1500,
+                    "baseHitpoints" : 1200,
                     "gunArc" : 360.0,
                     "hull" : {
                         "frontArmor" : [ 150.0, 60.0 ],
@@ -83,7 +83,47 @@
                             "topModule" : false,
                             "experienceNeeded" : 0,
                             "cost" : 0,
-                            "additionalHP" : 0
+                            "additionalHP" : 300,
+                            "availableGuns" : {
+                                "8,8 cm KwK 43 L/71" : {
+                                    "name" : "8,8 cm KwK 43 L/71",
+                                    "shells" : [[203.0, 240.0], [237.0, 240.0], [44.0, 295.0]],
+                                    "rateOfFire" : 8.22,
+                                    "accuracy" : 0.34,
+                                    "aimTime" : 2.9,
+                                    "gunDepression" : -5.0,
+                                    "gunElevation" : 17.0,
+                                    "weight" : 2562.0,
+                                    "stockModule" : true,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 0,
+                                    "cost" : 0
+                                },
+                                "10,5 cm KwK 45 L/52" : {
+                                    "name" : "10,5 cm KwK 45 L/52",
+                                    "shells" : [[200.0, 320.0], [244.0, 320.0], [60.0, 420.0]],
+                                    "rateOfFire" : 5.5,
+                                    "accuracy" : 0.37,
+                                    "aimTime" : 2.3,
+                                    "weight" : 3000,
+                                    "stockModule" : false,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 16800,
+                                    "cost" : 116490
+                                },
+                                "10,5 cm KwK 46 L/68" : {
+                                    "name" : "10,5 cm KwK 46 L/68",
+                                    "shells" : [[225.0, 320.0], [285.0, 320.0], [60.0, 420.0]],
+                                    "rateOfFire" : 5.5,
+                                    "accuracy" : 0.34,
+                                    "aimTime" : 2.3,
+                                    "weight" : 3600,
+                                    "stockModule" : false,
+                                    "topModule" : true,
+                                    "experienceNeeded" : 46000,
+                                    "cost" : 178500
+                                }
+                            }
                         },
                         "Tiger II Serienturm" : {
                             "name" : "Tiger II Serienturm",
@@ -97,45 +137,47 @@
                             "topModule" : true,
                             "experienceNeeded" : 22260,
                             "cost" : 52370,
-                            "additionalHP" : 50
-                        }
-                    },
-                    "guns" : {
-                        "8,8 cm KwK 43 L/71" : {
-                            "name" : "8,8 cm KwK 43 L/71",
-                            "shells" : [[203.0, 240.0], [237.0, 240.0], [44.0, 295.0]],
-                            "rateOfFire" : 8.22,
-                            "accuracy" : 0.34,
-                            "aimTime" : 2.9,
-                            "weight" : 2562.0,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 0
-                        },
-                        "10,5 cm KwK 45 L/52" : {
-                            "name" : "10,5 cm KwK 45 L/52",
-                            "shells" : [[200.0, 320.0], [244.0, 320.0], [60.0, 420.0]],
-                            "rateOfFire" : 6.74,
-                            "accuracy" : 0.37,
-                            "aimTime" : 2.3,
-                            "weight" : 3000,
-                            "stockModule" : false,
-                            "topModule" : false,
-                            "experienceNeeded" : 16800,
-                            "cost" : 116490
-                        },
-                        "10,5 cm KwK 46 L/68" : {
-                            "name" : "10,5 cm KwK 46 L/68",
-                            "shells" : [[225.0, 320.0], [285.0, 320.0], [60.0, 420.0]],
-                            "rateOfFire" : 6.59,
-                            "accuracy" : 0.34,
-                            "aimTime" : 2.3,
-                            "weight" : 3600,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 46000,
-                            "cost" : 178500
+                            "additionalHP" : 400,
+                            "availableGuns" : {
+                                "8,8 cm KwK 43 L/71" : {
+                                    "name" : "8,8 cm KwK 43 L/71",
+                                    "shells" : [[203.0, 240.0], [237.0, 240.0], [44.0, 295.0]],
+                                    "rateOfFire" : 8.22,
+                                    "accuracy" : 0.34,
+                                    "aimTime" : 2.9,
+                                    "gunDepression" : -5.0,
+                                    "gunElevation" : 17.0,
+                                    "weight" : 2562.0,
+                                    "stockModule" : true,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 0,
+                                    "cost" : 0
+                                },
+                                "10,5 cm KwK 45 L/52" : {
+                                    "name" : "10,5 cm KwK 45 L/52",
+                                    "shells" : [[200.0, 320.0], [244.0, 320.0], [60.0, 420.0]],
+                                    "rateOfFire" : 5.5,
+                                    "accuracy" : 0.37,
+                                    "aimTime" : 2.3,
+                                    "weight" : 3000,
+                                    "stockModule" : false,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 16800,
+                                    "cost" : 116490
+                                },
+                                "10,5 cm KwK 46 L/68" : {
+                                    "name" : "10,5 cm KwK 46 L/68",
+                                    "shells" : [[225.0, 320.0], [285.0, 320.0], [60.0, 420.0]],
+                                    "rateOfFire" : 5.5,
+                                    "accuracy" : 0.34,
+                                    "aimTime" : 2.3,
+                                    "weight" : 3600,
+                                    "stockModule" : false,
+                                    "topModule" : true,
+                                    "experienceNeeded" : 46000,
+                                    "cost" : 178500
+                                }
+                            }
                         }
                     },
                     "engines" : {
