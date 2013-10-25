@@ -62,6 +62,7 @@ typedef enum TankNationality : NSUInteger {
 - (float)weight;
 - (float)specificPower;
 - (float)damagePerMinute;
+- (float)reloadTime;
 - (Gun *)gun;
 
 TankNationality fetchTankNationality (int index);

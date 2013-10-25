@@ -105,17 +105,22 @@
 
 - (float)weight
 {
-    return (hull.weight + turret.weight + self.gun.weight + engine.weight + suspension.weight + radio.weight);
+    return (hull.weight + turret.weight + self.gun.weight + engine.weight + suspension.weight + radio.weight) / 1000.0;
 }
 
 - (float)specificPower
 {
-    return (engine.horsepower / (self.weight / 1000.0));
+    return (engine.horsepower / self.weight);
 }
 
 - (float)damagePerMinute
 {
     return (self.gun.rateOfFire * self.gun.round.damage);
+}
+
+- (float)reloadTime
+{
+    return 60.0 / self.gun.rateOfFire;
 }
 
 TankType fetchTankType (int index)

@@ -27,7 +27,8 @@
                               [NSPredicate predicateWithFormat:@"self.name == %@", @"Tiger II"]][0];
     
     NSLog(@"%@", tiger2.gun);
-    NSLog(@"Weight: %0.0f - Specific Power: %0.2f - Damage Per Minute: %0.0f", tiger2.weight, tiger2.specificPower, tiger2.damagePerMinute);
+    NSLog(@"\n%@\nWeight: %0.2f\nSpecific Power: %0.2f\nDamage Per Minute: %0.0f\nReload Time: %0.2f",
+          tiger2, tiger2.weight, tiger2.specificPower, tiger2.damagePerMinute, tiger2.reloadTime);
     
     return YES;
 }
