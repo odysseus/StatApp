@@ -253,6 +253,188 @@
                             "cost" : 43200
                         }
                     }
+                },
+                "t32" : {
+                    "name" : "t32",
+                    "nationality" : 0,
+                    "tier" : 8,
+                    "type" : 2,
+                    "premiumTank" : false,
+                    "experienceNeeded" : 100000,
+                    "cost" : 2600000,
+                    "baseHitpoints" : 1120,
+                    "gunArc" : 360.0,
+                    "crewLevel" : 100,
+                    "hull" : {
+                        "frontArmor" : [127.0, 54.0],
+                        "sideArmor" : [76.0, 5.0],
+                        "rearArmor" : [51.0, 5.0],
+                        "weight" : 40000.0
+                    },
+                    "turrets" : {
+                        "T99E2" : {
+                            "name" : "T99E2",
+                            "viewRange" : 380.0,
+                            "traverseSpeed" : 26.0,
+                            "frontArmor" : [114.0, 5.0],
+                            "sideArmor" : [76.2, 5.0],
+                            "rearArmor" : [76.2, 5.0],
+                            "weight" : 9500.0,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : 0,
+                            "cost" : 32500,
+                            "additionalHP" : 280,
+                            "availableGuns" : {
+                                "90 mm Gun T15E2" : {
+                                    "name" : "90 mm Gun T15E2",
+                                    "shells" : [[170.0, 240.0], [258, 240], [45, 320]],
+                                    "rateOfFire" : 7.89,
+                                    "accuracy" : 0.38,
+                                    "aimTime" : 2.3,
+                                    "gunDepression" : -10.0,
+                                    "gunElevation" : 20.0,
+                                    "weight" : 2050.0,
+                                    "stockModule" : true,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 0,
+                                    "cost" : 111900
+                                },
+                                "105 mm Gun T5E1" : {
+                                    "name" : "105 mm Gun T5E1",
+                                    "shells" : [[198, 320], [245, 320], [53, 420]],
+                                    "rateOfFire" : 4.76,
+                                    "accuracy" : 0.42,
+                                    "aimTime" : 2.3,
+                                    "gunDepression" : -10,
+                                    "gunElevation" : 20,
+                                    "weight" : 2400,
+                                    "stockModule" : false,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 18100,
+                                    "cost" : 118000
+                                }
+                            }
+                        },
+                        "T119" : {
+                            "name" : "T119",
+                            "viewRange" : 400,
+                            "traverseSpeed" : 25,
+                            "frontArmor" : [298, 10],
+                            "sideArmor" : [197, 10],
+                            "rearArmor" : [152, 10],
+                            "weight" : 12200,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 21400,
+                            "cost" : 50500,
+                            "additionalHP" : 430,
+                            "availableGuns" : {
+                                "90 mm Gun T15E2" : {
+                                    "name" : "90 mm Gun T15E2",
+                                    "shells" : [[170.0, 240.0], [258, 240], [45, 320]],
+                                    "rateOfFire" : 7.89,
+                                    "accuracy" : 0.38,
+                                    "aimTime" : 2.3,
+                                    "gunDepression" : -10.0,
+                                    "gunElevation" : 20.0,
+                                    "weight" : 2050.0,
+                                    "stockModule" : true,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 0,
+                                    "cost" : 111900
+                                },
+                                "105 mm Gun T5E1" : {
+                                    "name" : "105 mm Gun T5E1",
+                                    "shells" : [[198, 320], [245, 320], [53, 420]],
+                                    "rateOfFire" : 5.66,
+                                    "accuracy" : 0.41,
+                                    "aimTime" : 2.3,
+                                    "gunDepression" : -10,
+                                    "gunElevation" : 20,
+                                    "weight" : 2400,
+                                    "stockModule" : false,
+                                    "topModule" : false,
+                                    "experienceNeeded" : 18100,
+                                    "cost" : 118000
+                                }
+                            }
+                        }
+                    },
+                    "engines" : {
+                        "Ford GAZ" : {
+                            "name" : "Ford GAZ",
+                            "horsepower" : 720,
+                            "fireChance": 0.20,
+                            "weight": 556,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : 0,
+                            "cost" : 43500
+                        },
+                        "GMC Allison V1710-E32" : {
+                            "name" : "GMC Allison V1710-E32",
+                            "horsepower" : 760,
+                            "fireChance": 0.20,
+                            "weight": 556,
+                            "stockModule" : false,
+                            "topModule" : false,
+                            "experienceNeeded" : 12300,
+                            "cost" : 48500
+                        },
+                        "Continental AV-1790-3" : {
+                            "name" : "Continental AV-1790-3",
+                            "horsepower" : 800,
+                            "fireChance": 0.20,
+                            "weight": 569,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 19000,
+                            "cost" : 59000
+                        }
+                    },
+                    "suspensions" : {
+                        "T84E1A" : {
+                            "name" : "T84E1A",
+                            "loadLimit" : 54.83,
+                            "traverseSpeed" : 20,
+                            "weight" : 12000,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : 0,
+                            "cost" : 20200
+                        },
+                        "T84E3A" : {
+                            "name" : "T84E3A",
+                            "loadLimit" : 60.5,
+                            "traverseSpeed" : 25,
+                            "weight" : 12000,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 14500,
+                            "cost" : 38100
+                        }
+                    },
+                    "radios" : {
+                        "SCR 508" : {
+                            "name" : "SCR 508",
+                            "signalRange" : 395,
+                            "weight" : 100,
+                            "stockModule" : true,
+                            "topModule" : false,
+                            "experienceNeeded" : 0,
+                            "cost" : 21600
+                        },
+                        "SCR 528" : {
+                            "name" : "SCR 528",
+                            "signalRange" : 745,
+                            "weight" : 80,
+                            "stockModule" : false,
+                            "topModule" : true,
+                            "experienceNeeded" : 9000,
+                            "cost" : 54000
+                        }
+                    }
                 }
             },
             "tankDestroyers" : {},
@@ -274,5 +456,3 @@
         }
     }
 }
-
-
