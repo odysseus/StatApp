@@ -435,6 +435,238 @@
                             "cost" : 54000
                         }
                     }
+                },
+                "t34": {
+                    "name": "T34",
+                    "nationality": 0,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": true,
+                    "experienceNeeded": 0,
+                    "cost": 12000,
+                    "baseHitpoints": 1200,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "hull": {
+                        "frontArmor": [
+                                       102,
+                                       54
+                                       ],
+                        "sideArmor": [
+                                      76,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      51,
+                                      5
+                                      ],
+                        "weight": 40000
+                    },
+                    "turrets": {
+                        "T34T7": {
+                            "name": "T34T7",
+                            "viewRange": 360,
+                            "traverseSpeed": 18,
+                            "frontArmor": [
+                                           279,
+                                           5
+                                           ],
+                            "sideArmor": [
+                                          127,
+                                          5
+                                          ],
+                            "rearArmor": [
+                                          203,
+                                          5
+                                          ],
+                            "weight": 12800,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 300,
+                            "availableGuns": {
+                                "120 mm Gun T53A1": {
+                                    "name": "120 mm Gun T53A1",
+                                    "shells": [
+                                               [
+                                                248,
+                                                400
+                                                ],
+                                               [
+                                                297,
+                                                400
+                                                ],
+                                               [
+                                                60,
+                                                515
+                                                ]
+                                               ],
+                                    "rateOfFire": 4,
+                                    "accuracy": 0.35,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -10,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "Continental AV-1790-3A1": {
+                            "name": "Continental AV-1790-3A1",
+                            "horsepower": 810,
+                            "fireChance": 0.2,
+                            "weight": 1057,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "T80E3": {
+                            "name": "T80E3",
+                            "loadLimit": 71.85,
+                            "traverseSpeed": 22,
+                            "weight": 10000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "SCR 528A1": {
+                            "name": "SCR 528A1",
+                            "signalRange": 745,
+                            "weight": 91,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
+                },
+                "lowe": {
+                    "name": "Löwe",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": true,
+                    "experienceNeeded": 0,
+                    "cost": 12500,
+                    "baseHitpoints": 1300,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "hull": {
+                        "frontArmor": [
+                                       120,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "weight": 40000
+                    },
+                    "turrets": {
+                        "Lowe": {
+                            "name": "Löwe",
+                            "viewRange": 400,
+                            "traverseSpeed": 23,
+                            "frontArmor": [
+                                           120,
+                                           60
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 15000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 330,
+                            "availableGuns": {
+                                "10,5 cm KwK46 L/70": {
+                                    "name": "10,5 cm KwK46 L/70",
+                                    "shells": [
+                                               [
+                                                234,
+                                                320
+                                                ],
+                                               [
+                                                294,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5,
+                                    "accuracy": 0.33,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 3600,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "Maybach HL 234 P 30 Ausf. A": {
+                            "name": "Maybach HL 234 P 30 Ausf. A",
+                            "horsepower": 800,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "Lowe": {
+                            "name": "Löwe",
+                            "loadLimit": 99.85,
+                            "traverseSpeed": 24,
+                            "weight": 22000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "FuG 12A": {
+                            "name": "FuG 12A",
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
                 }
             },
             "tankDestroyers" : {},
@@ -456,3 +688,5 @@
         }
     }
 }
+
+
