@@ -1,438 +1,622 @@
 {
-    "version" : 20131021,
-    "tanks" : {
-        "tier1" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+    "version": 20131021,
+    "tanks": {
+        "tier1": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier2" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier2": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier3" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier3": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier4" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier4": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier5" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier5": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier6" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier6": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier7" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier7": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier8" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {
-                "tiger 2" : {
-                    "name" : "Tiger II",
-                    "nationality" : 4,
-                    "tier" : 8,
-                    "type" : 2,
-                    "premiumTank" : false,
-                    "experienceNeeded" : 78000,
-                    "cost" : 2450000,
-                    "baseHitpoints" : 1200,
-                    "gunArc" : 360.0,
-                    "hull" : {
-                        "frontArmor" : [ 150.0, 60.0 ],
-                        "sideArmor" : [ 80.0, 10.0 ],
-                        "rearArmor" : [ 80.0, 10.0 ],
-                        "weight" : 40000.0
+        "tier8": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {
+                "tiger 2": {
+                    "name": "Tiger II",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": false,
+                    "experienceNeeded": 78000,
+                    "cost": 2450000,
+                    "baseHitpoints": 1200,
+                    "gunArc": 360,
+                    "hull": {
+                        "frontArmor": [
+                                       150,
+                                       60
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      10
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      10
+                                      ],
+                        "weight": 40000
                     },
-                    "turrets" : {
-                        "Tiger II Turm Nr. 1-50" : {
-                            "name" : "Tiger II Turm. Nr. 1-50",
-                            "viewRange" : 380.0,
-                            "traverseSpeed" : 27.0,
-                            "frontArmor" : [ 100.0, 10.0 ],
-                            "sideArmor" : [ 80.0, 10.0 ],
-                            "rearArmor" : [ 80.0, 10.0 ],
-                            "weight" : 9638.0,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 0,
-                            "additionalHP" : 300,
-                            "availableGuns" : {
-                                "8,8 cm KwK 43 L/71" : {
-                                    "name" : "8,8 cm KwK 43 L/71",
-                                    "shells" : [[203.0, 240.0], [237.0, 240.0], [44.0, 295.0]],
-                                    "rateOfFire" : 8.22,
-                                    "accuracy" : 0.34,
-                                    "aimTime" : 2.9,
-                                    "gunDepression" : -5.0,
-                                    "gunElevation" : 17.0,
-                                    "weight" : 2562.0,
-                                    "stockModule" : true,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 0,
-                                    "cost" : 0
+                    "turrets": {
+                        "Tiger II Turm Nr. 1-50": {
+                            "name": "Tiger II Turm. Nr. 1-50",
+                            "viewRange": 380,
+                            "traverseSpeed": 27,
+                            "frontArmor": [
+                                           100,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 9638,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 300,
+                            "availableGuns": {
+                                "8,8 cm KwK 43 L/71": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "shells": [
+                                               [
+                                                203,
+                                                240
+                                                ],
+                                               [
+                                                237,
+                                                240
+                                                ],
+                                               [
+                                                44,
+                                                295
+                                                ]
+                                               ],
+                                    "rateOfFire": 8.22,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
                                 },
-                                "10,5 cm KwK 45 L/52" : {
-                                    "name" : "10,5 cm KwK 45 L/52",
-                                    "shells" : [[200.0, 320.0], [244.0, 320.0], [60.0, 420.0]],
-                                    "rateOfFire" : 5.5,
-                                    "accuracy" : 0.37,
-                                    "aimTime" : 2.3,
-                                    "weight" : 3000,
-                                    "stockModule" : false,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 16800,
-                                    "cost" : 116490
+                                "10,5 cm KwK 45 L/52": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "shells": [
+                                               [
+                                                200,
+                                                320
+                                                ],
+                                               [
+                                                244,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
                                 },
-                                "10,5 cm KwK 46 L/68" : {
-                                    "name" : "10,5 cm KwK 46 L/68",
-                                    "shells" : [[225.0, 320.0], [285.0, 320.0], [60.0, 420.0]],
-                                    "rateOfFire" : 5.5,
-                                    "accuracy" : 0.34,
-                                    "aimTime" : 2.3,
-                                    "weight" : 3600,
-                                    "stockModule" : false,
-                                    "topModule" : true,
-                                    "experienceNeeded" : 46000,
-                                    "cost" : 178500
+                                "10,5 cm KwK 46 L/68": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "shells": [
+                                               [
+                                                225,
+                                                320
+                                                ],
+                                               [
+                                                285,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
                                 }
                             }
                         },
-                        "Tiger II Serienturm" : {
-                            "name" : "Tiger II Serienturm",
-                            "viewRange" : 390.0,
-                            "traverseSpeed" : 27.0,
-                            "frontArmor" : [ 185.0, 10.0 ],
-                            "sideArmor" : [ 80.0, 10.0 ],
-                            "rearArmor" : [ 80.0, 10.0 ],
-                            "weight" : 10935.0,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 22260,
-                            "cost" : 52370,
-                            "additionalHP" : 400,
-                            "availableGuns" : {
-                                "8,8 cm KwK 43 L/71" : {
-                                    "name" : "8,8 cm KwK 43 L/71",
-                                    "shells" : [[203.0, 240.0], [237.0, 240.0], [44.0, 295.0]],
-                                    "rateOfFire" : 8.22,
-                                    "accuracy" : 0.34,
-                                    "aimTime" : 2.9,
-                                    "gunDepression" : -5.0,
-                                    "gunElevation" : 17.0,
-                                    "weight" : 2562.0,
-                                    "stockModule" : true,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 0,
-                                    "cost" : 0
+                        "Tiger II Serienturm": {
+                            "name": "Tiger II Serienturm",
+                            "viewRange": 390,
+                            "traverseSpeed": 27,
+                            "frontArmor": [
+                                           185,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 10935,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 22260,
+                            "cost": 52370,
+                            "additionalHP": 400,
+                            "availableGuns": {
+                                "8,8 cm KwK 43 L/71": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "shells": [
+                                               [
+                                                203,
+                                                240
+                                                ],
+                                               [
+                                                237,
+                                                240
+                                                ],
+                                               [
+                                                44,
+                                                295
+                                                ]
+                                               ],
+                                    "rateOfFire": 8.22,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
                                 },
-                                "10,5 cm KwK 45 L/52" : {
-                                    "name" : "10,5 cm KwK 45 L/52",
-                                    "shells" : [[200.0, 320.0], [244.0, 320.0], [60.0, 420.0]],
-                                    "rateOfFire" : 5.5,
-                                    "accuracy" : 0.37,
-                                    "aimTime" : 2.3,
-                                    "weight" : 3000,
-                                    "stockModule" : false,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 16800,
-                                    "cost" : 116490
+                                "10,5 cm KwK 45 L/52": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "shells": [
+                                               [
+                                                200,
+                                                320
+                                                ],
+                                               [
+                                                244,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
                                 },
-                                "10,5 cm KwK 46 L/68" : {
-                                    "name" : "10,5 cm KwK 46 L/68",
-                                    "shells" : [[225.0, 320.0], [285.0, 320.0], [60.0, 420.0]],
-                                    "rateOfFire" : 5.5,
-                                    "accuracy" : 0.34,
-                                    "aimTime" : 2.3,
-                                    "weight" : 3600,
-                                    "stockModule" : false,
-                                    "topModule" : true,
-                                    "experienceNeeded" : 46000,
-                                    "cost" : 178500
+                                "10,5 cm KwK 46 L/68": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "shells": [
+                                               [
+                                                225,
+                                                320
+                                                ],
+                                               [
+                                                285,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
                                 }
                             }
                         }
                     },
-                    "engines" : {
-                        "Maybach HL 210 TRM P45" : {
-                            "name" : "Maybach HL 210 TRM P45",
-                            "horsepower" : 650,
-                            "fireChance": 0.20,
+                    "engines": {
+                        "Maybach HL 210 TRM P45": {
+                            "name": "Maybach HL 210 TRM P45",
+                            "horsepower": 650,
+                            "fireChance": 0.2,
                             "weight": 850,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 0
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0
                         },
-                        "Maybach HL 230 TRM P45" : {
-                            "name" : "Maybach HL 230 TRM P45",
-                            "horsepower" : 700,
-                            "fireChance": 0.20,
+                        "Maybach HL 230 TRM P45": {
+                            "name": "Maybach HL 230 TRM P45",
+                            "horsepower": 700,
+                            "fireChance": 0.2,
                             "weight": 1300,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 18800,
-                            "cost" : 54000
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 18800,
+                            "cost": 54000
                         }
                     },
-                    "suspensions" : {
-                        "Tiger II Vesuchs-Serie" : {
-                            "name" : "Tiger II Vesuchs-Serie",
-                            "loadLimit" : 69.70,
-                            "traverseSpeed" : 26,
-                            "weight" : 22350,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 0
+                    "suspensions": {
+                        "Tiger II Vesuchs-Serie": {
+                            "name": "Tiger II Vesuchs-Serie",
+                            "loadLimit": 69.7,
+                            "traverseSpeed": 26,
+                            "weight": 22350,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0
                         },
-                        "Tiger II" : {
-                            "name" : "Tiger II",
-                            "loadLimit" : 74,
-                            "traverseSpeed" : 28,
-                            "weight" : 22350,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 16940,
-                            "cost" : 37520
+                        "Tiger II": {
+                            "name": "Tiger II",
+                            "loadLimit": 74,
+                            "traverseSpeed": 28,
+                            "weight": 22350,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16940,
+                            "cost": 37520
                         }
                     },
-                    "radios" : {
-                        "FuG 5" : {
-                            "name" : "FuG 5",
-                            "signalRange" : 310,
-                            "weight" : 50,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 0
+                    "radios": {
+                        "FuG 5": {
+                            "name": "FuG 5",
+                            "signalRange": 310,
+                            "weight": 50,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0
                         },
-                        "FuG 7" : {
-                            "name" : "FuG 7",
-                            "signalRange" : 415,
-                            "weight" : 70,
-                            "stockModule" : false,
-                            "topModule" : false,
-                            "experienceNeeded" : 1360,
-                            "cost" : 8160
+                        "FuG 7": {
+                            "name": "FuG 7",
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1360,
+                            "cost": 8160
                         },
-                        "FuG 12" : {
-                            "name" : "FuG 12",
-                            "signalRange" : 710,
-                            "weight" : 150,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 7200,
-                            "cost" : 43200
+                        "FuG 12": {
+                            "name": "FuG 12",
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
                         }
                     }
                 },
-                "t32" : {
-                    "name" : "t32",
-                    "nationality" : 0,
-                    "tier" : 8,
-                    "type" : 2,
-                    "premiumTank" : false,
-                    "experienceNeeded" : 100000,
-                    "cost" : 2600000,
-                    "baseHitpoints" : 1120,
-                    "gunArc" : 360.0,
-                    "crewLevel" : 100,
-                    "hull" : {
-                        "frontArmor" : [127.0, 54.0],
-                        "sideArmor" : [76.0, 5.0],
-                        "rearArmor" : [51.0, 5.0],
-                        "weight" : 40000.0
+                "t32": {
+                    "name": "t32",
+                    "nationality": 0,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": false,
+                    "experienceNeeded": 100000,
+                    "cost": 2600000,
+                    "baseHitpoints": 1120,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "hull": {
+                        "frontArmor": [
+                                       127,
+                                       54
+                                       ],
+                        "sideArmor": [
+                                      76,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      51,
+                                      5
+                                      ],
+                        "weight": 40000
                     },
-                    "turrets" : {
-                        "T99E2" : {
-                            "name" : "T99E2",
-                            "viewRange" : 380.0,
-                            "traverseSpeed" : 26.0,
-                            "frontArmor" : [114.0, 5.0],
-                            "sideArmor" : [76.2, 5.0],
-                            "rearArmor" : [76.2, 5.0],
-                            "weight" : 9500.0,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 32500,
-                            "additionalHP" : 280,
-                            "availableGuns" : {
-                                "90 mm Gun T15E2" : {
-                                    "name" : "90 mm Gun T15E2",
-                                    "shells" : [[170.0, 240.0], [258, 240], [45, 320]],
-                                    "rateOfFire" : 7.89,
-                                    "accuracy" : 0.38,
-                                    "aimTime" : 2.3,
-                                    "gunDepression" : -10.0,
-                                    "gunElevation" : 20.0,
-                                    "weight" : 2050.0,
-                                    "stockModule" : true,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 0,
-                                    "cost" : 111900
+                    "turrets": {
+                        "T99E2": {
+                            "name": "T99E2",
+                            "viewRange": 380,
+                            "traverseSpeed": 26,
+                            "frontArmor": [
+                                           114,
+                                           5
+                                           ],
+                            "sideArmor": [
+                                          76.2,
+                                          5
+                                          ],
+                            "rearArmor": [
+                                          76.2,
+                                          5
+                                          ],
+                            "weight": 9500,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 32500,
+                            "additionalHP": 280,
+                            "availableGuns": {
+                                "90 mm Gun T15E2": {
+                                    "name": "90 mm Gun T15E2",
+                                    "shells": [
+                                               [
+                                                170,
+                                                240
+                                                ],
+                                               [
+                                                258,
+                                                240
+                                                ],
+                                               [
+                                                45,
+                                                320
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 111900
                                 },
-                                "105 mm Gun T5E1" : {
-                                    "name" : "105 mm Gun T5E1",
-                                    "shells" : [[198, 320], [245, 320], [53, 420]],
-                                    "rateOfFire" : 4.76,
-                                    "accuracy" : 0.42,
-                                    "aimTime" : 2.3,
-                                    "gunDepression" : -10,
-                                    "gunElevation" : 20,
-                                    "weight" : 2400,
-                                    "stockModule" : false,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 18100,
-                                    "cost" : 118000
+                                "105 mm Gun T5E1": {
+                                    "name": "105 mm Gun T5E1",
+                                    "shells": [
+                                               [
+                                                198,
+                                                320
+                                                ],
+                                               [
+                                                245,
+                                                320
+                                                ],
+                                               [
+                                                53,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 4.76,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2400,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18100,
+                                    "cost": 118000
                                 }
                             }
                         },
-                        "T119" : {
-                            "name" : "T119",
-                            "viewRange" : 400,
-                            "traverseSpeed" : 25,
-                            "frontArmor" : [298, 10],
-                            "sideArmor" : [197, 10],
-                            "rearArmor" : [152, 10],
-                            "weight" : 12200,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 21400,
-                            "cost" : 50500,
-                            "additionalHP" : 430,
-                            "availableGuns" : {
-                                "90 mm Gun T15E2" : {
-                                    "name" : "90 mm Gun T15E2",
-                                    "shells" : [[170.0, 240.0], [258, 240], [45, 320]],
-                                    "rateOfFire" : 7.89,
-                                    "accuracy" : 0.38,
-                                    "aimTime" : 2.3,
-                                    "gunDepression" : -10.0,
-                                    "gunElevation" : 20.0,
-                                    "weight" : 2050.0,
-                                    "stockModule" : true,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 0,
-                                    "cost" : 111900
+                        "T119": {
+                            "name": "T119",
+                            "viewRange": 400,
+                            "traverseSpeed": 25,
+                            "frontArmor": [
+                                           298,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          197,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          152,
+                                          10
+                                          ],
+                            "weight": 12200,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 21400,
+                            "cost": 50500,
+                            "additionalHP": 430,
+                            "availableGuns": {
+                                "90 mm Gun T15E2": {
+                                    "name": "90 mm Gun T15E2",
+                                    "shells": [
+                                               [
+                                                170,
+                                                240
+                                                ],
+                                               [
+                                                258,
+                                                240
+                                                ],
+                                               [
+                                                45,
+                                                320
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 111900
                                 },
-                                "105 mm Gun T5E1" : {
-                                    "name" : "105 mm Gun T5E1",
-                                    "shells" : [[198, 320], [245, 320], [53, 420]],
-                                    "rateOfFire" : 5.66,
-                                    "accuracy" : 0.41,
-                                    "aimTime" : 2.3,
-                                    "gunDepression" : -10,
-                                    "gunElevation" : 20,
-                                    "weight" : 2400,
-                                    "stockModule" : false,
-                                    "topModule" : false,
-                                    "experienceNeeded" : 18100,
-                                    "cost" : 118000
+                                "105 mm Gun T5E1": {
+                                    "name": "105 mm Gun T5E1",
+                                    "shells": [
+                                               [
+                                                198,
+                                                320
+                                                ],
+                                               [
+                                                245,
+                                                320
+                                                ],
+                                               [
+                                                53,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.66,
+                                    "accuracy": 0.41,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2400,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18100,
+                                    "cost": 118000
                                 }
                             }
                         }
                     },
-                    "engines" : {
-                        "Ford GAZ" : {
-                            "name" : "Ford GAZ",
-                            "horsepower" : 720,
-                            "fireChance": 0.20,
+                    "engines": {
+                        "Ford GAZ": {
+                            "name": "Ford GAZ",
+                            "horsepower": 720,
+                            "fireChance": 0.2,
                             "weight": 556,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 43500
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 43500
                         },
-                        "GMC Allison V1710-E32" : {
-                            "name" : "GMC Allison V1710-E32",
-                            "horsepower" : 760,
-                            "fireChance": 0.20,
+                        "GMC Allison V1710-E32": {
+                            "name": "GMC Allison V1710-E32",
+                            "horsepower": 760,
+                            "fireChance": 0.2,
                             "weight": 556,
-                            "stockModule" : false,
-                            "topModule" : false,
-                            "experienceNeeded" : 12300,
-                            "cost" : 48500
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 12300,
+                            "cost": 48500
                         },
-                        "Continental AV-1790-3" : {
-                            "name" : "Continental AV-1790-3",
-                            "horsepower" : 800,
-                            "fireChance": 0.20,
+                        "Continental AV-1790-3": {
+                            "name": "Continental AV-1790-3",
+                            "horsepower": 800,
+                            "fireChance": 0.2,
                             "weight": 569,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 19000,
-                            "cost" : 59000
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 19000,
+                            "cost": 59000
                         }
                     },
-                    "suspensions" : {
-                        "T84E1A" : {
-                            "name" : "T84E1A",
-                            "loadLimit" : 54.83,
-                            "traverseSpeed" : 20,
-                            "weight" : 12000,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 20200
+                    "suspensions": {
+                        "T84E1A": {
+                            "name": "T84E1A",
+                            "loadLimit": 54.83,
+                            "traverseSpeed": 20,
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 20200
                         },
-                        "T84E3A" : {
-                            "name" : "T84E3A",
-                            "loadLimit" : 60.5,
-                            "traverseSpeed" : 25,
-                            "weight" : 12000,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 14500,
-                            "cost" : 38100
+                        "T84E3A": {
+                            "name": "T84E3A",
+                            "loadLimit": 60.5,
+                            "traverseSpeed": 25,
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14500,
+                            "cost": 38100
                         }
                     },
-                    "radios" : {
-                        "SCR 508" : {
-                            "name" : "SCR 508",
-                            "signalRange" : 395,
-                            "weight" : 100,
-                            "stockModule" : true,
-                            "topModule" : false,
-                            "experienceNeeded" : 0,
-                            "cost" : 21600
+                    "radios": {
+                        "SCR 508": {
+                            "name": "SCR 508",
+                            "signalRange": 395,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
                         },
-                        "SCR 528" : {
-                            "name" : "SCR 528",
-                            "signalRange" : 745,
-                            "weight" : 80,
-                            "stockModule" : false,
-                            "topModule" : true,
-                            "experienceNeeded" : 9000,
-                            "cost" : 54000
+                        "SCR 528": {
+                            "name": "SCR 528",
+                            "signalRange": 745,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
                         }
                     }
                 },
@@ -667,26 +851,341 @@
                             "cost": 0
                         }
                     }
+                },
+                "vk4502a": {
+                    "name": "VK 45.02 (P) Ausf. A",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 2,
+                    "parent": "Tiger P",
+                    "child": "VK 45.02 (P) Ausf. B",
+                    "premiumTank": false,
+                    "experienceNeeded": 90000,
+                    "cost": 2435000,
+                    "baseHitpoints": 1176,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "hull": {
+                        "frontArmor": [
+                                       120,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "weight": 40000
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "VK-4502-(A)-Turm Ausf. A",
+                            "viewRange": 380,
+                            "traverseSpeed": 30,
+                            "frontArmor": [
+                                           100,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 11200,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18500,
+                            "additionalHP": 294,
+                            "availableGuns": {
+                                "8,8 cm KwK 36 L/56": {
+                                    "name": "8,8 cm KwK 36 L/56",
+                                    "shells": [
+                                               [
+                                                132,
+                                                220
+                                                ],
+                                               [
+                                                171,
+                                                220
+                                                ],
+                                               [
+                                                44,
+                                                270
+                                                ]
+                                               ],
+                                    "rateOfFire": 9.23,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 66000
+                                },
+                                "8,8 cm KwK 43 L/71": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "shells": [
+                                               [
+                                                203,
+                                                240
+                                                ],
+                                               [
+                                                237,
+                                                240
+                                                ],
+                                               [
+                                                44,
+                                                295
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.32,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 2562,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16500,
+                                    "cost": 112180
+                                },
+                                "10,5 cm KwK 45 L/52": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "shells": [
+                                               [
+                                                200,
+                                                320
+                                                ],
+                                               [
+                                                244,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "VK-4502-(A)-Turm Ausf. F",
+                            "viewRange": 390,
+                            "traverseSpeed": 25,
+                            "frontArmor": [
+                                           185,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 13500,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15520,
+                            "cost": 33550,
+                            "additionalHP": 394,
+                            "availableGuns": {
+                                "8,8 cm KwK 36 L/56": {
+                                    "name": "8,8 cm KwK 36 L/56",
+                                    "shells": [
+                                               [
+                                                132,
+                                                220
+                                                ],
+                                               [
+                                                171,
+                                                220
+                                                ],
+                                               [
+                                                44,
+                                                270
+                                                ]
+                                               ],
+                                    "rateOfFire": 9.23,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 66000
+                                },
+                                "8,8 cm KwK 43 L/71": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "shells": [
+                                               [
+                                                203,
+                                                240
+                                                ],
+                                               [
+                                                237,
+                                                240
+                                                ],
+                                               [
+                                                44,
+                                                295
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.79,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 2562,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16500,
+                                    "cost": 112180
+                                },
+                                "10,5 cm KwK 45 L/52": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "shells": [
+                                               [
+                                                200,
+                                                320
+                                                ],
+                                               [
+                                                244,
+                                                320
+                                                ],
+                                               [
+                                                60,
+                                                420
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.94,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "2x Porsche Typ 100/1": {
+                            "name": "2x Porsche Typ 100/1",
+                            "horsepower": 600,
+                            "fireChance": 0.2,
+                            "weight": 670,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 29900
+                        },
+                        "2x Porsche Typ 100/3": {
+                            "name": "2x Porsche Typ 100/3",
+                            "horsepower": 670,
+                            "fireChance": 0.2,
+                            "weight": 720,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 12000,
+                            "cost": 39850
+                        },
+                        "Porsche Deutz Typ 180/2": {
+                            "name": "Porsche Deutz Typ 180/2",
+                            "horsepower": 840,
+                            "fireChance": 0.2,
+                            "weight": 720,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 31000,
+                            "cost": 45300
+                        }
+                    },
+                    "suspensions": {
+                        "VK-4502-(A)-Keten Ausf. A": {
+                            "name": "VK-4502-(A)-Keten Ausf. A",
+                            "loadLimit": 54.18,
+                            "traverseSpeed": 25,
+                            "weight": 7600,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16550
+                        },
+                        "VK-4502-(A)-Keten Ausf. C": {
+                            "name": "VK-4502-(A)-Keten Ausf. A",
+                            "loadLimit": 59.2,
+                            "traverseSpeed": 28,
+                            "weight": 7600,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14650,
+                            "cost": 33400
+                        }
+                    },
+                    "radios": {
+                        "FuG 7": {
+                            "name": "FuG 7",
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 8160
+                        },
+                        "FuG 12": {
+                            "name": "FuG 12",
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
+                        }
+                    }
                 }
             },
-            "tankDestroyers" : {},
-            "spgs" : {}
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier9" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier9": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         },
-        "tier10" : {
-            "lightTanks" : {},
-            "mediumTanks" : {},
-            "heavyTanks" : {},
-            "tankDestroyers" : {},
-            "spgs" : {}
+        "tier10": {
+            "lightTanks": {},
+            "mediumTanks": {},
+            "heavyTanks": {},
+            "tankDestroyers": {},
+            "spgs": {}
         }
     }
 }
-
-
