@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class TankGroup;
+
 @interface Tier : NSObject
 
-@property (nonatomic) NSMutableArray *lightTanks;
-@property (nonatomic) NSMutableArray *mediumTanks;
-@property (nonatomic) NSMutableArray *heavyTanks;
-@property (nonatomic) NSMutableArray *tankDestroyers;
-@property (nonatomic) NSMutableArray *SPGs;
+@property (nonatomic) TankGroup *lightTanks;
+@property (nonatomic) TankGroup *mediumTanks;
+@property (nonatomic) TankGroup *heavyTanks;
+@property (nonatomic) TankGroup *tankDestroyers;
+@property (nonatomic) TankGroup *SPGs;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

@@ -37,6 +37,11 @@
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
         
+        if ([dict objectForKey:@"premiumTank"]) {
+            self.parent = [dict objectForKey:@"parent"];
+            self.child = [dict objectForKey:@"child"];
+        }
+        
         // Add the hull
         self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"]];
         

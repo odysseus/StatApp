@@ -52,7 +52,124 @@
         },
         "tier8": {
             "lightTanks": {},
-            "mediumTanks": {},
+            "mediumTanks": {
+                "type59" : {
+                    "name": "Type 59",
+                    "nationality": 2,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": true,
+                    "experienceNeeded": 0,
+                    "cost": 1000000,
+                    "baseHitpoints": 1000,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 36.0,
+                    "hull": {
+                        "frontArmor": [
+                                       100,
+                                       65
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      45,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Type59 B",
+                            "viewRange": 380,
+                            "traverseSpeed": 46,
+                            "frontArmor": [
+                                           200,
+                                           60
+                                           ],
+                            "sideArmor": [
+                                          130,
+                                          60
+                                          ],
+                            "rearArmor": [
+                                          60,
+                                          60
+                                          ],
+                            "weight": 8500,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 300,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "100 mm Type 59",
+                                    "shells": [
+                                               [
+                                                181,
+                                                250
+                                                ],
+                                               [
+                                                241,
+                                                250
+                                                ],
+                                               [
+                                                50,
+                                                330
+                                                ]
+                                               ],
+                                    "rateOfFire": 6.9,
+                                    "accuracy": 0.39,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 20,
+                                    "weight": 2257,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "NORINCO 12150L7",
+                            "horsepower": 520,
+                            "fireChance": 0.12,
+                            "weight": 700,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "Type59 A",
+                            "loadLimit": 39.8,
+                            "traverseSpeed": 46,
+                            "weight": 7700,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "A-220",
+                            "signalRange": 600,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
+                }
+            },
             "heavyTanks": {
                 "tiger 2": {
                     "name": "Tiger II",
@@ -1408,6 +1525,122 @@
                             "topModule": true,
                             "experienceNeeded": 9000,
                             "cost": 54000
+                        }
+                    }
+                },
+                "fcm50t" : {
+                    "name": "FCM 50 t",
+                    "nationality": 3,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": true,
+                    "experienceNeeded": 0,
+                    "cost": 11900,
+                    "baseHitpoints": 1200,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 54.24,
+                    "hull": {
+                        "frontArmor": [
+                                       120,
+                                       30
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "FCM 50 t",
+                            "viewRange": 360,
+                            "traverseSpeed": 36,
+                            "frontArmor": [
+                                           120,
+                                           40
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          60,
+                                          10
+                                          ],
+                            "weight": 9000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 300,
+                            "availableGuns": {
+                                "90 mm DCA 45" : {
+                                    "name": "90 mm DCA 45",
+                                    "shells": [
+                                               [
+                                                212,
+                                                240
+                                                ],
+                                               [
+                                                259,
+                                                240
+                                                ],
+                                               [
+                                                45,
+                                                320
+                                                ]
+                                               ],
+                                    "rateOfFire": 8,
+                                    "accuracy": 0.36,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 17,
+                                    "weight": 2750,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "Maybach V-12 ACC": {
+                            "name": "Maybach V-12 ACC",
+                            "horsepower": 1000,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "FCM 50 t" : {
+                            "name": "FCM 50 t",
+                            "loadLimit": 57.5,
+                            "traverseSpeed": 40,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "SCR 528F" : {
+                            "name": "SCR 528F",
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
                         }
                     }
                 }

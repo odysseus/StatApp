@@ -59,12 +59,20 @@
 
 - (float)burstDamage
 {
-    return self.roundsInDrum * self.round.damage;
+    if (self.roundsInDrum) {
+        return self.roundsInDrum * self.round.damage;
+    } else {
+        return self.round.damage;
+    }
 }
 
 - (float)burstLength
 {
-    return self.roundsInDrum * self.timeBetweenShots;
+    if (self.roundsInDrum) {
+        return self.roundsInDrum * self.timeBetweenShots;
+    } else {
+        return 1;
+    }
 }
 
 @end

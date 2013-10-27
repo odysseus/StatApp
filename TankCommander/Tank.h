@@ -44,6 +44,9 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) float topWeight;
 @property (nonatomic) float gunTraverseArc;
 
+@property (nonatomic) NSString *parent;
+@property (nonatomic) NSString *child;
+
 // These arrays hold the equippable modules
 @property (nonatomic) NSMutableArray *availableTurrets;
 @property (nonatomic) NSMutableArray *availableEngines;

@@ -32,6 +32,7 @@
 		941A766C1815C7CB0072089F /* TankStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A766B1815C7CB0072089F /* TankStore.m */; };
 		941A766E1815FB620072089F /* Tanks.json in Resources */ = {isa = PBXBuildFile; fileRef = 941A766D1815FB620072089F /* Tanks.json */; };
 		948C359F1816F1C500708761 /* Tier.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C359E1816F1C500708761 /* Tier.m */; };
+		94D4729D181CEE5000B11466 /* TankGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D4729C181CEE5000B11466 /* TankGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		941A766D1815FB620072089F /* Tanks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tanks.json; sourceTree = "<group>"; };
 		948C359D1816F1C500708761 /* Tier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tier.h; sourceTree = "<group>"; };
 		948C359E1816F1C500708761 /* Tier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tier.m; sourceTree = "<group>"; };
+		94D4729B181CEE5000B11466 /* TankGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankGroup.h; sourceTree = "<group>"; };
+		94D4729C181CEE5000B11466 /* TankGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				941A766B1815C7CB0072089F /* TankStore.m */,
 				948C359D1816F1C500708761 /* Tier.h */,
 				948C359E1816F1C500708761 /* Tier.m */,
+				94D4729B181CEE5000B11466 /* TankGroup.h */,
+				94D4729C181CEE5000B11466 /* TankGroup.m */,
 				941A764C1814B8E10072089F /* Tank.h */,
 				941A764D1814B8E10072089F /* Tank.m */,
 				941A764F1814C4D40072089F /* Hull.h */,
@@ -308,6 +313,7 @@
 				941A76571814C4F70072089F /* Gun.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
 				941289C91818AC53008C69E7 /* Module.m in Sources */,
+				94D4729D181CEE5000B11466 /* TankGroup.m in Sources */,
 				941A765A1814C4FF0072089F /* Radio.m in Sources */,
 				941A76601814C5940072089F /* Engine.m in Sources */,
 				941A76631814EE260072089F /* Armor.m in Sources */,
