@@ -64,6 +64,8 @@
                     "cost": 2450000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 70.93,
                     "hull": {
                         "frontArmor": [
                                        150,
@@ -76,8 +78,7 @@
                         "rearArmor": [
                                       80,
                                       10
-                                      ],
-                        "weight": 40000
+                                      ]
                     },
                     "turrets": {
                         "Tiger II Turm Nr. 1-50": {
@@ -120,6 +121,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 8.22,
+                                    "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.9,
                                     "gunDepression": -5,
@@ -147,6 +149,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.5,
+                                    "autoloader": false,
                                     "accuracy": 0.37,
                                     "aimTime": 2.3,
                                     "weight": 3000,
@@ -172,6 +175,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.5,
+                                    "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.3,
                                     "weight": 3600,
@@ -222,6 +226,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 8.22,
+                                    "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.9,
                                     "gunDepression": -5,
@@ -249,6 +254,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.5,
+                                    "autoloader": false,
                                     "accuracy": 0.37,
                                     "aimTime": 2.3,
                                     "weight": 3000,
@@ -274,6 +280,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.5,
+                                    "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.3,
                                     "weight": 3600,
@@ -360,7 +367,7 @@
                     }
                 },
                 "t32": {
-                    "name": "t32",
+                    "name": "T32",
                     "nationality": 0,
                     "tier": 8,
                     "type": 2,
@@ -370,6 +377,7 @@
                     "baseHitpoints": 1120,
                     "gunArc": 360,
                     "crewLevel": 100,
+                    "topWeight": 57.549,
                     "hull": {
                         "frontArmor": [
                                        127,
@@ -382,8 +390,7 @@
                         "rearArmor": [
                                       51,
                                       5
-                                      ],
-                        "weight": 40000
+                                      ]
                     },
                     "turrets": {
                         "T99E2": {
@@ -426,6 +433,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 7.89,
+                                    "autoloader": false,
                                     "accuracy": 0.38,
                                     "aimTime": 2.3,
                                     "gunDepression": -10,
@@ -453,13 +461,14 @@
                                                 ]
                                                ],
                                     "rateOfFire": 4.76,
+                                    "autoloader": false,
                                     "accuracy": 0.42,
                                     "aimTime": 2.3,
                                     "gunDepression": -10,
                                     "gunElevation": 20,
                                     "weight": 2400,
                                     "stockModule": false,
-                                    "topModule": false,
+                                    "topModule": true,
                                     "experienceNeeded": 18100,
                                     "cost": 118000
                                 }
@@ -505,6 +514,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 7.89,
+                                    "autoloader": false,
                                     "accuracy": 0.38,
                                     "aimTime": 2.3,
                                     "gunDepression": -10,
@@ -532,13 +542,14 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.66,
+                                    "autoloader": false,
                                     "accuracy": 0.41,
                                     "aimTime": 2.3,
                                     "gunDepression": -10,
                                     "gunElevation": 20,
                                     "weight": 2400,
                                     "stockModule": false,
-                                    "topModule": false,
+                                    "topModule": true,
                                     "experienceNeeded": 18100,
                                     "cost": 118000
                                 }
@@ -631,6 +642,7 @@
                     "baseHitpoints": 1200,
                     "gunArc": 360,
                     "crewLevel": 100,
+                    "topWeight": 65.1,
                     "hull": {
                         "frontArmor": [
                                        102,
@@ -643,8 +655,7 @@
                         "rearArmor": [
                                       51,
                                       5
-                                      ],
-                        "weight": 40000
+                                      ]
                     },
                     "turrets": {
                         "T34T7": {
@@ -687,6 +698,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 4,
+                                    "autoloader": false,
                                     "accuracy": 0.35,
                                     "aimTime": 3.4,
                                     "gunDepression": -10,
@@ -747,6 +759,7 @@
                     "baseHitpoints": 1300,
                     "gunArc": 360,
                     "crewLevel": 100,
+                    "topWeight": 92.6,
                     "hull": {
                         "frontArmor": [
                                        120,
@@ -759,8 +772,7 @@
                         "rearArmor": [
                                       80,
                                       5
-                                      ],
-                        "weight": 40000
+                                      ]
                     },
                     "turrets": {
                         "Lowe": {
@@ -803,6 +815,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5,
+                                    "autoloader": false,
                                     "accuracy": 0.33,
                                     "aimTime": 2.9,
                                     "gunDepression": -6,
@@ -857,14 +870,15 @@
                     "nationality": 4,
                     "tier": 8,
                     "type": 2,
+                    "premiumTank": false,
                     "parent": "Tiger P",
                     "child": "VK 45.02 (P) Ausf. B",
-                    "premiumTank": false,
                     "experienceNeeded": 90000,
                     "cost": 2435000,
                     "baseHitpoints": 1176,
                     "gunArc": 360,
                     "crewLevel": 100,
+                    "topWeight": 57.0,
                     "hull": {
                         "frontArmor": [
                                        120,
@@ -877,8 +891,7 @@
                         "rearArmor": [
                                       80,
                                       5
-                                      ],
-                        "weight": 40000
+                                      ]
                     },
                     "turrets": {
                         "stock": {
@@ -921,6 +934,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 9.23,
+                                    "autoloader": false,
                                     "accuracy": 0.38,
                                     "aimTime": 2.3,
                                     "gunDepression": -6,
@@ -948,6 +962,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 7.32,
+                                    "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.9,
                                     "gunDepression": -6,
@@ -975,6 +990,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.5,
+                                    "autoloader": false,
                                     "accuracy": 0.37,
                                     "aimTime": 2.3,
                                     "gunDepression": -6,
@@ -1027,6 +1043,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 9.23,
+                                    "autoloader": false,
                                     "accuracy": 0.38,
                                     "aimTime": 2.3,
                                     "gunDepression": -6,
@@ -1054,6 +1071,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 7.79,
+                                    "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.9,
                                     "gunDepression": -6,
@@ -1081,6 +1099,7 @@
                                                 ]
                                                ],
                                     "rateOfFire": 5.94,
+                                    "autoloader": false,
                                     "accuracy": 0.37,
                                     "aimTime": 2.3,
                                     "gunDepression": -6,
@@ -1166,6 +1185,229 @@
                             "topModule": true,
                             "experienceNeeded": 7200,
                             "cost": 43200
+                        }
+                    }
+                },
+                "amx50100" : {
+                    "name": "AMX 50 100",
+                    "nationality": 3,
+                    "tier": 8,
+                    "type": 2,
+                    "parent": "AMX M4 mle. 45",
+                    "child": "AMX 50 120",
+                    "premiumTank": false,
+                    "experienceNeeded": 81000,
+                    "cost": 2552500,
+                    "baseHitpoints": 1120,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 49.1,
+                    "hull": {
+                        "frontArmor": [
+                                       90,
+                                       60
+                                       ],
+                        "sideArmor": [
+                                      35,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      30,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "AMX 50 100",
+                            "viewRange": 380,
+                            "traverseSpeed": 32,
+                            "frontArmor": [
+                                           90,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          30,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          30,
+                                          10
+                                          ],
+                            "weight": 12800,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 280,
+                            "availableGuns": {
+                                "90 mm F3" : {
+                                    "name": "90 mm F3",
+                                    "shells": [
+                                               [
+                                                170,
+                                                240
+                                                ],
+                                               [
+                                                248,
+                                                240
+                                                ],
+                                               [
+                                                45,
+                                                320
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.4,
+                                    "accuracy": 0.38,
+                                    "aimTime": 3,
+                                    "autoloader": true,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 2200,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 87000,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 50,
+                                    "timeBetweenShots": 2.5
+                                },
+                                "90 mm DCA 45" : {
+                                    "name": "90 mm DCA 45",
+                                    "shells": [
+                                               [
+                                                212,
+                                                240
+                                                ],
+                                               [
+                                                259,
+                                                240
+                                                ],
+                                               [
+                                                45,
+                                                320
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.4,
+                                    "accuracy": 0.36,
+                                    "aimTime": 3,
+                                    "autoloader": true,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 2750,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18500,
+                                    "cost": 121250,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 50,
+                                    "timeBetweenShots": 2.5
+                                },
+                                "100mm SA47" : {
+                                    "name": "100mm SA47",
+                                    "shells": [
+                                               [
+                                                232,
+                                                300
+                                                ],
+                                               [
+                                                263,
+                                                300
+                                                ],
+                                               [
+                                                50,
+                                                400
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.66,
+                                    "accuracy": 0.36,
+                                    "aimTime": 3,
+                                    "autoloader": true,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 34500,
+                                    "cost": 127550,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 50,
+                                    "timeBetweenShots": 2.5
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "Maybach HL 230" : {
+                            "name": "Maybach HL 230",
+                            "horsepower": 575,
+                            "fireChance": 0.2,
+                            "weight": 700,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 26000
+                        },
+                        "Maybach HL 230 P 45F" : {
+                            "name": "Maybach HL 230 P 45F",
+                            "horsepower": 750,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 18800,
+                            "cost": 55000
+                        },
+                        "Maybach HL 295" : {
+                            "name": "Maybach HL 295",
+                            "horsepower": 850,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24700,
+                            "cost": 78000
+                        }
+                    },
+                    "suspensions": {
+                        "AMX M4 mle. 50" : {
+                            "name": "AMX M4 mle. 50",
+                            "loadLimit": 50,
+                            "traverseSpeed": 30,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16450
+                        },
+                        "AMX 50 100" : {
+                            "name": "AMX 50 100",
+                            "loadLimit": 57,
+                            "traverseSpeed": 32,
+                            "weight": 11000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16800,
+                            "cost": 37250
+                        }
+                    },
+                    "radios": {
+                        "SCR 508": {
+                            "name": "SCR 508",
+                            "signalRange": 400,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "SCR 528F" : {
+                            "name": "SCR 528F",
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
                         }
                     }
                 }

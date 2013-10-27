@@ -11,7 +11,7 @@
 
 @implementation Gun
 
-@synthesize shells, round, rateOfFire, accuracy, aimTime;
+@synthesize shells, round, rateOfFire, accuracy, aimTime, roundsInDrum, drumReload, timeBetweenShots;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -27,6 +27,11 @@
         self.aimTime = [[dict objectForKey:@"aimTime"] floatValue];
         self.gunDepression = [[dict objectForKey:@"gunDepression"] floatValue];
         self.gunElevation = [[dict objectForKey:@"gunElevation"] floatValue];
+        if ([dict objectForKey:@"autoloader"]) {
+            self.roundsInDrum = [[dict objectForKey:@"roundsInDrum"] floatValue];
+            self.drumReload = [[dict objectForKey:@"drumReload"] floatValue];
+            self.timeBetweenShots = [[dict objectForKey:@"timeBetweenShots"] floatValue];
+        }
         [self setNormalRounds];
     }
     return self;
@@ -50,6 +55,16 @@
 - (void)setHERounds
 {
     round = shells[ShellTypeHE];
+}
+
+- (float)burstDamage
+{
+    return self.roundsInDrum * self.round.damage;
+}
+
+- (float)burstLength
+{
+    return self.roundsInDrum * self.timeBetweenShots;
 }
 
 @end

@@ -16,8 +16,8 @@
 
 @implementation Tank
 
-@synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios,
-    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc;
+@synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight,
+    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel;
 
 
 - (id)initWithDict:(NSDictionary *)dict
@@ -34,6 +34,8 @@
         self.cost = [[dict objectForKey:@"cost"] integerValue];
         self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] integerValue];
         self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
+        self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
+        self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
         
         // Add the hull
         self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"]];
@@ -84,6 +86,11 @@
             }
             [availableRadios addObject:currentRadio];
         }
+        // Finding the hull weight is a pain since it's not really available anywhere, so the variable topWeight holds
+        // the weight with all the top modules, since the top modules are automatically equipped we can subtract the
+        // weight of the individual modules from the top weight to get the hull weight
+        self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
+            self.suspension.weight - self.radio.weight - self.engine.weight;
     }
     return self;
 }

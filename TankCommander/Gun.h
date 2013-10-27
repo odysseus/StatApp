@@ -19,6 +19,10 @@
 @property (nonatomic) float aimTime;
 @property (nonatomic) float gunDepression;
 @property (nonatomic) float gunElevation;
+@property (nonatomic) BOOL autoloader;
+@property (nonatomic) float roundsInDrum;
+@property (nonatomic) float drumReload;
+@property (nonatomic) float timeBetweenShots;
 
 
 - (id)initWithDict:(NSDictionary *)dict;
@@ -28,5 +32,7 @@
 - (void)setNormalRounds;
 - (void)setGoldRounds;
 - (void)setHERounds;
+- (float)burstDamage;
+- (float)burstLength;
 
 @end

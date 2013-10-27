@@ -39,7 +39,9 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) BOOL premiumTank;
 @property (nonatomic) int experienceNeeded;
 @property (nonatomic) int cost;
+@property (nonatomic) float crewLevel;
 @property (nonatomic) int baseHitpoints;
+@property (nonatomic) float topWeight;
 @property (nonatomic) float gunTraverseArc;
 
 // These arrays hold the equippable modules

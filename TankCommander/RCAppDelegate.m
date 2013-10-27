@@ -10,6 +10,7 @@
 #import "Tank.h"
 #import "Tier.h"
 #import "TankStore.h"
+#import "Gun.h"
 
 @implementation RCAppDelegate
 
@@ -23,12 +24,12 @@
     TankStore *allTanks = [TankStore allTanks];
     [allTanks loadTanks];
     
-    Tank *tiger2 = [allTanks.tier8.heavyTanks filteredArrayUsingPredicate:
-                              [NSPredicate predicateWithFormat:@"self.name == %@", @"Tiger II"]][0];
+    Tank *tank = [allTanks.tier8.heavyTanks filteredArrayUsingPredicate:
+                              [NSPredicate predicateWithFormat:@"self.name == %@", @"AMX 50 100"]][0];
     
-    NSLog(@"%@", tiger2.gun);
-    NSLog(@"\n%@\nWeight: %0.2f\nSpecific Power: %0.2f\nDamage Per Minute: %0.0f\nReload Time: %0.2f",
-          tiger2, tiger2.weight, tiger2.specificPower, tiger2.damagePerMinute, tiger2.reloadTime);
+    NSLog(@"%@: %0.0f, %0.0f", tank.gun, tank.gun.roundsInDrum, tank.gun.burstDamage);
+    NSLog(@"\n%@\nWeight: %0.2f metric tons\nSpecific Power: %0.2f hp/ton\nDamage Per Minute: %0.0f\nReload Time: %0.2fs",
+          tank, tank.weight, tank.specificPower, tank.damagePerMinute, tank.reloadTime);
     
     return YES;
 }

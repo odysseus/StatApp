@@ -28,7 +28,8 @@
         availableGuns = [[NSMutableArray alloc] init];
         NSDictionary *gunValues = [dict objectForKey:@"availableGuns"];
         for (id key in gunValues) {
-            Gun *currentGun = [[Gun alloc] initWithDict: [gunValues objectForKey:key]];
+            NSDictionary *gunDict = [gunValues objectForKey:key];
+            Gun *currentGun = [[Gun alloc] initWithDict: gunDict];
             [availableGuns addObject:currentGun];
             if (currentGun.topModule) {
                 self.gun = currentGun;
