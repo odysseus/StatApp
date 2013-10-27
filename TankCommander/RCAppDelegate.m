@@ -27,7 +27,6 @@
     
     Tank *heavy = [allTanks.tier8.heavyTanks findTankByName:@"FCM 50 t"];
     
-    NSLog(@"%@", heavy.gun);
     NSLog(@"\n\n%@\nWeight: %0.2f metric tons\nSpecific Power: %0.2f hp/ton\nDamage Per Minute: %0.0f\nReload Time: %0.2fs\n",
           heavy, heavy.weight, heavy.specificPower, heavy.damagePerMinute, heavy.reloadTime);
     

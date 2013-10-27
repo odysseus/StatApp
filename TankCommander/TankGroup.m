@@ -35,12 +35,14 @@
 
 - (Tank *)findTankByName:(NSString *)name
 {
-    Tank *result = [group filteredArrayUsingPredicate:
-                    [NSPredicate predicateWithFormat:@"self.name == %@", name]][0];
-    if (result) {
-        return result;
+    NSArray *result = [group filteredArrayUsingPredicate:
+                    [NSPredicate predicateWithFormat:@"self.name == %@", name]];
+    if ([result count] > 0) {
+        return result[0];
     } else {
-        return [[Tank alloc] init];
+        Tank *error = [[Tank alloc] init];
+        error.name = @"Search Failed";
+        return error;
     }
 }
 
