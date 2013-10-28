@@ -61,7 +61,7 @@
                     "premiumTank": true,
                     "experienceNeeded": 0,
                     "cost": 1000000,
-                    "baseHitpoints": 1000,
+                    "baseHitpoints": 1040,
                     "gunArc": 360,
                     "crewLevel": 100,
                     "topWeight": 36.0,
@@ -82,6 +82,7 @@
                     "turrets": {
                         "stock": {
                             "name": "Type59 B",
+                            "tier": 8,
                             "viewRange": 380,
                             "traverseSpeed": 46,
                             "frontArmor": [
@@ -101,22 +102,29 @@
                             "topModule": true,
                             "experienceNeeded": 0,
                             "cost": 0,
-                            "additionalHP": 300,
+                            "additionalHP": 260,
                             "availableGuns": {
                                 "stock" : {
                                     "name": "100 mm Type 59",
+                                    "tier": 7,
                                     "shells": [
                                                [
                                                 181,
-                                                250
+                                                250,
+                                                252,
+                                                false
                                                 ],
                                                [
                                                 241,
-                                                250
+                                                250,
+                                                11,
+                                                true
                                                 ],
                                                [
                                                 50,
-                                                330
+                                                330,
+                                                252,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 6.9,
@@ -136,6 +144,7 @@
                     "engines": {
                         "stock" : {
                             "name": "NORINCO 12150L7",
+                            "tier": 8,
                             "horsepower": 520,
                             "fireChance": 0.12,
                             "weight": 700,
@@ -148,6 +157,7 @@
                     "suspensions": {
                         "stock" : {
                             "name": "Type59 A",
+                            "tier": 8,
                             "loadLimit": 39.8,
                             "traverseSpeed": 46,
                             "weight": 7700,
@@ -160,6 +170,7 @@
                     "radios": {
                         "stock": {
                             "name": "A-220",
+                            "tier": 9,
                             "signalRange": 600,
                             "weight": 40,
                             "stockModule": true,
@@ -171,315 +182,824 @@
                 }
             },
             "heavyTanks": {
-                "tiger 2": {
-                    "name": "Tiger II",
-                    "nationality": 4,
+                "amx50100" : {
+                    "name": "AMX 50 100",
+                    "nationality": 3,
                     "tier": 8,
                     "type": 2,
+                    "parent": "AMX M4 mle. 45",
+                    "child": "AMX 50 120",
                     "premiumTank": false,
-                    "experienceNeeded": 78000,
-                    "cost": 2450000,
-                    "baseHitpoints": 1200,
+                    "experienceNeeded": 81000,
+                    "cost": 2552500,
+                    "baseHitpoints": 1120,
                     "gunArc": 360,
                     "crewLevel": 100,
-                    "topWeight": 70.93,
+                    "topWeight": 49.1,
                     "hull": {
                         "frontArmor": [
-                                       150,
+                                       90,
                                        60
                                        ],
                         "sideArmor": [
-                                      80,
-                                      10
+                                      35,
+                                      5
                                       ],
                         "rearArmor": [
-                                      80,
-                                      10
+                                      30,
+                                      5
                                       ]
                     },
                     "turrets": {
-                        "Tiger II Turm Nr. 1-50": {
-                            "name": "Tiger II Turm. Nr. 1-50",
+                        "stock": {
+                            "name": "AMX 50 100",
+                            "tier": 8,
                             "viewRange": 380,
-                            "traverseSpeed": 27,
+                            "traverseSpeed": 32,
                             "frontArmor": [
-                                           100,
+                                           90,
                                            10
                                            ],
                             "sideArmor": [
-                                          80,
+                                          30,
                                           10
                                           ],
                             "rearArmor": [
-                                          80,
+                                          30,
                                           10
                                           ],
-                            "weight": 9638,
+                            "weight": 12800,
                             "stockModule": true,
-                            "topModule": false,
+                            "topModule": true,
                             "experienceNeeded": 0,
                             "cost": 0,
-                            "additionalHP": 300,
+                            "additionalHP": 280,
                             "availableGuns": {
-                                "8,8 cm KwK 43 L/71": {
-                                    "name": "8,8 cm KwK 43 L/71",
+                                "90 mm F3" : {
+                                    "name": "90 mm F3",
+                                    "tier": 7,
                                     "shells": [
                                                [
-                                                203,
-                                                240
+                                                170,
+                                                240,
+                                                255,
+                                                false
                                                 ],
                                                [
-                                                237,
-                                                240
+                                                248,
+                                                240,
+                                                12,
+                                                true
                                                 ],
                                                [
-                                                44,
-                                                295
+                                                45,
+                                                320,
+                                                255,
+                                                false
                                                 ]
                                                ],
-                                    "rateOfFire": 8.22,
-                                    "autoloader": false,
-                                    "accuracy": 0.34,
-                                    "aimTime": 2.9,
-                                    "gunDepression": -5,
-                                    "gunElevation": 17,
-                                    "weight": 2562,
+                                    "rateOfFire": 7.4,
+                                    "accuracy": 0.38,
+                                    "aimTime": 3,
+                                    "autoloader": true,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 2200,
                                     "stockModule": true,
                                     "topModule": false,
                                     "experienceNeeded": 0,
-                                    "cost": 0
+                                    "cost": 87000,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 50,
+                                    "timeBetweenShots": 2.5
                                 },
-                                "10,5 cm KwK 45 L/52": {
-                                    "name": "10,5 cm KwK 45 L/52",
+                                "90 mm DCA 45" : {
+                                    "name": "90 mm DCA 45",
+                                    "tier": 8,
                                     "shells": [
                                                [
-                                                200,
-                                                320
+                                                212,
+                                                240,
+                                                255,
+                                                false
                                                 ],
                                                [
-                                                244,
-                                                320
+                                                259,
+                                                240,
+                                                12,
+                                                true
                                                 ],
                                                [
-                                                60,
-                                                420
+                                                45,
+                                                320,
+                                                255,
+                                                false
                                                 ]
                                                ],
-                                    "rateOfFire": 5.5,
-                                    "autoloader": false,
-                                    "accuracy": 0.37,
-                                    "aimTime": 2.3,
+                                    "rateOfFire": 7.4,
+                                    "accuracy": 0.36,
+                                    "aimTime": 3,
+                                    "autoloader": true,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 2750,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18500,
+                                    "cost": 121250,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 50,
+                                    "timeBetweenShots": 2.5
+                                },
+                                "100mm SA47" : {
+                                    "name": "100mm SA47",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                232,
+                                                300,
+                                                1030,
+                                                false
+                                                ],
+                                               [
+                                                263,
+                                                300,
+                                                10,
+                                                true
+                                                ],
+                                               [
+                                                50,
+                                                400,
+                                                650,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.66,
+                                    "accuracy": 0.36,
+                                    "aimTime": 3,
+                                    "autoloader": true,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
                                     "weight": 3000,
                                     "stockModule": false,
-                                    "topModule": false,
-                                    "experienceNeeded": 16800,
-                                    "cost": 116490
-                                },
-                                "10,5 cm KwK 46 L/68": {
-                                    "name": "10,5 cm KwK 46 L/68",
-                                    "shells": [
-                                               [
-                                                225,
-                                                320
-                                                ],
-                                               [
-                                                285,
-                                                320
-                                                ],
-                                               [
-                                                60,
-                                                420
-                                                ]
-                                               ],
-                                    "rateOfFire": 5.5,
-                                    "autoloader": false,
-                                    "accuracy": 0.34,
-                                    "aimTime": 2.3,
-                                    "weight": 3600,
-                                    "stockModule": false,
                                     "topModule": true,
-                                    "experienceNeeded": 46000,
-                                    "cost": 178500
-                                }
-                            }
-                        },
-                        "Tiger II Serienturm": {
-                            "name": "Tiger II Serienturm",
-                            "viewRange": 390,
-                            "traverseSpeed": 27,
-                            "frontArmor": [
-                                           185,
-                                           10
-                                           ],
-                            "sideArmor": [
-                                          80,
-                                          10
-                                          ],
-                            "rearArmor": [
-                                          80,
-                                          10
-                                          ],
-                            "weight": 10935,
-                            "stockModule": false,
-                            "topModule": true,
-                            "experienceNeeded": 22260,
-                            "cost": 52370,
-                            "additionalHP": 400,
-                            "availableGuns": {
-                                "8,8 cm KwK 43 L/71": {
-                                    "name": "8,8 cm KwK 43 L/71",
-                                    "shells": [
-                                               [
-                                                203,
-                                                240
-                                                ],
-                                               [
-                                                237,
-                                                240
-                                                ],
-                                               [
-                                                44,
-                                                295
-                                                ]
-                                               ],
-                                    "rateOfFire": 8.22,
-                                    "autoloader": false,
-                                    "accuracy": 0.34,
-                                    "aimTime": 2.9,
-                                    "gunDepression": -5,
-                                    "gunElevation": 17,
-                                    "weight": 2562,
-                                    "stockModule": true,
-                                    "topModule": false,
-                                    "experienceNeeded": 0,
-                                    "cost": 0
-                                },
-                                "10,5 cm KwK 45 L/52": {
-                                    "name": "10,5 cm KwK 45 L/52",
-                                    "shells": [
-                                               [
-                                                200,
-                                                320
-                                                ],
-                                               [
-                                                244,
-                                                320
-                                                ],
-                                               [
-                                                60,
-                                                420
-                                                ]
-                                               ],
-                                    "rateOfFire": 5.5,
-                                    "autoloader": false,
-                                    "accuracy": 0.37,
-                                    "aimTime": 2.3,
-                                    "weight": 3000,
-                                    "stockModule": false,
-                                    "topModule": false,
-                                    "experienceNeeded": 16800,
-                                    "cost": 116490
-                                },
-                                "10,5 cm KwK 46 L/68": {
-                                    "name": "10,5 cm KwK 46 L/68",
-                                    "shells": [
-                                               [
-                                                225,
-                                                320
-                                                ],
-                                               [
-                                                285,
-                                                320
-                                                ],
-                                               [
-                                                60,
-                                                420
-                                                ]
-                                               ],
-                                    "rateOfFire": 5.5,
-                                    "autoloader": false,
-                                    "accuracy": 0.34,
-                                    "aimTime": 2.3,
-                                    "weight": 3600,
-                                    "stockModule": false,
-                                    "topModule": true,
-                                    "experienceNeeded": 46000,
-                                    "cost": 178500
+                                    "experienceNeeded": 34500,
+                                    "cost": 127550,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 50,
+                                    "timeBetweenShots": 2.5
                                 }
                             }
                         }
                     },
                     "engines": {
-                        "Maybach HL 210 TRM P45": {
-                            "name": "Maybach HL 210 TRM P45",
-                            "horsepower": 650,
+                        "Maybach HL 230" : {
+                            "name": "Maybach HL 230",
+                            "tier": 6,
+                            "horsepower": 575,
                             "fireChance": 0.2,
-                            "weight": 850,
+                            "weight": 700,
                             "stockModule": true,
                             "topModule": false,
                             "experienceNeeded": 0,
-                            "cost": 0
+                            "cost": 26000
                         },
-                        "Maybach HL 230 TRM P45": {
-                            "name": "Maybach HL 230 TRM P45",
-                            "horsepower": 700,
+                        "Maybach HL 230 P 45F" : {
+                            "name": "Maybach HL 230 P 45F",
+                            "tier": 8,
+                            "horsepower": 750,
                             "fireChance": 0.2,
-                            "weight": 1300,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 18800,
+                            "cost": 55000
+                        },
+                        "Maybach HL 295" : {
+                            "name": "Maybach HL 295",
+                            "tier": 9,
+                            "horsepower": 850,
+                            "fireChance": 0.2,
+                            "weight": 750,
                             "stockModule": false,
                             "topModule": true,
-                            "experienceNeeded": 18800,
-                            "cost": 54000
+                            "experienceNeeded": 24700,
+                            "cost": 78000
                         }
                     },
                     "suspensions": {
-                        "Tiger II Vesuchs-Serie": {
-                            "name": "Tiger II Vesuchs-Serie",
-                            "loadLimit": 69.7,
-                            "traverseSpeed": 26,
-                            "weight": 22350,
+                        "AMX M4 mle. 50" : {
+                            "name": "AMX M4 mle. 50",
+                            "tier": 7,
+                            "loadLimit": 50,
+                            "traverseSpeed": 30,
+                            "weight": 11000,
                             "stockModule": true,
                             "topModule": false,
                             "experienceNeeded": 0,
-                            "cost": 0
+                            "cost": 16450
                         },
-                        "Tiger II": {
-                            "name": "Tiger II",
-                            "loadLimit": 74,
-                            "traverseSpeed": 28,
-                            "weight": 22350,
+                        "AMX 50 100" : {
+                            "name": "AMX 50 100",
+                            "tier": 8,
+                            "loadLimit": 57,
+                            "traverseSpeed": 32,
+                            "weight": 11000,
                             "stockModule": false,
                             "topModule": true,
-                            "experienceNeeded": 16940,
-                            "cost": 37520
+                            "experienceNeeded": 16800,
+                            "cost": 37250
                         }
                     },
                     "radios": {
-                        "FuG 5": {
-                            "name": "FuG 5",
-                            "signalRange": 310,
-                            "weight": 50,
+                        "SCR 508": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 400,
+                            "weight": 100,
                             "stockModule": true,
                             "topModule": false,
                             "experienceNeeded": 0,
-                            "cost": 0
+                            "cost": 21600
                         },
-                        "FuG 7": {
-                            "name": "FuG 7",
-                            "signalRange": 415,
-                            "weight": 70,
-                            "stockModule": false,
-                            "topModule": false,
-                            "experienceNeeded": 1360,
-                            "cost": 8160
-                        },
-                        "FuG 12": {
-                            "name": "FuG 12",
-                            "signalRange": 710,
-                            "weight": 150,
+                        "SCR 528F" : {
+                            "name": "SCR 528F",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
                             "stockModule": false,
                             "topModule": true,
-                            "experienceNeeded": 7200,
-                            "cost": 43200
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "caernarvon" : {
+                    "name": "Caernarvon",
+                    "nationality": 1,
+                    "tier": 8,
+                    "type": 2,
+                    "parent": "Black Prince",
+                    "child": "Conqueror",
+                    "premiumTank": false,
+                    "experienceNeeded": 110000,
+                    "cost": 2520000,
+                    "baseHitpoints": 1200,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 60.036,
+                    "hull": {
+                        "frontArmor": [
+                                       130,
+                                       60
+                                       ],
+                        "sideArmor": [
+                                      51,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      38,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Black Prince",
+                            "tier": 7,
+                            "viewRange": 370,
+                            "traverseSpeed": 30,
+                            "frontArmor": [
+                                           152,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          95,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          95,
+                                          10
+                                          ],
+                            "weight": 10000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22500,
+                            "additionalHP": 300,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "OQF 17-pdr Gun Mk. VII",
+                                    "tier": 7,
+                                    "shells": [
+                                               [
+                                                171,
+                                                150,
+                                                175,
+                                                false
+                                                ],
+                                               [
+                                                239,
+                                                150,
+                                                8,
+                                                true
+                                                ],
+                                               [
+                                                38,
+                                                190,
+                                                75,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 13.33,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "autoloader": false,
+                                    "gunDepression": -8,
+                                    "gunElevation": 15,
+                                    "weight": 826,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 60000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "Centurion Mk. II",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 36,
+                            "frontArmor": [
+                                           165,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          112,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          90,
+                                          10
+                                          ],
+                            "weight": 10400,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14500,
+                            "cost": 31000,
+                            "additionalHP": 400,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "OQF 17-pdr Gun Mk. VII",
+                                    "tier": 7,
+                                    "shells": [
+                                               [
+                                                171,
+                                                150,
+                                                175,
+                                                false
+                                                ],
+                                               [
+                                                239,
+                                                150,
+                                                8,
+                                                true
+                                                ],
+                                               [
+                                                38,
+                                                190,
+                                                75,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 14.29,
+                                    "accuracy": 0.34,
+                                    "aimTime": 1.9,
+                                    "autoloader": false,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 826,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 60000
+                                },
+                                "second": {
+                                    "name": "OQF 20-pdr Gun Type A Barrel",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                226,
+                                                230,
+                                                680,
+                                                false
+                                                ],
+                                               [
+                                                258,
+                                                230,
+                                                11,
+                                                true
+                                                ],
+                                               [
+                                                42,
+                                                280,
+                                                170,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.5,
+                                    "accuracy": 0.33,
+                                    "aimTime": 2.3,
+                                    "autoloader": false,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1242,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16400,
+                                    "cost": 120000
+                                },
+                                "top": {
+                                    "name": "OQF 20-pdr Gun Type B Barrel",
+                                    "tier": 9,
+                                    "shells": [
+                                               [
+                                                226,
+                                                230,
+                                                680,
+                                                false
+                                                ],
+                                               [
+                                                258,
+                                                230,
+                                                11,
+                                                true
+                                                ],
+                                               [
+                                                42,
+                                                280,
+                                                170,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 7.69,
+                                    "accuracy": 0.32,
+                                    "aimTime": 1.9,
+                                    "autoloader": false,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1282,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 45000,
+                                    "cost": 180000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Rolls-Royce Meteor Mk. IVB",
+                            "tier": 5,
+                            "horsepower": 650,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16000
+                        },
+                        "second": {
+                            "name": "Rolls-Royce Meteor Mk. IVC",
+                            "tier": 9,
+                            "horsepower": 750,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 31000,
+                            "cost": 84000
+                        },
+                        "top": {
+                            "name": "Rolls-Royce Meteor M120",
+                            "tier": 9,
+                            "horsepower": 810,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 27000,
+                            "cost": 92000
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "FV221",
+                            "tier": 7,
+                            "loadLimit": 60,
+                            "traverseSpeed": 22,
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 20200
+                        },
+                        "top": {
+                            "name": "FV221A",
+                            "tier": 8,
+                            "loadLimit": 63,
+                            "traverseSpeed": 24,
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14800,
+                            "cost": 30500
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "WS No. 19 Mk. III",
+                            "tier": 8,
+                            "signalRange": 550,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22000
+                        },
+                        "second": {
+                            "name": "WS No. 22",
+                            "tier": 8,
+                            "signalRange": 700,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 4500,
+                            "cost": 25000
+                        },
+                        "top": {
+                            "name": "SR C42",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "fcm50t": {
+                    "name": "FCM 50 t",
+                    "nationality": 3,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": true,
+                    "experienceNeeded": 0,
+                    "cost": 11900,
+                    "baseHitpoints": 1200,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 54.24,
+                    "hull": {
+                        "frontArmor": [
+                                       120,
+                                       30
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "FCM 50 t",
+                            "tier": 8,
+                            "viewRange": 360,
+                            "traverseSpeed": 36,
+                            "frontArmor": [
+                                           120,
+                                           40
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          60,
+                                          10
+                                          ],
+                            "weight": 9000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 300,
+                            "availableGuns": {
+                                "90 mm DCA 45": {
+                                    "name": "90 mm DCA 45",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                212,
+                                                240,
+                                                255,
+                                                false
+                                                ],
+                                               [
+                                                259,
+                                                240,
+                                                12,
+                                                true
+                                                ],
+                                               [
+                                                45,
+                                                320,
+                                                255,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 8,
+                                    "accuracy": 0.36,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 17,
+                                    "weight": 2750,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "Maybach V-12 ACC": {
+                            "name": "Maybach V-12 ACC",
+                            "tier": 6,
+                            "horsepower": 1000,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "FCM 50 t": {
+                            "name": "FCM 50 t",
+                            "tier": 8,
+                            "loadLimit": 57.5,
+                            "traverseSpeed": 40,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "SCR 528F": {
+                            "name": "SCR 528F",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
+                },
+                "lowe": {
+                    "name": "Löwe",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 2,
+                    "premiumTank": true,
+                    "experienceNeeded": 0,
+                    "cost": 12500,
+                    "baseHitpoints": 1300,
+                    "gunArc": 360,
+                    "crewLevel": 100,
+                    "topWeight": 92.6,
+                    "hull": {
+                        "frontArmor": [
+                                       120,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "Lowe": {
+                            "name": "Löwe",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 23,
+                            "frontArmor": [
+                                           120,
+                                           60
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 15000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 330,
+                            "availableGuns": {
+                                "10,5 cm KwK46 L/70": {
+                                    "name": "10,5 cm KwK46 L/70",
+                                    "tier": 9,
+                                    "shells": [
+                                               [
+                                                234,
+                                                320,
+                                                1030,
+                                                false
+                                                ],
+                                               [
+                                                294,
+                                                320,
+                                                294,
+                                                true
+                                                ],
+                                               [
+                                                60,
+                                                420,
+                                                650,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 5,
+                                    "autoloader": false,
+                                    "accuracy": 0.33,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 3600,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "Maybach HL 234 P 30 Ausf. A": {
+                            "name": "Maybach HL 234 P 30 Ausf. A",
+                            "tier": 8,
+                            "horsepower": 800,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "Lowe": {
+                            "name": "Löwe",
+                            "tier": 8,
+                            "loadLimit": 99.85,
+                            "traverseSpeed": 24,
+                            "weight": 22000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "FuG 12A": {
+                            "name": "FuG 12A",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
                         }
                     }
                 },
@@ -512,6 +1032,7 @@
                     "turrets": {
                         "T99E2": {
                             "name": "T99E2",
+                            "tier": 7,
                             "viewRange": 380,
                             "traverseSpeed": 26,
                             "frontArmor": [
@@ -535,18 +1056,25 @@
                             "availableGuns": {
                                 "90 mm Gun T15E2": {
                                     "name": "90 mm Gun T15E2",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 170,
-                                                240
+                                                240,
+                                                255,
+                                                false
                                                 ],
                                                [
                                                 258,
-                                                240
+                                                240,
+                                                11,
+                                                true
                                                 ],
                                                [
                                                 45,
-                                                320
+                                                320,
+                                                255,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 7.89,
@@ -563,18 +1091,25 @@
                                 },
                                 "105 mm Gun T5E1": {
                                     "name": "105 mm Gun T5E1",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 198,
-                                                320
+                                                320,
+                                                1000,
+                                                false
                                                 ],
                                                [
                                                 245,
-                                                320
+                                                320,
+                                                12,
+                                                true
                                                 ],
                                                [
                                                 53,
-                                                420
+                                                420,
+                                                680,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 4.76,
@@ -593,6 +1128,7 @@
                         },
                         "T119": {
                             "name": "T119",
+                            "tier": 9,
                             "viewRange": 400,
                             "traverseSpeed": 25,
                             "frontArmor": [
@@ -616,18 +1152,25 @@
                             "availableGuns": {
                                 "90 mm Gun T15E2": {
                                     "name": "90 mm Gun T15E2",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 170,
-                                                240
+                                                240,
+                                                255,
+                                                false
                                                 ],
                                                [
                                                 258,
-                                                240
+                                                240,
+                                                11,
+                                                true
                                                 ],
                                                [
                                                 45,
-                                                320
+                                                320,
+                                                255,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 7.89,
@@ -644,18 +1187,25 @@
                                 },
                                 "105 mm Gun T5E1": {
                                     "name": "105 mm Gun T5E1",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 198,
-                                                320
+                                                320,
+                                                1000,
+                                                false
                                                 ],
                                                [
                                                 245,
-                                                320
+                                                320,
+                                                12,
+                                                true
                                                 ],
                                                [
                                                 53,
-                                                420
+                                                420,
+                                                680,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 5.66,
@@ -676,6 +1226,7 @@
                     "engines": {
                         "Ford GAZ": {
                             "name": "Ford GAZ",
+                            "tier": 7,
                             "horsepower": 720,
                             "fireChance": 0.2,
                             "weight": 556,
@@ -686,6 +1237,7 @@
                         },
                         "GMC Allison V1710-E32": {
                             "name": "GMC Allison V1710-E32",
+                            "tier": 8,
                             "horsepower": 760,
                             "fireChance": 0.2,
                             "weight": 556,
@@ -696,6 +1248,7 @@
                         },
                         "Continental AV-1790-3": {
                             "name": "Continental AV-1790-3",
+                            "tier": 8,
                             "horsepower": 800,
                             "fireChance": 0.2,
                             "weight": 569,
@@ -708,6 +1261,7 @@
                     "suspensions": {
                         "T84E1A": {
                             "name": "T84E1A",
+                            "tier": 7,
                             "loadLimit": 54.83,
                             "traverseSpeed": 20,
                             "weight": 12000,
@@ -718,6 +1272,7 @@
                         },
                         "T84E3A": {
                             "name": "T84E3A",
+                            "tier": 8,
                             "loadLimit": 60.5,
                             "traverseSpeed": 25,
                             "weight": 12000,
@@ -730,6 +1285,7 @@
                     "radios": {
                         "SCR 508": {
                             "name": "SCR 508",
+                            "tier": 6,
                             "signalRange": 395,
                             "weight": 100,
                             "stockModule": true,
@@ -739,6 +1295,7 @@
                         },
                         "SCR 528": {
                             "name": "SCR 528",
+                            "tier": 10,
                             "signalRange": 745,
                             "weight": 80,
                             "stockModule": false,
@@ -777,6 +1334,7 @@
                     "turrets": {
                         "T34T7": {
                             "name": "T34T7",
+                            "tier": 9,
                             "viewRange": 360,
                             "traverseSpeed": 18,
                             "frontArmor": [
@@ -800,18 +1358,25 @@
                             "availableGuns": {
                                 "120 mm Gun T53A1": {
                                     "name": "120 mm Gun T53A1",
+                                    "tier": 9,
                                     "shells": [
                                                [
                                                 248,
-                                                400
+                                                400,
+                                                1060,
+                                                false
                                                 ],
                                                [
                                                 297,
-                                                400
+                                                400,
+                                                12,
+                                                true
                                                 ],
                                                [
                                                 60,
-                                                515
+                                                515,
+                                                900,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 4,
@@ -832,6 +1397,7 @@
                     "engines": {
                         "Continental AV-1790-3A1": {
                             "name": "Continental AV-1790-3A1",
+                            "tier": 9,
                             "horsepower": 810,
                             "fireChance": 0.2,
                             "weight": 1057,
@@ -844,6 +1410,7 @@
                     "suspensions": {
                         "T80E3": {
                             "name": "T80E3",
+                            "tier": 8,
                             "loadLimit": 71.85,
                             "traverseSpeed": 22,
                             "weight": 10000,
@@ -856,6 +1423,7 @@
                     "radios": {
                         "SCR 528A1": {
                             "name": "SCR 528A1",
+                            "tier": 10,
                             "signalRange": 745,
                             "weight": 91,
                             "stockModule": true,
@@ -865,40 +1433,41 @@
                         }
                     }
                 },
-                "lowe": {
-                    "name": "Löwe",
+                "tiger 2": {
+                    "name": "Tiger II",
                     "nationality": 4,
                     "tier": 8,
                     "type": 2,
-                    "premiumTank": true,
-                    "experienceNeeded": 0,
-                    "cost": 12500,
-                    "baseHitpoints": 1300,
+                    "premiumTank": false,
+                    "experienceNeeded": 78000,
+                    "cost": 2450000,
+                    "baseHitpoints": 1200,
                     "gunArc": 360,
                     "crewLevel": 100,
-                    "topWeight": 92.6,
+                    "topWeight": 70.93,
                     "hull": {
                         "frontArmor": [
-                                       120,
-                                       50
+                                       150,
+                                       60
                                        ],
                         "sideArmor": [
                                       80,
-                                      5
+                                      10
                                       ],
                         "rearArmor": [
                                       80,
-                                      5
+                                      10
                                       ]
                     },
                     "turrets": {
-                        "Lowe": {
-                            "name": "Löwe",
-                            "viewRange": 400,
-                            "traverseSpeed": 23,
+                        "Tiger II Turm Nr. 1-50": {
+                            "name": "Tiger II Turm. Nr. 1-50",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 27,
                             "frontArmor": [
-                                           120,
-                                           60
+                                           100,
+                                           10
                                            ],
                             "sideArmor": [
                                           80,
@@ -908,77 +1477,322 @@
                                           80,
                                           10
                                           ],
-                            "weight": 15000,
+                            "weight": 9638,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
                             "cost": 0,
-                            "additionalHP": 330,
+                            "additionalHP": 300,
                             "availableGuns": {
-                                "10,5 cm KwK46 L/70": {
-                                    "name": "10,5 cm KwK46 L/70",
+                                "8,8 cm KwK 43 L/71": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
                                     "shells": [
                                                [
-                                                234,
-                                                320
+                                                203,
+                                                240,
+                                                252,
+                                                false
                                                 ],
                                                [
-                                                294,
-                                                320
+                                                237,
+                                                240,
+                                                11,
+                                                true
+                                                ],
+                                               [
+                                                44,
+                                                295,
+                                                252,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 8.22,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                },
+                                "10,5 cm KwK 45 L/52": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                200,
+                                                320,
+                                                1030,
+                                                false
+                                                ],
+                                               [
+                                                244,
+                                                320,
+                                                12,
+                                                true
                                                 ],
                                                [
                                                 60,
-                                                420
+                                                420,
+                                                650,
+                                                false
                                                 ]
                                                ],
-                                    "rateOfFire": 5,
+                                    "rateOfFire": 5.5,
                                     "autoloader": false,
-                                    "accuracy": 0.33,
-                                    "aimTime": 2.9,
-                                    "gunDepression": -6,
-                                    "gunElevation": 17,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                },
+                                "10,5 cm KwK 46 L/68": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "tier": 9,
+                                    "shells": [
+                                               [
+                                                225,
+                                                320,
+                                                1030,
+                                                false
+                                                ],
+                                               [
+                                                285,
+                                                320,
+                                                12,
+                                                true
+                                                ],
+                                               [
+                                                60,
+                                                420,
+                                                650,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
                                     "weight": 3600,
-                                    "stockModule": true,
+                                    "stockModule": false,
                                     "topModule": true,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
+                                }
+                            }
+                        },
+                        "Tiger II Serienturm": {
+                            "name": "Tiger II Serienturm",
+                            "tier": 9,
+                            "viewRange": 390,
+                            "traverseSpeed": 27,
+                            "frontArmor": [
+                                           185,
+                                           10
+                                           ],
+                            "sideArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "rearArmor": [
+                                          80,
+                                          10
+                                          ],
+                            "weight": 10935,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 22260,
+                            "cost": 52370,
+                            "additionalHP": 400,
+                            "availableGuns": {
+                                "8,8 cm KwK 43 L/71": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                203,
+                                                240,
+                                                252,
+                                                false
+                                                ],
+                                               [
+                                                237,
+                                                240,
+                                                11,
+                                                true
+                                                ],
+                                               [
+                                                44,
+                                                295,
+                                                252,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 8.22,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
                                     "experienceNeeded": 0,
                                     "cost": 0
+                                },
+                                "10,5 cm KwK 45 L/52": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                200,
+                                                320,
+                                                1030,
+                                                false
+                                                ],
+                                               [
+                                                244,
+                                                320,
+                                                12,
+                                                true
+                                                ],
+                                               [
+                                                60,
+                                                420,
+                                                650,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                },
+                                "10,5 cm KwK 46 L/68": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "tier": 9,
+                                    "shells": [
+                                               [
+                                                225,
+                                                320,
+                                                1030,
+                                                false
+                                                ],
+                                               [
+                                                285,
+                                                320,
+                                                12,
+                                                true
+                                                ],
+                                               [
+                                                60,
+                                                420,
+                                                650,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.5,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
                                 }
                             }
                         }
                     },
                     "engines": {
-                        "Maybach HL 234 P 30 Ausf. A": {
-                            "name": "Maybach HL 234 P 30 Ausf. A",
-                            "horsepower": 800,
+                        "Maybach HL 210 TRM P45": {
+                            "name": "Maybach HL 210 TRM P45",
+                            "tier": 7,
+                            "horsepower": 650,
                             "fireChance": 0.2,
-                            "weight": 750,
+                            "weight": 850,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
                             "cost": 0
+                        },
+                        "Maybach HL 230 TRM P45": {
+                            "name": "Maybach HL 230 TRM P45",
+                            "tier": 8,
+                            "horsepower": 700,
+                            "fireChance": 0.2,
+                            "weight": 1300,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 18800,
+                            "cost": 54000
                         }
                     },
                     "suspensions": {
-                        "Lowe": {
-                            "name": "Löwe",
-                            "loadLimit": 99.85,
-                            "traverseSpeed": 24,
-                            "weight": 22000,
+                        "Tiger II Vesuchs-Serie": {
+                            "name": "Tiger II Vesuchs-Serie",
+                            "tier": 7,
+                            "loadLimit": 69.7,
+                            "traverseSpeed": 26,
+                            "weight": 22350,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
                             "cost": 0
+                        },
+                        "Tiger II": {
+                            "name": "Tiger II",
+                            "tier": 8,
+                            "loadLimit": 74,
+                            "traverseSpeed": 28,
+                            "weight": 22350,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16940,
+                            "cost": 37520
                         }
                     },
                     "radios": {
-                        "FuG 12A": {
-                            "name": "FuG 12A",
-                            "signalRange": 710,
-                            "weight": 150,
+                        "FuG 5": {
+                            "name": "FuG 5",
+                            "tier": 3,
+                            "signalRange": 310,
+                            "weight": 50,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
                             "cost": 0
+                        },
+                        "FuG 7": {
+                            "name": "FuG 7",
+                            "tier": 6,
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1360,
+                            "cost": 8160
+                        },
+                        "FuG 12": {
+                            "name": "FuG 12",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
                         }
                     }
                 },
@@ -1013,6 +1827,7 @@
                     "turrets": {
                         "stock": {
                             "name": "VK-4502-(A)-Turm Ausf. A",
+                            "tier": 7,
                             "viewRange": 380,
                             "traverseSpeed": 30,
                             "frontArmor": [
@@ -1036,18 +1851,25 @@
                             "availableGuns": {
                                 "8,8 cm KwK 36 L/56": {
                                     "name": "8,8 cm KwK 36 L/56",
+                                    "tier": 7,
                                     "shells": [
                                                [
                                                 132,
-                                                220
+                                                220,
+                                                252,
+                                                false
                                                 ],
                                                [
                                                 171,
-                                                220
+                                                220,
+                                                8,
+                                                true
                                                 ],
                                                [
                                                 44,
-                                                270
+                                                270,
+                                                252,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 9.23,
@@ -1064,18 +1886,25 @@
                                 },
                                 "8,8 cm KwK 43 L/71": {
                                     "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 203,
-                                                240
+                                                240,
+                                                252,
+                                                false
                                                 ],
                                                [
                                                 237,
-                                                240
+                                                240,
+                                                11,
+                                                true
                                                 ],
                                                [
                                                 44,
-                                                295
+                                                295,
+                                                252,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 7.32,
@@ -1092,18 +1921,25 @@
                                 },
                                 "10,5 cm KwK 45 L/52": {
                                     "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 200,
-                                                320
+                                                320,
+                                                1030,
+                                                false
                                                 ],
                                                [
                                                 244,
-                                                320
+                                                320,
+                                                12,
+                                                true
                                                 ],
                                                [
                                                 60,
-                                                420
+                                                420,
+                                                650,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 5.5,
@@ -1122,6 +1958,7 @@
                         },
                         "top": {
                             "name": "VK-4502-(A)-Turm Ausf. F",
+                            "tier": 8,
                             "viewRange": 390,
                             "traverseSpeed": 25,
                             "frontArmor": [
@@ -1145,18 +1982,25 @@
                             "availableGuns": {
                                 "8,8 cm KwK 36 L/56": {
                                     "name": "8,8 cm KwK 36 L/56",
+                                    "tier": 7,
                                     "shells": [
                                                [
                                                 132,
-                                                220
+                                                220,
+                                                252,
+                                                false
                                                 ],
                                                [
                                                 171,
-                                                220
+                                                220,
+                                                8,
+                                                true
                                                 ],
                                                [
                                                 44,
-                                                270
+                                                270,
+                                                252,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 9.23,
@@ -1173,18 +2017,25 @@
                                 },
                                 "8,8 cm KwK 43 L/71": {
                                     "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 203,
-                                                240
+                                                240,
+                                                252,
+                                                false
                                                 ],
                                                [
                                                 237,
-                                                240
+                                                240,
+                                                11,
+                                                true
                                                 ],
                                                [
                                                 44,
-                                                295
+                                                295,
+                                                252,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 7.79,
@@ -1201,18 +2052,25 @@
                                 },
                                 "10,5 cm KwK 45 L/52": {
                                     "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
                                     "shells": [
                                                [
                                                 200,
-                                                320
+                                                320,
+                                                1030,
+                                                false
                                                 ],
                                                [
                                                 244,
-                                                320
+                                                320,
+                                                12,
+                                                true
                                                 ],
                                                [
                                                 60,
-                                                420
+                                                420,
+                                                650,
+                                                false
                                                 ]
                                                ],
                                     "rateOfFire": 5.94,
@@ -1233,6 +2091,7 @@
                     "engines": {
                         "2x Porsche Typ 100/1": {
                             "name": "2x Porsche Typ 100/1",
+                            "tier": 6,
                             "horsepower": 600,
                             "fireChance": 0.2,
                             "weight": 670,
@@ -1243,6 +2102,7 @@
                         },
                         "2x Porsche Typ 100/3": {
                             "name": "2x Porsche Typ 100/3",
+                            "tier": 7,
                             "horsepower": 670,
                             "fireChance": 0.2,
                             "weight": 720,
@@ -1253,6 +2113,7 @@
                         },
                         "Porsche Deutz Typ 180/2": {
                             "name": "Porsche Deutz Typ 180/2",
+                            "tier": 8,
                             "horsepower": 840,
                             "fireChance": 0.2,
                             "weight": 720,
@@ -1265,6 +2126,7 @@
                     "suspensions": {
                         "VK-4502-(A)-Keten Ausf. A": {
                             "name": "VK-4502-(A)-Keten Ausf. A",
+                            "tier": 7,
                             "loadLimit": 54.18,
                             "traverseSpeed": 25,
                             "weight": 7600,
@@ -1275,6 +2137,7 @@
                         },
                         "VK-4502-(A)-Keten Ausf. C": {
                             "name": "VK-4502-(A)-Keten Ausf. A",
+                            "tier": 8,
                             "loadLimit": 59.2,
                             "traverseSpeed": 28,
                             "weight": 7600,
@@ -1287,6 +2150,7 @@
                     "radios": {
                         "FuG 7": {
                             "name": "FuG 7",
+                            "tier": 6,
                             "signalRange": 415,
                             "weight": 70,
                             "stockModule": true,
@@ -1296,351 +2160,13 @@
                         },
                         "FuG 12": {
                             "name": "FuG 12",
+                            "tier": 9,
                             "signalRange": 710,
                             "weight": 150,
                             "stockModule": false,
                             "topModule": true,
                             "experienceNeeded": 7200,
                             "cost": 43200
-                        }
-                    }
-                },
-                "amx50100" : {
-                    "name": "AMX 50 100",
-                    "nationality": 3,
-                    "tier": 8,
-                    "type": 2,
-                    "parent": "AMX M4 mle. 45",
-                    "child": "AMX 50 120",
-                    "premiumTank": false,
-                    "experienceNeeded": 81000,
-                    "cost": 2552500,
-                    "baseHitpoints": 1120,
-                    "gunArc": 360,
-                    "crewLevel": 100,
-                    "topWeight": 49.1,
-                    "hull": {
-                        "frontArmor": [
-                                       90,
-                                       60
-                                       ],
-                        "sideArmor": [
-                                      35,
-                                      5
-                                      ],
-                        "rearArmor": [
-                                      30,
-                                      5
-                                      ]
-                    },
-                    "turrets": {
-                        "stock": {
-                            "name": "AMX 50 100",
-                            "viewRange": 380,
-                            "traverseSpeed": 32,
-                            "frontArmor": [
-                                           90,
-                                           10
-                                           ],
-                            "sideArmor": [
-                                          30,
-                                          10
-                                          ],
-                            "rearArmor": [
-                                          30,
-                                          10
-                                          ],
-                            "weight": 12800,
-                            "stockModule": true,
-                            "topModule": true,
-                            "experienceNeeded": 0,
-                            "cost": 0,
-                            "additionalHP": 280,
-                            "availableGuns": {
-                                "90 mm F3" : {
-                                    "name": "90 mm F3",
-                                    "shells": [
-                                               [
-                                                170,
-                                                240
-                                                ],
-                                               [
-                                                248,
-                                                240
-                                                ],
-                                               [
-                                                45,
-                                                320
-                                                ]
-                                               ],
-                                    "rateOfFire": 7.4,
-                                    "accuracy": 0.38,
-                                    "aimTime": 3,
-                                    "autoloader": true,
-                                    "gunDepression": -6,
-                                    "gunElevation": 13,
-                                    "weight": 2200,
-                                    "stockModule": true,
-                                    "topModule": false,
-                                    "experienceNeeded": 0,
-                                    "cost": 87000,
-                                    "roundsInDrum": 6,
-                                    "drumReload": 50,
-                                    "timeBetweenShots": 2.5
-                                },
-                                "90 mm DCA 45" : {
-                                    "name": "90 mm DCA 45",
-                                    "shells": [
-                                               [
-                                                212,
-                                                240
-                                                ],
-                                               [
-                                                259,
-                                                240
-                                                ],
-                                               [
-                                                45,
-                                                320
-                                                ]
-                                               ],
-                                    "rateOfFire": 7.4,
-                                    "accuracy": 0.36,
-                                    "aimTime": 3,
-                                    "autoloader": true,
-                                    "gunDepression": -6,
-                                    "gunElevation": 13,
-                                    "weight": 2750,
-                                    "stockModule": false,
-                                    "topModule": false,
-                                    "experienceNeeded": 18500,
-                                    "cost": 121250,
-                                    "roundsInDrum": 6,
-                                    "drumReload": 50,
-                                    "timeBetweenShots": 2.5
-                                },
-                                "100mm SA47" : {
-                                    "name": "100mm SA47",
-                                    "shells": [
-                                               [
-                                                232,
-                                                300
-                                                ],
-                                               [
-                                                263,
-                                                300
-                                                ],
-                                               [
-                                                50,
-                                                400
-                                                ]
-                                               ],
-                                    "rateOfFire": 5.66,
-                                    "accuracy": 0.36,
-                                    "aimTime": 3,
-                                    "autoloader": true,
-                                    "gunDepression": -6,
-                                    "gunElevation": 13,
-                                    "weight": 3000,
-                                    "stockModule": false,
-                                    "topModule": true,
-                                    "experienceNeeded": 34500,
-                                    "cost": 127550,
-                                    "roundsInDrum": 6,
-                                    "drumReload": 50,
-                                    "timeBetweenShots": 2.5
-                                }
-                            }
-                        }
-                    },
-                    "engines": {
-                        "Maybach HL 230" : {
-                            "name": "Maybach HL 230",
-                            "horsepower": 575,
-                            "fireChance": 0.2,
-                            "weight": 700,
-                            "stockModule": true,
-                            "topModule": false,
-                            "experienceNeeded": 0,
-                            "cost": 26000
-                        },
-                        "Maybach HL 230 P 45F" : {
-                            "name": "Maybach HL 230 P 45F",
-                            "horsepower": 750,
-                            "fireChance": 0.2,
-                            "weight": 750,
-                            "stockModule": false,
-                            "topModule": false,
-                            "experienceNeeded": 18800,
-                            "cost": 55000
-                        },
-                        "Maybach HL 295" : {
-                            "name": "Maybach HL 295",
-                            "horsepower": 850,
-                            "fireChance": 0.2,
-                            "weight": 750,
-                            "stockModule": false,
-                            "topModule": true,
-                            "experienceNeeded": 24700,
-                            "cost": 78000
-                        }
-                    },
-                    "suspensions": {
-                        "AMX M4 mle. 50" : {
-                            "name": "AMX M4 mle. 50",
-                            "loadLimit": 50,
-                            "traverseSpeed": 30,
-                            "weight": 11000,
-                            "stockModule": true,
-                            "topModule": false,
-                            "experienceNeeded": 0,
-                            "cost": 16450
-                        },
-                        "AMX 50 100" : {
-                            "name": "AMX 50 100",
-                            "loadLimit": 57,
-                            "traverseSpeed": 32,
-                            "weight": 11000,
-                            "stockModule": false,
-                            "topModule": true,
-                            "experienceNeeded": 16800,
-                            "cost": 37250
-                        }
-                    },
-                    "radios": {
-                        "SCR 508": {
-                            "name": "SCR 508",
-                            "signalRange": 400,
-                            "weight": 100,
-                            "stockModule": true,
-                            "topModule": false,
-                            "experienceNeeded": 0,
-                            "cost": 21600
-                        },
-                        "SCR 528F" : {
-                            "name": "SCR 528F",
-                            "signalRange": 750,
-                            "weight": 80,
-                            "stockModule": false,
-                            "topModule": true,
-                            "experienceNeeded": 9000,
-                            "cost": 54000
-                        }
-                    }
-                },
-                "fcm50t" : {
-                    "name": "FCM 50 t",
-                    "nationality": 3,
-                    "tier": 8,
-                    "type": 2,
-                    "premiumTank": true,
-                    "experienceNeeded": 0,
-                    "cost": 11900,
-                    "baseHitpoints": 1200,
-                    "gunArc": 360,
-                    "crewLevel": 100,
-                    "topWeight": 54.24,
-                    "hull": {
-                        "frontArmor": [
-                                       120,
-                                       30
-                                       ],
-                        "sideArmor": [
-                                      80,
-                                      5
-                                      ],
-                        "rearArmor": [
-                                      80,
-                                      5
-                                      ]
-                    },
-                    "turrets": {
-                        "stock": {
-                            "name": "FCM 50 t",
-                            "viewRange": 360,
-                            "traverseSpeed": 36,
-                            "frontArmor": [
-                                           120,
-                                           40
-                                           ],
-                            "sideArmor": [
-                                          80,
-                                          10
-                                          ],
-                            "rearArmor": [
-                                          60,
-                                          10
-                                          ],
-                            "weight": 9000,
-                            "stockModule": true,
-                            "topModule": true,
-                            "experienceNeeded": 0,
-                            "cost": 0,
-                            "additionalHP": 300,
-                            "availableGuns": {
-                                "90 mm DCA 45" : {
-                                    "name": "90 mm DCA 45",
-                                    "shells": [
-                                               [
-                                                212,
-                                                240
-                                                ],
-                                               [
-                                                259,
-                                                240
-                                                ],
-                                               [
-                                                45,
-                                                320
-                                                ]
-                                               ],
-                                    "rateOfFire": 8,
-                                    "accuracy": 0.36,
-                                    "aimTime": 2.3,
-                                    "gunDepression": -8,
-                                    "gunElevation": 17,
-                                    "weight": 2750,
-                                    "stockModule": true,
-                                    "topModule": true,
-                                    "experienceNeeded": 0,
-                                    "cost": 0
-                                }
-                            }
-                        }
-                    },
-                    "engines": {
-                        "Maybach V-12 ACC": {
-                            "name": "Maybach V-12 ACC",
-                            "horsepower": 1000,
-                            "fireChance": 0.2,
-                            "weight": 750,
-                            "stockModule": true,
-                            "topModule": true,
-                            "experienceNeeded": 0,
-                            "cost": 0
-                        }
-                    },
-                    "suspensions": {
-                        "FCM 50 t" : {
-                            "name": "FCM 50 t",
-                            "loadLimit": 57.5,
-                            "traverseSpeed": 40,
-                            "weight": 11000,
-                            "stockModule": true,
-                            "topModule": true,
-                            "experienceNeeded": 0,
-                            "cost": 0
-                        }
-                    },
-                    "radios": {
-                        "SCR 528F" : {
-                            "name": "SCR 528F",
-                            "signalRange": 750,
-                            "weight": 80,
-                            "stockModule": true,
-                            "topModule": true,
-                            "experienceNeeded": 0,
-                            "cost": 0
                         }
                     }
                 }

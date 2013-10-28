@@ -17,6 +17,12 @@
         self.shellType = fetchShellType(index);
         self.penetration = [arr[0] floatValue];
         self.damage = [arr[1] floatValue];
+        self.cost = [arr[2] floatValue];
+        if (arr[3]) {
+            self.shellCurrency = CurrencyTypeGold;
+        } else {
+            self.shellCurrency = CurrencyTypeSilver;
+        }
     }
     return self;
 }
