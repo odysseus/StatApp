@@ -102,15 +102,88 @@
 
 - (NSString *)description
 {
-    return name;
+    if (self.premiumTank) {
+        return [NSString stringWithFormat:@"*%@", name];
+    } else {
+        return name;
+    }
 }
+
+// Pass through properties
 
 - (Gun *)gun
 {
     return turret.gun;
 }
 
-- (int)baseHitpoints
+- (float)penetration
+{
+    return self.gun.round.penetration;
+}
+
+- (float)aimTime
+{
+    return self.gun.aimTime;
+}
+
+- (float)accuracy
+{
+    return self.gun.accuracy;
+}
+
+- (float)rateOfFire
+{
+    return self.gun.rateOfFire;
+}
+
+- (float)gunDepression
+{
+    return self.gun.gunDepression;
+}
+
+- (float)gunElevation
+{
+    return self.gun.gunElevation;
+}
+
+- (float)alphaDamage
+{
+    return self.gun.round.damage;
+}
+
+- (BOOL)autoloader
+{
+    return self.gun.autoloader;
+}
+
+- (float)roundsInDrum
+{
+    if (self.autoloader) {
+        return self.gun.roundsInDrum;
+    } else {
+        return 1.0;
+    }
+}
+
+- (float)drumReload
+{
+    if (self.autoloader) {
+        return self.gun.drumReload;
+    } else {
+        return self.reloadTime;
+    }
+}
+
+- (float)timeBetweenShots
+{
+    if (self.autoloader) {
+        return self.gun.timeBetweenShots;
+    } else {
+        return self.reloadTime;
+    }
+}
+
+- (int)hitpoints
 {
     return self.baseHitpoints + turret.additionalHP;
 }

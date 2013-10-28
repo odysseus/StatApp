@@ -29,10 +29,15 @@
 
 - (NSString *)description;
 
+- (Shell *)normalRounds;
+- (Shell *)goldRounds;
+- (Shell *)HERounds;
+
+- (float)burstDamage;
+- (float)burstLength;
+
 - (void)setNormalRounds;
 - (void)setGoldRounds;
 - (void)setHERounds;
-- (float)burstDamage;
-- (float)burstLength;
 
 @end

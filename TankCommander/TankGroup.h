@@ -18,4 +18,11 @@
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate;
 - (Tank *)findTankByName:(NSString *)name;
 
+- (NSArray *)sortTanksByKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
+- (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
+
+- (void)setAllRoundsToNormalRounds;
+- (void)setAllRoundsToGoldRounds;
+- (void)setAllRoundsToHERounds;
+
 @end

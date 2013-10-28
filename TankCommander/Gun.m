@@ -42,6 +42,21 @@
     return self.name;
 }
 
+- (Shell *)normalRounds
+{
+    return shells[0];
+}
+
+- (Shell *)goldRounds
+{
+    return shells[1];
+}
+
+- (Shell *)HERounds
+{
+    return shells[2];
+}
+
 - (void)setNormalRounds
 {
     round = shells[ShellTypeNormal];
