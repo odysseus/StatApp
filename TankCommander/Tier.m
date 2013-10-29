@@ -56,4 +56,42 @@
     return self;
 }
 
+- (TankGroup *)all
+{
+    TankGroup *allTanks = [[TankGroup alloc] init];
+    for (Tank *tank in lightTanks.group) {
+        [allTanks.group addObject:tank];
+    }
+    for (Tank *tank in mediumTanks.group) {
+        [allTanks.group addObject:tank];
+    }
+    for (Tank *tank in heavyTanks.group) {
+        [allTanks.group addObject:tank];
+    }
+    for (Tank *tank in tankDestroyers.group) {
+        [allTanks.group addObject:tank];
+    }
+    for (Tank *tank in SPGs.group) {
+        [allTanks.group addObject:tank];
+    }
+    return  allTanks;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

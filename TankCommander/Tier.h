@@ -18,6 +18,8 @@
 @property (nonatomic) TankGroup *tankDestroyers;
 @property (nonatomic) TankGroup *SPGs;
 
+- (TankGroup *)all;
+
 - (id)initWithDict:(NSDictionary *)dict;
 
 @end

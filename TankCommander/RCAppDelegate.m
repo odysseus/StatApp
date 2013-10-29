@@ -24,10 +24,10 @@
     
     TankStore *allTanks = [TankStore allTanks];
     
-    NSString *key = @"accuracy";
-    BOOL smallerIsBetter = YES;
-    NSArray *sortedList = [allTanks.tier8.heavyTanks sortedListForKey:key smallerValuesAreBetter:smallerIsBetter];
-    NSArray *percentiles = [allTanks.tier8.heavyTanks percentileValuesForKey:key smallerValuesAreBetter:smallerIsBetter];
+    NSString *key = @"specificPower";
+    BOOL smallerIsBetter = NO;
+    NSArray *sortedList = [allTanks.tier8.all sortedListForKey:key smallerValuesAreBetter:smallerIsBetter];
+    NSArray *percentiles = [allTanks.tier8.all percentileValuesForKey:key smallerValuesAreBetter:smallerIsBetter];
     
     for (int i=0; i < [sortedList count]; i++) {
         NSLog(@"%@: %0.2f", sortedList[i], [percentiles[i] floatValue]);
