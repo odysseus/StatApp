@@ -19,7 +19,7 @@
 - (Tank *)findTankByName:(NSString *)name;
 
 - (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
-- (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
+- (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)smallerIsBetter;
 - (NSArray *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
 
 - (void)setAllRoundsToNormalRounds;

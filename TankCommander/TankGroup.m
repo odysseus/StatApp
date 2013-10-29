@@ -61,12 +61,12 @@
     }
 }
 
-- (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
+- (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)smallerIsBetter
 {
-    NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];
+    NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:smallerIsBetter];
     NSMutableArray *values = [[NSMutableArray alloc] init];
     for (Tank *tank in sortedArray) {
-        [values addObject:[NSNumber numberWithFloat:tank.penetration]];
+        [values addObject:[NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]]];
     }
     NSMutableDictionary *valuesCount = [[NSMutableDictionary alloc] init];
     for (NSNumber *num in values) {
@@ -84,16 +84,23 @@
         NSUInteger valuesEqualTo = 0;
         NSUInteger valuesBelow = 0;
         for (id key in valuesCount) {
-            NSUInteger keyIntegerValue = [key integerValue];
+            float keyNumericValue = [key floatValue];
             NSUInteger numberOfKeyOccurences = [[valuesCount objectForKey:key] integerValue];
-            if (keyIntegerValue < [tankStat integerValue]) {
+            if (keyNumericValue < [tankStat floatValue]) {
                 valuesBelow += numberOfKeyOccurences;
-            } else if (keyIntegerValue == [tankStat integerValue]) {
+            } else if (keyNumericValue == [tankStat floatValue]) {
                 valuesEqualTo += numberOfKeyOccurences;
             }
         }
         float percentileForStat = (valuesBelow + (0.5 * valuesEqualTo)) / [values count];
         [percentiles addObject:[NSNumber numberWithFloat:percentileForStat]];
+    }
+    if (smallerIsBetter) {
+        for (int i=0; i < [percentiles count]; i++) {
+            float currentNumber = [percentiles[i] floatValue];
+            currentNumber = 1.00 - currentNumber;
+            percentiles[i] = [NSNumber numberWithFloat:currentNumber];
+        }
     }
     return percentiles;
 }
