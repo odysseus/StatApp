@@ -48,7 +48,7 @@
     }
 }
 
-- (NSArray *)sortTanksByKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
+- (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
 {
     @try {
         NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:key ascending:yesno];
@@ -61,9 +61,46 @@
     }
 }
 
-- (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
+- (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
 {
-    NSArray *sortedArray = [self sortTanksByKey:key smallerValuesAreBetter:yesno];
+    NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    for (Tank *tank in sortedArray) {
+        [values addObject:[NSNumber numberWithFloat:tank.penetration]];
+    }
+    NSMutableDictionary *valuesCount = [[NSMutableDictionary alloc] init];
+    for (NSNumber *num in values) {
+        NSString *numString = [num stringValue];
+        if ([valuesCount objectForKey:numString]) {
+            NSUInteger currentValue = [[valuesCount objectForKey:numString] integerValue];
+            currentValue++;
+            [valuesCount setObject:[NSNumber numberWithInt:currentValue] forKey:numString];
+        } else {
+            [valuesCount setObject:[NSNumber numberWithInt:1] forKey:numString];
+        }
+    }
+    NSMutableArray *percentiles = [[NSMutableArray alloc] init];
+    for (NSNumber *tankStat in values) {
+        NSUInteger valuesEqualTo = 0;
+        NSUInteger valuesBelow = 0;
+        for (id key in valuesCount) {
+            NSUInteger keyIntegerValue = [key integerValue];
+            NSUInteger numberOfKeyOccurences = [[valuesCount objectForKey:key] integerValue];
+            if (keyIntegerValue < [tankStat integerValue]) {
+                valuesBelow += numberOfKeyOccurences;
+            } else if (keyIntegerValue == [tankStat integerValue]) {
+                valuesEqualTo += numberOfKeyOccurences;
+            }
+        }
+        float percentileForStat = (valuesBelow + (0.5 * valuesEqualTo)) / [values count];
+        [percentiles addObject:[NSNumber numberWithFloat:percentileForStat]];
+    }
+    return percentiles;
+}
+
+- (NSArray *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
+{
+    NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];
     @try {
         NSMutableArray *stringArray = [[NSMutableArray alloc] init];
         for (int i=0; i<[sortedArray count]; i++) {
