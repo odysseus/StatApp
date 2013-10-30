@@ -36,6 +36,7 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) TankNationality nationality;
 @property (nonatomic) int tier;
 @property (nonatomic) TankType type;
+@property (nonatomic) BOOL hasTurret;
 @property (nonatomic) BOOL premiumTank;
 @property (nonatomic) int experienceNeeded;
 @property (nonatomic) int cost;

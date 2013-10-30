@@ -24,7 +24,7 @@
     
     TankStore *allTanks = [TankStore allTanks];
     
-    NSString *key = @"specificPower";
+    NSString *key = @"damagePerMinute";
     BOOL smallerIsBetter = NO;
     NSArray *sortedList = [allTanks.tier8.all sortedListForKey:key smallerValuesAreBetter:smallerIsBetter];
     NSArray *percentiles = [allTanks.tier8.all percentileValuesForKey:key smallerValuesAreBetter:smallerIsBetter];

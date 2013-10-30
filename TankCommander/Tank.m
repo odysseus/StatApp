@@ -16,7 +16,7 @@
 
 @implementation Tank
 
-@synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight,
+@synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
     availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel;
 
 
@@ -30,6 +30,7 @@
         self.tier = [[dict objectForKey:@"tier"] integerValue];
         self.type = fetchTankType([[dict objectForKey:@"type"] integerValue]);
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
+        self.hasTurret = [[dict objectForKey:@"turreted"] boolValue];
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
         self.cost = [[dict objectForKey:@"cost"] integerValue];
         self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] integerValue];
@@ -37,29 +38,31 @@
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
         
-        if ([dict objectForKey:@"premiumTank"]) {
+        if (![dict objectForKey:@"premiumTank"]) {
             self.parent = [dict objectForKey:@"parent"];
             self.child = [dict objectForKey:@"child"];
         }
         
-        // Add the hull
-        self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"]];
+        // Add the hull - init will be different depending on whether the gun is in the turret or the hull
+        self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"] forTurreted:hasTurret];
         
-        // Each of the following chunks for the module groups is functionally the same
-        // First fetch the JSON for the module group
-        NSDictionary *turretValues = [dict objectForKey:@"turrets"];
-        // Init the NSMutableArray to hold the objects
-        availableTurrets = [[NSMutableArray alloc] init];
-        // Init each object from the JSON
-        for (id key in turretValues) {
-            Turret *currentTurret = [[Turret alloc] initWithDict:[turretValues objectForKey:key]];
-            // If the module is the top module, set it to the selected
-            // module so the top modules are the default
-            if (currentTurret.topModule) {
-                self.turret = currentTurret;
+        if ([dict objectForKey:@"turrets"]) {
+            // Each of the following chunks for the module groups is functionally the same
+            // First fetch the JSON for the module group
+            NSDictionary *turretValues = [dict objectForKey:@"turrets"];
+            // Init the NSMutableArray to hold the objects
+            availableTurrets = [[NSMutableArray alloc] init];
+            // Init each object from the JSON
+            for (id key in turretValues) {
+                Turret *currentTurret = [[Turret alloc] initWithDict:[turretValues objectForKey:key]];
+                // If the module is the top module, set it to the selected
+                // module so the top modules are the default
+                if (currentTurret.topModule) {
+                    self.turret = currentTurret;
+                }
+                // Finally, add it to the module array
+                [availableTurrets addObject:currentTurret];
             }
-            // Finally, add it to the module array
-            [availableTurrets addObject:currentTurret];
         }
         
         NSDictionary *engineValues = [dict objectForKey:@"engines"];
@@ -113,7 +116,11 @@
 
 - (Gun *)gun
 {
-    return turret.gun;
+    if (hasTurret) {
+        return turret.gun;
+    } else {
+        return hull.gun;
+    }
 }
 
 - (float)penetration

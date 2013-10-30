@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class Armor;
+@class Armor, Gun;
 
 @interface Hull : NSObject
 
 @property (nonatomic) Armor *frontArmor;
 @property (nonatomic) Armor *sideArmor;
 @property (nonatomic) Armor *rearArmor;
-@property float weight;
+@property (nonatomic) float weight;
+@property (nonatomic) NSMutableArray *availableGuns;
+@property Gun *gun;
 
-- (id)initWithDict:(NSDictionary *)dict;
+- (id)initWithDict:(NSDictionary *)dict forTurreted:(BOOL)hasTurret;
 
 @end
