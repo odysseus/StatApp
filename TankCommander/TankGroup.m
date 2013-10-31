@@ -116,7 +116,7 @@
                                     i+1, currentTank.description, [[currentTank valueForKey:key] floatValue]];
             [stringArray addObject:tankString];
         }
-        NSString *final = @"";
+        NSString *final = [NSString stringWithFormat:@"\n%@:\n", key];
         for (NSString *line in stringArray) {
             final = [final stringByAppendingString:line];
         }

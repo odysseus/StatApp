@@ -3774,6 +3774,169 @@
                 }
             },
             "tankDestroyers": {
+                "t28": {
+                    "name": "T28",
+                    "nationality": 0,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "T25 AT",
+                    "child": "T95",
+                    "turreted": false,
+                    "experienceNeeded": 87000,
+                    "cost": 2580000,
+                    "baseHitpoints": 1150,
+                    "gunArc": 21,
+                    "camoValue": 18.3,
+                    "crewLevel": 100,
+                    "topWeight": 59.2,
+                    "hull": {
+                        "frontArmor": [
+                                       254,
+                                       30
+                                       ],
+                        "sideArmor": [
+                                      50,
+                                      10
+                                      ],
+                        "rearArmor": [
+                                      50,
+                                      10
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "90 mm AT Gun T15E2",
+                                "tier": 8,
+                                "shells": [
+                                           [170, 240, 255, false],
+                                           [258, 240, 11, true],
+                                           [45, 320, 255, false]
+                                           ],
+                                "rateOfFire": 8.7,
+                                "autoloader": false,
+                                "accuracy": 0.35,
+                                "aimTime": 1.7,
+                                "gunDepression": -5,
+                                "gunElevation": 20,
+                                "weight": 2050,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 111900
+                            },
+                            "second": {
+                                "name": "105 mm AT Gun T5E1",
+                                "tier": 8,
+                                "shells": [
+                                           [198, 320, 1000, false],
+                                           [245, 320, 12, true],
+                                           [53, 420, 680, false]
+                                           ],
+                                "rateOfFire": 7.79,
+                                "autoloader": false,
+                                "accuracy": 0.38,
+                                "aimTime": 1.7,
+                                "gunDepression": -5,
+                                "gunElevation": 20,
+                                "weight": 2400,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 18100,
+                                "cost": 118000
+                            },
+                            "top": {
+                                "name": "120 mm AT Gun T53",
+                                "tier": 10,
+                                "shells": [
+                                           [248, 400, 1060, false],
+                                           [297, 400, 12, true],
+                                           [60, 515, 900, false]
+                                           ],
+                                "rateOfFire": 6.59,
+                                "autoloader": false,
+                                "accuracy": 0.38,
+                                "aimTime": 2.1,
+                                "gunDepression": -5,
+                                "gunElevation": 20,
+                                "weight": 2790,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 51000,
+                                "cost": 250000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Ford GAF",
+                            "tier": 6,
+                            "horsepower": 440,
+                            "fireChance": 0.20,
+                            "weight": 569,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 25300
+                        },
+                        "top": {
+                            "name": "Ford GAFM2A1",
+                            "tier": 6,
+                            "horsepower": 510,
+                            "fireChance": 0.20,
+                            "weight": 569,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 5250,
+                            "cost": 34600
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "T28VVSS T46",
+                            "tier": 7,
+                            "loadLimit": 59.8,
+                            "traverseSpeed": 18,
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16500
+                        },
+                        "top": {
+                            "name": "T28VVSS T56",
+                            "tier": 8,
+                            "loadLimit": 62.45,
+                            "traverseSpeed": 20,
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14600,
+                            "cost": 33300
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 395,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top": {
+                            "name": "SCR 528",
+                            "tier": 10,
+                            "signalRange": 745,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 21600
+                        }
+                    }
+                },
                 "jt88": {
                     "name": "8,8 cm PaK 43 Jagdtiger",
                     "nationality": 4,

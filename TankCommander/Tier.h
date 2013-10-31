@@ -19,6 +19,7 @@
 @property (nonatomic) TankGroup *SPGs;
 
 - (TankGroup *)all;
+- (TankGroup *)allExceptSPGs;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

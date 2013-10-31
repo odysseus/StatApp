@@ -192,7 +192,11 @@
 
 - (int)hitpoints
 {
-    return self.baseHitpoints + turret.additionalHP;
+    if (self.hasTurret) {
+        return self.baseHitpoints + turret.additionalHP;
+    } else {
+        return self.baseHitpoints;
+    }
 }
 
 - (float)weight

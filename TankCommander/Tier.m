@@ -77,6 +77,24 @@
     return  allTanks;
 }
 
+- (TankGroup *)allExceptSPGs
+{
+    TankGroup *allExceptSPGs = [[TankGroup alloc] init];
+    for (Tank *tank in lightTanks.group) {
+        [allExceptSPGs.group addObject:tank];
+    }
+    for (Tank *tank in mediumTanks.group) {
+        [allExceptSPGs.group addObject:tank];
+    }
+    for (Tank *tank in heavyTanks.group) {
+        [allExceptSPGs.group addObject:tank];
+    }
+    for (Tank *tank in tankDestroyers.group) {
+        [allExceptSPGs.group addObject:tank];
+    }
+    return  allExceptSPGs;
+}
+
 @end
 
 
