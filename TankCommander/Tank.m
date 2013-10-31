@@ -37,7 +37,7 @@
         self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
-        
+                
         if (![dict objectForKey:@"premiumTank"]) {
             self.parent = [dict objectForKey:@"parent"];
             self.child = [dict objectForKey:@"child"];

@@ -17,7 +17,7 @@
 @property (nonatomic) Armor *rearArmor;
 @property (nonatomic) float weight;
 @property (nonatomic) NSMutableArray *availableGuns;
-@property Gun *gun;
+@property (nonatomic) Gun *gun;
 
 - (id)initWithDict:(NSDictionary *)dict forTurreted:(BOOL)hasTurret;
 

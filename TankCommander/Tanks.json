@@ -53,7 +53,7 @@
         "tier8": {
             "lightTanks": {},
             "mediumTanks": {
-                "type59" : {
+                "type59": {
                     "name": "Type 59",
                     "nationality": 2,
                     "tier": 8,
@@ -64,21 +64,22 @@
                     "cost": 1000000,
                     "baseHitpoints": 1040,
                     "gunArc": 360,
+                    "camoValue": 16,
                     "crewLevel": 100,
-                    "topWeight": 36.0,
+                    "topWeight": 36,
                     "hull": {
                         "frontArmor": [
-                                       100,
-                                       65
-                                       ],
+                            100,
+                            65
+                        ],
                         "sideArmor": [
-                                      80,
-                                      5
-                                      ],
+                            80,
+                            5
+                        ],
                         "rearArmor": [
-                                      45,
-                                      5
-                                      ]
+                            45,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -87,17 +88,17 @@
                             "viewRange": 380,
                             "traverseSpeed": 46,
                             "frontArmor": [
-                                           200,
-                                           60
-                                           ],
+                                200,
+                                60
+                            ],
                             "sideArmor": [
-                                          130,
-                                          60
-                                          ],
+                                130,
+                                60
+                            ],
                             "rearArmor": [
-                                          60,
-                                          60
-                                          ],
+                                60,
+                                60
+                            ],
                             "weight": 8500,
                             "stockModule": true,
                             "topModule": true,
@@ -105,29 +106,29 @@
                             "cost": 0,
                             "additionalHP": 260,
                             "availableGuns": {
-                                "stock" : {
+                                "stock": {
                                     "name": "100 mm Type 59",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                181,
-                                                250,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                241,
-                                                250,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                50,
-                                                330,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            181,
+                                            250,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            241,
+                                            250,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            50,
+                                            330,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 6.9,
                                     "accuracy": 0.39,
                                     "aimTime": 2.9,
@@ -143,7 +144,7 @@
                         }
                     },
                     "engines": {
-                        "stock" : {
+                        "stock": {
                             "name": "NORINCO 12150L7",
                             "tier": 8,
                             "horsepower": 520,
@@ -156,7 +157,7 @@
                         }
                     },
                     "suspensions": {
-                        "stock" : {
+                        "stock": {
                             "name": "Type59 A",
                             "tier": 8,
                             "loadLimit": 39.8,
@@ -194,12 +195,22 @@
                     "cost": 2600000,
                     "baseHitpoints": 1160,
                     "gunArc": 360,
+                    "camoValue": 6.6,
                     "crewLevel": 100,
                     "topWeight": 50.47,
                     "hull": {
-                        "frontArmor": [120, 65],
-                        "sideArmor": [90, 5],
-                        "rearArmor": [60, 5]
+                        "frontArmor": [
+                            120,
+                            65
+                        ],
+                        "sideArmor": [
+                            90,
+                            5
+                        ],
+                        "rearArmor": [
+                            60,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -207,9 +218,18 @@
                             "tier": 7,
                             "viewRange": 350,
                             "traverseSpeed": 28,
-                            "frontArmor": [130, 45],
-                            "sideArmor": [90, 10],
-                            "rearArmor": [90, 5],
+                            "frontArmor": [
+                                130,
+                                45
+                            ],
+                            "sideArmor": [
+                                90,
+                                10
+                            ],
+                            "rearArmor": [
+                                90,
+                                5
+                            ],
                             "weight": 7000,
                             "stockModule": true,
                             "topModule": false,
@@ -221,10 +241,25 @@
                                     "name": "122 mm 37-122JT",
                                     "tier": 8,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 250, 390, 14, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            250,
+                                            390,
+                                            14,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.29,
                                     "autoloader": false,
                                     "accuracy": 0.48,
@@ -241,10 +276,25 @@
                                     "name": "122 mm D-25T",
                                     "tier": 8,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 250, 390, 14, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            250,
+                                            390,
+                                            14,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.8,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -264,9 +314,18 @@
                             "tier": 8,
                             "viewRange": 380,
                             "traverseSpeed": 28,
-                            "frontArmor": [201, 60],
-                            "sideArmor": [148, 30],
-                            "rearArmor": [50, 25],
+                            "frontArmor": [
+                                201,
+                                60
+                            ],
+                            "sideArmor": [
+                                148,
+                                30
+                            ],
+                            "rearArmor": [
+                                50,
+                                25
+                            ],
                             "weight": 11000,
                             "stockModule": false,
                             "topModule": true,
@@ -278,10 +337,25 @@
                                     "name": "122 mm 37-122JT",
                                     "tier": 8,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 250, 390, 14, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            250,
+                                            390,
+                                            14,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.68,
                                     "autoloader": false,
                                     "accuracy": 0.48,
@@ -298,10 +372,25 @@
                                     "name": "122 mm D-25T",
                                     "tier": 8,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 250, 390, 14, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            250,
+                                            390,
+                                            14,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -318,10 +407,25 @@
                                     "name": "100 mm 62-100T",
                                     "tier": 9,
                                     "shells": [
-                                               [ 215, 320, 1050, false ],
-                                               [ 265, 320, 10, true ],
-                                               [ 50, 420, 750, false ]
-                                               ],
+                                        [
+                                            215,
+                                            320,
+                                            1050,
+                                            false
+                                        ],
+                                        [
+                                            265,
+                                            320,
+                                            10,
+                                            true
+                                        ],
+                                        [
+                                            50,
+                                            420,
+                                            750,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 6,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -419,12 +523,22 @@
                     "cost": 12250,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "camoValue": 6.6,
                     "crewLevel": 100,
-                    "topWeight": 46.0,
+                    "topWeight": 46,
                     "hull": {
-                        "frontArmor": [ 120, 55 ],
-                        "sideArmor": [ 80, 10 ],
-                        "rearArmor": [ 60, 10 ]
+                        "frontArmor": [
+                            120,
+                            55
+                        ],
+                        "sideArmor": [
+                            80,
+                            10
+                        ],
+                        "rearArmor": [
+                            60,
+                            10
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -432,9 +546,18 @@
                             "tier": 8,
                             "viewRange": 380,
                             "traverseSpeed": 26,
-                            "frontArmor": [ 240, 30 ],
-                            "sideArmor": [ 130, 30 ],
-                            "rearArmor": [ 60, 30 ],
+                            "frontArmor": [
+                                240,
+                                30
+                            ],
+                            "sideArmor": [
+                                130,
+                                30
+                            ],
+                            "rearArmor": [
+                                60,
+                                30
+                            ],
                             "weight": 12000,
                             "stockModule": true,
                             "topModule": true,
@@ -446,10 +569,25 @@
                                     "name": "122 mm D-25TA",
                                     "tier": 8,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 250, 390, 14, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            250,
+                                            390,
+                                            14,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.55,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -504,7 +642,7 @@
                         }
                     }
                 },
-                "amx50100" : {
+                "amx50100": {
                     "name": "AMX 50 100",
                     "nationality": 3,
                     "tier": 8,
@@ -517,21 +655,22 @@
                     "cost": 2552500,
                     "baseHitpoints": 1120,
                     "gunArc": 360,
+                    "camoValue": 5.7,
                     "crewLevel": 100,
                     "topWeight": 49.1,
                     "hull": {
                         "frontArmor": [
-                                       90,
-                                       60
-                                       ],
+                            90,
+                            60
+                        ],
                         "sideArmor": [
-                                      35,
-                                      5
-                                      ],
+                            35,
+                            5
+                        ],
                         "rearArmor": [
-                                      30,
-                                      5
-                                      ]
+                            30,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -540,17 +679,17 @@
                             "viewRange": 380,
                             "traverseSpeed": 32,
                             "frontArmor": [
-                                           90,
-                                           10
-                                           ],
+                                90,
+                                10
+                            ],
                             "sideArmor": [
-                                          30,
-                                          10
-                                          ],
+                                30,
+                                10
+                            ],
                             "rearArmor": [
-                                          30,
-                                          10
-                                          ],
+                                30,
+                                10
+                            ],
                             "weight": 12800,
                             "stockModule": true,
                             "topModule": true,
@@ -558,29 +697,29 @@
                             "cost": 0,
                             "additionalHP": 280,
                             "availableGuns": {
-                                "90 mm F3" : {
+                                "90 mm F3": {
                                     "name": "90 mm F3",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                170,
-                                                240,
-                                                255,
-                                                false
-                                                ],
-                                               [
-                                                248,
-                                                240,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                45,
-                                                320,
-                                                255,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            170,
+                                            240,
+                                            255,
+                                            false
+                                        ],
+                                        [
+                                            248,
+                                            240,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            45,
+                                            320,
+                                            255,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.4,
                                     "accuracy": 0.38,
                                     "aimTime": 3,
@@ -596,29 +735,29 @@
                                     "drumReload": 50,
                                     "timeBetweenShots": 2.5
                                 },
-                                "90 mm DCA 45" : {
+                                "90 mm DCA 45": {
                                     "name": "90 mm DCA 45",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                212,
-                                                240,
-                                                255,
-                                                false
-                                                ],
-                                               [
-                                                259,
-                                                240,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                45,
-                                                320,
-                                                255,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            212,
+                                            240,
+                                            255,
+                                            false
+                                        ],
+                                        [
+                                            259,
+                                            240,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            45,
+                                            320,
+                                            255,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.4,
                                     "accuracy": 0.36,
                                     "aimTime": 3,
@@ -634,29 +773,29 @@
                                     "drumReload": 50,
                                     "timeBetweenShots": 2.5
                                 },
-                                "100mm SA47" : {
+                                "100mm SA47": {
                                     "name": "100mm SA47",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                232,
-                                                300,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                263,
-                                                300,
-                                                10,
-                                                true
-                                                ],
-                                               [
-                                                50,
-                                                400,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            232,
+                                            300,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            263,
+                                            300,
+                                            10,
+                                            true
+                                        ],
+                                        [
+                                            50,
+                                            400,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.66,
                                     "accuracy": 0.36,
                                     "aimTime": 3,
@@ -676,7 +815,7 @@
                         }
                     },
                     "engines": {
-                        "Maybach HL 230" : {
+                        "Maybach HL 230": {
                             "name": "Maybach HL 230",
                             "tier": 6,
                             "horsepower": 575,
@@ -687,7 +826,7 @@
                             "experienceNeeded": 0,
                             "cost": 26000
                         },
-                        "Maybach HL 230 P 45F" : {
+                        "Maybach HL 230 P 45F": {
                             "name": "Maybach HL 230 P 45F",
                             "tier": 8,
                             "horsepower": 750,
@@ -698,7 +837,7 @@
                             "experienceNeeded": 18800,
                             "cost": 55000
                         },
-                        "Maybach HL 295" : {
+                        "Maybach HL 295": {
                             "name": "Maybach HL 295",
                             "tier": 9,
                             "horsepower": 850,
@@ -711,7 +850,7 @@
                         }
                     },
                     "suspensions": {
-                        "AMX M4 mle. 50" : {
+                        "AMX M4 mle. 50": {
                             "name": "AMX M4 mle. 50",
                             "tier": 7,
                             "loadLimit": 50,
@@ -722,7 +861,7 @@
                             "experienceNeeded": 0,
                             "cost": 16450
                         },
-                        "AMX 50 100" : {
+                        "AMX 50 100": {
                             "name": "AMX 50 100",
                             "tier": 8,
                             "loadLimit": 57,
@@ -745,7 +884,7 @@
                             "experienceNeeded": 0,
                             "cost": 21600
                         },
-                        "SCR 528F" : {
+                        "SCR 528F": {
                             "name": "SCR 528F",
                             "tier": 10,
                             "signalRange": 750,
@@ -757,7 +896,7 @@
                         }
                     }
                 },
-                "caernarvon" : {
+                "caernarvon": {
                     "name": "Caernarvon",
                     "nationality": 1,
                     "tier": 8,
@@ -770,21 +909,22 @@
                     "cost": 2520000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "camoValue": 5.4,
                     "crewLevel": 100,
                     "topWeight": 60.036,
                     "hull": {
                         "frontArmor": [
-                                       130,
-                                       60
-                                       ],
+                            130,
+                            60
+                        ],
                         "sideArmor": [
-                                      51,
-                                      5
-                                      ],
+                            51,
+                            5
+                        ],
                         "rearArmor": [
-                                      38,
-                                      5
-                                      ]
+                            38,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -793,17 +933,17 @@
                             "viewRange": 370,
                             "traverseSpeed": 30,
                             "frontArmor": [
-                                           152,
-                                           10
-                                           ],
+                                152,
+                                10
+                            ],
                             "sideArmor": [
-                                          95,
-                                          10
-                                          ],
+                                95,
+                                10
+                            ],
                             "rearArmor": [
-                                          95,
-                                          10
-                                          ],
+                                95,
+                                10
+                            ],
                             "weight": 10000,
                             "stockModule": true,
                             "topModule": false,
@@ -811,29 +951,29 @@
                             "cost": 22500,
                             "additionalHP": 300,
                             "availableGuns": {
-                                "stock" : {
+                                "stock": {
                                     "name": "OQF 17-pdr Gun Mk. VII",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                171,
-                                                150,
-                                                175,
-                                                false
-                                                ],
-                                               [
-                                                239,
-                                                150,
-                                                8,
-                                                true
-                                                ],
-                                               [
-                                                38,
-                                                190,
-                                                75,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            171,
+                                            150,
+                                            175,
+                                            false
+                                        ],
+                                        [
+                                            239,
+                                            150,
+                                            8,
+                                            true
+                                        ],
+                                        [
+                                            38,
+                                            190,
+                                            75,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 13.33,
                                     "accuracy": 0.34,
                                     "aimTime": 2.3,
@@ -854,17 +994,17 @@
                             "viewRange": 400,
                             "traverseSpeed": 36,
                             "frontArmor": [
-                                           165,
-                                           10
-                                           ],
+                                165,
+                                10
+                            ],
                             "sideArmor": [
-                                          112,
-                                          10
-                                          ],
+                                112,
+                                10
+                            ],
                             "rearArmor": [
-                                          90,
-                                          10
-                                          ],
+                                90,
+                                10
+                            ],
                             "weight": 10400,
                             "stockModule": false,
                             "topModule": true,
@@ -872,29 +1012,29 @@
                             "cost": 31000,
                             "additionalHP": 400,
                             "availableGuns": {
-                                "stock" : {
+                                "stock": {
                                     "name": "OQF 17-pdr Gun Mk. VII",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                171,
-                                                150,
-                                                175,
-                                                false
-                                                ],
-                                               [
-                                                239,
-                                                150,
-                                                8,
-                                                true
-                                                ],
-                                               [
-                                                38,
-                                                190,
-                                                75,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            171,
+                                            150,
+                                            175,
+                                            false
+                                        ],
+                                        [
+                                            239,
+                                            150,
+                                            8,
+                                            true
+                                        ],
+                                        [
+                                            38,
+                                            190,
+                                            75,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 14.29,
                                     "accuracy": 0.34,
                                     "aimTime": 1.9,
@@ -911,25 +1051,25 @@
                                     "name": "OQF 20-pdr Gun Type A Barrel",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                226,
-                                                230,
-                                                680,
-                                                false
-                                                ],
-                                               [
-                                                258,
-                                                230,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                42,
-                                                280,
-                                                170,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            226,
+                                            230,
+                                            680,
+                                            false
+                                        ],
+                                        [
+                                            258,
+                                            230,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            42,
+                                            280,
+                                            170,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.5,
                                     "accuracy": 0.33,
                                     "aimTime": 2.3,
@@ -946,25 +1086,25 @@
                                     "name": "OQF 20-pdr Gun Type B Barrel",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                226,
-                                                230,
-                                                680,
-                                                false
-                                                ],
-                                               [
-                                                258,
-                                                230,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                42,
-                                                280,
-                                                170,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            226,
+                                            230,
+                                            680,
+                                            false
+                                        ],
+                                        [
+                                            258,
+                                            230,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            42,
+                                            280,
+                                            170,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.69,
                                     "accuracy": 0.32,
                                     "aimTime": 1.9,
@@ -1016,7 +1156,7 @@
                         }
                     },
                     "suspensions": {
-                        "stock" : {
+                        "stock": {
                             "name": "FV221",
                             "tier": 7,
                             "loadLimit": 60,
@@ -1083,21 +1223,22 @@
                     "cost": 11900,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "camoValue": 4.6,
                     "crewLevel": 100,
                     "topWeight": 54.24,
                     "hull": {
                         "frontArmor": [
-                                       120,
-                                       30
-                                       ],
+                            120,
+                            30
+                        ],
                         "sideArmor": [
-                                      80,
-                                      5
-                                      ],
+                            80,
+                            5
+                        ],
                         "rearArmor": [
-                                      80,
-                                      5
-                                      ]
+                            80,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -1106,17 +1247,17 @@
                             "viewRange": 360,
                             "traverseSpeed": 36,
                             "frontArmor": [
-                                           120,
-                                           40
-                                           ],
+                                120,
+                                40
+                            ],
                             "sideArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "rearArmor": [
-                                          60,
-                                          10
-                                          ],
+                                60,
+                                10
+                            ],
                             "weight": 9000,
                             "stockModule": true,
                             "topModule": true,
@@ -1128,25 +1269,25 @@
                                     "name": "90 mm DCA 45",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                212,
-                                                240,
-                                                255,
-                                                false
-                                                ],
-                                               [
-                                                259,
-                                                240,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                45,
-                                                320,
-                                                255,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            212,
+                                            240,
+                                            255,
+                                            false
+                                        ],
+                                        [
+                                            259,
+                                            240,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            45,
+                                            320,
+                                            255,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 8,
                                     "accuracy": 0.36,
                                     "aimTime": 2.3,
@@ -1200,7 +1341,7 @@
                         }
                     }
                 },
-                "is3" : {
+                "is3": {
                     "name": "IS-3",
                     "nationality": 6,
                     "tier": 8,
@@ -1211,21 +1352,22 @@
                     "cost": 2568500,
                     "baseHitpoints": 1160,
                     "gunArc": 360,
+                    "camoValue": 7.1,
                     "crewLevel": 100,
                     "topWeight": 49.095,
                     "hull": {
                         "frontArmor": [
-                                       110,
-                                       60
-                                       ],
+                            110,
+                            60
+                        ],
                         "sideArmor": [
-                                      90,
-                                      5
-                                      ],
+                            90,
+                            5
+                        ],
                         "rearArmor": [
-                                      60,
-                                      5
-                                      ]
+                            60,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -1234,17 +1376,17 @@
                             "viewRange": 330,
                             "traverseSpeed": 28,
                             "frontArmor": [
-                                           150,
-                                           45
-                                           ],
+                                150,
+                                45
+                            ],
                             "sideArmor": [
-                                          90,
-                                          45
-                                          ],
+                                90,
+                                45
+                            ],
                             "rearArmor": [
-                                          60,
-                                          45
-                                          ],
+                                60,
+                                45
+                            ],
                             "weight": 11200,
                             "stockModule": true,
                             "topModule": false,
@@ -1256,25 +1398,25 @@
                                     "name": "100 mm D10T",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                175,
-                                                250,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                235,
-                                                250,
-                                                10,
-                                                true
-                                                ],
-                                               [
-                                                50,
-                                                330,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            250,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            235,
+                                            250,
+                                            10,
+                                            true
+                                        ],
+                                        [
+                                            50,
+                                            330,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 6.82,
                                     "autoloader": false,
                                     "accuracy": 0.42,
@@ -1291,25 +1433,25 @@
                                     "name": "122 mm D-2-5T",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.08,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1326,25 +1468,25 @@
                                     "name": "122 mm D-25T",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.88,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1361,25 +1503,25 @@
                                     "name": "122 mm BL-9",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                225,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                265,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                68,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            225,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            265,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            68,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.51,
                                     "autoloader": false,
                                     "accuracy": 0.4,
@@ -1400,17 +1542,17 @@
                             "viewRange": 350,
                             "traverseSpeed": 28,
                             "frontArmor": [
-                                           220,
-                                           45
-                                           ],
+                                220,
+                                45
+                            ],
                             "sideArmor": [
-                                          220,
-                                          45
-                                          ],
+                                220,
+                                45
+                            ],
                             "rearArmor": [
-                                          220,
-                                          45
-                                          ],
+                                220,
+                                45
+                            ],
                             "weight": 11500,
                             "stockModule": false,
                             "topModule": true,
@@ -1422,25 +1564,25 @@
                                     "name": "100 mm D10T",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                175,
-                                                250,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                235,
-                                                250,
-                                                10,
-                                                true
-                                                ],
-                                               [
-                                                50,
-                                                330,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            250,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            235,
+                                            250,
+                                            10,
+                                            true
+                                        ],
+                                        [
+                                            50,
+                                            330,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 6.82,
                                     "autoloader": false,
                                     "accuracy": 0.42,
@@ -1457,25 +1599,25 @@
                                     "name": "122 mm D-2-5T",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.08,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1492,25 +1634,25 @@
                                     "name": "122 mm D-25T",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.88,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1527,25 +1669,25 @@
                                     "name": "122 mm BL-9",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                225,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                265,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                68,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            225,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            265,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            68,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.51,
                                     "autoloader": false,
                                     "accuracy": 0.4,
@@ -1611,26 +1753,6 @@
                     },
                     "radios": {
                         "stock": {
-                            "name": "10RK",
-                            "tier": 7,
-                            "signalRange": 440,
-                            "weight": 100,
-                            "stockModule": true,
-                            "topModule": false,
-                            "experienceNeeded": 0,
-                            "cost": 18600
-                        },
-                        "stock": {
-                            "name": "12RT",
-                            "tier": 9,
-                            "signalRange": 625,
-                            "weight": 110,
-                            "stockModule": false,
-                            "topModule": false,
-                            "experienceNeeded": 5600,
-                            "cost": 33600
-                        },
-                        "stock": {
                             "name": "R-113",
                             "tier": 10,
                             "signalRange": 730,
@@ -1642,7 +1764,7 @@
                         }
                     }
                 },
-                "is6" : {
+                "is6": {
                     "name": "IS-6",
                     "nationality": 6,
                     "tier": 8,
@@ -1653,21 +1775,22 @@
                     "cost": 11800,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "camoValue": 7.1,
                     "crewLevel": 100,
                     "topWeight": 51.5,
                     "hull": {
                         "frontArmor": [
-                                       100,
-                                       60
-                                       ],
+                            100,
+                            60
+                        ],
                         "sideArmor": [
-                                      100,
-                                      45
-                                      ],
+                            100,
+                            45
+                        ],
                         "rearArmor": [
-                                      60,
-                                      45
-                                      ]
+                            60,
+                            45
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -1676,17 +1799,17 @@
                             "viewRange": 350,
                             "traverseSpeed": 24,
                             "frontArmor": [
-                                           150,
-                                           15
-                                           ],
+                                150,
+                                15
+                            ],
                             "sideArmor": [
-                                          150,
-                                          15
-                                          ],
+                                150,
+                                15
+                            ],
                             "rearArmor": [
-                                          100,
-                                          15
-                                          ],
+                                100,
+                                15
+                            ],
                             "weight": 12500,
                             "stockModule": true,
                             "topModule": true,
@@ -1698,25 +1821,25 @@
                                     "name": "122 mm D-30",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.13,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1782,21 +1905,22 @@
                     "cost": 2430000,
                     "baseHitpoints": 1280,
                     "gunArc": 360,
+                    "camoValue": 2.3,
                     "crewLevel": 100,
                     "topWeight": 106.695,
                     "hull": {
                         "frontArmor": [
-                                       180,
-                                       50
-                                       ],
+                            180,
+                            50
+                        ],
                         "sideArmor": [
-                                      150,
-                                      5
-                                      ],
+                            150,
+                            5
+                        ],
                         "rearArmor": [
-                                      90,
-                                      5
-                                      ]
+                            90,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -1805,17 +1929,17 @@
                             "viewRange": 330,
                             "traverseSpeed": 20,
                             "frontArmor": [
-                                           180,
-                                           30
-                                           ],
+                                180,
+                                30
+                            ],
                             "sideArmor": [
-                                          130,
-                                          30
-                                          ],
+                                130,
+                                30
+                            ],
                             "rearArmor": [
-                                          110,
-                                          5
-                                          ],
+                                110,
+                                5
+                            ],
                             "weight": 15400,
                             "stockModule": true,
                             "topModule": false,
@@ -1827,10 +1951,25 @@
                                     "name": "107 mm ZiS-6",
                                     "tier": 7,
                                     "shells": [
-                                               [ 167, 300, 270, false ],
-                                               [ 219, 300, 11, true ],
-                                               [ 54, 360, 280, false]
-                                               ],
+                                        [
+                                            167,
+                                            300,
+                                            270,
+                                            false
+                                        ],
+                                        [
+                                            219,
+                                            300,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            54,
+                                            360,
+                                            280,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 6.45,
                                     "autoloader": false,
                                     "accuracy": 0.45,
@@ -1847,25 +1986,25 @@
                                     "name": "122 mm D-2-5T",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.08,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1882,25 +2021,25 @@
                                     "name": "122 mm D-25T",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                175,
-                                                390,
-                                                1025,
-                                                false
-                                                ],
-                                               [
-                                                217,
-                                                390,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                61,
-                                                465,
-                                                608,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.88,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1917,10 +2056,25 @@
                                     "name": "107 mm ZiS-24",
                                     "tier": 9,
                                     "shells": [
-                                               [ 227, 320, 1010, false],
-                                               [ 289, 320, 10, true],
-                                               [ 62, 420, 659, false]
-                                               ],
+                                        [
+                                            227,
+                                            320,
+                                            1010,
+                                            false
+                                        ],
+                                        [
+                                            289,
+                                            320,
+                                            10,
+                                            true
+                                        ],
+                                        [
+                                            62,
+                                            420,
+                                            659,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.26,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -1940,9 +2094,18 @@
                             "tier": 8,
                             "viewRange": 350,
                             "traverseSpeed": 28,
-                            "frontArmor": [180, 30],
-                            "sideArmor": [150, 30],
-                            "rearArmor": [140, 5],
+                            "frontArmor": [
+                                180,
+                                30
+                            ],
+                            "sideArmor": [
+                                150,
+                                30
+                            ],
+                            "rearArmor": [
+                                140,
+                                5
+                            ],
                             "weight": 24000,
                             "stockModule": false,
                             "topModule": true,
@@ -1954,10 +2117,25 @@
                                     "name": "107 mm ZiS-6",
                                     "tier": 7,
                                     "shells": [
-                                               [ 167, 300, 270, false ],
-                                               [ 219, 300, 11, true ],
-                                               [ 54, 360, 280, false]
-                                               ],
+                                        [
+                                            167,
+                                            300,
+                                            270,
+                                            false
+                                        ],
+                                        [
+                                            219,
+                                            300,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            54,
+                                            360,
+                                            280,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 6.67,
                                     "autoloader": false,
                                     "accuracy": 0.45,
@@ -1974,10 +2152,25 @@
                                     "name": "122 mm D-2-5T",
                                     "tier": 7,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 217, 390, 12, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.17,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -1994,10 +2187,25 @@
                                     "name": "122 mm D-25T",
                                     "tier": 8,
                                     "shells": [
-                                               [ 175, 390, 1025, false ],
-                                               [ 217, 390, 12, true ],
-                                               [ 61, 465, 608, false ]
-                                               ],
+                                        [
+                                            175,
+                                            390,
+                                            1025,
+                                            false
+                                        ],
+                                        [
+                                            217,
+                                            390,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            61,
+                                            465,
+                                            608,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.96,
                                     "autoloader": false,
                                     "accuracy": 0.46,
@@ -2014,10 +2222,25 @@
                                     "name": "107 mm ZiS-24",
                                     "tier": 9,
                                     "shells": [
-                                               [ 227, 320, 1010, false],
-                                               [ 289, 320, 10, true],
-                                               [ 62, 420, 659, false]
-                                               ],
+                                        [
+                                            227,
+                                            320,
+                                            1010,
+                                            false
+                                        ],
+                                        [
+                                            289,
+                                            320,
+                                            10,
+                                            true
+                                        ],
+                                        [
+                                            62,
+                                            420,
+                                            659,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.41,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -2125,21 +2348,22 @@
                     "cost": 1000000,
                     "baseHitpoints": 1424,
                     "gunArc": 360,
+                    "camoValue": 3.4,
                     "crewLevel": 100,
                     "topWeight": 100.2,
                     "hull": {
                         "frontArmor": [
-                                       180,
-                                       60
-                                       ],
+                            180,
+                            60
+                        ],
                         "sideArmor": [
-                                      150,
-                                      5
-                                      ],
+                            150,
+                            5
+                        ],
                         "rearArmor": [
-                                      140,
-                                      5
-                                      ]
+                            140,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -2148,17 +2372,17 @@
                             "viewRange": 350,
                             "traverseSpeed": 21,
                             "frontArmor": [
-                                           180,
-                                           45
-                                           ],
+                                180,
+                                45
+                            ],
                             "sideArmor": [
-                                          150,
-                                          5
-                                          ],
+                                150,
+                                5
+                            ],
                             "rearArmor": [
-                                          140,
-                                          5
-                                          ],
+                                140,
+                                5
+                            ],
                             "weight": 21700,
                             "stockModule": true,
                             "topModule": true,
@@ -2170,25 +2394,25 @@
                                     "name": "107 mm ZiS-6M",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                167,
-                                                300,
-                                                270,
-                                                false
-                                                ],
-                                               [
-                                                219,
-                                                300,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                54,
-                                                360,
-                                                280,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            167,
+                                            300,
+                                            270,
+                                            false
+                                        ],
+                                        [
+                                            219,
+                                            300,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            54,
+                                            360,
+                                            280,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7,
                                     "autoloader": false,
                                     "accuracy": 0.43,
@@ -2254,21 +2478,22 @@
                     "cost": 12500,
                     "baseHitpoints": 1300,
                     "gunArc": 360,
+                    "camoValue": 4,
                     "crewLevel": 100,
                     "topWeight": 92.6,
                     "hull": {
                         "frontArmor": [
-                                       120,
-                                       50
-                                       ],
+                            120,
+                            50
+                        ],
                         "sideArmor": [
-                                      80,
-                                      5
-                                      ],
+                            80,
+                            5
+                        ],
                         "rearArmor": [
-                                      80,
-                                      5
-                                      ]
+                            80,
+                            5
+                        ]
                     },
                     "turrets": {
                         "Lowe": {
@@ -2277,17 +2502,17 @@
                             "viewRange": 400,
                             "traverseSpeed": 23,
                             "frontArmor": [
-                                           120,
-                                           60
-                                           ],
+                                120,
+                                60
+                            ],
                             "sideArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "rearArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "weight": 15000,
                             "stockModule": true,
                             "topModule": true,
@@ -2299,25 +2524,25 @@
                                     "name": "10,5 cm KwK46 L/70",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                234,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                294,
-                                                320,
-                                                294,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            234,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            294,
+                                            320,
+                                            294,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5,
                                     "autoloader": false,
                                     "accuracy": 0.33,
@@ -2383,21 +2608,22 @@
                     "cost": 2600000,
                     "baseHitpoints": 1120,
                     "gunArc": 360,
+                    "camoValue": 6,
                     "crewLevel": 100,
                     "topWeight": 57.549,
                     "hull": {
                         "frontArmor": [
-                                       127,
-                                       54
-                                       ],
+                            127,
+                            54
+                        ],
                         "sideArmor": [
-                                      76,
-                                      5
-                                      ],
+                            76,
+                            5
+                        ],
                         "rearArmor": [
-                                      51,
-                                      5
-                                      ]
+                            51,
+                            5
+                        ]
                     },
                     "turrets": {
                         "T99E2": {
@@ -2406,17 +2632,17 @@
                             "viewRange": 380,
                             "traverseSpeed": 26,
                             "frontArmor": [
-                                           114,
-                                           5
-                                           ],
+                                114,
+                                5
+                            ],
                             "sideArmor": [
-                                          76.2,
-                                          5
-                                          ],
+                                76.2,
+                                5
+                            ],
                             "rearArmor": [
-                                          76.2,
-                                          5
-                                          ],
+                                76.2,
+                                5
+                            ],
                             "weight": 9500,
                             "stockModule": true,
                             "topModule": false,
@@ -2428,25 +2654,25 @@
                                     "name": "90 mm Gun T15E2",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                170,
-                                                240,
-                                                255,
-                                                false
-                                                ],
-                                               [
-                                                258,
-                                                240,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                45,
-                                                320,
-                                                255,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            170,
+                                            240,
+                                            255,
+                                            false
+                                        ],
+                                        [
+                                            258,
+                                            240,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            45,
+                                            320,
+                                            255,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.89,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -2463,25 +2689,25 @@
                                     "name": "105 mm Gun T5E1",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                198,
-                                                320,
-                                                1000,
-                                                false
-                                                ],
-                                               [
-                                                245,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                53,
-                                                420,
-                                                680,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            198,
+                                            320,
+                                            1000,
+                                            false
+                                        ],
+                                        [
+                                            245,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            53,
+                                            420,
+                                            680,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4.76,
                                     "autoloader": false,
                                     "accuracy": 0.42,
@@ -2502,17 +2728,17 @@
                             "viewRange": 400,
                             "traverseSpeed": 25,
                             "frontArmor": [
-                                           298,
-                                           10
-                                           ],
+                                298,
+                                10
+                            ],
                             "sideArmor": [
-                                          197,
-                                          10
-                                          ],
+                                197,
+                                10
+                            ],
                             "rearArmor": [
-                                          152,
-                                          10
-                                          ],
+                                152,
+                                10
+                            ],
                             "weight": 12200,
                             "stockModule": false,
                             "topModule": true,
@@ -2524,25 +2750,25 @@
                                     "name": "90 mm Gun T15E2",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                170,
-                                                240,
-                                                255,
-                                                false
-                                                ],
-                                               [
-                                                258,
-                                                240,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                45,
-                                                320,
-                                                255,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            170,
+                                            240,
+                                            255,
+                                            false
+                                        ],
+                                        [
+                                            258,
+                                            240,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            45,
+                                            320,
+                                            255,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.89,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -2559,25 +2785,25 @@
                                     "name": "105 mm Gun T5E1",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                198,
-                                                320,
-                                                1000,
-                                                false
-                                                ],
-                                               [
-                                                245,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                53,
-                                                420,
-                                                680,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            198,
+                                            320,
+                                            1000,
+                                            false
+                                        ],
+                                        [
+                                            245,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            53,
+                                            420,
+                                            680,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.66,
                                     "autoloader": false,
                                     "accuracy": 0.41,
@@ -2686,21 +2912,22 @@
                     "cost": 12000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "camoValue": 4.3,
                     "crewLevel": 100,
                     "topWeight": 65.1,
                     "hull": {
                         "frontArmor": [
-                                       102,
-                                       54
-                                       ],
+                            102,
+                            54
+                        ],
                         "sideArmor": [
-                                      76,
-                                      5
-                                      ],
+                            76,
+                            5
+                        ],
                         "rearArmor": [
-                                      51,
-                                      5
-                                      ]
+                            51,
+                            5
+                        ]
                     },
                     "turrets": {
                         "T34T7": {
@@ -2709,17 +2936,17 @@
                             "viewRange": 360,
                             "traverseSpeed": 18,
                             "frontArmor": [
-                                           279,
-                                           5
-                                           ],
+                                279,
+                                5
+                            ],
                             "sideArmor": [
-                                          127,
-                                          5
-                                          ],
+                                127,
+                                5
+                            ],
                             "rearArmor": [
-                                          203,
-                                          5
-                                          ],
+                                203,
+                                5
+                            ],
                             "weight": 12800,
                             "stockModule": true,
                             "topModule": true,
@@ -2731,25 +2958,25 @@
                                     "name": "120 mm Gun T53A1",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                248,
-                                                400,
-                                                1060,
-                                                false
-                                                ],
-                                               [
-                                                297,
-                                                400,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                515,
-                                                900,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            248,
+                                            400,
+                                            1060,
+                                            false
+                                        ],
+                                        [
+                                            297,
+                                            400,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            515,
+                                            900,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 4,
                                     "autoloader": false,
                                     "accuracy": 0.35,
@@ -2815,21 +3042,22 @@
                     "cost": 2450000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "camoValue": 4.6,
                     "crewLevel": 100,
                     "topWeight": 70.93,
                     "hull": {
                         "frontArmor": [
-                                       150,
-                                       60
-                                       ],
+                            150,
+                            60
+                        ],
                         "sideArmor": [
-                                      80,
-                                      10
-                                      ],
+                            80,
+                            10
+                        ],
                         "rearArmor": [
-                                      80,
-                                      10
-                                      ]
+                            80,
+                            10
+                        ]
                     },
                     "turrets": {
                         "Tiger II Turm Nr. 1-50": {
@@ -2838,17 +3066,17 @@
                             "viewRange": 380,
                             "traverseSpeed": 27,
                             "frontArmor": [
-                                           100,
-                                           10
-                                           ],
+                                100,
+                                10
+                            ],
                             "sideArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "rearArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "weight": 9638,
                             "stockModule": true,
                             "topModule": false,
@@ -2860,25 +3088,25 @@
                                     "name": "8,8 cm KwK 43 L/71",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                203,
-                                                240,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                237,
-                                                240,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                44,
-                                                295,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            203,
+                                            240,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            237,
+                                            240,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            44,
+                                            295,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 8.22,
                                     "autoloader": false,
                                     "accuracy": 0.34,
@@ -2895,25 +3123,25 @@
                                     "name": "10,5 cm KwK 45 L/52",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                200,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                244,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            200,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            244,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.5,
                                     "autoloader": false,
                                     "accuracy": 0.37,
@@ -2928,25 +3156,25 @@
                                     "name": "10,5 cm KwK 46 L/68",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                225,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                285,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            225,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            285,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.5,
                                     "autoloader": false,
                                     "accuracy": 0.34,
@@ -2965,17 +3193,17 @@
                             "viewRange": 390,
                             "traverseSpeed": 27,
                             "frontArmor": [
-                                           185,
-                                           10
-                                           ],
+                                185,
+                                10
+                            ],
                             "sideArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "rearArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "weight": 10935,
                             "stockModule": false,
                             "topModule": true,
@@ -2987,25 +3215,25 @@
                                     "name": "8,8 cm KwK 43 L/71",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                203,
-                                                240,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                237,
-                                                240,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                44,
-                                                295,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            203,
+                                            240,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            237,
+                                            240,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            44,
+                                            295,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 8.22,
                                     "autoloader": false,
                                     "accuracy": 0.34,
@@ -3022,25 +3250,25 @@
                                     "name": "10,5 cm KwK 45 L/52",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                200,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                244,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            200,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            244,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.5,
                                     "autoloader": false,
                                     "accuracy": 0.37,
@@ -3055,25 +3283,25 @@
                                     "name": "10,5 cm KwK 46 L/68",
                                     "tier": 9,
                                     "shells": [
-                                               [
-                                                225,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                285,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            225,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            285,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.5,
                                     "autoloader": false,
                                     "accuracy": 0.34,
@@ -3181,21 +3409,22 @@
                     "cost": 2435000,
                     "baseHitpoints": 1176,
                     "gunArc": 360,
+                    "camoValue": 4.3,
                     "crewLevel": 100,
-                    "topWeight": 57.0,
+                    "topWeight": 57,
                     "hull": {
                         "frontArmor": [
-                                       120,
-                                       50
-                                       ],
+                            120,
+                            50
+                        ],
                         "sideArmor": [
-                                      80,
-                                      5
-                                      ],
+                            80,
+                            5
+                        ],
                         "rearArmor": [
-                                      80,
-                                      5
-                                      ]
+                            80,
+                            5
+                        ]
                     },
                     "turrets": {
                         "stock": {
@@ -3204,17 +3433,17 @@
                             "viewRange": 380,
                             "traverseSpeed": 30,
                             "frontArmor": [
-                                           100,
-                                           10
-                                           ],
+                                100,
+                                10
+                            ],
                             "sideArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "rearArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "weight": 11200,
                             "stockModule": true,
                             "topModule": false,
@@ -3226,25 +3455,25 @@
                                     "name": "8,8 cm KwK 36 L/56",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                132,
-                                                220,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                171,
-                                                220,
-                                                8,
-                                                true
-                                                ],
-                                               [
-                                                44,
-                                                270,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            132,
+                                            220,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            171,
+                                            220,
+                                            8,
+                                            true
+                                        ],
+                                        [
+                                            44,
+                                            270,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 9.23,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -3261,25 +3490,25 @@
                                     "name": "8,8 cm KwK 43 L/71",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                203,
-                                                240,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                237,
-                                                240,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                44,
-                                                295,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            203,
+                                            240,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            237,
+                                            240,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            44,
+                                            295,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.32,
                                     "autoloader": false,
                                     "accuracy": 0.34,
@@ -3296,25 +3525,25 @@
                                     "name": "10,5 cm KwK 45 L/52",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                200,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                244,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            200,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            244,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.5,
                                     "autoloader": false,
                                     "accuracy": 0.37,
@@ -3335,17 +3564,17 @@
                             "viewRange": 390,
                             "traverseSpeed": 25,
                             "frontArmor": [
-                                           185,
-                                           10
-                                           ],
+                                185,
+                                10
+                            ],
                             "sideArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "rearArmor": [
-                                          80,
-                                          10
-                                          ],
+                                80,
+                                10
+                            ],
                             "weight": 13500,
                             "stockModule": false,
                             "topModule": true,
@@ -3357,25 +3586,25 @@
                                     "name": "8,8 cm KwK 36 L/56",
                                     "tier": 7,
                                     "shells": [
-                                               [
-                                                132,
-                                                220,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                171,
-                                                220,
-                                                8,
-                                                true
-                                                ],
-                                               [
-                                                44,
-                                                270,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            132,
+                                            220,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            171,
+                                            220,
+                                            8,
+                                            true
+                                        ],
+                                        [
+                                            44,
+                                            270,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 9.23,
                                     "autoloader": false,
                                     "accuracy": 0.38,
@@ -3392,25 +3621,25 @@
                                     "name": "8,8 cm KwK 43 L/71",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                203,
-                                                240,
-                                                252,
-                                                false
-                                                ],
-                                               [
-                                                237,
-                                                240,
-                                                11,
-                                                true
-                                                ],
-                                               [
-                                                44,
-                                                295,
-                                                252,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            203,
+                                            240,
+                                            252,
+                                            false
+                                        ],
+                                        [
+                                            237,
+                                            240,
+                                            11,
+                                            true
+                                        ],
+                                        [
+                                            44,
+                                            295,
+                                            252,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 7.79,
                                     "autoloader": false,
                                     "accuracy": 0.34,
@@ -3427,25 +3656,25 @@
                                     "name": "10,5 cm KwK 45 L/52",
                                     "tier": 8,
                                     "shells": [
-                                               [
-                                                200,
-                                                320,
-                                                1030,
-                                                false
-                                                ],
-                                               [
-                                                244,
-                                                320,
-                                                12,
-                                                true
-                                                ],
-                                               [
-                                                60,
-                                                420,
-                                                650,
-                                                false
-                                                ]
-                                               ],
+                                        [
+                                            200,
+                                            320,
+                                            1030,
+                                            false
+                                        ],
+                                        [
+                                            244,
+                                            320,
+                                            12,
+                                            true
+                                        ],
+                                        [
+                                            60,
+                                            420,
+                                            650,
+                                            false
+                                        ]
+                                    ],
                                     "rateOfFire": 5.94,
                                     "autoloader": false,
                                     "accuracy": 0.37,
@@ -3544,7 +3773,112 @@
                     }
                 }
             },
-            "tankDestroyers": {},
+            "tankDestroyers": {
+                "jt88": {
+                    "name": "8,8 cm PaK 43 Jagdtiger",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": true,
+                    "turreted": false,
+                    "experienceNeeded": 0,
+                    "cost": 10000,
+                    "baseHitpoints": 1300,
+                    "gunArc": 20,
+                    "camoValue": 10.9,
+                    "crewLevel": 100,
+                    "topWeight": 69.68,
+                    "hull": {
+                        "frontArmor": [
+                            250,
+                            45
+                        ],
+                        "sideArmor": [
+                            80,
+                            20
+                        ],
+                        "rearArmor": [
+                            80,
+                            20
+                        ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "8,8 cm PaK 43 L/71 Ausf. A",
+                                "tier": 8,
+                                "shells": [
+                                    [
+                                        203,
+                                        240,
+                                        252,
+                                        false
+                                    ],
+                                    [
+                                        237,
+                                        240,
+                                        11,
+                                        true
+                                    ],
+                                    [
+                                        44,
+                                        295,
+                                        252,
+                                        false
+                                    ]
+                                ],
+                                "rateOfFire": 11.11,
+                                "autoloader": false,
+                                "accuracy": 0.31,
+                                "aimTime": 2,
+                                "gunDepression": -7,
+                                "gunElevation": 15,
+                                "weight": 2562,
+                                "stockModule": true,
+                                "topModule": true,
+                                "experienceNeeded": 0,
+                                "cost": 0
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 230 P30",
+                            "tier": 7,
+                            "horsepower": 700,
+                            "fireChance": 0.2,
+                            "weight": 1200,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "Jagdtiger 8,8",
+                            "tier": 8,
+                            "loadLimit": 74.85,
+                            "traverseSpeed": 22,
+                            "weight": 18000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 7 Ausf. F",
+                            "tier": 6,
+                            "signalRange": 710,
+                            "weight": 70,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
+                }
+            },
             "spgs": {}
         },
         "tier9": {

@@ -105,21 +105,25 @@
     return percentiles;
 }
 
-- (NSArray *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
+- (NSString *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
 {
     NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];
     @try {
         NSMutableArray *stringArray = [[NSMutableArray alloc] init];
         for (int i=0; i<[sortedArray count]; i++) {
             Tank *currentTank = sortedArray[i];
-            NSString *tankString = [NSString stringWithFormat:@"%d) %@: %.2f",
+            NSString *tankString = [NSString stringWithFormat:@"%d) %@: %.2f\n",
                                     i+1, currentTank.description, [[currentTank valueForKey:key] floatValue]];
             [stringArray addObject:tankString];
         }
-        return stringArray;
+        NSString *final = @"";
+        for (NSString *line in stringArray) {
+            final = [final stringByAppendingString:line];
+        }
+        return final;
     }
     @catch (NSException *exception) {
-        return [NSArray arrayWithObject:@"Error, key not found"];
+        return @"Error, key not found";
     }
 }
 

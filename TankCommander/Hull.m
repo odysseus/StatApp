@@ -22,7 +22,7 @@
         self.frontArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"frontArmor"]];
         self.sideArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"sideArmor"]];
         self.rearArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"rearArmor"]];
-        if (hasTurret) {
+        if (!hasTurret) {
             availableGuns = [[NSMutableArray alloc] init];
             NSDictionary *gunValues = [dict objectForKey:@"availableGuns"];
             for (id key in gunValues) {
