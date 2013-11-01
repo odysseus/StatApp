@@ -82,6 +82,9 @@ typedef enum TankNationality : NSUInteger {
 - (float)damagePerMinute;
 - (float)reloadTime;
 - (float)alphaDamage;
+    
+// Helper Methods
+- (BOOL)isTopTurretNeededForTopGun;
 
 // Init methods
 - (id)initWithDict:(NSDictionary *)dict;

@@ -22,6 +22,7 @@
 - (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)smallerIsBetter;
 - (NSString *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
 
+
 - (void)setAllRoundsToNormalRounds;
 - (void)setAllRoundsToGoldRounds;
 - (void)setAllRoundsToHERounds;

@@ -24,10 +24,10 @@
     
     TankStore *allTanks = [TankStore allTanks];
     
-    Tank *tank = [allTanks.tier8.all findTankByName:@"T28"];
+    Tank *tank = [allTanks.tier8.all findTankByName:@"T28 Prototype"];
     NSLog(@"%@", tank.gun);
     
-    NSString *list = [allTanks.tier8.all logSortedListForKey:@"damagePerMinute" smallerValuesAreBetter:NO];
+    NSString *list = [allTanks.tier8.all logSortedListForKey:@"specificPower" smallerValuesAreBetter:NO];
     NSLog(@"\n%@", list);
 
     

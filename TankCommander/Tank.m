@@ -258,5 +258,20 @@ TankNationality fetchTankNationality (int index)
             return Nation;
     }
 }
+    
+- (BOOL)isTopTurretNeededForTopGun
+{
+    if (self.hasTurret) {
+        Turret *stock = self.availableTurrets[0];
+        Turret *top = self.availableTurrets[1];
+        if (stock.gun.name == top.gun.name) {
+            return NO;
+        } else {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 
 @end

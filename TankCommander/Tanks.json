@@ -3774,6 +3774,488 @@
                 }
             },
             "tankDestroyers": {
+                "at15": {
+                    "name": "AT 15",
+                    "nationality": 1,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "AT 7",
+                    "child": "Tortoise",
+                    "turreted": false,
+                    "experienceNeeded": 92000,
+                    "cost": 2650000,
+                    "baseHitpoints": 1450,
+                    "gunArc": 50,
+                    "camoValue": 12,
+                    "crewLevel": 100,
+                    "topWeight": 60.16,
+                    "hull": {
+                        "frontArmor": [
+                                       228,
+                                       45
+                                       ],
+                        "sideArmor": [
+                                      152,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      101,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "OQF 17-pdr AT Gun Mk. VII",
+                                "tier": 7,
+                                "shells": [
+                                           [171, 150, 175, false],
+                                           [235, 150, 8, true],
+                                           [38, 190, 75, false]
+                                           ],
+                                "rateOfFire": 16.67,
+                                "autoloader": false,
+                                "accuracy": 0.32,
+                                "aimTime": 1.7,
+                                "gunDepression": -10,
+                                "gunElevation": 10,
+                                "weight": 826,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 65000
+                            },
+                            "second": {
+                                "name": "OQF 32-pdr AT Gun",
+                                "tier": 8,
+                                "shells": [
+                                           [214, 250, 630, false],
+                                           [246, 250, 11, true],
+                                           [47, 330, 250, false]
+                                           ],
+                                "rateOfFire": 10.17,
+                                "autoloader": false,
+                                "accuracy": 0.33,
+                                "aimTime": 2.1,
+                                "gunDepression": -10,
+                                "gunElevation": 10,
+                                "weight": 2972,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 16200,
+                                "cost": 105000
+                            },
+                            "third" : {
+                                "name": "OQF 20-pdr AT Gun Type A Barrel",
+                                "tier": 8,
+                                "shells": [
+                                           [226, 230, 680, false],
+                                           [258, 230, 11, true],
+                                           [42, 280, 170, false]
+                                           ],
+                                "rateOfFire": 11.11,
+                                "autoloader": false,
+                                "accuracy": 0.31,
+                                "aimTime": 1.9,
+                                "gunDepression": -10,
+                                "gunElevation": 10,
+                                "weight": 1242,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 16400,
+                                "cost": 120000
+                            },
+                            "top": {
+                                "name": "OQF 20-pdr AT Gun Type B Barrel",
+                                "tier": 9,
+                                "shells": [
+                                           [226, 230, 680, false],
+                                           [258, 230, 11, true],
+                                           [42, 280, 170, false]
+                                           ],
+                                "rateOfFire": 12,
+                                "autoloader": false,
+                                "accuracy": 0.3,
+                                "aimTime": 1.7,
+                                "gunDepression": -10,
+                                "gunElevation": 10,
+                                "weight": 1282,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 45000,
+                                "cost": 180000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Ford GAA",
+                            "tier": 5,
+                            "horsepower": 500,
+                            "fireChance": 0.20,
+                            "weight": 708,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 13000
+                        },
+                        "second": {
+                            "name": "Rolls-Royce Meteor",
+                            "tier": 5,
+                            "horsepower": 600,
+                            "fireChance": 0.20,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1500,
+                            "cost": 14000
+                        },
+                        "top": {
+                            "name": "Rolls-Royce Meteor Mk. V",
+                            "tier": 8,
+                            "horsepower": 650,
+                            "fireChance": 0.20,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16000,
+                            "cost": 44000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "AT 15",
+                            "tier": 7,
+                            "loadLimit": 60.5,
+                            "traverseSpeed": 18,
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 29240
+                        },
+                        "top": {
+                            "name": "AT 15 Mk. II",
+                            "tier": 8,
+                            "loadLimit": 66,
+                            "traverseSpeed": 20,
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14550,
+                            "cost": 39000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "WS No. 19 Mk. III",
+                            "tier": 8,
+                            "signalRange": 550,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22000
+                        },
+                        "second": {
+                            "name": "WS No. 22",
+                            "tier": 8,
+                            "signalRange": 700,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 4500,
+                            "cost": 25000
+                        },
+                        "top": {
+                            "name": "SR C42",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "ferdinand": {
+                    "name": "Ferdinand",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "Jagdpanther",
+                    "child": "Jagdtiger",
+                    "turreted": false,
+                    "experienceNeeded": 77500,
+                    "cost": 2570000,
+                    "baseHitpoints": 1200,
+                    "gunArc": 30,
+                    "camoValue": 11.1,
+                    "crewLevel": 100,
+                    "topWeight": 66.75,
+                    "hull": {
+                        "frontArmor": [
+                                       200,
+                                       5
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      20
+                                      ],
+                        "rearArmor": [
+                                      80,
+                                      20
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "8,8 cm PaK 43 L/71",
+                                "tier": 8,
+                                "shells": [
+                                           [203, 240, 252, false],
+                                           [237, 240, 11, true],
+                                           [44, 295, 252, false]
+                                           ],
+                                "rateOfFire": 9.84,
+                                "autoloader": false,
+                                "accuracy": 0.32,
+                                "aimTime": 2.3,
+                                "gunDepression": -8,
+                                "gunElevation": 14,
+                                "weight": 2562,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 112180
+                            },
+                            "second": {
+                                "name": "10,5 cm PaK 35 L/52",
+                                "tier": 8,
+                                "shells": [
+                                           [200, 320, 1030, false],
+                                           [244, 320, 12, true],
+                                           [60, 420, 650, false]
+                                           ],
+                                "rateOfFire": 7.32,
+                                "autoloader": false,
+                                "accuracy": 0.34,
+                                "aimTime": 1.7,
+                                "gunDepression": -8,
+                                "gunElevation": 14,
+                                "weight": 3000,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 16800,
+                                "cost": 116490
+                            },
+                            "top": {
+                                "name": "12,8 cm PaK 44 L/55",
+                                "tier": 10,
+                                "shells": [
+                                           [246, 490, 1070, false],
+                                           [311, 390, 12, true],
+                                           [65, 630, 935, false]
+                                           ],
+                                "rateOfFire": 5,
+                                "autoloader": false,
+                                "accuracy": 0.35,
+                                "aimTime": 2.3,
+                                "gunDepression": -8,
+                                "gunElevation": 14,
+                                "weight": 3480,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 63000,
+                                "cost": 310000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "2x Porsche Typ 100/1",
+                            "tier": 6,
+                            "horsepower": 600,
+                            "fireChance": 0.20,
+                            "weight": 670,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 29900
+                        },
+                        "second": {
+                            "name": "2x Porsche Typ 100/3",
+                            "tier": 7,
+                            "horsepower": 670,
+                            "fireChance": 0.20,
+                            "weight": 720,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 12000,
+                            "cost": 14000
+                        },
+                        "top": {
+                            "name": "Porsche Deutz Typ 180/2",
+                            "tier": 8,
+                            "horsepower": 840,
+                            "fireChance": 0.15,
+                            "weight": 840,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 31000,
+                            "cost": 45300
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "Ferdinand",
+                            "tier": 7,
+                            "loadLimit": 66.4,
+                            "traverseSpeed": 18,
+                            "weight": 20750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18860
+                        },
+                        "top": {
+                            "name": "Elefant",
+                            "tier": 8,
+                            "loadLimit": 68.95,
+                            "traverseSpeed": 21,
+                            "weight": 20550,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14550,
+                            "cost": 32234
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 7",
+                            "tier": 6,
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 8160
+                        },
+                        "top" : {
+                            "name": "FuG 12",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
+                        }
+                    }
+                },
+                "jt88": {
+                    "name": "8,8 cm PaK 43 Jagdtiger",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": true,
+                    "turreted": false,
+                    "experienceNeeded": 0,
+                    "cost": 10000,
+                    "baseHitpoints": 1300,
+                    "gunArc": 20,
+                    "camoValue": 10.9,
+                    "crewLevel": 100,
+                    "topWeight": 69.68,
+                    "hull": {
+                        "frontArmor": [
+                            250,
+                            45
+                        ],
+                        "sideArmor": [
+                            80,
+                            20
+                        ],
+                        "rearArmor": [
+                            80,
+                            20
+                        ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "8,8 cm PaK 43 L/71 Ausf. A",
+                                "tier": 8,
+                                "shells": [
+                                    [
+                                        203,
+                                        240,
+                                        252,
+                                        false
+                                    ],
+                                    [
+                                        237,
+                                        240,
+                                        11,
+                                        true
+                                    ],
+                                    [
+                                        44,
+                                        295,
+                                        252,
+                                        false
+                                    ]
+                                ],
+                                "rateOfFire": 11.11,
+                                "autoloader": false,
+                                "accuracy": 0.31,
+                                "aimTime": 2,
+                                "gunDepression": -7,
+                                "gunElevation": 15,
+                                "weight": 2562,
+                                "stockModule": true,
+                                "topModule": true,
+                                "experienceNeeded": 0,
+                                "cost": 0
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 230 P30",
+                            "tier": 7,
+                            "horsepower": 700,
+                            "fireChance": 0.2,
+                            "weight": 1200,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "Jagdtiger 8,8",
+                            "tier": 8,
+                            "loadLimit": 74.85,
+                            "traverseSpeed": 22,
+                            "weight": 18000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 7 Ausf. F",
+                            "tier": 6,
+                            "signalRange": 710,
+                            "weight": 70,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
+                },
                 "t28": {
                     "name": "T28",
                     "nationality": 0,
@@ -3789,7 +4271,7 @@
                     "gunArc": 21,
                     "camoValue": 18.3,
                     "crewLevel": 100,
-                    "topWeight": 59.2,
+                    "topWeight": 59.934,
                     "hull": {
                         "frontArmor": [
                                        254,
@@ -3937,107 +4419,191 @@
                         }
                     }
                 },
-                "jt88": {
-                    "name": "8,8 cm PaK 43 Jagdtiger",
-                    "nationality": 4,
+                "t28proto": {
+                    "name": "T28 Prototype",
+                    "nationality": 0,
                     "tier": 8,
                     "type": 3,
-                    "premiumTank": true,
-                    "turreted": false,
-                    "experienceNeeded": 0,
-                    "cost": 10000,
-                    "baseHitpoints": 1300,
-                    "gunArc": 20,
-                    "camoValue": 10.9,
+                    "premiumTank": false,
+                    "parent": "T25/2",
+                    "child": "T30",
+                    "turreted": true,
+                    "experienceNeeded": 102000,
+                    "cost": 2650000,
+                    "baseHitpoints": 1150,
+                    "gunArc": 186,
                     "crewLevel": 100,
-                    "topWeight": 69.68,
+                    "topWeight": 66.334,
                     "hull": {
                         "frontArmor": [
-                            250,
-                            45
-                        ],
+                                       203,
+                                       15
+                                       ],
                         "sideArmor": [
-                            80,
-                            20
-                        ],
+                                      50,
+                                      5
+                                      ],
                         "rearArmor": [
-                            80,
-                            20
-                        ],
-                        "availableGuns": {
-                            "stock": {
-                                "name": "8,8 cm PaK 43 L/71 Ausf. A",
-                                "tier": 8,
-                                "shells": [
-                                    [
-                                        203,
-                                        240,
-                                        252,
-                                        false
-                                    ],
-                                    [
-                                        237,
-                                        240,
-                                        11,
-                                        true
-                                    ],
-                                    [
-                                        44,
-                                        295,
-                                        252,
-                                        false
-                                    ]
-                                ],
-                                "rateOfFire": 11.11,
-                                "autoloader": false,
-                                "accuracy": 0.31,
-                                "aimTime": 2,
-                                "gunDepression": -7,
-                                "gunElevation": 15,
-                                "weight": 2562,
-                                "stockModule": true,
-                                "topModule": true,
-                                "experienceNeeded": 0,
-                                "cost": 0
+                                      50,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "T28P D1",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 18,
+                            "frontArmor": [
+                                           203,
+                                           35
+                                           ],
+                            "sideArmor": [
+                                          127,
+                                          35
+                                          ],
+                            "rearArmor": [
+                                          101,
+                                          35
+                                          ],
+                            "weight": 6570,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 32000,
+                            "additionalHP": 0,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "90 mm AT Gun T15E2",
+                                    "tier": 8,
+                                    "shells": [
+                                               [ 170, 240, 255, false],
+                                               [ 258, 240, 11, true ],
+                                               [ 45, 320, 255, false ]
+                                               ],
+                                    "rateOfFire": 8,
+                                    "autoloader": false,
+                                    "accuracy": 0.36,
+                                    "aimTime": 1.7,
+                                    "gunDepression": -10,
+                                    "gunElevation": 15,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 111900
+                                },
+                                "second": {
+                                    "name": "105 mm AT Gun T5E1",
+                                    "tier": 8,
+                                    "shells": [
+                                               [ 198, 320, 1000, false ],
+                                               [ 245, 320, 12, true ],
+                                               [ 53, 420, 900, false ]
+                                               ],
+                                    "rateOfFire": 7.23,
+                                    "autoloader": false,
+                                    "accuracy": 0.39,
+                                    "aimTime": 1.7,
+                                    "gunDepression": -10,
+                                    "gunElevation": 15,
+                                    "weight": 2400,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18100,
+                                    "cost": 118000
+                                },
+                                "top": {
+                                    "name": "120 mm AT Gun T53",
+                                    "tier": 10,
+                                    "shells": [
+                                               [248, 400, 1060, false],
+                                               [297, 400, 12, true],
+                                               [60, 515, 900, false]
+                                               ],
+                                    "rateOfFire": 5.94,
+                                    "autoloader": false,
+                                    "accuracy": 0.39,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 51000,
+                                    "cost": 250000
+                                }
                             }
                         }
                     },
                     "engines": {
                         "stock": {
-                            "name": "Maybach HL 230 P30",
-                            "tier": 7,
-                            "horsepower": 700,
+                            "name": "Ford GAF",
+                            "tier": 6,
+                            "horsepower": 440,
                             "fireChance": 0.2,
-                            "weight": 1200,
+                            "weight": 569,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
-                            "cost": 0
+                            "cost": 25300
+                        },
+                        "top": {
+                            "name": "Ford GAFM2A1",
+                            "tier": 6,
+                            "horsepower": 510,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 5250,
+                            "cost": 34600
                         }
                     },
                     "suspensions": {
                         "stock": {
-                            "name": "Jagdtiger 8,8",
-                            "tier": 8,
-                            "loadLimit": 74.85,
-                            "traverseSpeed": 22,
-                            "weight": 18000,
+                            "name": "T28P E2",
+                            "tier": 7,
+                            "loadLimit": 68.8,
+                            "traverseSpeed": 18,
+                            "weight": 12000,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
-                            "cost": 0
+                            "cost": 16000
+                        },
+                        "top": {
+                            "name": "T28P E4",
+                            "tier": 8,
+                            "loadLimit": 76.8,
+                            "traverseSpeed": 20,
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15900,
+                            "cost": 35000
                         }
                     },
                     "radios": {
                         "stock": {
-                            "name": "FuG 7 Ausf. F",
+                            "name": "SCR 508",
                             "tier": 6,
-                            "signalRange": 710,
-                            "weight": 70,
+                            "signalRange": 395,
+                            "weight": 100,
                             "stockModule": true,
-                            "topModule": true,
+                            "topModule": false,
                             "experienceNeeded": 0,
-                            "cost": 0
+                            "cost": 21600
+                        },
+                        "top": {
+                            "name": "SCR 528",
+                            "tier": 10,
+                            "signalRange": 745,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
                         }
                     }
                 }
