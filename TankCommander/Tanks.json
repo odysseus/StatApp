@@ -3774,6 +3774,181 @@
                 }
             },
             "tankDestroyers": {
+                "amxac48": {
+                    "name": "AMX AC Mle. 1948",
+                    "nationality": 3,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "AMX AC Mle. 1946",
+                    "child": "AMX 50 Foch",
+                    "turreted": false,
+                    "experienceNeeded": 70000,
+                    "cost": 1799000,
+                    "baseHitpoints": 1000,
+                    "gunArc": 20,
+                    "camoValue": 13.4,
+                    "crewLevel": 100,
+                    "topWeight": 50.58,
+                    "topSpeed": 50.0,
+                    "hull": {
+                        "frontArmor": [
+                                       150,
+                                       65
+                                       ],
+                        "sideArmor": [
+                                      40,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      40,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "90 mm AC DCA 45",
+                                "tier": 8,
+                                "shells": [
+                                           [212, 240, 255, false],
+                                           [259, 240, 12, true],
+                                           [45, 320, 255, false]
+                                           ],
+                                "rateOfFire": 9.52,
+                                "autoloader": false,
+                                "accuracy": 0.34,
+                                "aimTime": 1.7,
+                                "gunDepression": -6,
+                                "gunElevation": 18,
+                                "weight": 2750,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 121250
+                            },
+                            "second": {
+                                "name": "100 mm AC SA47",
+                                "tier": 8,
+                                "shells": [
+                                           [232, 300, 1030, false],
+                                           [263, 300, 10, true],
+                                           [50, 400, 650, false]
+                                           ],
+                                "rateOfFire": 7.5,
+                                "autoloader": false,
+                                "accuracy": 0.34,
+                                "aimTime": 2.3,
+                                "gunDepression": -6,
+                                "gunElevation": 18,
+                                "weight": 3000,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 34500,
+                                "cost": 127550
+                            },
+                            "top": {
+                                "name": "120 mm AC SA46",
+                                "tier": 10,
+                                "shells": [
+                                           [257, 400, 1060, false],
+                                           [325, 400, 12, true],
+                                           [65, 515, 900, false]
+                                           ],
+                                "rateOfFire": 5.77,
+                                "autoloader": false,
+                                "accuracy": 0.33,
+                                "aimTime": 2.9,
+                                "gunDepression": -6,
+                                "gunElevation": 18,
+                                "weight": 3580,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 63200,
+                                "cost": 339000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 230",
+                            "tier": 6,
+                            "horsepower": 575,
+                            "fireChance": 0.20,
+                            "weight": 700,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 26000
+                        },
+                        "second": {
+                            "name": "Maybach HL 230 P 45F",
+                            "tier": 8,
+                            "horsepower": 750,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 18800,
+                            "cost": 55000
+                        },
+                        "top": {
+                            "name": "Maybach HL 295",
+                            "tier": 9,
+                            "horsepower": 850,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24700,
+                            "cost": 78000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "AMX AC mle. 48",
+                            "tier": 7,
+                            "loadLimit": 56.9,
+                            "traverseSpeed": 26,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18860
+                        },
+                        "top": {
+                            "name": "AMX AC mle. 49",
+                            "tier": 8,
+                            "loadLimit": 59.3,
+                            "traverseSpeed": 28,
+                            "weight": 11000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 17500,
+                            "cost": 29500
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 400,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top" : {
+                            "name": "SCR 528F",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
                 "at15": {
                     "name": "AT 15",
                     "nationality": 1,
@@ -4253,6 +4428,179 @@
                             "topModule": true,
                             "experienceNeeded": 0,
                             "cost": 0
+                        }
+                    }
+                },
+                "jp2": {
+                    "name": "Jagdpanther II",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "Jagdpanther",
+                    "child": "Jagdtiger",
+                    "turreted": false,
+                    "experienceNeeded": 77500,
+                    "cost": 2570000,
+                    "baseHitpoints": 1150,
+                    "gunArc": 20,
+                    "camoValue": 10.63,
+                    "crewLevel": 100,
+                    "topWeight": 53.1,
+                    "hull": {
+                        "frontArmor": [
+                                       100,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      60,
+                                      10
+                                      ],
+                        "rearArmor": [
+                                      40,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "8,8 cm PaK 43 L/71",
+                                "tier": 8,
+                                "shells": [
+                                           [203, 240, 252, false],
+                                           [237, 240, 11, true],
+                                           [44, 295, 252, false]
+                                           ],
+                                "rateOfFire": 10,
+                                "autoloader": false,
+                                "accuracy": 0.32,
+                                "aimTime": 2.3,
+                                "gunDepression": -6.5,
+                                "gunElevation": 15,
+                                "weight": 2562,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 112180
+                            },
+                            "second": {
+                                "name": "10,5 cm PaK 35 L/52",
+                                "tier": 8,
+                                "shells": [
+                                           [200, 320, 1030, false],
+                                           [244, 320, 12, true],
+                                           [60, 420, 650, false]
+                                           ],
+                                "rateOfFire": 7.5,
+                                "autoloader": false,
+                                "accuracy": 0.34,
+                                "aimTime": 1.7,
+                                "gunDepression": -6.5,
+                                "gunElevation": 15,
+                                "weight": 3000,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 16800,
+                                "cost": 116490
+                            },
+                            "top": {
+                                "name": "12,8 cm PaK 44 L/55",
+                                "tier": 10,
+                                "shells": [
+                                           [246, 490, 1070, false],
+                                           [311, 390, 12, true],
+                                           [65, 630, 935, false]
+                                           ],
+                                "rateOfFire": 5.13,
+                                "autoloader": false,
+                                "accuracy": 0.35,
+                                "aimTime": 2.3,
+                                "gunDepression": -6.5,
+                                "gunElevation": 15,
+                                "weight": 3480,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 63000,
+                                "cost": 310000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 210 TRM P30",
+                            "tier": 7,
+                            "horsepower": 650,
+                            "fireChance": 0.20,
+                            "weight": 850,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 35500
+                        },
+                        "top": {
+                            "name": "Maybach HL 230 TRM P30",
+                            "tier": 8,
+                            "horsepower": 700,
+                            "fireChance": 0.2,
+                            "weight": 1200,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15800,
+                            "cost": 54000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "JagdPanther II",
+                            "tier": 7,
+                            "loadLimit": 53,
+                            "traverseSpeed": 34,
+                            "weight": 16500,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18860
+                        },
+                        "top": {
+                            "name": "Jagdpanther II verstärkteketten",
+                            "tier": 8,
+                            "loadLimit": 56,
+                            "traverseSpeed": 38,
+                            "weight": 16500,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15500,
+                            "cost": 34200
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 5",
+                            "tier": 3,
+                            "signalRange": 310,
+                            "weight": 50,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 630
+                        },
+                        "stock": {
+                            "name": "FuG 7",
+                            "tier": 6,
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 8160
+                        },
+                        "top" : {
+                            "name": "FuG 12",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
                         }
                     }
                 },
