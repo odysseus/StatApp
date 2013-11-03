@@ -24,7 +24,7 @@
     
     TankStore *allTanks = [TankStore allTanks];
     
-    Tank *tank = [allTanks.tier8.all findTankByName:@"AMX AC Mle. 1948"];
+    Tank *tank = [allTanks.tier8.all findTankByName:@"ISU-152"];
     NSLog(@"%@", tank.gun);
     
     NSString *list = [allTanks.tier8.all logSortedListForKey:@"damagePerMinute" smallerValuesAreBetter:NO];
