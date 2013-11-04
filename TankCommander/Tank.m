@@ -17,7 +17,7 @@
 @implementation Tank
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
-    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel;
+    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit, baseHitpoints, parent, child, nationality, tier, type;
 
 
 - (id)initWithDict:(NSDictionary *)dict
@@ -35,10 +35,12 @@
         self.cost = [[dict objectForKey:@"cost"] integerValue];
         self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] integerValue];
         self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
+        self.speedLimit = [[dict objectForKey:@"speedLimit"] floatValue];
+        self.camoValue = [[dict objectForKey:@"camoValue"] floatValue];
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
                 
-        if (![dict objectForKey:@"premiumTank"]) {
+        if (!self.premiumTank) {
             self.parent = [dict objectForKey:@"parent"];
             self.child = [dict objectForKey:@"child"];
         }
@@ -103,6 +105,89 @@
     return self;
 }
 
+- (BOOL)validate
+{
+    BOOL result = YES;
+    // The validation is being separated into categories, the first is floatKeys, which require both non-null and nonzero values
+    NSArray *floatKeys = [NSArray arrayWithObjects:
+        @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"gunTraverseArc", @"speedLimit", @"camoValue", nil];
+    for (NSString *key in floatKeys) {
+        if ([[self valueForKey:key] floatValue] == 0.0) {
+            NSLog(@"%@ is missing %@", self.name, key);
+            result = NO;
+        }
+    }
+    // These keys check only for the presence of a value
+    NSArray *presenceKeys = [NSArray arrayWithObjects:
+                             @"name", @"nationality", @"type", @"hasTurret", @"premiumTank", @"experienceNeeded", @"hull", @"engine", @"radio", @"suspension", nil];
+    for (NSString *key in presenceKeys) {
+        if (![self valueForKey:key]) {
+            NSLog(@"%@ is missing %@", self.name, key);
+            result = NO;
+        }
+    }
+    // Some validations are not needed if the tank is a premium
+    if (!self.premiumTank) {
+        if (self.experienceNeeded < 1) {
+            NSLog(@"Non-premium tank %@ is missing experience needed",
+                  self.name);
+            result = NO;
+        }
+        if (!self.parent | !self.child) {
+            NSLog(@"%@ is missing parent and/or child: parent: %@, child: %@", self.name, self.parent, self.child);
+            result = NO;
+        }
+    }
+    // Finally, validate the module arrays to ensure there is only one stock and one top module for each
+    NSArray *moduleArrayKeys = [NSArray arrayWithObjects:
+                                @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns", nil];
+    for (NSString *key in moduleArrayKeys) {
+        result = [self validateModuleArray:key];
+    }
+    
+    
+    return result;
+}
+
+- (BOOL)validateModuleArray:(NSString *)moduleArrayString
+{
+    BOOL result = YES;
+    NSArray *moduleArray = [self valueForKey:moduleArrayString];
+    int stockValues = 0;
+    int topValues = 0;
+    // There can only be one stock module and one top module for each module type, this method checks to ensure that this is true
+    for (Module *mod in moduleArray) {
+        // First we count the number of modules labelled stock and top
+        if (mod.topModule) {
+            topValues++;
+        }
+        if (mod.stockModule) {
+            stockValues++;
+        }
+    }
+    // Then log errors accordingly and change the bool value
+    if (topValues == 0) {
+        NSLog(@"Error: %@ %@ is missing a top module",
+              self.name, moduleArrayString);
+        result = NO;
+    } else if (topValues > 1) {
+        NSLog(@"Error: %@ %@ has too many top modules",
+              self.name, moduleArrayString);
+        result = NO;
+    }
+    // The method will fail if any of the four conditions are wrong, so the log statements can stay in here permanently to specify the error
+    if (stockValues == 0) {
+        NSLog(@"Error: %@ %@ is missing a stock module",
+              self.name, moduleArrayString);
+        result = NO;
+    } else if (stockValues > 1) {
+        NSLog(@"Error: %@ %@ has too many stock modules",
+              self.name, moduleArrayString);
+        result = NO;
+    }
+    return result;
+}
+
 - (NSString *)description
 {
     if (self.premiumTank) {
@@ -113,6 +198,15 @@
 }
 
 // Pass through properties
+
+- (NSArray *)availableGuns
+{
+    if (self.hasTurret) {
+        return self.turret.availableGuns;
+    } else {
+        return self.hull.availableGuns;
+    }
+}
 
 - (Gun *)gun
 {

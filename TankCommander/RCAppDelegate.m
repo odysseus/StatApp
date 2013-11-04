@@ -18,16 +18,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     TankStore *allTanks = [TankStore allTanks];
     
-    Tank *tank = [allTanks.tier8.all findTankByName:@"ISU-152"];
+    NSMutableArray *tier8 = allTanks.tier8.all.group;
+    
+    for (Tank *tank in tier8) {
+        [tank validate];
+    }
+    
+    Tank *tank = [allTanks.tier8.all findTankByName:@"M26 Pershing"];
     NSLog(@"%@", tank.gun);
     
-    NSString *list = [allTanks.tier8.all logSortedListForKey:@"damagePerMinute" smallerValuesAreBetter:NO];
+    NSString *list = [allTanks.tier8.all logSortedListForKey:@"camoValue" smallerValuesAreBetter:NO];
     NSLog(@"\n%@", list);
 
     

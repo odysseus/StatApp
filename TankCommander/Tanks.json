@@ -53,6 +53,332 @@
         "tier8": {
             "lightTanks": {},
             "mediumTanks": {
+                "pershing": {
+                    "name": "M26 Pershing",
+                    "nationality": 0,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "T20",
+                    "child": "M46 Patton",
+                    "turreted": true,
+                    "experienceNeeded": 98100,
+                    "cost": 2403000,
+                    "baseHitpoints": 1080,
+                    "gunArc": 360,
+                    "speedLimit": 48,
+                    "camoValue": 13.0,
+                    "crewLevel": 100,
+                    "topWeight": 42.924,
+                    "hull": {
+                        "frontArmor": [
+                                       101,
+                                       56
+                                       ],
+                        "sideArmor": [
+                                      76,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      50,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "M26M67",
+                            "tier": 7,
+                            "viewRange": 390,
+                            "traverseSpeed": 36,
+                            "frontArmor": [
+                                           101,
+                                           45
+                                           ],
+                            "sideArmor": [
+                                          76,
+                                          25
+                                          ],
+                            "rearArmor": [
+                                          76,
+                                          5
+                                          ],
+                            "weight": 8000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21800,
+                            "additionalHP": 270,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "76 mm Gun M1A1",
+                                    "tier": 6,
+                                    "shells": [
+                                               [128, 115, 96, false],
+                                               [177, 110, 7, true],
+                                               [38, 185, 68, false]
+                                               ],
+                                    "rateOfFire": 14.29,
+                                    "accuracy": 0.43,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 1567,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 50330
+                                },
+                                "second": {
+                                    "name": "76 mm Gun M1A2",
+                                    "tier": 6,
+                                    "shells": [
+                                               [128, 115, 96, false],
+                                               [177, 110, 7, true],
+                                               [38, 185, 68, false]
+                                               ],
+                                    "rateOfFire": 18.18,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 1590,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 5800,
+                                    "cost": 62000
+                                },
+                                "third": {
+                                    "name": "90 mm Gun M3",
+                                    "tier": 7,
+                                    "shells": [
+                                               [160, 240, 255, false],
+                                               [243, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.32,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2050,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 14000,
+                                    "cost": 81000
+                                },
+                                "top": {
+                                    "name": "90 mm Gun T15E2M2",
+                                    "tier": 8,
+                                    "shells": [
+                                               [180, 240, 255, false],
+                                               [268, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.32,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2250,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 18900,
+                                    "cost": 128900
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "M26M71",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 38,
+                            "frontArmor": [
+                                           127,
+                                           45
+                                           ],
+                            "sideArmor": [
+                                          76,
+                                          25
+                                          ],
+                            "rearArmor": [
+                                          63,
+                                          10
+                                          ],
+                            "weight": 9700,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 21800,
+                            "additionalHP": 360,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "76 mm Gun M1A1",
+                                    "tier": 6,
+                                    "shells": [
+                                               [128, 115, 96, false],
+                                               [177, 110, 7, true],
+                                               [38, 185, 68, false]
+                                               ],
+                                    "rateOfFire": 14.29,
+                                    "accuracy": 0.43,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 1567,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 50330
+                                },
+                                "second": {
+                                    "name": "76 mm Gun M1A2",
+                                    "tier": 6,
+                                    "shells": [
+                                               [128, 115, 96, false],
+                                               [177, 110, 7, true],
+                                               [38, 185, 68, false]
+                                               ],
+                                    "rateOfFire": 18.18,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 1590,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 5800,
+                                    "cost": 62000
+                                },
+                                "third": {
+                                    "name": "90 mm Gun M3",
+                                    "tier": 7,
+                                    "shells": [
+                                               [160, 240, 255, false],
+                                               [243, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.32,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2050,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 14000,
+                                    "cost": 81000
+                                },
+                                "fourth": {
+                                    "name": "105 mm M4",
+                                    "tier": 5,
+                                    "shells": [
+                                               [53, 410, 166, false],
+                                               [101, 350, 10, true]
+                                               ],
+                                    "rateOfFire": 7.5,
+                                    "accuracy": 0.55,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2600,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 1500,
+                                    "cost": 40300
+                                },
+                                "top": {
+                                    "name": "90 mm Gun T15E2M2",
+                                    "tier": 8,
+                                    "shells": [
+                                               [180, 240, 255, false],
+                                               [268, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.32,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 20,
+                                    "weight": 2250,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 18900,
+                                    "cost": 128900
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "Ford GAN",
+                            "tier": 7,
+                            "horsepower": 560,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 37200
+                        },
+                        "top": {
+                            "name": "Continental AV-1790-1",
+                            "tier": 8,
+                            "horsepower": 704,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 10500,
+                            "cost": 45000
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "M26T80E1",
+                            "tier": 7,
+                            "loadLimit": 42.35,
+                            "traverseSpeed": 36,
+                            "weight": 10000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16300
+                        },
+                        "top": {
+                            "name": "M26T81",
+                            "tier": 8,
+                            "loadLimit": 45.05,
+                            "traverseSpeed": 38,
+                            "weight": 10000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 13500,
+                            "cost": 30250
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 395,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top": {
+                            "name": "SCR 528",
+                            "tier": 10,
+                            "signalRange": 745,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
                 "type59": {
                     "name": "Type 59",
                     "nationality": 2,
@@ -64,6 +390,7 @@
                     "cost": 1000000,
                     "baseHitpoints": 1040,
                     "gunArc": 360,
+                    "speedLimit": 56,
                     "camoValue": 16,
                     "crewLevel": 100,
                     "topWeight": 36,
@@ -190,11 +517,14 @@
                     "tier": 8,
                     "type": 2,
                     "premiumTank": false,
+                    "parent": "IS-2",
+                    "child": "WZ-111 model 1-4",
                     "turreted": true,
                     "experienceNeeded": 85000,
                     "cost": 2600000,
                     "baseHitpoints": 1160,
                     "gunArc": 360,
+                    "speedLimit": 40,
                     "camoValue": 6.6,
                     "crewLevel": 100,
                     "topWeight": 50.47,
@@ -523,6 +853,7 @@
                     "cost": 12250,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "speedLimit": 45,
                     "camoValue": 6.6,
                     "crewLevel": 100,
                     "topWeight": 46,
@@ -655,6 +986,7 @@
                     "cost": 2552500,
                     "baseHitpoints": 1120,
                     "gunArc": 360,
+                    "speedLimit": 51,
                     "camoValue": 5.7,
                     "crewLevel": 100,
                     "topWeight": 49.1,
@@ -909,6 +1241,7 @@
                     "cost": 2520000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "speedLimit": 34,
                     "camoValue": 5.4,
                     "crewLevel": 100,
                     "topWeight": 60.036,
@@ -1223,6 +1556,7 @@
                     "cost": 11900,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "speedLimit": 51,
                     "camoValue": 4.6,
                     "crewLevel": 100,
                     "topWeight": 54.24,
@@ -1347,11 +1681,14 @@
                     "tier": 8,
                     "type": 2,
                     "premiumTank": false,
+                    "parent": "IS",
+                    "child": "IS-8",
                     "turreted": true,
                     "experienceNeeded": 77000,
                     "cost": 2568500,
                     "baseHitpoints": 1160,
                     "gunArc": 360,
+                    "speedLimit": 38,
                     "camoValue": 7.1,
                     "crewLevel": 100,
                     "topWeight": 49.095,
@@ -1753,6 +2090,26 @@
                     },
                     "radios": {
                         "stock": {
+                            "name": "10RK",
+                            "tier": 7,
+                            "signalRange": 440,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18600
+                        },
+                        "second": {
+                            "name": "12RT",
+                            "tier": 9,
+                            "signalRange": 625,
+                            "weight": 110,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 5600,
+                            "cost": 33600
+                        },
+                        "top": {
                             "name": "R-113",
                             "tier": 10,
                             "signalRange": 730,
@@ -1775,6 +2132,7 @@
                     "cost": 11800,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "speedLimit": 35,
                     "camoValue": 7.1,
                     "crewLevel": 100,
                     "topWeight": 51.5,
@@ -1900,11 +2258,14 @@
                     "tier": 8,
                     "type": 2,
                     "premiumTank": false,
+                    "parent": "KV-3",
+                    "child": "ST-I",
                     "turreted": true,
                     "experienceNeeded": 53000,
                     "cost": 2430000,
                     "baseHitpoints": 1280,
                     "gunArc": 360,
+                    "speedLimit": 30,
                     "camoValue": 2.3,
                     "crewLevel": 100,
                     "topWeight": 106.695,
@@ -2178,7 +2539,7 @@
                                     "gunDepression": -6,
                                     "gunElevation": 18,
                                     "weight": 2600,
-                                    "stockModule": true,
+                                    "stockModule": false,
                                     "topModule": false,
                                     "experienceNeeded": 17000,
                                     "cost": 84980
@@ -2348,6 +2709,7 @@
                     "cost": 1000000,
                     "baseHitpoints": 1424,
                     "gunArc": 360,
+                    "speedLimit": 40,
                     "camoValue": 3.4,
                     "crewLevel": 100,
                     "topWeight": 100.2,
@@ -2478,6 +2840,7 @@
                     "cost": 12500,
                     "baseHitpoints": 1300,
                     "gunArc": 360,
+                    "speedLimit": 35,
                     "camoValue": 4,
                     "crewLevel": 100,
                     "topWeight": 92.6,
@@ -2603,11 +2966,14 @@
                     "tier": 8,
                     "type": 2,
                     "premiumTank": false,
+                    "parent": "T29",
+                    "child": "M103",
                     "turreted": true,
                     "experienceNeeded": 100000,
                     "cost": 2600000,
                     "baseHitpoints": 1120,
                     "gunArc": 360,
+                    "speedLimit": 35,
                     "camoValue": 6,
                     "crewLevel": 100,
                     "topWeight": 57.549,
@@ -2912,6 +3278,7 @@
                     "cost": 12000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "speedLimit": 35,
                     "camoValue": 4.3,
                     "crewLevel": 100,
                     "topWeight": 65.1,
@@ -3037,11 +3404,14 @@
                     "tier": 8,
                     "type": 2,
                     "premiumTank": false,
+                    "parent": "Tiger",
+                    "child": "E-75",
                     "turreted": true,
                     "experienceNeeded": 78000,
                     "cost": 2450000,
                     "baseHitpoints": 1200,
                     "gunArc": 360,
+                    "speedLimit": 38,
                     "camoValue": 4.6,
                     "crewLevel": 100,
                     "topWeight": 70.93,
@@ -3409,6 +3779,7 @@
                     "cost": 2435000,
                     "baseHitpoints": 1176,
                     "gunArc": 360,
+                    "speedLimit": 38,
                     "camoValue": 4.3,
                     "crewLevel": 100,
                     "topWeight": 57,
@@ -3787,6 +4158,7 @@
                     "cost": 1799000,
                     "baseHitpoints": 1000,
                     "gunArc": 20,
+                    "speedLimit": 50,
                     "camoValue": 13.4,
                     "crewLevel": 100,
                     "topWeight": 50.58,
@@ -3962,6 +4334,7 @@
                     "cost": 2650000,
                     "baseHitpoints": 1450,
                     "gunArc": 50,
+                    "speedLimit": 20,
                     "camoValue": 12,
                     "crewLevel": 100,
                     "topWeight": 60.16,
@@ -4166,6 +4539,7 @@
                     "cost": 2570000,
                     "baseHitpoints": 1200,
                     "gunArc": 30,
+                    "speedLimit": 30,
                     "camoValue": 11.1,
                     "crewLevel": 100,
                     "topWeight": 66.75,
@@ -4340,6 +4714,7 @@
                     "cost": 2520000,
                     "baseHitpoints": 1010,
                     "gunArc": 16,
+                    "speedLimit": 43,
                     "camoValue": 15.4,
                     "crewLevel": 100,
                     "topWeight": 49.685,
@@ -4384,7 +4759,7 @@
                                 "shells": [
                                            [175, 390, 1025, false],
                                            [217, 390, 12, true],
-                                           [61, 645, 608, false]
+                                           [61, 465, 608, false]
                                            ],
                                 "rateOfFire": 6.67,
                                 "autoloader": false,
@@ -4552,6 +4927,7 @@
                     "cost": 10000,
                     "baseHitpoints": 1300,
                     "gunArc": 20,
+                    "speedLimit": 28,
                     "camoValue": 10.9,
                     "crewLevel": 100,
                     "topWeight": 69.68,
@@ -4658,6 +5034,7 @@
                     "cost": 2570000,
                     "baseHitpoints": 1150,
                     "gunArc": 20,
+                    "speedLimit": 55,
                     "camoValue": 10.63,
                     "crewLevel": 100,
                     "topWeight": 53.1,
@@ -4818,6 +5195,182 @@
                         }
                     }
                 },
+                "su101": {
+                    "name": "SU-101",
+                    "nationality": 6,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "SU-100M1",
+                    "child": "SU-122-54",
+                    "turreted": false,
+                    "experienceNeeded": 91000,
+                    "cost": 2560000,
+                    "baseHitpoints": 990,
+                    "gunArc": 14,
+                    "speedLimit": 54,
+                    "camoValue": 20.6,
+                    "crewLevel": 100,
+                    "topWeight": 34.312,
+                    "topSpeed": 54.16,
+                    "hull": {
+                        "frontArmor": [
+                                       120,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      75,
+                                      30
+                                      ],
+                        "rearArmor": [
+                                      40,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "100 mm D-10S mod. 1944",
+                                "tier": 7,
+                                "shells": [
+                                           [175, 250, 252, false],
+                                           [235, 250, 10, true],
+                                           [50, 330, 252, false]
+                                           ],
+                                "rateOfFire": 9.68,
+                                "autoloader": false,
+                                "accuracy": 0.35,
+                                "aimTime": 1.7,
+                                "gunDepression": -2,
+                                "gunElevation": 18,
+                                "weight": 2300,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 83700
+                            },
+                            "second": {
+                                "name": "122 mm D-25 mod. 1944",
+                                "tier": 8,
+                                "shells": [
+                                           [175, 390, 1025, false],
+                                           [217, 390, 12, true],
+                                           [64, 465, 608, false]
+                                           ],
+                                "rateOfFire": 7.69,
+                                "autoloader": false,
+                                "accuracy": 0.41,
+                                "aimTime": 2.9,
+                                "gunDepression": -2,
+                                "gunElevation": 18,
+                                "weight": 2590,
+                                "stockModule": false,
+                                "topModule": false,
+                                "experienceNeeded": 21400,
+                                "cost": 106400
+                            },
+                            "top": {
+                                "name": "100 mm D-54S",
+                                "tier": 9,
+                                "shells": [
+                                           [219, 320, 1230, false],
+                                           [330, 320, 10, true],
+                                           [50, 420, 1170, false]
+                                           ],
+                                "rateOfFire": 8.45,
+                                "autoloader": false,
+                                "accuracy": 0.36,
+                                "aimTime": 2.1,
+                                "gunDepression": -2,
+                                "gunElevation": 18,
+                                "weight": 2557,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 38000,
+                                "cost": 140000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "V-2-44",
+                            "tier": 8,
+                            "horsepower": 560,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 49740
+                        },
+                        "second": {
+                            "name": "V-2-54",
+                            "tier": 9,
+                            "horsepower": 620,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 25200,
+                            "cost": 79290
+                        },
+                        "top": {
+                            "name": "V-54-6",
+                            "tier": 9,
+                            "horsepower": 680,
+                            "fireChance": 0.12,
+                            "weight": 700,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 27650,
+                            "cost": 82300
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "SU-101",
+                            "tier": 7,
+                            "loadLimit": 34.5,
+                            "traverseSpeed": 34,
+                            "weight": 8500,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22200
+                        },
+                        "top": {
+                            "name": "SU-101M",
+                            "tier": 8,
+                            "loadLimit": 37.5,
+                            "traverseSpeed": 36,
+                            "weight": 8500,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16000,
+                            "cost": 35000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "9RM",
+                            "tier": 8,
+                            "signalRange": 525,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 24240
+                        },
+                        "top" : {
+                            "name": "R113",
+                            "tier": 10,
+                            "signalRange": 730,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 8700,
+                            "cost": 52200
+                        }
+                    }
+                },
                 "t28": {
                     "name": "T28",
                     "nationality": 0,
@@ -4831,6 +5384,7 @@
                     "cost": 2580000,
                     "baseHitpoints": 1150,
                     "gunArc": 21,
+                    "speedLimit": 18,
                     "camoValue": 18.3,
                     "crewLevel": 100,
                     "topWeight": 59.934,
@@ -4994,6 +5548,8 @@
                     "cost": 2650000,
                     "baseHitpoints": 1150,
                     "gunArc": 186,
+                    "speedLimit": 18,
+                    "camoValue": 12.9,
                     "crewLevel": 100,
                     "topWeight": 66.334,
                     "hull": {

@@ -44,6 +44,8 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) int baseHitpoints;
 @property (nonatomic) float topWeight;
 @property (nonatomic) float gunTraverseArc;
+@property (nonatomic) float speedLimit;
+@property (nonatomic) float camoValue;
 
 // Strings to define the tanks before and after it
 @property (nonatomic) NSString *parent;
@@ -63,6 +65,7 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) Suspension *suspension;
 
 // Pass through properties
+- (NSArray *)availableGuns;
 - (Gun *)gun;
 - (float)penetration;
 - (float)aimTime;
@@ -85,6 +88,8 @@ typedef enum TankNationality : NSUInteger {
     
 // Helper Methods
 - (BOOL)isTopTurretNeededForTopGun;
+- (BOOL)validate;
+- (BOOL)validateModuleArray:(NSString *)moduleArrayString;
 
 // Init methods
 - (id)initWithDict:(NSDictionary *)dict;
