@@ -105,6 +105,20 @@
     return percentiles;
 }
 
+- (NSNumber *)averageValueForKey:(NSString *)key
+{
+    NSMutableArray *stats = [[NSMutableArray alloc] init];
+    for (Tank *tank in self.group) {
+        [stats addObject:[NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]]];
+    }
+    float average = 0;
+    for (NSNumber *sample in stats) {
+        average += [sample floatValue];
+    }
+    average = average / [stats count];
+    return [NSNumber numberWithFloat:average];
+}
+
 - (NSString *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
 {
     NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];

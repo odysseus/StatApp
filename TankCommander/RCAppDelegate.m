@@ -29,10 +29,13 @@
         [tank validate];
     }
     
-    Tank *tank = [allTanks.tier8.all findTankByName:@"M26 Pershing"];
-    NSLog(@"%@", tank.gun);
+    Tank *tank = [allTanks.tier8.all findTankByName:@"T26E4 Super Pershing"];
+    NSLog(@"%@: %@", tank.name, tank.gun);
     
-    NSString *list = [allTanks.tier8.all logSortedListForKey:@"camoValue" smallerValuesAreBetter:NO];
+    NSString *key = @"damagePerMinute";
+    NSLog(@"Average %@ for Tier 8: %@", key, [allTanks.tier8.all averageValueForKey:key]);
+    
+    NSString *list = [allTanks.tier8.mediumTanks logSortedListForKey:@"totalExperienceNeeded" smallerValuesAreBetter:NO];
     NSLog(@"\n%@", list);
 
     

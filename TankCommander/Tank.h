@@ -90,6 +90,7 @@ typedef enum TankNationality : NSUInteger {
 - (BOOL)isTopTurretNeededForTopGun;
 - (BOOL)validate;
 - (BOOL)validateModuleArray:(NSString *)moduleArrayString;
+- (int)totalExperienceNeeded;
 
 // Init methods
 - (id)initWithDict:(NSDictionary *)dict;

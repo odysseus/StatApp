@@ -139,8 +139,12 @@
         }
     }
     // Finally, validate the module arrays to ensure there is only one stock and one top module for each
-    NSArray *moduleArrayKeys = [NSArray arrayWithObjects:
+    NSMutableArray *moduleArrayKeys = [NSMutableArray arrayWithObjects:
                                 @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns", nil];
+    if (self.hasTurret) {
+        [moduleArrayKeys addObject:@"availableTurrets"];
+    }
+    
     for (NSString *key in moduleArrayKeys) {
         result = [self validateModuleArray:key];
     }
@@ -365,6 +369,27 @@ TankNationality fetchTankNationality (int index)
         }
     }
     return NO;
+}
+
+- (int)totalExperienceNeeded
+{
+    int totalExp = 0;
+    NSArray *modules = [[NSArray alloc] init];
+    if (self.hasTurret) {
+        modules = [NSArray arrayWithObjects:
+                            @"availableTurrets", @"availableGuns", @"availableSuspensions", @"availableEngines",
+                            @"availableRadios", nil];
+    } else {
+        modules = [NSArray arrayWithObjects:
+                            @"availableGuns", @"availableSuspensions", @"availableEngines", @"availableRadios", nil];
+    }
+    for (NSString *key in modules) {
+        NSArray *moduleArray = [self valueForKey:key];
+        for (Module *mod in moduleArray) {
+            totalExp += mod.experienceNeeded;
+        }
+    }
+    return totalExp;
 }
 
 

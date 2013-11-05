@@ -18,8 +18,14 @@
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate;
 - (Tank *)findTankByName:(NSString *)name;
 
+// Data Sorting Methods
 - (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
 - (NSArray *)percentileValuesForKey:(NSString *)key smallerValuesAreBetter:(BOOL)smallerIsBetter;
+
+// Sample Statistical Methods
+- (NSNumber *)averageValueForKey:(NSString *)key;
+
+// Pretty Printing Methods
 - (NSString *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
 
 
