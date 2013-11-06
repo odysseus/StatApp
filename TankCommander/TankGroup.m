@@ -119,7 +119,7 @@
     return [NSNumber numberWithFloat:average];
 }
 
-- (NSString *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
+- (NSString *)stringSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
 {
     NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];
     @try {

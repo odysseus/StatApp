@@ -85,6 +85,23 @@ typedef enum TankNationality : NSUInteger {
 - (float)damagePerMinute;
 - (float)reloadTime;
 - (float)alphaDamage;
+
+// Armor Properties
+- (float)frontalHullArmor;
+- (float)sideHullArmor;
+- (float)rearHullArmor;
+
+- (float)frontalTurretArmor;
+- (float)sideTurretArmor;
+- (float)rearTurretArmor;
+
+- (float)effectiveFrontalHullArmor;
+- (float)effectiveSideHullArmor;
+- (float)effectiveRearHullArmor;
+
+- (float)effectiveFrontalTurretArmor;
+- (float)effectiveSideTurretArmor;
+- (float)effectiveRearTurretArmor;
     
 // Helper Methods
 - (BOOL)isTopTurretNeededForTopGun;

@@ -642,6 +642,237 @@
                         }
                     }
                 },
+                "object416": {
+                    "name": "Object 416",
+                    "nationality": 6,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "A-44",
+                    "child": "T-54",
+                    "turreted": true,
+                    "experienceNeeded": 104000,
+                    "cost": 2500000,
+                    "baseHitpoints": 880,
+                    "gunArc": 150,
+                    "speedLimit": 50,
+                    "camoValue": 24.2,
+                    "crewLevel": 100,
+                    "topWeight": 24,
+                    "hull": {
+                        "frontArmor": [
+                                       75,
+                                       60
+                                       ],
+                        "sideArmor": [
+                                      45,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      45,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Object 416 mod. 1952",
+                            "tier": 7,
+                            "viewRange": 370,
+                            "traverseSpeed": 40,
+                            "frontArmor": [
+                                           110,
+                                           20
+                                           ],
+                            "sideArmor": [
+                                          60,
+                                          20
+                                          ],
+                            "rearArmor": [
+                                          45,
+                                          20
+                                          ],
+                            "weight": 7000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21000,
+                            "additionalHP": 220,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "100 mm D10T",
+                                    "tier": 7,
+                                    "shells": [
+                                               [175, 250, 252, false],
+                                               [235, 250, 11, true],
+                                               [50, 330, 252, false]
+                                               ],
+                                    "rateOfFire": 6.9,
+                                    "accuracy": 0.39,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -3,
+                                    "gunElevation": 15,
+                                    "weight": 2257,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 78180
+                                },
+                                "stock" : {
+                                    "name": "100 mm M-63",
+                                    "tier": 9,
+                                    "shells": [
+                                               [201, 320, 1230, false],
+                                               [330, 320, 12, true],
+                                               [50, 430, 1170, false]
+                                               ],
+                                    "rateOfFire": 6.9,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -3,
+                                    "gunElevation": 15,
+                                    "weight": 2000,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 54000,
+                                    "cost": 210000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "Object 416 mod. 1953",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 40,
+                            "frontArmor": [
+                                           110,
+                                           50
+                                           ],
+                            "sideArmor": [
+                                          75,
+                                          50
+                                          ],
+                            "rearArmor": [
+                                          45,
+                                          50
+                                          ],
+                            "weight": 7000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15500,
+                            "cost": 35000,
+                            "additionalHP": 320,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "100 mm D10T",
+                                    "tier": 7,
+                                    "shells": [
+                                               [175, 250, 252, false],
+                                               [235, 250, 11, true],
+                                               [50, 330, 252, false]
+                                               ],
+                                    "rateOfFire": 7.5,
+                                    "accuracy": 0.39,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -3,
+                                    "gunElevation": 15,
+                                    "weight": 2257,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 78180
+                                },
+                                "top" : {
+                                    "name": "100 mm M-63",
+                                    "tier": 9,
+                                    "shells": [
+                                               [201, 320, 1230, false],
+                                               [330, 320, 12, true],
+                                               [50, 430, 1170, false]
+                                               ],
+                                    "rateOfFire": 7.5,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -3,
+                                    "gunElevation": 15,
+                                    "weight": 2000,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 54000,
+                                    "cost": 210000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "DG",
+                            "tier": 8,
+                            "horsepower": 400,
+                            "fireChance": 0.12,
+                            "weight": 1100,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 45000
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "Object 416 mod. 1952",
+                            "tier": 7,
+                            "loadLimit": 24.35,
+                            "traverseSpeed": 50,
+                            "weight": 7000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16000
+                        },
+                        "second": {
+                            "name": "Object 416 mod. 1953",
+                            "tier": 8,
+                            "loadLimit": 27,
+                            "traverseSpeed": 52,
+                            "weight": 7000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 13800,
+                            "cost": 31700
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "9RM",
+                            "tier": 8,
+                            "signalRange": 525,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 24240
+                        },
+                        "second": {
+                            "name": "R-113",
+                            "tier": 10,
+                            "signalRange": 760,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 8700,
+                            "cost": 52200
+                        },
+                        "third": {
+                            "name": "10RT-26E",
+                            "tier": 10,
+                            "signalRange": 760,
+                            "weight": 120,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9200,
+                            "cost": 56500
+                        }
+                    }
+                },
                 "panther2": {
                     "name": "Panther II",
                     "nationality": 4,
@@ -1410,13 +1641,12 @@
                     "gunArc": 360,
                     "speedLimit": 40.2,
                     "camoValue": 13.4,
-                    "speedLimit": 56,
                     "crewLevel": 100,
                     "topWeight": 50.55,
                     "hull": {
                         "frontArmor": [
                                        177,
-                                       65
+                                       55
                                        ],
                         "sideArmor": [
                                       76,
@@ -1513,6 +1743,721 @@
                         }
                     }
                 },
+                "t-34-2": {
+                    "name": "T-34-2",
+                    "nationality": 2,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "T-34-1",
+                    "child": "WZ-120",
+                    "turreted": true,
+                    "experienceNeeded": 105000,
+                    "cost": 2480000,
+                    "baseHitpoints": 960,
+                    "gunArc": 360,
+                    "speedLimit": 50,
+                    "camoValue": 17.1,
+                    "crewLevel": 100,
+                    "topWeight": 34.18,
+                    "hull": {
+                        "frontArmor": [
+                                       70,
+                                       55
+                                       ],
+                        "sideArmor": [
+                                      45,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      45,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "T-34-2",
+                            "tier": 7,
+                            "viewRange": 370,
+                            "traverseSpeed": 44,
+                            "frontArmor": [
+                                           170,
+                                           60
+                                           ],
+                            "sideArmor": [
+                                          120,
+                                          60
+                                          ],
+                            "rearArmor": [
+                                          60,
+                                          60
+                                          ],
+                            "weight": 9300,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 12840,
+                            "additionalHP": 240,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "85 mm S-53",
+                                    "tier": 6,
+                                    "shells": [
+                                               [126, 160, 109, false],
+                                               [167, 160, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 13.33,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 20,
+                                    "weight": 1550,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 61530
+                                },
+                                "second": {
+                                    "name": "85 mm 56-85JT",
+                                    "tier": 6,
+                                    "shells": [
+                                               [128, 160, 109, false],
+                                               [167, 172, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 13.33,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 20,
+                                    "weight": 1750,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 6100,
+                                    "cost": 72000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "T-34-2 model 2",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 46,
+                            "frontArmor": [
+                                           180,
+                                           60
+                                           ],
+                            "sideArmor": [
+                                          120,
+                                          60
+                                          ],
+                            "rearArmor": [
+                                          60,
+                                          60
+                                          ],
+                            "weight": 10793,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15200,
+                            "cost": 35000,
+                            "additionalHP": 340,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "85 mm S-53",
+                                    "tier": 6,
+                                    "shells": [
+                                               [126, 160, 109, false],
+                                               [167, 160, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 13.33,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 20,
+                                    "weight": 1550,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 61530
+                                },
+                                "second": {
+                                    "name": "85 mm 56-85JT",
+                                    "tier": 6,
+                                    "shells": [
+                                               [128, 160, 109, false],
+                                               [167, 172, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 13.33,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 20,
+                                    "weight": 1750,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 6100,
+                                    "cost": 72000
+                                },
+                                "third": {
+                                    "name": "100 mm 44-100JT",
+                                    "tier": 7,
+                                    "shells": [
+                                               [175, 250, 252, false],
+                                               [235, 250, 11, true],
+                                               [50, 330, 252, false]
+                                               ],
+                                    "rateOfFire": 6.59,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 2257,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 17500,
+                                    "cost": 79000
+                                },
+                                "fourth": {
+                                    "name": "100 mm 59-100T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [181, 250, 252, false],
+                                               [241, 250, 11, true],
+                                               [50, 330, 252, false]
+                                               ],
+                                    "rateOfFire": 7.06,
+                                    "accuracy": 0.39,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 2257,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 18000,
+                                    "cost": 102000
+                                },
+                                "fifth": {
+                                    "name": "122 mm 37-122JT",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [250, 390, 14, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 4,
+                                    "accuracy": 0.48,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -3,
+                                    "gunElevation": 15,
+                                    "weight": 2440,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 19000,
+                                    "cost": 120000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "Type 102S1",
+                            "tier": 7,
+                            "horsepower": 500,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 38000
+                        },
+                        "second": {
+                            "name": "12150L",
+                            "tier": 8,
+                            "horsepower": 520,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 16000,
+                            "cost": 48000
+                        },
+                        "third": {
+                            "name": "12150LS",
+                            "tier": 9,
+                            "horsepower": 580,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 33000,
+                            "cost": 99500
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "T-34-2",
+                            "tier": 7,
+                            "loadLimit": 33.5,
+                            "traverseSpeed": 44,
+                            "weight": 7800,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 11690
+                        },
+                        "second": {
+                            "name": "T-34-2 model 2",
+                            "tier": 8,
+                            "loadLimit": 36.5,
+                            "traverseSpeed": 46,
+                            "weight": 7800,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16100,
+                            "cost": 34000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "A-220",
+                            "tier": 9,
+                            "signalRange": 600,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 38000
+                        },
+                        "top": {
+                            "name": "A-220A",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9500,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "t-34-3": {
+                    "name": "T-34-3",
+                    "nationality": 2,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": true,
+                    "turreted": true,
+                    "experienceNeeded": 0,
+                    "cost": 11000,
+                    "baseHitpoints": 1040,
+                    "gunArc": 360,
+                    "speedLimit": 50,
+                    "camoValue": 14.9,
+                    "crewLevel": 100,
+                    "topWeight": 35.5,
+                    "hull": {
+                        "frontArmor": [
+                                       90,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      50,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      50,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "T-34-3",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 46,
+                            "frontArmor": [
+                                           190,
+                                           60
+                                           ],
+                            "sideArmor": [
+                                          120,
+                                          60
+                                          ],
+                            "rearArmor": [
+                                          60,
+                                          60
+                                          ],
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 260,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "122 mm D-25TA",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [250, 390, 14, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 4.17,
+                                    "accuracy": 0.46,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -3,
+                                    "gunElevation": 15,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": true,
+                                    "experienceNeeded": 0,
+                                    "cost": 0
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "NORINCO 12150L",
+                            "tier": 8,
+                            "horsepower": 520,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "T-34-3",
+                            "tier": 8,
+                            "loadLimit": 38,
+                            "traverseSpeed": 46,
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "A-220",
+                            "tier": 9,
+                            "signalRange": 600,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        }
+                    }
+                },
+                "t-44": {
+                    "name": "T-44",
+                    "nationality": 6,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "T-43",
+                    "child": "T-54",
+                    "turreted": true,
+                    "experienceNeeded": 93653,
+                    "cost": 2390000,
+                    "baseHitpoints": 960,
+                    "gunArc": 360,
+                    "speedLimit": 51,
+                    "camoValue": 16.3,
+                    "crewLevel": 100,
+                    "topWeight": 34.155,
+                    "hull": {
+                        "frontArmor": [
+                                       90,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      75,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      45,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "T-44",
+                            "tier": 8,
+                            "viewRange": 370,
+                            "traverseSpeed": 48,
+                            "frontArmor": [
+                                           120,
+                                           30
+                                           ],
+                            "sideArmor": [
+                                          90,
+                                          15
+                                          ],
+                            "rearArmor": [
+                                          75,
+                                          5
+                                          ],
+                            "weight": 7000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 28000,
+                            "additionalHP": 240,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "85 mm ZiS S-53",
+                                    "tier": 6,
+                                    "shells": [
+                                               [120, 160, 109, false],
+                                               [161, 160, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 12.5,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 25,
+                                    "weight": 1550,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 62000
+                                },
+                                "second": {
+                                    "name": "85 mm D5T-85BM",
+                                    "tier": 7,
+                                    "shells": [
+                                               [144, 180, 150, false],
+                                               [194, 180, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 10.53,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 25,
+                                    "weight": 1850,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 15500,
+                                    "cost": 73600
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "T-44-100",
+                            "tier": 9,
+                            "viewRange": 380,
+                            "traverseSpeed": 48,
+                            "frontArmor": [
+                                           120,
+                                           30
+                                           ],
+                            "sideArmor": [
+                                          100,
+                                          15
+                                          ],
+                            "rearArmor": [
+                                          100,
+                                          5
+                                          ],
+                            "weight": 7800,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 20400,
+                            "cost": 48000,
+                            "additionalHP": 340,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "85 mm ZiS S-53",
+                                    "tier": 6,
+                                    "shells": [
+                                               [120, 160, 109, false],
+                                               [161, 160, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 12.77,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 25,
+                                    "weight": 1550,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 62000
+                                },
+                                "second": {
+                                    "name": "85 mm D5T-85BM",
+                                    "tier": 7,
+                                    "shells": [
+                                               [144, 180, 150, false],
+                                               [194, 180, 7, true],
+                                               [43, 280, 98, false]
+                                               ],
+                                    "rateOfFire": 10.71,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 25,
+                                    "weight": 1850,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 15500,
+                                    "cost": 73600
+                                },
+                                "third": {
+                                    "name": "100 mm D10T",
+                                    "tier": 7,
+                                    "shells": [
+                                               [175, 250, 252, false],
+                                               [235, 250, 10, true],
+                                               [50, 330, 252, false]
+                                               ],
+                                    "rateOfFire": 6.59,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 23,
+                                    "weight": 2257,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16500,
+                                    "cost": 78180
+                                },
+                                "fourth": {
+                                    "name": "100 mm LB-1",
+                                    "tier": 7,
+                                    "shells": [
+                                               [175, 250, 252, false],
+                                               [235, 250, 10, true],
+                                               [50, 330, 252, false]
+                                               ],
+                                    "rateOfFire": 6.98,
+                                    "accuracy": 0.35,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -7,
+                                    "gunElevation": 23,
+                                    "weight": 2400,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 19100,
+                                    "cost": 130750
+                                },
+                                "fifth": {
+                                    "name": "122 mm D-25-44",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 3.13,
+                                    "accuracy": 0.43,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 23,
+                                    "weight": 2600,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 26700,
+                                    "cost": 106370
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "V-2-44",
+                            "tier": 8,
+                            "horsepower": 560,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 49740
+                        },
+                        "second": {
+                            "name": "V-2-54",
+                            "tier": 9,
+                            "horsepower": 620,
+                            "fireChance": 0.12,
+                            "weight": 700,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 25200,
+                            "cost": 79290
+                        },
+                        "third": {
+                            "name": "V-54-6",
+                            "tier": 9,
+                            "horsepower": 680,
+                            "fireChance": 0.12,
+                            "weight": 700,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 27650,
+                            "cost": 82300
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "T-44",
+                            "tier": 7,
+                            "loadLimit": 33,
+                            "traverseSpeed": 42,
+                            "weight": 7700,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16070
+                        },
+                        "top": {
+                            "name": "T-44M",
+                            "tier": 8,
+                            "loadLimit": 35.3,
+                            "traverseSpeed": 44,
+                            "weight": 7700,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 13365,
+                            "cost": 30200
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "9RM",
+                            "tier": 8,
+                            "signalRange": 525,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 24240
+                        },
+                        "top": {
+                            "name": "R113",
+                            "tier": 10,
+                            "signalRange": 730,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 8700,
+                            "cost": 52200
+                        }
+                    }
+                },
                 "type59": {
                     "name": "Type 59",
                     "nationality": 2,
@@ -1531,7 +2476,7 @@
                     "hull": {
                         "frontArmor": [
                                        100,
-                                       65
+                                       60
                                        ],
                         "sideArmor": [
                                       80,
@@ -3850,7 +4795,7 @@
                     "hull": {
                         "frontArmor": [
                                        180,
-                                       60
+                                       55
                                        ],
                         "sideArmor": [
                                       150,
@@ -4438,7 +5383,7 @@
                             "traverseSpeed": 18,
                             "frontArmor": [
                                            279,
-                                           5
+                                           30
                                            ],
                             "sideArmor": [
                                           127,
@@ -5300,7 +6245,7 @@
                     "hull": {
                         "frontArmor": [
                                        150,
-                                       65
+                                       55
                                        ],
                         "sideArmor": [
                                       40,
@@ -6293,7 +7238,7 @@
                     "hull": {
                         "frontArmor": [
                                        250,
-                                       45
+                                       30
                                        ],
                         "sideArmor": [
                                       80,

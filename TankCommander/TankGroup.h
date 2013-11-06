@@ -26,7 +26,7 @@
 - (NSNumber *)averageValueForKey:(NSString *)key;
 
 // Pretty Printing Methods
-- (NSString *)logSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
+- (NSString *)stringSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;
 
 
 - (void)setAllRoundsToNormalRounds;

@@ -13,11 +13,13 @@
 #import "Engine.h"
 #import "Radio.h"
 #import "Suspension.h"
+#import "Armor.h"
 
 @implementation Tank
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
-    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit, baseHitpoints, parent, child, nationality, tier, type;
+    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
+    baseHitpoints, parent, child, nationality, tier, type, camoValue;
 
 
 - (id)initWithDict:(NSDictionary *)dict
@@ -108,9 +110,11 @@
 - (BOOL)validate
 {
     BOOL result = YES;
-    // The validation is being separated into categories, the first is floatKeys, which require both non-null and nonzero values
+    // The validation is being separated into categories, the first is floatKeys,
+    // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
-        @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"gunTraverseArc", @"speedLimit", @"camoValue", nil];
+                          @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"gunTraverseArc",
+                          @"speedLimit", @"camoValue", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -119,7 +123,8 @@
     }
     // These keys check only for the presence of a value
     NSArray *presenceKeys = [NSArray arrayWithObjects:
-                             @"name", @"nationality", @"type", @"hasTurret", @"premiumTank", @"experienceNeeded", @"hull", @"engine", @"radio", @"suspension", nil];
+                             @"name", @"nationality", @"type", @"hasTurret", @"premiumTank", @"experienceNeeded",
+                             @"hull", @"engine", @"radio", @"suspension", nil];
     for (NSString *key in presenceKeys) {
         if (![self valueForKey:key]) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -140,7 +145,8 @@
     }
     // Finally, validate the module arrays to ensure there is only one stock and one top module for each
     NSMutableArray *moduleArrayKeys = [NSMutableArray arrayWithObjects:
-                                @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns", nil];
+                                @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns",
+                                       nil];
     if (self.hasTurret) {
         [moduleArrayKeys addObject:@"availableTurrets"];
     }
@@ -159,7 +165,8 @@
     NSArray *moduleArray = [self valueForKey:moduleArrayString];
     int stockValues = 0;
     int topValues = 0;
-    // There can only be one stock module and one top module for each module type, this method checks to ensure that this is true
+    // There can only be one stock module and one top module for each module type,
+    // this method checks to ensure that this is true
     for (Module *mod in moduleArray) {
         // First we count the number of modules labelled stock and top
         if (mod.topModule) {
@@ -179,7 +186,8 @@
               self.name, moduleArrayString);
         result = NO;
     }
-    // The method will fail if any of the four conditions are wrong, so the log statements can stay in here permanently to specify the error
+    // The method will fail if any of the four conditions are wrong, so the log statements
+    // can stay in here permanently to specify the error
     if (stockValues == 0) {
         NSLog(@"Error: %@ %@ is missing a stock module",
               self.name, moduleArrayString);
@@ -315,6 +323,84 @@
 - (float)reloadTime
 {
     return 60.0 / self.gun.rateOfFire;
+}
+
+
+
+- (float)frontalHullArmor
+{
+    return self.hull.frontArmor.thickness;
+}
+- (float)sideHullArmor
+{
+    return self.hull.sideArmor.thickness;
+}
+- (float)rearHullArmor
+{
+    return self.hull.rearArmor.thickness;
+}
+
+- (float)effectiveFrontalHullArmor
+{
+    return self.hull.frontArmor.effectiveThickness;
+}
+- (float)effectiveSideHullArmor
+{
+    return self.hull.sideArmor.effectiveThickness;
+}
+- (float)effectiveRearHullArmor
+{
+    return self.hull.rearArmor.thickness;
+}
+
+- (float)frontalTurretArmor
+{
+    if (self.hasTurret) {
+        return self.turret.frontArmor.thickness;
+    } else {
+        return self.frontalHullArmor;
+    }
+}
+- (float)sideTurretArmor
+{
+    if (self.hasTurret) {
+        return self.turret.sideArmor.thickness;
+    } else {
+        return self.sideHullArmor;
+    }
+}
+- (float)rearTurretArmor
+{
+    if (self.hasTurret) {
+        return self.turret.rearArmor.thickness;
+    } else {
+        return self.rearHullArmor;
+    }
+}
+
+- (float)effectiveFrontalTurretArmor
+{
+    if (self.hasTurret) {
+        return self.turret.frontArmor.effectiveThickness;
+    } else {
+        return self.effectiveFrontalHullArmor;
+    }
+}
+- (float)effectiveSideTurretArmor
+{
+    if (self.hasTurret) {
+        return self.turret.sideArmor.effectiveThickness;
+    } else {
+        return self.effectiveSideHullArmor;
+    }
+}
+- (float)effectiveRearTurretArmor
+{
+    if (self.hasTurret) {
+        return self.turret.rearArmor.effectiveThickness;
+    } else {
+        return self.effectiveRearHullArmor;
+    }
 }
 
 TankType fetchTankType (int index)
