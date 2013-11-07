@@ -51,7 +51,206 @@
             "spgs": {}
         },
         "tier8": {
-            "lightTanks": {},
+            "lightTanks": {
+                "amx1390": {
+                    "name": "AMX 13 90",
+                    "nationality": 3,
+                    "tier": 8,
+                    "type": 0,
+                    "premiumTank": false,
+                    "parent": "AMX 13 75",
+                    "child": "Lorraine 40 t",
+                    "turreted": true,
+                    "experienceNeeded": 113000,
+                    "cost": 2370000,
+                    "baseHitpoints": 880,
+                    "gunArc": 360,
+                    "speedLimit": 64,
+                    "camoValue": 17.7,
+                    "crewLevel": 100,
+                    "topWeight": 14.895,
+                    "hull": {
+                        "frontArmor": [
+                                       40,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      20,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      15,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Fl 10 Type D",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 46,
+                            "frontArmor": [
+                                           40,
+                                           40
+                                           ],
+                            "sideArmor": [
+                                          20,
+                                          15
+                                          ],
+                            "rearArmor": [
+                                          20,
+                                          15
+                                          ],
+                            "weight": 2670,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 220,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "75 mm SA50",
+                                    "tier": 6,
+                                    "shells": [
+                                               [144, 135, 109, false],
+                                               [202, 135, 7, true],
+                                               [38, 175, 98, false]
+                                               ],
+                                    "rateOfFire": 13.85,
+                                    "accuracy": 0.36,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 1740,
+                                    "autoloader": true,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 16,
+                                    "timeBetweenShots": 2,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 64200
+                                },
+                                "top": {
+                                    "name": "90 mm F3",
+                                    "tier": 7,
+                                    "shells": [
+                                               [170, 240, 255, false],
+                                               [248, 240, 12, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 6.47,
+                                    "accuracy": 0.38,
+                                    "aimTime": 3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 13,
+                                    "weight": 2200,
+                                    "autoloader": true,
+                                    "roundsInDrum": 6,
+                                    "drumReload": 42,
+                                    "timeBetweenShots": 2.73,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 15000,
+                                    "cost": 87000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "SOFAM 8 Gxb",
+                            "tier": 5,
+                            "horsepower": 250,
+                            "fireChance": 0.2,
+                            "weight": 400,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16000
+                        },
+                        "second": {
+                            "name": "Baudouin 6F 11 SRY",
+                            "tier": 6,
+                            "horsepower": 280,
+                            "fireChance": 0.15,
+                            "weight": 400,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 8000,
+                            "cost": 27000
+                        },
+                        "third": {
+                            "name": "Detroit Diesel 6V53T",
+                            "tier": 7,
+                            "horsepower": 300,
+                            "fireChance": 0.15,
+                            "weight": 770,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 11000,
+                            "cost": 37000
+                        },
+                        "top": {
+                            "name": "Detroit Diesel 6V53T-s",
+                            "tier": 7,
+                            "horsepower": 350,
+                            "fireChance": 0.12,
+                            "weight": 770,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 12000,
+                            "cost": 39740
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "AMX 13 Type 2R",
+                            "tier": 6,
+                            "loadLimit": 15.61,
+                            "traverseSpeed": 38,
+                            "weight": 1400,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 9250
+                        },
+                        "top": {
+                            "name": "AMX 13 Type 2D",
+                            "tier": 8,
+                            "loadLimit": 15.61,
+                            "traverseSpeed": 38,
+                            "weight": 1400,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 18200,
+                            "cost": 26000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 400,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top": {
+                            "name": "SCR 528F",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+            },
             "mediumTanks": {
                 "centurion": {
                     "name": "Centurion Mk. I",
@@ -2458,6 +2657,193 @@
                         }
                     }
                 },
+                "t69": {
+                    "name": "T69",
+                    "nationality": 0,
+                    "tier": 8,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "T71",
+                    "child": "T54E1",
+                    "turreted": true,
+                    "experienceNeeded": 118000,
+                    "cost": 2403000,
+                    "baseHitpoints": 1080,
+                    "gunArc": 360,
+                    "speedLimit": 51.5,
+                    "camoValue": 12.9,
+                    "crewLevel": 100,
+                    "topWeight": 34.53,
+                    "hull": {
+                        "frontArmor": [
+                                       101,
+                                       55
+                                       ],
+                        "sideArmor": [
+                                      76,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      38,
+                                      5
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "T178",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 38,
+                            "frontArmor": [
+                                           101,
+                                           45
+                                           ],
+                            "sideArmor": [
+                                          76,
+                                          5
+                                          ],
+                            "rearArmor": [
+                                          50,
+                                          5
+                                          ],
+                            "weight": 7000,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 46000,
+                            "additionalHP": 270,
+                            "availableGuns": {
+                                "stock" : {
+                                    "name": "76 mm Gun T185",
+                                    "tier": 6,
+                                    "shells": [
+                                               [175, 150, 270, false],
+                                               [210, 150, 40 , true],
+                                               [38, 185, 250, false]
+                                               ],
+                                    "rateOfFire": 12.9,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -9,
+                                    "gunElevation": 14,
+                                    "weight": 646,
+                                    "autoloader": true,
+                                    "roundsInDrum": 5,
+                                    "drumReload": 16,
+                                    "timeBetweenShots": 1.82,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 60000
+                                },
+                                "top": {
+                                    "name": "90 mm Gun T178",
+                                    "tier": 8,
+                                    "shells": [
+                                               [173, 240, 255, false],
+                                               [250, 240, 10, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.27,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -9,
+                                    "gunElevation": 14,
+                                    "weight": 1075,
+                                    "autoloader": true,
+                                    "roundsInDrum": 4,
+                                    "drumReload": 27,
+                                    "timeBetweenShots": 2,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 18000,
+                                    "cost": 121000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock" : {
+                            "name": "Wright Continental R-975C4",
+                            "tier": 5,
+                            "horsepower": 460,
+                            "fireChance": 0.2,
+                            "weight": 550,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 13900
+                        },
+                        "second": {
+                            "name": "Continental AOS-895-3",
+                            "tier": 7,
+                            "horsepower": 500,
+                            "fireChance": 0.2,
+                            "weight": 771,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 9500,
+                            "cost": 31000
+                        },
+                        "top": {
+                            "name": "Continental AOS-895-5",
+                            "tier": 8,
+                            "horsepower": 600,
+                            "fireChance": 0.2,
+                            "weight": 771,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 18000,
+                            "cost": 43000
+                        }
+                    },
+                    "suspensions": {
+                        "stock" : {
+                            "name": "T84E1",
+                            "tier": 7,
+                            "loadLimit": 34.56,
+                            "traverseSpeed": 38,
+                            "weight": 8000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16300
+                        },
+                        "top": {
+                            "name": "T95",
+                            "tier": 8,
+                            "loadLimit": 36.56,
+                            "traverseSpeed": 40,
+                            "weight": 8000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14800,
+                            "cost": 16300
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 610",
+                            "tier": 6,
+                            "signalRange": 420,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 24600
+                        },
+                        "top": {
+                            "name": "SCR 619",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
                 "type59": {
                     "name": "Type 59",
                     "nationality": 2,
@@ -3143,8 +3529,8 @@
                                     "experienceNeeded": 0,
                                     "cost": 87000,
                                     "roundsInDrum": 6,
-                                    "drumReload": 50,
-                                    "timeBetweenShots": 2.5
+                                    "drumReload": 35,
+                                    "timeBetweenShots": 2.73
                                 },
                                 "90 mm DCA 45": {
                                     "name": "90 mm DCA 45",
@@ -3181,8 +3567,8 @@
                                     "experienceNeeded": 18500,
                                     "cost": 121250,
                                     "roundsInDrum": 6,
-                                    "drumReload": 50,
-                                    "timeBetweenShots": 2.5
+                                    "drumReload": 35,
+                                    "timeBetweenShots": 2.73
                                 },
                                 "100mm SA47": {
                                     "name": "100mm SA47",
@@ -3220,7 +3606,7 @@
                                     "cost": 127550,
                                     "roundsInDrum": 6,
                                     "drumReload": 50,
-                                    "timeBetweenShots": 2.5
+                                    "timeBetweenShots": 2.73
                                 }
                             }
                         }
@@ -7541,6 +7927,159 @@
                             "topModule": true,
                             "experienceNeeded": 7200,
                             "cost": 43200
+                        }
+                    }
+                },
+                "rhm-b-wt": {
+                    "name": "Rhm.-B. WT",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 3,
+                    "premiumTank": false,
+                    "parent": "Pz.Sfl. V",
+                    "child": "WT auf. Pz. IV",
+                    "turreted": false,
+                    "experienceNeeded": 71000,
+                    "cost": 2400000,
+                    "baseHitpoints": 1100,
+                    "gunArc": 360,
+                    "camoValue": 22.56,
+                    "crewLevel": 100,
+                    "topWeight": 18.57,
+                    "hull": {
+                        "frontArmor": [
+                                       20,
+                                       45
+                                       ],
+                        "sideArmor": [
+                                      10,
+                                      20
+                                      ],
+                        "rearArmor": [
+                                      8,
+                                      20
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "12,8 cm K44 L/55",
+                                "tier": 10,
+                                "shells": [
+                                           [246, 490, 1070, false],
+                                           [311, 490, 12, true],
+                                           [65, 630, 608, false]
+                                           ],
+                                "rateOfFire": 5.5,
+                                "autoloader": false,
+                                "accuracy": 0.35,
+                                "aimTime": 2.3,
+                                "gunDepression": -2,
+                                "gunElevation": 15,
+                                "weight": 7795,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 0
+                            },
+                            "top": {
+                                "name": "15 cm Pak L/29.5",
+                                "tier": 10,
+                                "shells": [
+                                           [215, 750, 1200, false],
+                                           [334, 750, 16, true],
+                                           [85, 950, 1050, false]
+                                           ],
+                                "rateOfFire": 3,
+                                "autoloader": false,
+                                "accuracy": 0.4,
+                                "aimTime": 2.7,
+                                "gunDepression": -2,
+                                "gunElevation": 15,
+                                "weight": 5625,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 63500,
+                                "cost": 330000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Praga Ausf. IV",
+                            "tier": 4,
+                            "horsepower": 180,
+                            "fireChance": 0.20,
+                            "weight": 600,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        },
+                        "top": {
+                            "name": "Tatra Typ TD 103 P",
+                            "tier": 5,
+                            "horsepower": 207,
+                            "fireChance": 0.20,
+                            "weight": 600,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 1050,
+                            "cost": 14000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "Rhm.-B. WT",
+                            "tier": 7,
+                            "loadLimit": 21,
+                            "traverseSpeed": 34,
+                            "weight": 6000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        },
+                        "top": {
+                            "name": "Rhm.-B. WT verstarkteketten",
+                            "tier": 8,
+                            "loadLimit": 23,
+                            "traverseSpeed": 38,
+                            "weight": 6000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 14500,
+                            "cost": 31000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG f",
+                            "tier": 6,
+                            "signalRange": 400,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 0
+                        },
+                        "second": {
+                            "name": "FuG 8",
+                            "tier": 8,
+                            "signalRange": 550,
+                            "weight": 50,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 4040,
+                            "cost": 24240
+                        },
+                        "third": {
+                            "name": "FuG Spr. A",
+                            "tier": 8,
+                            "signalRange": 700,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 4500,
+                            "cost": 27000
                         }
                     }
                 },

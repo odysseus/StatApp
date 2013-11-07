@@ -21,7 +21,6 @@
     availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
     baseHitpoints, parent, child, nationality, tier, type, camoValue;
 
-
 - (id)initWithDict:(NSDictionary *)dict
 {
     self = [super init];
@@ -325,8 +324,6 @@
     return 60.0 / self.gun.rateOfFire;
 }
 
-
-
 - (float)frontalHullArmor
 {
     return self.hull.frontArmor.thickness;
@@ -477,6 +474,5 @@ TankNationality fetchTankNationality (int index)
     }
     return totalExp;
 }
-
 
 @end
