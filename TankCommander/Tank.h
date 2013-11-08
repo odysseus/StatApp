@@ -77,6 +77,7 @@ typedef enum TankNationality : NSUInteger {
 - (float)roundsInDrum;
 - (float)drumReload;
 - (float)timeBetweenShots;
+- (float)loadLimit;
 
 // Calculated properties
 - (int)hitpoints;

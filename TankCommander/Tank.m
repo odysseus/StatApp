@@ -324,6 +324,11 @@
     return 60.0 / self.gun.rateOfFire;
 }
 
+- (float)loadLimit
+{
+    return self.suspension.loadLimit;
+}
+
 - (float)frontalHullArmor
 {
     return self.hull.frontArmor.thickness;

@@ -29,7 +29,7 @@
         [tank validate];
     }
     
-    Tank *tank = [allTanks.tier8.all findTankByName:@"T69"];
+    Tank *tank = [allTanks.tier8.all findTankByName:@"AMX 13 90"];
     NSLog(@"%@: %@", tank.name, tank.gun);
     
     NSString *key = @"damagePerMinute";
