@@ -10,10 +10,11 @@
 #import "Tank.h"
 #import "Module.h"
 #import "Gun.h"
+#import "AverageTank.h"
 
 @implementation TankGroup
 
-@synthesize group;
+@synthesize group, averageTank;
 
 - (id)init
 {
@@ -26,7 +27,11 @@
 
 - (void)addObject:(id)object
 {
-    [group addObject:object];
+    if ([object class] == [Tank class]) {
+        [group addObject:object];
+    } else {
+        NSLog(@"Trying to add a non Tank to a TankGroup array");
+    }
 }
 
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate
@@ -138,6 +143,29 @@
     }
     @catch (NSException *exception) {
         return @"Error, key not found";
+    }
+}
+
+- (void)addAverageTank
+{
+    AverageTank *average = [[AverageTank alloc] init];
+    if (average) {
+        average.name = @"Average";
+        NSArray *intKeys = @[@"experienceNeeded", @"cost", @"hitpoints"];
+        for (NSString *key in intKeys) {
+            [average setValue:[self averageValueForKey:key] forKey:key];
+        }
+        NSArray *floatKeys = @[@"gunTraverseArc", @"speedLimit", @"camoValue", @"penetration", @"aimTime",
+                               @"accuracy", @"rateOfFire", @"gunDepression", @"gunElevation", @"weight",
+                               @"specificPower", @"damagePerMinute", @"reloadTime", @"alphaDamage",
+                               @"frontalHullArmor", @"sideHullArmor", @"rearHullArmor", @"frontalTurretArmor",
+                               @"sideTurretArmor", @"effectiveFrontalHullArmor", @"effectiveSideHullArmor",
+                               @"effectiveRearHullArmor", @"effectiveFrontalTurretArmor",
+                               @"effectiveSideTurretArmor", @"effectiveRearTurretArmor"];
+        for (NSString *key in floatKeys) {
+            [average setValue:[self averageValueForKey:key] forKey:key];
+        }
+        self.averageTank = average;
     }
 }
 

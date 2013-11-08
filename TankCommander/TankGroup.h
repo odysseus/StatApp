@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class Tank;
+@class Tank, AverageTank;
 
 @interface TankGroup : NSObject
 
 @property (nonatomic) NSMutableArray *group;
+@property (nonatomic) AverageTank *averageTank;
 
 - (void)addObject:(id)object;
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate;
 - (Tank *)findTankByName:(NSString *)name;
+- (void)addAverageTank;
 
 // Data Sorting Methods
 - (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;

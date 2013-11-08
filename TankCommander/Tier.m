@@ -53,6 +53,11 @@
             [SPGs addObject:currentTank];
         }
     }
+    [self.lightTanks addAverageTank];
+    [self.mediumTanks addAverageTank];
+    [self.heavyTanks addAverageTank];
+    [self.tankDestroyers addAverageTank];
+    [self.SPGs addAverageTank];
     return self;
 }
 
