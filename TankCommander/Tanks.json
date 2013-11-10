@@ -9353,6 +9353,150 @@
                         }
                     }
                 },
+                "lorr15551": {
+                    "name": "Lorraine 155 mle. 51",
+                    "nationality": 3,
+                    "tier": 8,
+                    "type": 4,
+                    "premiumTank": false,
+                    "parent": "Lorraine 155 mle. 50",
+                    "child": "Bat.-Châtillon 155 55",
+                    "turreted": false,
+                    "experienceNeeded": 92100,
+                    "cost": 2550000,
+                    "baseHitpoints": 390,
+                    "gunArc": 30,
+                    "camoValue": 11.1,
+                    "speedLimit": 60,
+                    "crewLevel": 100,
+                    "topWeight": 33,
+                    "hull": {
+                        "frontArmor": [
+                                       40,
+                                       45
+                                       ],
+                        "sideArmor": [
+                                      30,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      25,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "Obusier de 155 mm mle. 1950",
+                                "tier": 7,
+                                "shells": [
+                                           [90, 950, 1000, false],
+                                           [90, 950, 13, true],
+                                           [185, 720, 12, true]
+                                           ],
+                                "rateOfFire": 2.25,
+                                "autoloader": false,
+                                "accuracy": 0.76,
+                                "aimTime": 6.5,
+                                "gunDepression": 0,
+                                "gunElevation": 45,
+                                "weight": 2675,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 96000
+                            },
+                            "top": {
+                                "name": "Canon de 155 mm mle. 1917 G.P.F.",
+                                "tier": 8,
+                                "shells": [
+                                           [95, 1250, 1120, false],
+                                           [95, 1250, 13, true],
+                                           [185, 720, 12, true]
+                                           ],
+                                "rateOfFire": 1.82,
+                                "autoloader": false,
+                                "accuracy": 0.74,
+                                "aimTime": 6,
+                                "gunDepression": 0,
+                                "gunElevation": 45,
+                                "weight": 3989,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 20500,
+                                "cost": 125000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 230 TRM P30",
+                            "tier": 8,
+                            "horsepower": 700,
+                            "fireChance": 0.20,
+                            "weight": 1200,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 54000
+                        },
+                        "third": {
+                            "name": "Maybach 850 CV",
+                            "tier": 9,
+                            "horsepower": 850,
+                            "fireChance": 0.20,
+                            "weight": 1200,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 25100,
+                            "cost": 80000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "Lorraine 155 mle. 51",
+                            "tier": 7,
+                            "loadLimit": 33,
+                            "traverseSpeed": 25,
+                            "weight": 15000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 20080
+                        },
+                        "top": {
+                            "name": "Lorraine 155 mle. 51 bis",
+                            "tier": 8,
+                            "loadLimit": 36.5,
+                            "traverseSpeed": 28,
+                            "weight": 15000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15200,
+                            "cost": 33000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 400,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top" : {
+                            "name": "SCR 528F",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
                 "m4043": {
                     "name": "M40/M43",
                     "nationality": 0,
@@ -9514,6 +9658,150 @@
                             "topModule": true,
                             "experienceNeeded": 9000,
                             "cost": 54000
+                        }
+                    }
+                },
+                "su-14-2": {
+                    "name": "SU-14-2",
+                    "nationality": 6,
+                    "tier": 8,
+                    "type": 4,
+                    "premiumTank": false,
+                    "parent": "SU-14-1",
+                    "child": "212A",
+                    "turreted": false,
+                    "experienceNeeded": 118600,
+                    "cost": 2720000,
+                    "baseHitpoints": 410,
+                    "gunArc": 10,
+                    "camoValue": 3.71,
+                    "speedLimit": 30,
+                    "crewLevel": 100,
+                    "topWeight": 63.99,
+                    "hull": {
+                        "frontArmor": [
+                                       50,
+                                       45
+                                       ],
+                        "sideArmor": [
+                                      30,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      20,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "152 mm BR-2",
+                                "tier": 7,
+                                "shells": [
+                                           [88, 950, 1120, false],
+                                           [246, 750, 12, true],
+                                           [90, 950, 13, true]
+                                           ],
+                                "rateOfFire": 2.59,
+                                "autoloader": false,
+                                "accuracy": 0.74,
+                                "aimTime": 6.5,
+                                "gunDepression": -4,
+                                "gunElevation": 50,
+                                "weight": 5720,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 92000
+                            },
+                            "top": {
+                                "name": "203 mm B-4",
+                                "tier": 9,
+                                "shells": [
+                                           [102, 1850, 1586, false],
+                                           [260, 1450, 1200, false],
+                                           [102, 1850, 15, true]
+                                           ],
+                                "rateOfFire": 1.3,
+                                "autoloader": false,
+                                "accuracy": 0.87,
+                                "aimTime": 7.5,
+                                "gunDepression": -4,
+                                "gunElevation": 50,
+                                "weight": 5200,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 64000,
+                                "cost": 235000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "M-17T",
+                            "tier": 4,
+                            "horsepower": 500,
+                            "fireChance": 0.20,
+                            "weight": 610,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 13460
+                        },
+                        "second": {
+                            "name": "M-17F",
+                            "tier": 7,
+                            "horsepower": 700,
+                            "fireChance": 0.20,
+                            "weight": 610,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 10000,
+                            "cost": 35000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "SU-14-2",
+                            "tier": 7,
+                            "loadLimit": 64,
+                            "traverseSpeed": 14,
+                            "weight": 15000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 20000
+                        },
+                        "top": {
+                            "name": "SU-14-2 enhanced",
+                            "tier": 8,
+                            "loadLimit": 66,
+                            "traverseSpeed": 16,
+                            "weight": 15000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15115,
+                            "cost": 27310
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "10R",
+                            "tier": 5,
+                            "signalRange": 360,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 3660
+                        },
+                        "top" : {
+                            "name": "12RT",
+                            "tier": 9,
+                            "signalRange": 625,
+                            "weight": 110,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 5600,
+                            "cost": 33600
                         }
                     }
                 }
