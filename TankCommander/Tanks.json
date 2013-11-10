@@ -9046,7 +9046,478 @@
                     }
                 }
             },
-            "spgs": {}
+            "spgs": {
+                "fv207": {
+                    "name": "FV207",
+                    "nationality": 1,
+                    "tier": 8,
+                    "type": 4,
+                    "premiumTank": false,
+                    "parent": "Crusader 5.5-in. SP",
+                    "child": "FV3805",
+                    "turreted": false,
+                    "experienceNeeded": 118200,
+                    "cost": 2730000,
+                    "baseHitpoints": 430,
+                    "gunArc": 36,
+                    "camoValue": 7.7,
+                    "speedLimit": 29,
+                    "crewLevel": 100,
+                    "topWeight": 60,
+                    "hull": {
+                        "frontArmor": [
+                                       50,
+                                       5
+                                       ],
+                        "sideArmor": [
+                                      50,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      50,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "B.L. 5.5-in. Gun",
+                                "tier": 7,
+                                "shells": [
+                                           [70, 900, 700, false],
+                                           [75, 900, 12, true]
+                                           ],
+                                "rateOfFire": 2.4,
+                                "autoloader": false,
+                                "accuracy": 0.72,
+                                "aimTime": 6.5,
+                                "gunDepression": -5,
+                                "gunElevation": 70,
+                                "weight": 1869,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 88000
+                            },
+                            "top": {
+                                "name": "Q.F. 6-in. Gun Mk. V",
+                                "tier": 8,
+                                "shells": [
+                                           [90, 1250, 1220, false],
+                                           [258, 750, 1400, false],
+                                           [90, 1250, 15, true]
+                                           ],
+                                "rateOfFire": 1.82,
+                                "autoloader": false,
+                                "accuracy": 0.72,
+                                "aimTime": 7.5,
+                                "gunDepression": -1,
+                                "gunElevation": 50,
+                                "weight": 6960,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 20800,
+                                "cost": 130000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Rolls-Royce Meteor Mk. IVB",
+                            "tier": 5,
+                            "horsepower": 650,
+                            "fireChance": 0.20,
+                            "weight": 744,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16000
+                        },
+                        "third": {
+                            "name": "Rolls-Royce Meteor Mk. IVC",
+                            "tier": 9,
+                            "horsepower": 750,
+                            "fireChance": 0.20,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 31000,
+                            "cost": 84000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "FV206",
+                            "tier": 7,
+                            "loadLimit": 56,
+                            "traverseSpeed": 18,
+                            "weight": 20000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 20000
+                        },
+                        "top": {
+                            "name": "FV207",
+                            "tier": 8,
+                            "loadLimit": 65,
+                            "traverseSpeed": 20,
+                            "weight": 20000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15500,
+                            "cost": 35000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "WS No. 19 Mk. III",
+                            "tier": 8,
+                            "signalRange": 550,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22000
+                        },
+                        "second": {
+                            "name": "WS No. 22",
+                            "tier": 8,
+                            "signalRange": 700,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 4500,
+                            "cost": 25000
+                        },
+                        "third": {
+                            "name": "SR C42",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "gwtigerp": {
+                    "name": "G.W. Tiger (P)",
+                    "nationality": 4,
+                    "tier": 8,
+                    "type": 4,
+                    "premiumTank": false,
+                    "parent": "G.W. Panther",
+                    "child": "G.W. Tiger",
+                    "turreted": false,
+                    "experienceNeeded": 113000,
+                    "cost": 2650000,
+                    "baseHitpoints": 440,
+                    "gunArc": 10,
+                    "camoValue": 3.71,
+                    "speedLimit": 35,
+                    "crewLevel": 100,
+                    "topWeight": 74.06,
+                    "hull": {
+                        "frontArmor": [
+                                       100,
+                                       25
+                                       ],
+                        "sideArmor": [
+                                      80,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      16,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "17 cm Kanone 72",
+                                "tier": 8,
+                                "shells": [
+                                           [88, 1400, 1344, false],
+                                           [95, 1400, 13, true]
+                                           ],
+                                "rateOfFire": 1.69,
+                                "autoloader": false,
+                                "accuracy": 0.74,
+                                "aimTime": 7,
+                                "gunDepression": -2,
+                                "gunElevation": 48,
+                                "weight": 6750,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 140000
+                            },
+                            "top": {
+                                "name": "21 cm Mörser 18/1",
+                                "tier": 9,
+                                "shells": [
+                                           [105, 2000, 2080, false],
+                                           [303, 1550, 1930, false],
+                                           [105, 2000, 20, true]
+                                           ],
+                                "rateOfFire": 1.16,
+                                "autoloader": false,
+                                "accuracy": 0.9,
+                                "aimTime": 7.5,
+                                "gunDepression": -2,
+                                "gunElevation": 48,
+                                "weight": 5900,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 67500,
+                                "cost": 245000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "2x Maybach HL 120 TRM",
+                            "tier": 7,
+                            "horsepower": 600,
+                            "fireChance": 0.20,
+                            "weight": 1840,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 35500
+                        },
+                        "third": {
+                            "name": "2x Porsche Typ 101/1",
+                            "tier": 8,
+                            "horsepower": 640,
+                            "fireChance": 0.20,
+                            "weight": 1840,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15000,
+                            "cost": 36000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "G.W. Tiger (P)",
+                            "tier": 7,
+                            "loadLimit": 75,
+                            "traverseSpeed": 14,
+                            "weight": 21000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 20000
+                        },
+                        "top": {
+                            "name": "G.W. Tiger (P) verstärkteketten",
+                            "tier": 8,
+                            "loadLimit": 78,
+                            "traverseSpeed": 16,
+                            "weight": 21000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 15000,
+                            "cost": 36000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 5",
+                            "tier": 3,
+                            "signalRange": 310,
+                            "weight": 50,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 630
+                        },
+                        "stock": {
+                            "name": "FuG 7",
+                            "tier": 6,
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1360,
+                            "cost": 8160
+                        },
+                        "top" : {
+                            "name": "FuG 12",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
+                        }
+                    }
+                },
+                "m4043": {
+                    "name": "M40/M43",
+                    "nationality": 0,
+                    "tier": 8,
+                    "type": 4,
+                    "premiumTank": false,
+                    "parent": "M12",
+                    "child": "M53/M55",
+                    "turreted": false,
+                    "experienceNeeded": 165000,
+                    "cost": 2700000,
+                    "baseHitpoints": 400,
+                    "gunArc": 36,
+                    "camoValue": 10.57,
+                    "speedLimit": 38.6,
+                    "crewLevel": 100,
+                    "topWeight": 36.69,
+                    "hull": {
+                        "frontArmor": [
+                                       108,
+                                       50
+                                       ],
+                        "sideArmor": [
+                                      25,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      12,
+                                      5
+                                      ],
+                        "availableGuns": {
+                            "stock": {
+                                "name": "155 mm Gun M1A1",
+                                "tier": 7,
+                                "shells": [
+                                           [88, 1250, 1120, false],
+                                           [90, 1250, 13, true]
+                                           ],
+                                "rateOfFire": 1.82,
+                                "autoloader": false,
+                                "accuracy": 0.72,
+                                "aimTime": 6.5,
+                                "gunDepression": -5,
+                                "gunElevation": 45,
+                                "weight": 4352,
+                                "stockModule": true,
+                                "topModule": false,
+                                "experienceNeeded": 0,
+                                "cost": 96500
+                            },
+                            "top": {
+                                "name": "8-inch Howitzer M1",
+                                "tier": 8,
+                                "shells": [
+                                           [102, 1850, 1388, false],
+                                           [241, 1450, 1092, false],
+                                           [102, 1850, 15, true]
+                                           ],
+                                "rateOfFire": 1.23,
+                                "autoloader": false,
+                                "accuracy": 0.86,
+                                "aimTime": 7.5,
+                                "gunDepression": -5,
+                                "gunElevation": 45,
+                                "weight": 4645,
+                                "stockModule": false,
+                                "topModule": true,
+                                "experienceNeeded": 21000,
+                                "cost": 150000
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Wright Continental R-975C1",
+                            "tier": 4,
+                            "horsepower": 400,
+                            "fireChance": 0.20,
+                            "weight": 549,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 11000
+                        },
+                        "second": {
+                            "name": "Wright Continental R-975C4",
+                            "tier": 5,
+                            "horsepower": 460,
+                            "fireChance": 0.20,
+                            "weight": 549,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1500,
+                            "cost": 13900
+                        },
+                        "third": {
+                            "name": "Ford GAA early",
+                            "tier": 6,
+                            "horsepower": 500,
+                            "fireChance": 0.20,
+                            "weight": 708,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 5100,
+                            "cost": 29000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "M40",
+                            "tier": 7,
+                            "loadLimit": 37,
+                            "traverseSpeed": 20,
+                            "weight": 15000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 19070
+                        },
+                        "top": {
+                            "name": "M43",
+                            "tier": 8,
+                            "loadLimit": 39.5,
+                            "traverseSpeed": 22,
+                            "weight": 15000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 16300,
+                            "cost": 32000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 510",
+                            "tier": 4,
+                            "signalRange": 325,
+                            "weight": 80,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 1980
+                        },
+                        "second": {
+                            "name": "SCR 610",
+                            "tier": 6,
+                            "signalRange": 420,
+                            "weight": 100,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1480,
+                            "cost": 24600
+                        },
+                        "third": {
+                            "name": "SCR 619",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                }
+            }
         },
         "tier9": {
             "lightTanks": {},
