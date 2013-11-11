@@ -106,6 +106,17 @@ typedef enum TankNationality : NSUInteger {
 - (BOOL)validate;
 - (BOOL)validateModuleArray:(NSString *)moduleArrayString;
 - (int)totalExperienceNeeded;
+- (float)calculateProgressiveStatWithNominalStat:(float)nominalStat
+                             effectiveSkillLevel:(float)effectiveSkillLevel
+                               andEquipmentBonus:(float)equipmentBonus;
+- (float)calculateDegressiveStatWithNominalStat:(float)nominalStat
+                             effectiveSkillLevel:(float)effectiveSkillLevel
+                               andEquipmentBonus:(float)equipmentBonus;
+- (float)topRateOfFire;
+- (float)fastestReload;
+- (float)fastestAimTime;
+- (float)skillLevel;
+- (float)skillLevelVentAndBIA;
 
 // Init methods
 - (id)initWithDict:(NSDictionary *)dict;

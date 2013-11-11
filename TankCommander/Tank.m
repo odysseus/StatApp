@@ -208,6 +208,49 @@
     }
 }
 
+- (float)calculateProgressiveStatWithNominalStat:(float)nominalStat
+                             effectiveSkillLevel:(float)effectiveSkillLevel
+                               andEquipmentBonus:(float)equipmentBonus
+{
+    return ((nominalStat / 0.875) * ((0.00375 * effectiveSkillLevel + 0.5) + equipmentBonus));
+}
+
+- (float)calculateDegressiveStatWithNominalStat:(float)nominalStat
+                            effectiveSkillLevel:(float)effectiveSkillLevel
+                              andEquipmentBonus:(float)equipmentBonus
+{
+    return ((nominalStat * 0.875) / (0.00375 * effectiveSkillLevel + 0.5)) + equipmentBonus;
+}
+
+- (float)skillLevel
+{
+    return (self.crewLevel * 1.1);
+}
+
+- (float)skillLevelVentAndBIA
+{
+    return ((self.crewLevel + 10.0) * 1.1);
+}
+
+- (float)topRateOfFire
+{
+    return [self calculateProgressiveStatWithNominalStat:self.rateOfFire
+                                     effectiveSkillLevel:self.skillLevelVentAndBIA
+                                       andEquipmentBonus:0.10];
+}
+
+- (float)fastestReload
+{
+    return 60.0 / self.topRateOfFire;
+}
+
+- (float)fastestAimTime
+{
+    return [self calculateDegressiveStatWithNominalStat:self.aimTime
+                                    effectiveSkillLevel:self.skillLevel
+                                      andEquipmentBonus:0.0];
+}
+
 // Pass through properties
 
 - (NSArray *)availableGuns
@@ -333,10 +376,12 @@
 {
     return self.hull.frontArmor.thickness;
 }
+
 - (float)sideHullArmor
 {
     return self.hull.sideArmor.thickness;
 }
+
 - (float)rearHullArmor
 {
     return self.hull.rearArmor.thickness;
@@ -346,10 +391,12 @@
 {
     return self.hull.frontArmor.effectiveThickness;
 }
+
 - (float)effectiveSideHullArmor
 {
     return self.hull.sideArmor.effectiveThickness;
 }
+
 - (float)effectiveRearHullArmor
 {
     return self.hull.rearArmor.thickness;
@@ -363,6 +410,7 @@
         return self.frontalHullArmor;
     }
 }
+
 - (float)sideTurretArmor
 {
     if (self.hasTurret) {
@@ -371,6 +419,7 @@
         return self.sideHullArmor;
     }
 }
+
 - (float)rearTurretArmor
 {
     if (self.hasTurret) {
@@ -388,6 +437,7 @@
         return self.effectiveFrontalHullArmor;
     }
 }
+
 - (float)effectiveSideTurretArmor
 {
     if (self.hasTurret) {
@@ -396,6 +446,7 @@
         return self.effectiveSideHullArmor;
     }
 }
+
 - (float)effectiveRearTurretArmor
 {
     if (self.hasTurret) {
