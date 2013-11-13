@@ -18,10 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
+    // Debugging and Logging Code
     TankStore *allTanks = [TankStore allTanks];
     NSLog(@"%lu Tanks in database", (unsigned long)[[allTanks combinedArray] count]);
     
@@ -47,8 +44,17 @@
                       smallerValuesAreBetter:smallerIsBetter];
     NSLog(@"\n%@", list);
     
+    //  ACTUAL METHOD
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     TanksViewController *tvc = [[TanksViewController alloc] init];
-    [self.window setRootViewController:tvc];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tvc];
+    
+    [[self window] setRootViewController:navController];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

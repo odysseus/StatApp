@@ -7,6 +7,7 @@
 //
 
 #import "TanksViewController.h"
+#import "TankViewController.h"
 #import "TankStore.h"
 #import "Tank.h"
 #import "TankCell.h"
@@ -57,13 +58,18 @@
     [[cell nameLabel] setText:t.name];
     [[cell countryLabel] setText:t.stringNationality];
     [[cell tankTypeLabel] setText:t.stringTankType];
+    [[cell tankImage] setImage:t.imageForTankType];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO
+    NSLog(@"did select row at index path");
+    TankViewController *tvc = [[TankViewController alloc] init];
+    Tank *t = [[[TankStore allTanks] combinedArray] objectAtIndex:[indexPath row]];
+    [tvc setTank:t];
     
+    [[self navigationController] pushViewController:tvc animated:YES];
 }
 
 @end

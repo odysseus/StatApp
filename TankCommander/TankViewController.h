@@ -13,8 +13,8 @@
 @interface TankViewController : UIViewController
 
 @property (nonatomic) Tank *tank;
-@property (weak, nonatomic) IBOutlet UIImageView *tankImage;
-@property (weak, nonatomic) IBOutlet UILabel *tankNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tankCountryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameAndTypeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *typeImage;
 
 @end

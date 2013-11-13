@@ -38,7 +38,11 @@
 		946FC74E1831CC5C0016708A /* TankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946FC74D1831CC5C0016708A /* TankCell.xib */; };
 		946FC75418330C980016708A /* TankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC75218330C980016708A /* TankViewController.m */; };
 		946FC75518330C980016708A /* TankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946FC75318330C980016708A /* TankViewController.xib */; };
-		946FC7581833191C0016708A /* TankHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946FC7571833191C0016708A /* TankHeaderView.xib */; };
+		946FC763183410C10016708A /* lightTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC762183410C10016708A /* lightTank.png */; };
+		946FC768183415560016708A /* tankDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC764183415560016708A /* tankDestroyer.png */; };
+		946FC769183415560016708A /* heavyTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC765183415560016708A /* heavyTank.png */; };
+		946FC76A183415560016708A /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC766183415560016708A /* mediumTank.png */; };
+		946FC76B183415560016708A /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC767183415560016708A /* spg.png */; };
 		948C359F1816F1C500708761 /* Tier.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C359E1816F1C500708761 /* Tier.m */; };
 		94D4729D181CEE5000B11466 /* TankGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D4729C181CEE5000B11466 /* TankGroup.m */; };
 /* End PBXBuildFile section */
@@ -105,7 +109,11 @@
 		946FC75118330C980016708A /* TankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankViewController.h; sourceTree = "<group>"; };
 		946FC75218330C980016708A /* TankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankViewController.m; sourceTree = "<group>"; };
 		946FC75318330C980016708A /* TankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TankViewController.xib; sourceTree = "<group>"; };
-		946FC7571833191C0016708A /* TankHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TankHeaderView.xib; sourceTree = "<group>"; };
+		946FC762183410C10016708A /* lightTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightTank.png; sourceTree = "<group>"; };
+		946FC764183415560016708A /* tankDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankDestroyer.png; sourceTree = "<group>"; };
+		946FC765183415560016708A /* heavyTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyTank.png; sourceTree = "<group>"; };
+		946FC766183415560016708A /* mediumTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumTank.png; sourceTree = "<group>"; };
+		946FC767183415560016708A /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
 		948C359D1816F1C500708761 /* Tier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tier.h; sourceTree = "<group>"; };
 		948C359E1816F1C500708761 /* Tier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tier.m; sourceTree = "<group>"; };
 		94D4729B181CEE5000B11466 /* TankGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankGroup.h; sourceTree = "<group>"; };
@@ -175,6 +183,10 @@
 				946FC7451831AB9E0016708A /* App */,
 				941A766D1815FB620072089F /* Tanks.json */,
 				941A7626181494D50072089F /* Images.xcassets */,
+				946FC764183415560016708A /* tankDestroyer.png */,
+				946FC765183415560016708A /* heavyTank.png */,
+				946FC766183415560016708A /* mediumTank.png */,
+				946FC767183415560016708A /* spg.png */,
 				941A761B181494D50072089F /* Supporting Files */,
 			);
 			path = TankCommander;
@@ -183,6 +195,7 @@
 		941A761B181494D50072089F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				946FC762183410C10016708A /* lightTank.png */,
 				941A761C181494D50072089F /* TankCommander-Info.plist */,
 				941A761D181494D50072089F /* InfoPlist.strings */,
 				941A7620181494D50072089F /* main.m */,
@@ -264,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				946FC75318330C980016708A /* TankViewController.xib */,
-				946FC7571833191C0016708A /* TankHeaderView.xib */,
 				946FC74D1831CC5C0016708A /* TankCell.xib */,
 			);
 			name = IB;
@@ -348,8 +360,12 @@
 			files = (
 				946FC75518330C980016708A /* TankViewController.xib in Resources */,
 				941A761F181494D50072089F /* InfoPlist.strings in Resources */,
+				946FC768183415560016708A /* tankDestroyer.png in Resources */,
+				946FC769183415560016708A /* heavyTank.png in Resources */,
+				946FC76B183415560016708A /* spg.png in Resources */,
+				946FC763183410C10016708A /* lightTank.png in Resources */,
 				941A7627181494D50072089F /* Images.xcassets in Resources */,
-				946FC7581833191C0016708A /* TankHeaderView.xib in Resources */,
+				946FC76A183415560016708A /* mediumTank.png in Resources */,
 				941A766E1815FB620072089F /* Tanks.json in Resources */,
 				946FC74E1831CC5C0016708A /* TankCell.xib in Resources */,
 			);

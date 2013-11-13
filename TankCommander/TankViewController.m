@@ -7,6 +7,7 @@
 //
 
 #import "TankViewController.h"
+#import "Tank.h"
 
 @interface TankViewController ()
 
@@ -14,15 +15,28 @@
 
 @implementation TankViewController
 
-@synthesize tank;
+@synthesize tank, nameLabel, nameAndTypeLabel, typeImage;
+
+- (id)init
+{
+    self = [super initWithNibName:@"TankViewController" bundle:nil];
+    if (self) {
+        // Override
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    return [self init];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [nameLabel setText:tank.name];
+    [nameAndTypeLabel setText:tank.stringNationalityAndType];
+    [typeImage setImage:tank.imageForTankType];
 }
 
 - (void)viewDidLoad

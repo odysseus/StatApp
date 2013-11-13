@@ -538,6 +538,11 @@ TankNationality fetchTankNationality (int index)
     return result;
 }
 
+- (NSString *)stringNationalityAndType
+{
+    return [NSString stringWithFormat:@"%@ %@", self.stringNationality, self.stringTankType];
+}
+
 - (NSString *)stringTankType
 {
     NSString *result = @"Unknown";
@@ -561,6 +566,24 @@ TankNationality fetchTankNationality (int index)
             break;
     }
     return result;
+}
+
+- (UIImage *)imageForTankType
+{
+    switch (self.type) {
+        case LightTank:
+            return [UIImage imageNamed:@"lightTank"];
+        case MediumTank:
+            return [UIImage imageNamed:@"mediumTank"];
+        case HeavyTank:
+            return [UIImage imageNamed:@"heavyTank"];
+        case TankDestroyer:
+            return [UIImage imageNamed:@"tankDestroyer"];
+        case SPG:
+            return [UIImage imageNamed:@"spg"];
+        default:
+            return [UIImage imageNamed:@"lightTank"];
+    }
 }
     
 - (BOOL)isTopTurretNeededForTopGun
