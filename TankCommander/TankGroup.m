@@ -36,7 +36,7 @@
 
 - (int)count
 {
-    return [group count];
+    return (int)[group count];
 }
 
 - (id)objectAtIndex:(int)index
@@ -89,7 +89,7 @@
         if ([valuesCount objectForKey:numString]) {
             NSUInteger currentValue = [[valuesCount objectForKey:numString] integerValue];
             currentValue++;
-            [valuesCount setObject:[NSNumber numberWithInt:currentValue] forKey:numString];
+            [valuesCount setObject:[NSNumber numberWithLong:currentValue] forKey:numString];
         } else {
             [valuesCount setObject:[NSNumber numberWithInt:1] forKey:numString];
         }

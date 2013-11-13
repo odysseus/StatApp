@@ -511,28 +511,28 @@ TankNationality fetchTankNationality (int index)
 {
     NSString *result = @"Unknown";
     switch (self.nationality) {
-        case 0:
+        case American:
             result = @"American";
             break;
-        case 1:
+        case British:
             result = @"British";
             break;
-        case 2:
+        case Chinese:
             result = @"Chinese";
             break;
-        case 3:
+        case French:
             result = @"French";
             break;
-        case 4:
+        case German:
             result = @"German";
             break;
-        case 5:
+        case Japanese:
             result = @"Japanese";
             break;
-        case 6:
+        case Russian:
             result = @"Russian";
             break;
-        case 7:
+        case Nation:
             break;
     }
     return result;
@@ -542,22 +542,22 @@ TankNationality fetchTankNationality (int index)
 {
     NSString *result = @"Unknown";
     switch (self.type) {
-        case 0:
+        case LightTank:
             result = @"Light Tank";
             break;
-        case 1:
+        case MediumTank:
             result = @"Medium Tank";
             break;
-        case 2:
+        case HeavyTank:
             result = @"Heavy Tank";
             break;
-        case 3:
+        case TankDestroyer:
             result = @"Tank Destroyer";
             break;
-        case 4:
+        case SPG:
             result = @"SPG";
             break;
-        case 5:
+        case Vehicle:
             break;
     }
     return result;

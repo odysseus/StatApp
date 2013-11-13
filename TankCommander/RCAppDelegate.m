@@ -23,7 +23,7 @@
     [self.window makeKeyAndVisible];
     
     TankStore *allTanks = [TankStore allTanks];
-    NSLog(@"%d Tanks in database", [[allTanks combinedArray] count]);
+    NSLog(@"%lu Tanks in database", (unsigned long)[[allTanks combinedArray] count]);
     
     NSMutableArray *tier8 = allTanks.tier8.all.group;
     
