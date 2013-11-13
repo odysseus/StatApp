@@ -15,9 +15,11 @@
 @property (nonatomic) Armor *frontArmor;
 @property (nonatomic) Armor *sideArmor;
 @property (nonatomic) Armor *rearArmor;
-@property (nonatomic) float weight;
-@property (nonatomic) NSMutableArray *availableGuns;
 @property (nonatomic) Gun *gun;
+@property (nonatomic) float weight;
+@property (nonatomic) float viewRange;
+@property (nonatomic) NSMutableArray *availableGuns;
+
 
 - (id)initWithDict:(NSDictionary *)dict forTurreted:(BOOL)hasTurret;
 

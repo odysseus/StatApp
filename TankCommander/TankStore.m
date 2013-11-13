@@ -9,10 +9,13 @@
 #import "TankStore.h"
 #import "Tank.h"
 #import "Tier.h"
+#import "TankGroup.h"
 
 static TankStore *allTanks = nil;
 
 @implementation TankStore
+
+@synthesize tier1, tier2, tier3, tier4, tier5, tier6, tier7, tier8, tier9, tier10;
 
 + (TankStore *)allTanks
 {
@@ -71,6 +74,36 @@ static TankStore *allTanks = nil;
         
         tanksLoaded = YES;
     }
+}
+
+- (int)count
+{
+    return ([tier1 count] + [tier2 count] + [tier3 count] + [tier4 count] + [tier5 count] +
+            [tier6 count] + [tier7 count] + [tier8 count] + [tier9 count] + [tier10 count]);
+}
+
+- (NSArray *)combinedArray
+{
+    // Create an array to hold everything
+    NSMutableArray *combinedArray = [[NSMutableArray alloc] init];
+    // Fetch the tank db
+    TankStore *allTanks = [TankStore allTanks];
+    // The string array will be used to iterate over all the tiers
+    NSArray *tiers = @[@"tier1", @"tier2", @"tier3", @"tier4", @"tier5",
+                       @"tier6", @"tier7", @"tier8", @"tier9", @"tier10"];
+    // Iterate over each tier
+    for (NSString *key in tiers) {
+        // Fetch the tier
+        Tier *currentTier = [allTanks valueForKey:key];
+        // And the array containing all the tanks
+        NSArray *allForTier = [[currentTier all] group];
+        for (Tank *t in allForTier) {
+            // Then add each tank to the final array
+            [combinedArray addObject:t];
+        }
+    }
+    // And return it
+    return combinedArray;
 }
 
 @end

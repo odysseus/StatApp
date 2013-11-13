@@ -18,6 +18,8 @@
 @property (nonatomic) TankGroup *tankDestroyers;
 @property (nonatomic) TankGroup *SPGs;
 
+- (int)count;
+
 - (TankGroup *)all;
 - (TankGroup *)allExceptSPGs;
 

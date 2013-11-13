@@ -61,6 +61,11 @@
     return self;
 }
 
+- (int)count
+{
+    return ([lightTanks count] + [mediumTanks count] + [heavyTanks count] + [tankDestroyers count] + [SPGs count]);
+}
+
 - (TankGroup *)all
 {
     TankGroup *allTanks = [[TankGroup alloc] init];

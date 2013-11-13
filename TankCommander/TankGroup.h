@@ -19,6 +19,8 @@
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate;
 - (Tank *)findTankByName:(NSString *)name;
 - (void)addAverageTank;
+- (int)count;
+- (id)objectAtIndex:(int)index;
 
 // Data Sorting Methods
 - (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;

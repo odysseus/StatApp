@@ -12,7 +12,7 @@
 
 @implementation Hull
 
-@synthesize weight, frontArmor, sideArmor, rearArmor, availableGuns, gun;
+@synthesize weight, frontArmor, sideArmor, rearArmor, availableGuns, gun, viewRange;
 
 - (id)initWithDict:(NSDictionary *)dict forTurreted:(BOOL)hasTurret
 {

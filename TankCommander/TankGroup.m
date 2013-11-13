@@ -34,6 +34,16 @@
     }
 }
 
+- (int)count
+{
+    return [group count];
+}
+
+- (id)objectAtIndex:(int)index
+{
+    return [group objectAtIndex:index];
+}
+
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate
 {
     NSArray *result =  [group filteredArrayUsingPredicate:predicate];

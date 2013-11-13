@@ -78,6 +78,7 @@ typedef enum TankNationality : NSUInteger {
 - (float)drumReload;
 - (float)timeBetweenShots;
 - (float)loadLimit;
+- (float)viewRange;
 
 // Calculated properties
 - (int)hitpoints;
@@ -86,6 +87,8 @@ typedef enum TankNationality : NSUInteger {
 - (float)damagePerMinute;
 - (float)reloadTime;
 - (float)alphaDamage;
+- (NSString *)stringNationality;
+- (NSString *)stringTankType;
 
 // Armor Properties
 - (float)frontalHullArmor;

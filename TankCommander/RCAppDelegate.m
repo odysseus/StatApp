@@ -12,6 +12,7 @@
 #import "TankStore.h"
 #import "Gun.h"
 #import "TankGroup.h"
+#import "TanksViewController.h"
 
 @implementation RCAppDelegate
 
@@ -22,6 +23,7 @@
     [self.window makeKeyAndVisible];
     
     TankStore *allTanks = [TankStore allTanks];
+    NSLog(@"%d Tanks in database", [[allTanks combinedArray] count]);
     
     NSMutableArray *tier8 = allTanks.tier8.all.group;
     
@@ -32,7 +34,7 @@
     Tank *tank = [allTanks.tier8.all findTankByName:@"AMX 13 90"];
     NSLog(@"%@: %@", tank.name, tank.gun);
     
-    NSString *key = @"effectiveFrontalHullArmor";
+    NSString *key = @"specificPower";
     NSString *range = @"all";
     NSString *tier = @"tier8";
     BOOL smallerIsBetter = NO;
@@ -44,7 +46,9 @@
                       stringSortedListForKey:key
                       smallerValuesAreBetter:smallerIsBetter];
     NSLog(@"\n%@", list);
-
+    
+    TanksViewController *tvc = [[TanksViewController alloc] init];
+    [self.window setRootViewController:tvc];
     
     return YES;
 }

@@ -372,6 +372,17 @@
     return self.suspension.loadLimit;
 }
 
+- (float)viewRange
+{
+    if (self.hasTurret) {
+        return self.turret.viewRange;
+    } else {
+        return self.hull.viewRange;
+    }
+}
+
+// Armor Properties
+
 - (float)frontalHullArmor
 {
     return self.hull.frontArmor.thickness;
@@ -494,6 +505,62 @@ TankNationality fetchTankNationality (int index)
         default:
             return Nation;
     }
+}
+
+- (NSString *)stringNationality
+{
+    NSString *result = @"Unknown";
+    switch (self.nationality) {
+        case 0:
+            result = @"American";
+            break;
+        case 1:
+            result = @"British";
+            break;
+        case 2:
+            result = @"Chinese";
+            break;
+        case 3:
+            result = @"French";
+            break;
+        case 4:
+            result = @"German";
+            break;
+        case 5:
+            result = @"Japanese";
+            break;
+        case 6:
+            result = @"Russian";
+            break;
+        case 7:
+            break;
+    }
+    return result;
+}
+
+- (NSString *)stringTankType
+{
+    NSString *result = @"Unknown";
+    switch (self.type) {
+        case 0:
+            result = @"Light Tank";
+            break;
+        case 1:
+            result = @"Medium Tank";
+            break;
+        case 2:
+            result = @"Heavy Tank";
+            break;
+        case 3:
+            result = @"Tank Destroyer";
+            break;
+        case 4:
+            result = @"SPG";
+            break;
+        case 5:
+            break;
+    }
+    return result;
 }
     
 - (BOOL)isTopTurretNeededForTopGun

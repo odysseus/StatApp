@@ -29,5 +29,7 @@
 
 + (TankStore *)allTanks;
 - (void)loadTanks;
+- (int)count;
+- (NSArray *)combinedArray;
 
 @end
