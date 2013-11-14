@@ -19,7 +19,7 @@
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
     availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
-    baseHitpoints, parent, child, nationality, tier, type, camoValue;
+    baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -584,6 +584,44 @@ TankNationality fetchTankNationality (int index)
         default:
             return [UIImage imageNamed:@"lightTank"];
     }
+}
+
+NSString *romanStringFromInt (int convert)
+{
+    NSString *result = @"-";
+    switch (convert) {
+        case 1:
+            result = @"I";
+            break;
+        case 2:
+            result = @"II";
+            break;
+        case 3:
+            result = @"III";
+            break;
+        case 4:
+            result = @"IV";
+            break;
+        case 5:
+            result = @"V";
+            break;
+        case 6:
+            result = @"VI";
+            break;
+        case 7:
+            result = @"VII";
+            break;
+        case 8:
+            result = @"VIII";
+            break;
+        case 9:
+            result = @"IX";
+            break;
+        case 10:
+            result = @"X";
+            break;
+    }
+    return result;
 }
     
 - (BOOL)isTopTurretNeededForTopGun

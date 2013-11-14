@@ -15,6 +15,8 @@
 @property (nonatomic) NSMutableArray *group;
 @property (nonatomic) AverageTank *averageTank;
 
+- (id)initWithDict:(NSDictionary *)dict;
+
 - (void)addObject:(id)object;
 - (NSArray *)filteredArrayUsingPredicate:(NSPredicate *)predicate;
 - (Tank *)findTankByName:(NSString *)name;
@@ -28,6 +30,7 @@
 
 // Sample Statistical Methods
 - (NSNumber *)averageValueForKey:(NSString *)key;
+- (NSNumber *)medianValueForKey:(NSString *)key;
 
 // Pretty Printing Methods
 - (NSString *)stringSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;

@@ -17,6 +17,7 @@
     self = [super init];
     if (self) {
         self.name = [dict objectForKey:@"name"];
+        self.tier = [[dict objectForKey:@"tier"] integerValue];
         self.weight = [[dict objectForKey:@"weight"] floatValue];
         self.stockModule = [[dict objectForKey:@"stockModule"] boolValue];
         self.topModule = [[dict objectForKey:@"topModule"] boolValue];

@@ -64,7 +64,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"did select row at index path");
     TankViewController *tvc = [[TankViewController alloc] init];
     Tank *t = [[[TankStore allTanks] combinedArray] objectAtIndex:[indexPath row]];
     [tvc setTank:t];

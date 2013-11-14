@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Hull, Turret, Gun, Engine, Radio, Suspension, TankGroup;
+@class Hull, Turret, Gun, Engine, Radio, Suspension, TankGroup, AverageTank;
 
 @interface Tank : NSObject
 
@@ -31,8 +31,9 @@ typedef enum TankNationality : NSUInteger {
     Nation          // 7
 } TankNationality;
 
-// Pointer to the TankGroup that contains it
-@property (nonatomic, weak) TankGroup
+// Pointer to the AverageTank for its TankGroup
+@property (nonatomic, weak) AverageTank *averageTank;
+
 
 // Properties that go with the tank and not a specific module
 @property (nonatomic) NSString *name;
@@ -125,6 +126,7 @@ typedef enum TankNationality : NSUInteger {
 - (NSString *)stringNationality;
 - (NSString *)stringTankType;
 - (NSString *)stringNationalityAndType;
+NSString *romanStringFromInt (int convert);
 
 // Init methods
 - (id)initWithDict:(NSDictionary *)dict;

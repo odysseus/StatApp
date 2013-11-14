@@ -18,46 +18,12 @@
 {
     self = [super init];
     if (self) {
-        lightTanks = [[TankGroup alloc] init];
-        NSDictionary *lightTanksData = [dict objectForKey:@"lightTanks"];
-        for (id key in lightTanksData) {
-            Tank *currentTank = [[Tank alloc] initWithDict:[lightTanksData objectForKey:key]];
-            [lightTanks addObject:currentTank];
-        }
-        
-        mediumTanks = [[TankGroup alloc] init];
-        NSDictionary *mediumTanksData = [dict objectForKey:@"mediumTanks"];
-        for (id key in mediumTanksData) {
-            Tank *currentTank = [[Tank alloc] initWithDict:[mediumTanksData objectForKey:key]];
-            [mediumTanks addObject:currentTank];
-        }
-        
-        heavyTanks = [[TankGroup alloc] init];
-        NSDictionary *heavyTanksData = [dict objectForKey:@"heavyTanks"];
-        for (id key in heavyTanksData) {
-            Tank *currentTank = [[Tank alloc] initWithDict:[heavyTanksData objectForKey:key]];
-            [heavyTanks addObject:currentTank];
-        }
-        
-        tankDestroyers = [[TankGroup alloc] init];
-        NSDictionary *tankDestroyersData = [dict objectForKey:@"tankDestroyers"];
-        for (id key in tankDestroyersData) {
-            Tank *currentTank = [[Tank alloc] initWithDict:[tankDestroyersData objectForKey:key]];
-            [tankDestroyers addObject:currentTank];
-        }
-        
-        SPGs = [[TankGroup alloc] init];
-        NSDictionary *spgsData = [dict objectForKey:@"spgs"];
-        for (id key in spgsData) {
-            Tank *currentTank = [[Tank alloc] initWithDict:[spgsData objectForKey:key]];
-            [SPGs addObject:currentTank];
-        }
+        lightTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"lightTanks"]];
+        mediumTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"mediumTanks"]];
+        heavyTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"heavyTanks"]];
+        tankDestroyers = [[TankGroup alloc] initWithDict:[dict objectForKey:@"tankDestroyers"]];
+        SPGs = [[TankGroup alloc] initWithDict:[dict objectForKey:@"spgs"]];
     }
-    [self.lightTanks addAverageTank];
-    [self.mediumTanks addAverageTank];
-    [self.heavyTanks addAverageTank];
-    [self.tankDestroyers addAverageTank];
-    [self.SPGs addAverageTank];
     return self;
 }
 

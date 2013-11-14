@@ -25,6 +25,22 @@
     return self;
 }
 
+- (id)initWithDict:(NSDictionary *)dict
+{
+    self = [self init];
+    if (self) {
+        for (id key in dict) {
+            Tank *currentTank = [[Tank alloc] initWithDict:[dict objectForKey:key]];
+            [self addObject:currentTank];
+        }
+        [self addAverageTank];
+        for (Tank *t in self.group) {
+            t.averageTank = self.averageTank;
+        }
+    }
+    return self;
+}
+
 - (void)addObject:(id)object
 {
     if ([object class] == [Tank class]) {
@@ -134,6 +150,24 @@
     return [NSNumber numberWithFloat:average];
 }
 
+- (NSNumber *)medianValueForKey:(NSString *)key
+{
+    NSArray *sortedList = [self sortedListForKey:key smallerValuesAreBetter:NO];
+    int count = [sortedList count];
+    if (count == 0) {
+        return [NSNumber numberWithFloat:0.0];
+    }
+    if (count % 2 == 0) {
+        float value1 = [[[sortedList objectAtIndex:(count/2)-1] valueForKey:key] floatValue];
+        float value2 = [[[sortedList objectAtIndex:(count/2)] valueForKey:key] floatValue];
+        float result = (value1 + value2) / 2.0;
+        return [NSNumber numberWithFloat:result];
+    } else {
+        float value = [[[sortedList objectAtIndex:(count/2)] valueForKey:key] floatValue];
+        return [NSNumber numberWithFloat:value];
+    }
+}
+
 - (NSString *)stringSortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno
 {
     NSArray *sortedArray = [self sortedListForKey:key smallerValuesAreBetter:yesno];
@@ -163,7 +197,7 @@
         average.name = @"Average";
         NSArray *intKeys = @[@"experienceNeeded", @"cost", @"hitpoints"];
         for (NSString *key in intKeys) {
-            [average setValue:[self averageValueForKey:key] forKey:key];
+            [average setValue:[self medianValueForKey:key] forKey:key];
         }
         NSArray *floatKeys = @[@"gunTraverseArc", @"speedLimit", @"camoValue", @"penetration", @"aimTime",
                                @"accuracy", @"rateOfFire", @"gunDepression", @"gunElevation", @"weight",
@@ -173,7 +207,7 @@
                                @"effectiveRearHullArmor", @"effectiveFrontalTurretArmor",
                                @"effectiveSideTurretArmor", @"effectiveRearTurretArmor"];
         for (NSString *key in floatKeys) {
-            [average setValue:[self averageValueForKey:key] forKey:key];
+            [average setValue:[self medianValueForKey:key] forKey:key];
         }
         self.averageTank = average;
     }

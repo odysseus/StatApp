@@ -11,6 +11,7 @@
 @interface Module : NSObject
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) int tier;
 @property (nonatomic) float weight;
 @property (nonatomic) BOOL stockModule;
 @property (nonatomic) BOOL topModule;
