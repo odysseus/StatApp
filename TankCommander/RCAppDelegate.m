@@ -31,7 +31,7 @@
     Tank *tank = [allTanks.tier8.all findTankByName:@"AMX 13 90"];
     NSLog(@"%@: %@", tank.name, tank.gun);
     
-    NSString *key = @"alphaDamage";
+    NSString *key = @"specificPower";
     NSString *range = @"mediumTanks";
     NSString *tier = @"tier8";
     BOOL smallerIsBetter = NO;
