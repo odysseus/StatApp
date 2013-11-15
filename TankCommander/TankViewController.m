@@ -22,60 +22,96 @@
 
 @implementation TankViewController
 
-@synthesize tank, nameLabel, nameAndTypeLabel, typeImage, tierValue, tankCostValue, tankXpValue, penetrationAverage,
-    penetrationValue, damageAverage, damageValue, rateOfFireAverage, rateOfFireValue, damagePerMinuteAverage,
-    damagePerMinuteValue, aimTimeAverage, aimTimeValue, accuracyAverage, accuracyValue, depressionAverage,
-    depressionValue, elevationAverage, elevationValue, gunName, gunTier;
+@synthesize tank;
 
-- (id)init
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:@"TankViewController" bundle:nil];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Override
+        // Custom initialization
     }
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)loadView
 {
-    return [self init];
+    // Create a blank view to contain everything
+    UIView *tankView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.view = tankView;
+    
+    // Variables to provide consistent layout and colors
+    fontSize = 16.0;
+    darkColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1.0];
+    lightColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
+
+    [self renderHeader];
+}
+
+- (void)renderHeader
+{
+    // Tank Header objects
+    UIImageView *tankClassImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 85, 40, 40)];
+    [tankClassImage setImage:tank.imageForTankType];
+    [self.view addSubview:tankClassImage];
+    
+    UILabel *tankNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 80, 360, 50)];
+    [tankNameLabel setText:tank.name];
+    [tankNameLabel setFont:[UIFont systemFontOfSize:(fontSize * 2)]];
+    [tankNameLabel setTextColor:darkColor];
+    [self.view addSubview:tankNameLabel];
+    
+    UILabel *nationLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 120, 360, 20)];
+    [nationLabel setText:tank.stringNationalityAndType];
+    [nationLabel setFont:[UIFont systemFontOfSize:fontSize]];
+    [nationLabel setTextColor:lightColor];
+    [self.view addSubview:nationLabel];
+    
+    if (!tank.premiumTank) {
+        UILabel *xpNeededLabel = [[UILabel alloc] initWithFrame:CGRectMake(565, 90, 40, 20)];
+        [xpNeededLabel setText:NSLocalizedString(@"XP:", nil)];
+        [xpNeededLabel setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
+        [xpNeededLabel setTextColor:lightColor];
+        [self.view addSubview:xpNeededLabel];
+        
+        UILabel *xpNeededValue = [[UILabel alloc] initWithFrame:CGRectMake(615, 90, 75, 20)];
+        [xpNeededValue setText:[NSString stringWithFormat:@"%d", tank.experienceNeeded]];
+        [xpNeededValue setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
+        [xpNeededValue setTextColor:lightColor];
+        [self.view addSubview:xpNeededValue];
+    }
+    
+    UILabel *costLabel = [[UILabel alloc] initWithFrame:CGRectMake(565, 110, 40, 20)];
+    [costLabel setText:NSLocalizedString(@"Cost:", nil)];
+    [costLabel setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
+    [costLabel setTextColor:lightColor];
+    [self.view addSubview:costLabel];
+    
+    UILabel *costValue = [[UILabel alloc] initWithFrame:CGRectMake(615, 110, 75, 20)];
+    [costValue setText:[NSString stringWithFormat:@"%d", tank.cost]];
+    [costValue setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
+    if (tank.premiumTank) {
+        [costValue setTextColor:[UIColor orangeColor]];
+    } else {
+        [costValue setTextColor:lightColor];
+    }
+    [self.view addSubview:costValue];
+    
+    UILabel *tierLabel = [[UILabel alloc] initWithFrame:CGRectMake(700, 80, 50, 60)];
+    [tierLabel setText:romanStringFromInt(tank.tier)];
+    [tierLabel setFont:[UIFont systemFontOfSize:(fontSize * 2)]];
+    [tierLabel setTextColor:darkColor];
+    [self.view addSubview:tierLabel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    [nameLabel setText:tank.name];
-    [nameAndTypeLabel setText:tank.stringNationalityAndType];
-    [typeImage setImage:tank.imageForTankType];
-    [tierValue setText:[NSString stringWithFormat:@"%@", romanStringFromInt(tank.tier)]];
-    [tankXpValue setText:[NSString stringWithFormat:@"%d", tank.experienceNeeded]];
-    
-    // The Gun
-    [gunName setText:[NSString stringWithFormat:@"Gun: %@", tank.gun.name]];
-    [gunTier setText:[NSString stringWithFormat:@"%@", romanStringFromInt(tank.gun.tier)]];
-    [tankCostValue setText:[NSString stringWithFormat:@"%d", tank.cost]];
-    [penetrationValue setText:[NSString stringWithFormat:@"%0.0f", tank.penetration]];
-    [penetrationAverage setText:[NSString stringWithFormat:@"%0.0f", tank.averageTank.penetration]];
-    [damageValue setText:[NSString stringWithFormat:@"%0.0f", tank.alphaDamage]];
-    [damageAverage setText:[NSString stringWithFormat:@"%0.0f", tank.averageTank.alphaDamage]];
-    [rateOfFireValue setText:[NSString stringWithFormat:@"%0.2f", tank.rateOfFire]];
-    [rateOfFireAverage setText:[NSString stringWithFormat:@"%0.2f", tank.averageTank.rateOfFire]];
-    [damagePerMinuteValue setText:[NSString stringWithFormat:@"%0.0f", tank.damagePerMinute]];
-    [damagePerMinuteAverage setText:[NSString stringWithFormat:@"%0.0f", tank.averageTank.damagePerMinute]];
-    [aimTimeValue setText:[NSString stringWithFormat:@"%0.2f", tank.aimTime]];
-    [aimTimeAverage setText:[NSString stringWithFormat:@"%0.2f", tank.averageTank.aimTime]];
-    [accuracyValue setText:[NSString stringWithFormat:@"%0.2f", tank.accuracy]];
-    [accuracyAverage setText:[NSString stringWithFormat:@"%0.2f", tank.averageTank.accuracy]];
-    [depressionValue setText:[NSString stringWithFormat:@"%0.2f", tank.gunDepression]];
-    [depressionAverage setText:[NSString stringWithFormat:@"%0.2f", tank.averageTank.gunDepression]];
-    [elevationValue setText:[NSString stringWithFormat:@"%0.2f", tank.gunElevation]];
-    [elevationAverage setText:[NSString stringWithFormat:@"%0.2f", tank.averageTank.gunElevation]];
+    // When view is called to appear
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,3 +121,16 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

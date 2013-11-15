@@ -540,7 +540,11 @@ TankNationality fetchTankNationality (int index)
 
 - (NSString *)stringNationalityAndType
 {
-    return [NSString stringWithFormat:@"%@ %@", self.stringNationality, self.stringTankType];
+    if (self.premiumTank) {
+        return [NSString stringWithFormat:@"%@ Premium %@", self.stringNationality, self.stringTankType];
+    } else {
+        return [NSString stringWithFormat:@"%@ %@", self.stringNationality, self.stringTankType];
+    }
 }
 
 - (NSString *)stringTankType
