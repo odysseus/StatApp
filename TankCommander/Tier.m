@@ -19,10 +19,15 @@
     self = [super init];
     if (self) {
         lightTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"lightTanks"]];
+        lightTanks.typeString = @"Light Tanks";
         mediumTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"mediumTanks"]];
+        mediumTanks.typeString = @"Medium Tanks";
         heavyTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"heavyTanks"]];
+        heavyTanks.typeString = @"Heavy Tanks";
         tankDestroyers = [[TankGroup alloc] initWithDict:[dict objectForKey:@"tankDestroyers"]];
+        tankDestroyers.typeString = @"Tank Destroyers";
         SPGs = [[TankGroup alloc] initWithDict:[dict objectForKey:@"spgs"]];
+        SPGs.typeString = @"Artillery/SPGs";
     }
     return self;
 }
@@ -30,6 +35,21 @@
 - (int)count
 {
     return ([lightTanks count] + [mediumTanks count] + [heavyTanks count] + [tankDestroyers count] + [SPGs count]);
+}
+
+- (NSArray *)fetchValidKeys
+{
+    NSMutableArray *validKeys = [[NSMutableArray alloc] init];
+    NSArray *keys = @[@"lightTanks", @"mediumTanks", @"heavyTanks", @"tankDestroyers", @"SPGs"];
+    for (NSString *key in keys) {
+        if ([[self valueForKey:key] count] > 0) {
+            [validKeys addObject:key];
+        }
+    }
+    if ([validKeys count] > 0) {
+        [validKeys addObject:@"all"];
+    }
+    return  validKeys;
 }
 
 - (TankGroup *)all
@@ -50,6 +70,7 @@
     for (Tank *tank in SPGs.group) {
         [allTanks.group addObject:tank];
     }
+    allTanks.typeString = @"All";
     return  allTanks;
 }
 

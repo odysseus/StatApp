@@ -19,6 +19,7 @@
 @property (nonatomic) TankGroup *SPGs;
 
 - (int)count;
+- (NSArray *)fetchValidKeys;
 
 - (TankGroup *)all;
 - (TankGroup *)allExceptSPGs;

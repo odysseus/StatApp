@@ -13,6 +13,7 @@
 #import "Gun.h"
 #import "TankGroup.h"
 #import "TanksViewController.h"
+#import "TiersViewController.h"
 
 @implementation RCAppDelegate
 
@@ -48,7 +49,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    TanksViewController *tvc = [[TanksViewController alloc] init];
+//    TanksViewController *tvc = [[TanksViewController alloc] init];
+    TiersViewController *tvc = [[TiersViewController alloc] init];
+    
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tvc];
     
     [[self window] setRootViewController:navController];

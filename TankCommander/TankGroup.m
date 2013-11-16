@@ -14,7 +14,7 @@
 
 @implementation TankGroup
 
-@synthesize group, averageTank;
+@synthesize group, averageTank, typeString;
 
 - (id)init
 {

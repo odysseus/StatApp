@@ -31,5 +31,6 @@
 - (void)loadTanks;
 - (int)count;
 - (NSArray *)combinedArray;
+- (NSArray *)validKeys;
 
 @end

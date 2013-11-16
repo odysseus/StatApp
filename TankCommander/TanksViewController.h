@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class TankGroup;
+
 @interface TanksViewController : UITableViewController
+
+@property (nonatomic) TankGroup *TankGroup;
 
 @end

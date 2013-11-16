@@ -1,0 +1,96 @@
+//
+//  TypesViewController.m
+//  TankCommander
+//
+//  Created by Ryan Case on 11/16/13.
+//  Copyright (c) 2013 Ryan Case. All rights reserved.
+//
+
+#import "TypesViewController.h"
+#import "Tier.h"
+#import "TypeCell.h"
+#import "TankGroup.h"
+
+@interface TypesViewController ()
+
+@end
+
+@implementation TypesViewController
+
+@synthesize keys, tier;
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (id)initWithTier:(Tier *)t
+{
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self) {
+        tier = t;
+        keys = [tier fetchValidKeys];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // Load the nib file
+    UINib *nib = [UINib nibWithNibName:@"TypeCell" bundle:nil];
+    
+    // Register this NIB which contains the cell
+    [[self tableView] registerNib:nib
+           forCellReuseIdentifier:@"TypeCell"];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [keys count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"TypeCell";
+    TypeCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    NSString *key = keys[indexPath.row];
+    TankGroup *currentGroup = [tier valueForKey:key];
+    [[cell typeLabel] setText:[currentGroup typeString]];
+    [[cell typeImage] setImage:[self imageForKey:key]];
+    
+
+    return cell;
+}
+
+- (UIImage *)imageForKey:(NSString *)key
+{
+    UIImage *result = [UIImage imageNamed:@"default"];
+    if ([key  isEqual: @"lightTanks"]) {
+        return [UIImage imageNamed:@"lightTank"];
+    } else if ([key isEqual:@"mediumTanks"]) {
+        return [UIImage imageNamed:@"mediumTank"];
+    } else if ([key isEqualToString:@"heavyTanks"]) {
+        return [UIImage imageNamed:@"heavyTank"];
+    } else if ([key isEqualToString:@"SPGs"]) {
+        return [UIImage imageNamed:@"spg"];
+    } else if ([key isEqualToString:@"tankDestroyers"]) {
+        return [UIImage imageNamed:@"tankDestroyer"];
+    }
+    return result;
+}
+
+@end

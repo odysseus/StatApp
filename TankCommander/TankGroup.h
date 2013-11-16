@@ -14,6 +14,7 @@
 
 @property (nonatomic) NSMutableArray *group;
 @property (nonatomic) AverageTank *averageTank;
+@property (nonatomic) NSString *typeString;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

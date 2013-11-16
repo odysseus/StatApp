@@ -106,6 +106,19 @@ static TankStore *allTanks = nil;
     return combinedArray;
 }
 
+- (NSArray *)validKeys
+{
+    NSArray *tiers = @[@"tier1", @"tier2", @"tier3", @"tier4", @"tier5",
+                       @"tier6", @"tier7", @"tier8", @"tier9", @"tier10"];
+    NSMutableArray *validKeys = [[NSMutableArray alloc] init];
+    for (NSString *key in tiers) {
+        if ([[[self valueForKey:key] all] count] > 0) {
+            [validKeys addObject:key];
+        }
+    }
+    return validKeys;
+}
+
 @end
 
 
