@@ -12,6 +12,8 @@
 
 @interface TanksViewController : UITableViewController
 
-@property (nonatomic) TankGroup *TankGroup;
+@property (nonatomic) TankGroup *tankGroup;
+
+- (id)initWithTankGroup:(TankGroup *)group;
 
 @end

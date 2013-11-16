@@ -113,7 +113,7 @@
     // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
                           @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"gunTraverseArc",
-                          @"speedLimit", @"camoValue", nil];
+                          @"speedLimit", @"camoValue", @"viewRange", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
             NSLog(@"%@ is missing %@", self.name, key);

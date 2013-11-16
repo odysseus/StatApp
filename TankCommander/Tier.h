@@ -17,6 +17,7 @@
 @property (nonatomic) TankGroup *heavyTanks;
 @property (nonatomic) TankGroup *tankDestroyers;
 @property (nonatomic) TankGroup *SPGs;
+@property (nonatomic) NSString *nameString;
 
 - (int)count;
 - (NSArray *)fetchValidKeys;

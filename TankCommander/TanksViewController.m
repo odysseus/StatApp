@@ -11,12 +11,15 @@
 #import "TankStore.h"
 #import "Tank.h"
 #import "TankCell.h"
+#import "TankGroup.h"
 
 @interface TanksViewController ()
 
 @end
 
 @implementation TanksViewController
+
+@synthesize tankGroup;
 
 - (id)init
 {
@@ -33,6 +36,15 @@
     return [self init];
 }
 
+- (id)initWithTankGroup:(TankGroup *)group
+{
+    self = [self init];
+    if (self) {
+        tankGroup = group;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,12 +59,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[TankStore allTanks] count];
+    return [tankGroup count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Tank *t = [[[TankStore allTanks] combinedArray] objectAtIndex:[indexPath row]];
+    Tank *t = [tankGroup objectAtIndex:indexPath.row];
     TankCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TankCell"];
     
     [[cell nameLabel] setText:t.name];
@@ -65,7 +77,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TankViewController *tvc = [[TankViewController alloc] init];
-    Tank *t = [[[TankStore allTanks] combinedArray] objectAtIndex:[indexPath row]];
+    Tank *t = [tankGroup objectAtIndex:indexPath.row];
     [tvc setTank:t];
     
     [[self navigationController] pushViewController:tvc animated:YES];
