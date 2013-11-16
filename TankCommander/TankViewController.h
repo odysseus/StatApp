@@ -15,9 +15,19 @@
     CGFloat fontSize;
     UIColor *lightColor;
     UIColor *darkColor;
+    UIColor *barColor;
+    
     UIColor *debugGreen;
     UIColor *debugBlue;
     UIColor *debugPurple;
+    
+    CGFloat columnOneXLabel;
+    CGFloat columnTwoXLabel;
+    CGFloat columnThreeXLabel;
+    
+    CGFloat columnOneXValue;
+    CGFloat columnTwoXValue;
+    CGFloat columnThreeXValue;
 }
 
 @property (nonatomic) Tank *tank;
@@ -26,9 +36,11 @@
                   withFrame:(CGRect)frame
                        text:(NSString *)text
                    fontSize:(CGFloat)size
-               andFontColor:(UIColor *)color;
+                  fontColor:(UIColor *)color
+           andTextAlignment:(NSTextAlignment)alignment;
 
 // Rendering Methods
 - (UIView *)renderHeaderFromPoint:(CGPoint)point;
+- (UIView *)renderGunViewFromPoint:(CGPoint)point;
 
 @end

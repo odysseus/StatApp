@@ -31,7 +31,6 @@
 		941A76691815C4B40072089F /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76681815C4B40072089F /* Shell.m */; };
 		941A766C1815C7CB0072089F /* TankStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A766B1815C7CB0072089F /* TankStore.m */; };
 		941A766E1815FB620072089F /* Tanks.json in Resources */ = {isa = PBXBuildFile; fileRef = 941A766D1815FB620072089F /* Tanks.json */; };
-		944377001836CC1000E1451C /* RCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944376FF1836CC1000E1451C /* RCViewController.m */; };
 		946FC741182D8DFF0016708A /* AverageTank.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC740182D8DFF0016708A /* AverageTank.m */; };
 		946FC7441831AB580016708A /* TanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7431831AB580016708A /* TanksViewController.m */; };
 		946FC7491831CB900016708A /* RCBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7481831CB900016708A /* RCBaseCell.m */; };
@@ -98,8 +97,6 @@
 		941A766A1815C7CB0072089F /* TankStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankStore.h; sourceTree = "<group>"; };
 		941A766B1815C7CB0072089F /* TankStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankStore.m; sourceTree = "<group>"; };
 		941A766D1815FB620072089F /* Tanks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tanks.json; sourceTree = "<group>"; };
-		944376FE1836CC1000E1451C /* RCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCViewController.h; sourceTree = "<group>"; };
-		944376FF1836CC1000E1451C /* RCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCViewController.m; sourceTree = "<group>"; };
 		946FC73F182D8DFF0016708A /* AverageTank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AverageTank.h; sourceTree = "<group>"; };
 		946FC740182D8DFF0016708A /* AverageTank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AverageTank.m; sourceTree = "<group>"; };
 		946FC7421831AB570016708A /* TanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TanksViewController.h; sourceTree = "<group>"; };
@@ -271,8 +268,6 @@
 				946FC74B1831CC170016708A /* TankCell.m */,
 				946FC75118330C980016708A /* TankViewController.h */,
 				946FC75218330C980016708A /* TankViewController.m */,
-				944376FE1836CC1000E1451C /* RCViewController.h */,
-				944376FF1836CC1000E1451C /* RCViewController.m */,
 				946FC7561833183F0016708A /* IB */,
 			);
 			name = UI;
@@ -396,7 +391,6 @@
 				941A76571814C4F70072089F /* Gun.m in Sources */,
 				946FC7441831AB580016708A /* TanksViewController.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
-				944377001836CC1000E1451C /* RCViewController.m in Sources */,
 				941289C91818AC53008C69E7 /* Module.m in Sources */,
 				94D4729D181CEE5000B11466 /* TankGroup.m in Sources */,
 				941A765A1814C4FF0072089F /* Radio.m in Sources */,

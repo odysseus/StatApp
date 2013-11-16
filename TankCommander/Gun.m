@@ -34,7 +34,8 @@
         self.aimTime = [[dict objectForKey:@"aimTime"] floatValue];
         self.gunDepression = [[dict objectForKey:@"gunDepression"] floatValue];
         self.gunElevation = [[dict objectForKey:@"gunElevation"] floatValue];
-        if ([dict objectForKey:@"autoloader"]) {
+        self.autoloader = [[dict objectForKey:@"autoloader"] boolValue];
+        if (self.autoloader) {
             self.roundsInDrum = [[dict objectForKey:@"roundsInDrum"] floatValue];
             self.drumReload = [[dict objectForKey:@"drumReload"] floatValue];
             self.timeBetweenShots = [[dict objectForKey:@"timeBetweenShots"] floatValue];

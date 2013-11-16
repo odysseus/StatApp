@@ -627,6 +627,17 @@ NSString *romanStringFromInt (int convert)
     }
     return result;
 }
+
+NSString *stringFromBool (BOOL convert)
+{
+    NSString *result = @"Unknown";
+    if (convert) {
+        result = @"True";
+    } else {
+        result = @"False";
+    }
+    return result;
+}
     
 - (BOOL)isTopTurretNeededForTopGun
 {
