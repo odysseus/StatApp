@@ -15,10 +15,20 @@
     CGFloat fontSize;
     UIColor *lightColor;
     UIColor *darkColor;
+    UIColor *debugGreen;
+    UIColor *debugBlue;
+    UIColor *debugPurple;
 }
 
 @property (nonatomic) Tank *tank;
 
-- (void)renderHeader;
+- (UILabel *)addLabelToView:(UIView *)view
+                  withFrame:(CGRect)frame
+                       text:(NSString *)text
+                   fontSize:(CGFloat)size
+               andFontColor:(UIColor *)color;
+
+// Rendering Methods
+- (UIView *)renderHeaderFromPoint:(CGPoint)point;
 
 @end

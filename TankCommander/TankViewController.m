@@ -43,64 +43,16 @@
     fontSize = 16.0;
     darkColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1.0];
     lightColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
-
-    [self renderHeader];
-}
-
-- (void)renderHeader
-{
-    // Tank Header objects
-    UIImageView *tankClassImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 85, 40, 40)];
-    [tankClassImage setImage:tank.imageForTankType];
-    [self.view addSubview:tankClassImage];
     
-    UILabel *tankNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 80, 360, 50)];
-    [tankNameLabel setText:tank.name];
-    [tankNameLabel setFont:[UIFont systemFontOfSize:(fontSize * 2)]];
-    [tankNameLabel setTextColor:darkColor];
-    [self.view addSubview:tankNameLabel];
+    // Debugging Colors to show the outlines of the different views
+    debugGreen = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:1.0];
+    debugBlue = [UIColor colorWithRed:0.9 green:0.9 blue:1.0 alpha:1.0];
+    debugPurple = [UIColor colorWithRed:0.9 green:0.8 blue:1.0 alpha:1.0];
     
-    UILabel *nationLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 120, 360, 20)];
-    [nationLabel setText:tank.stringNationalityAndType];
-    [nationLabel setFont:[UIFont systemFontOfSize:fontSize]];
-    [nationLabel setTextColor:lightColor];
-    [self.view addSubview:nationLabel];
+    CGPoint origin = CGPointMake(0, 70);
     
-    if (!tank.premiumTank) {
-        UILabel *xpNeededLabel = [[UILabel alloc] initWithFrame:CGRectMake(565, 90, 40, 20)];
-        [xpNeededLabel setText:NSLocalizedString(@"XP:", nil)];
-        [xpNeededLabel setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
-        [xpNeededLabel setTextColor:lightColor];
-        [self.view addSubview:xpNeededLabel];
-        
-        UILabel *xpNeededValue = [[UILabel alloc] initWithFrame:CGRectMake(615, 90, 75, 20)];
-        [xpNeededValue setText:[NSString stringWithFormat:@"%d", tank.experienceNeeded]];
-        [xpNeededValue setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
-        [xpNeededValue setTextColor:lightColor];
-        [self.view addSubview:xpNeededValue];
-    }
-    
-    UILabel *costLabel = [[UILabel alloc] initWithFrame:CGRectMake(565, 110, 40, 20)];
-    [costLabel setText:NSLocalizedString(@"Cost:", nil)];
-    [costLabel setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
-    [costLabel setTextColor:lightColor];
-    [self.view addSubview:costLabel];
-    
-    UILabel *costValue = [[UILabel alloc] initWithFrame:CGRectMake(615, 110, 75, 20)];
-    [costValue setText:[NSString stringWithFormat:@"%d", tank.cost]];
-    [costValue setFont:[UIFont systemFontOfSize:(fontSize * 0.75)]];
-    if (tank.premiumTank) {
-        [costValue setTextColor:[UIColor orangeColor]];
-    } else {
-        [costValue setTextColor:lightColor];
-    }
-    [self.view addSubview:costValue];
-    
-    UILabel *tierLabel = [[UILabel alloc] initWithFrame:CGRectMake(700, 80, 50, 60)];
-    [tierLabel setText:romanStringFromInt(tank.tier)];
-    [tierLabel setFont:[UIFont systemFontOfSize:(fontSize * 2)]];
-    [tierLabel setTextColor:darkColor];
-    [self.view addSubview:tierLabel];
+    UIView *headerView = [self renderHeaderFromPoint:origin];
+    [self.view addSubview:headerView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -118,6 +70,98 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UILabel *)addLabelToView:(UIView *)view
+                  withFrame:(CGRect)frame
+                       text:(NSString *)text
+                   fontSize:(CGFloat)size
+               andFontColor:(UIColor *)color
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    [label setText:text];
+    [label setFont:[UIFont systemFontOfSize:size]];
+    [label setTextColor:color];
+    // If the supplied UIView is nil, add it to self.view by default
+    if (!view) {
+        [self.view addSubview:label];
+    } else {
+        [view addSubview:label];
+    }
+    return label;
+}
+
+- (UIView *)renderHeaderFromPoint:(CGPoint)point
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(point.x,
+                                                                  point.y,
+                                                                  [UIScreen mainScreen].bounds.size.width,
+                                                                  60)];
+    // Setting a nonwhite background for debugging purposes
+    [headerView setBackgroundColor:debugBlue];
+    
+    // Tank Type Image
+    UIImageView *tankClassImage = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 40, 40)];
+    [tankClassImage setImage:tank.imageForTankType];
+    [headerView addSubview:tankClassImage];
+    
+    // Tank Name
+    [self addLabelToView:headerView
+               withFrame:CGRectMake(60, 0, 360, 50)
+                    text:tank.name
+                fontSize:(fontSize * 2)
+            andFontColor:darkColor];
+    
+    // Tank Nationality and Type
+    [self addLabelToView:headerView
+               withFrame:CGRectMake(60, 40, 360, 20)
+                    text:tank.stringNationalityAndType
+                fontSize:fontSize
+            andFontColor:lightColor];
+    
+    // Experience fields will only show on non-premium tanks
+    if (!tank.premiumTank) {
+        // Experience Needed Label
+        [self addLabelToView:headerView
+                   withFrame:CGRectMake(565, 10, 40, 20)
+                        text:NSLocalizedString(@"XP:", nil)
+                    fontSize:(fontSize * 0.75)
+                andFontColor:lightColor];
+        
+        // Experience Needed Value
+        [self addLabelToView:headerView
+                   withFrame:CGRectMake(615, 10, 75, 20)
+                        text:[NSString stringWithFormat:@"%d", tank.experienceNeeded]
+                    fontSize:(fontSize * 0.75)
+                andFontColor:lightColor];
+    }
+    
+    // Cost label
+    [self addLabelToView:headerView
+               withFrame:CGRectMake(565, 30, 40, 20)
+                    text:NSLocalizedString(@"Cost:", nil)
+                fontSize:(fontSize * 0.75)
+            andFontColor:lightColor];
+    
+    // Cost value (Capturing the pointer to conditionally set the color of the cost)
+    UILabel *costValue = [self addLabelToView:headerView
+                                    withFrame:CGRectMake(615, 30, 75, 20)
+                                         text:[NSString stringWithFormat:@"%d", tank.cost]
+                                     fontSize:(fontSize * 0.75)
+                                 andFontColor:lightColor];
+    // Display cost differently if the tank is a premium
+    if (tank.premiumTank) {
+        [costValue setTextColor:[UIColor orangeColor]];
+    }
+    
+    // Tank Tier as a Roman Numeral
+    [self addLabelToView:headerView
+               withFrame:CGRectMake(700, 0, 50, 60)
+                    text:romanStringFromInt(tank.tier)
+                fontSize:(fontSize * 2)
+            andFontColor:darkColor];
+    
+    return headerView;
 }
 
 @end
