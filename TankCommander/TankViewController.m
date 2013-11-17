@@ -15,6 +15,7 @@
 #import "Engine.h"
 #import "Suspension.h"
 #import "Radio.h"
+#import "GunView.h"
 
 @interface TankViewController ()
 
@@ -28,7 +29,24 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // Variables to provide consistent layout and colors
+        fontSize = 16.0;
+        darkColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
+        lightColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
+        barColor = [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];
+        
+        // Debugging Colors to show the outlines of the different views
+        debugGreen = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:0.8];
+        debugBlue = [UIColor colorWithRed:0.9 green:0.9 blue:1.0 alpha:0.8];
+        debugPurple = [UIColor colorWithRed:0.9 green:0.8 blue:1.0 alpha:0.8];
+        
+        // Setting column values
+        columnOneXLabel = 20;
+        columnOneXValue = 150;
+        columnTwoXLabel = 260;
+        columnTwoXValue = 390;
+        columnThreeXLabel = 500;
+        columnThreeXValue = 630;
     }
     return self;
 }
@@ -42,26 +60,6 @@
     [scrollView setContentSize:[tankView bounds].size];
     self.view = scrollView;
     
-    
-    // Variables to provide consistent layout and colors
-    fontSize = 16.0;
-    darkColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
-    lightColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
-    barColor = [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];
-    
-    // Debugging Colors to show the outlines of the different views
-    debugGreen = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:0.8];
-    debugBlue = [UIColor colorWithRed:0.9 green:0.9 blue:1.0 alpha:0.8];
-    debugPurple = [UIColor colorWithRed:0.9 green:0.8 blue:1.0 alpha:0.8];
-    
-    // Setting column values
-    columnOneXLabel = 20;
-    columnOneXValue = 150;
-    columnTwoXLabel = 260;
-    columnTwoXValue = 390;
-    columnThreeXLabel = 500;
-    columnThreeXValue = 630;
-    
     CGPoint origin = CGPointMake(0, 0);
     
     UIView *headerView = [self renderHeaderFromPoint:origin];
@@ -73,9 +71,10 @@
     [self.view addSubview:subheader];
     origin.y += subheader.frame.size.height;
     
-    UIView *gunView = [self renderGunViewFromPoint:origin];
+    GunView *gunView = [[GunView alloc] initWithOrigin:origin andTank:tank];
     [self.view addSubview:gunView];
     origin.y += gunView.frame.size.height;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -156,7 +155,7 @@
                         text:NSLocalizedString(@"XP:", nil)
                     fontSize:(fontSize * 0.75)
                    fontColor:lightColor
-            andTextAlignment:NSTextAlignmentRight];
+            andTextAlignment:NSTextAlignmentLeft];
         
         [numberFormatter stringFromNumber:[NSNumber numberWithInteger:tank.experienceNeeded]];
         // Experience Needed Value
@@ -174,7 +173,7 @@
                     text:NSLocalizedString(@"Cost:", nil)
                 fontSize:(fontSize * 0.75)
                fontColor:lightColor
-        andTextAlignment:NSTextAlignmentRight];
+        andTextAlignment:NSTextAlignmentLeft];
     
     // Cost value (Capturing the pointer to conditionally set the color of the cost)
     UILabel *costValue = [self addLabelToView:headerView
@@ -215,7 +214,7 @@
                     text:NSLocalizedString(@"Hitpoints:", nil)
                 fontSize:fontSize
                fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
+        andTextAlignment:NSTextAlignmentLeft];
     [self addLabelToView:subheader
                withFrame:CGRectMake(columnOneXValue, y, 80, 24)
                     text:[NSString stringWithFormat:@"%d", tank.hitpoints]
@@ -227,7 +226,7 @@
                     text:NSLocalizedString(@"Average:", nil)
                 fontSize:fontSize
                fontColor:lightColor
-        andTextAlignment:NSTextAlignmentRight];
+        andTextAlignment:NSTextAlignmentLeft];
     [self addLabelToView:subheader
                withFrame:CGRectMake(columnOneXValue, y+15, 80, 24)
                     text:[NSString stringWithFormat:@"%d", tank.averageTank.hitpoints]
@@ -241,7 +240,7 @@
                     text:NSLocalizedString(@"Specific Power:", nil)
                 fontSize:fontSize
                fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
+        andTextAlignment:NSTextAlignmentLeft];
     [self addLabelToView:subheader
                withFrame:CGRectMake(columnTwoXValue, y, 80, 24)
                     text:[NSString stringWithFormat:@"%0.2f", tank.specificPower]
@@ -261,7 +260,7 @@
                     text:NSLocalizedString(@"Camo Value:", nil)
                 fontSize:fontSize
                fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
+        andTextAlignment:NSTextAlignmentLeft];
     [self addLabelToView:subheader
                withFrame:CGRectMake(columnThreeXValue, y, 80, 24)
                     text:[NSString stringWithFormat:@"%0.2f", tank.camoValue]
@@ -275,259 +274,6 @@
         andTextAlignment:NSTextAlignmentLeft];
     
     return subheader;
-}
-
-- (UIView *)renderGunViewFromPoint:(CGPoint)point
-{
-    UIView *gunView = [[UIView alloc] initWithFrame:CGRectMake(point.x,
-                                                               point.y,
-                                                               [UIScreen mainScreen].bounds.size.width,
-                                                               200)];
-    UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(20, 40, 700, 2)];
-    [barView setBackgroundColor:barColor];
-    [gunView addSubview:barView];
-    
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(20, 10, 400, 28)
-                    text:[NSString stringWithFormat:@"Gun: %@", tank.gun.name]
-                fontSize:(fontSize * 1.5)
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(680, 10, 40, 28)
-                    text:romanStringFromInt(tank.gun.tier)
-                fontSize:(fontSize * 1.5)
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    
-    CGFloat y = 45;
-    
-    // Row 1, Column 1
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Penetration:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.penetration]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXLabel, y+15, 120, 24)
-                    text:NSLocalizedString(@"Average:", nil)
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.penetration]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 1, Column 2
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Damage:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.alphaDamage]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.alphaDamage]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 1, Column 3
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnThreeXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Accuracy:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnThreeXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.2f", tank.accuracy]
-                fontSize:fontSize
-               fontColor:darkColor andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnThreeXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.accuracy]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 2, Column 1
-    y += 45;
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Aim Time:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.2fs", tank.aimTime]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.2fs", tank.averageTank.aimTime]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 2, Column 2
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Rate of Fire:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.2f", tank.rateOfFire]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.rateOfFire]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 2, Column 3
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnThreeXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"DPM:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnThreeXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.damagePerMinute]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnThreeXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.damagePerMinute]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 3, Column 1
-    y += 45;
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Depression:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.gunDepression]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnOneXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunDepression]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    // Row 3, Column 2
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXLabel, y, 120, 24)
-                    text:NSLocalizedString(@"Elevation:", nil)
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentRight];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXValue, y, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.gunElevation]
-                fontSize:fontSize
-               fontColor:darkColor
-        andTextAlignment:NSTextAlignmentLeft];
-    [self addLabelToView:gunView
-               withFrame:CGRectMake(columnTwoXValue, y+15, 80, 24)
-                    text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunElevation]
-                fontSize:fontSize
-               fontColor:lightColor
-        andTextAlignment:NSTextAlignmentLeft];
-    
-    if (tank.autoloader) {
-        // Row 3, Column 3
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnThreeXLabel, y, 120, 24)
-                        text:NSLocalizedString(@"Burst Damage:", nil)
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentRight];
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnThreeXValue, y, 80, 24)
-                        text:[NSString stringWithFormat:@"%0.0f", tank.gun.burstDamage]
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentLeft];
-        // Row 2, Column 1
-        y += 45;
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnOneXLabel, y, 120, 24)
-                        text:NSLocalizedString(@"Drum Capacity:", nil)
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentRight];
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnOneXValue, y, 80, 24)
-                        text:[NSString stringWithFormat:@"%0.0f", tank.roundsInDrum]
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentLeft];
-        
-        // Row 2, Column 2
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnTwoXLabel, y, 120, 24)
-                        text:NSLocalizedString(@"Between Shots:", nil)
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentRight];
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnTwoXValue, y, 80, 24)
-                        text:[NSString stringWithFormat:@"%0.2fs", tank.timeBetweenShots]
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentLeft];
-        
-        // Row 2, Column 3
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnThreeXLabel, y, 120, 24)
-                        text:NSLocalizedString(@"Full Reload:", nil)
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentRight];
-        [self addLabelToView:gunView
-                   withFrame:CGRectMake(columnThreeXValue, y, 80, 24)
-                        text:[NSString stringWithFormat:@"%0.0fs", tank.drumReload]
-                    fontSize:fontSize
-                   fontColor:darkColor
-            andTextAlignment:NSTextAlignmentLeft];
-    }
-    
-    return gunView;
 }
 
 @end

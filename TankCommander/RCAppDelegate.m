@@ -45,6 +45,8 @@
                       smallerValuesAreBetter:smallerIsBetter];
     NSLog(@"\n%@", list);
     
+    NSLog(@"Valid Keys: %@", [allTanks validKeys]);
+    
     //  ACTUAL METHOD
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

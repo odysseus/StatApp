@@ -41,6 +41,5 @@
 
 // Rendering Methods
 - (UIView *)renderHeaderFromPoint:(CGPoint)point;
-- (UIView *)renderGunViewFromPoint:(CGPoint)point;
 
 @end
