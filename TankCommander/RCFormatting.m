@@ -11,7 +11,8 @@
 @implementation RCFormatting
 
 @synthesize fontSize, darkColor, lightColor, barColor, debugGreen, debugBlue, debugPurple, columnOneXLabel,
-columnOneXValue, columnTwoXLabel, columnTwoXValue, columnThreeXLabel, columnThreeXValue;
+columnOneXValue, columnTwoXLabel, columnTwoXValue, columnThreeXLabel, columnThreeXValue, labelHeight, labelWidth,
+valueHeight, valueWidth;
 
 + (RCFormatting *)store
 {
@@ -41,6 +42,12 @@ columnOneXValue, columnTwoXLabel, columnTwoXValue, columnThreeXLabel, columnThre
         singleton->columnTwoXValue = 390;
         singleton->columnThreeXLabel = 500;
         singleton->columnThreeXValue = 630;
+        
+        // Setting the size constraints
+        singleton->labelWidth = 120;
+        singleton->labelHeight = 24;
+        singleton->valueWidth = 80;
+        singleton->valueHeight = 24;
 
     }
     // return the instance of this class

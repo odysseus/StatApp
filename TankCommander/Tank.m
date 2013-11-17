@@ -18,8 +18,8 @@
 @implementation Tank
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
-    availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
-    baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
+availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
+baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -40,7 +40,7 @@
         self.camoValue = [[dict objectForKey:@"camoValue"] floatValue];
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
-                
+        
         if (!self.premiumTank) {
             self.parent = [dict objectForKey:@"parent"];
             self.child = [dict objectForKey:@"child"];
@@ -101,7 +101,7 @@
         // the weight with all the top modules, since the top modules are automatically equipped we can subtract the
         // weight of the individual modules from the top weight to get the hull weight
         self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
-            self.suspension.weight - self.radio.weight - self.engine.weight;
+        self.suspension.weight - self.radio.weight - self.engine.weight;
     }
     return self;
 }
@@ -144,7 +144,7 @@
     }
     // Finally, validate the module arrays to ensure there is only one stock and one top module for each
     NSMutableArray *moduleArrayKeys = [NSMutableArray arrayWithObjects:
-                                @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns",
+                                       @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns",
                                        nil];
     if (self.hasTurret) {
         [moduleArrayKeys addObject:@"availableTurrets"];
@@ -467,6 +467,20 @@
     }
 }
 
+- (int)hullTraverse
+{
+    return self.suspension.traverseSpeed;
+}
+
+- (int)turretTraverse
+{
+    if (self.hasTurret) {
+        return  self.turret.traverseSpeed;
+    } else {
+        return self.hullTraverse;
+    }
+}
+
 TankType fetchTankType (int index)
 {
     switch (index) {
@@ -638,7 +652,7 @@ NSString *stringFromBool (BOOL convert)
     }
     return result;
 }
-    
+
 - (BOOL)isTopTurretNeededForTopGun
 {
     if (self.hasTurret) {
@@ -659,11 +673,11 @@ NSString *stringFromBool (BOOL convert)
     NSArray *modules = [[NSArray alloc] init];
     if (self.hasTurret) {
         modules = [NSArray arrayWithObjects:
-                            @"availableTurrets", @"availableGuns", @"availableSuspensions", @"availableEngines",
-                            @"availableRadios", nil];
+                   @"availableTurrets", @"availableGuns", @"availableSuspensions", @"availableEngines",
+                   @"availableRadios", nil];
     } else {
         modules = [NSArray arrayWithObjects:
-                            @"availableGuns", @"availableSuspensions", @"availableEngines", @"availableRadios", nil];
+                   @"availableGuns", @"availableSuspensions", @"availableEngines", @"availableRadios", nil];
     }
     for (NSString *key in modules) {
         NSArray *moduleArray = [self valueForKey:key];

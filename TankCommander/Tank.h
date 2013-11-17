@@ -83,6 +83,8 @@ typedef enum TankNationality : NSUInteger {
 - (float)timeBetweenShots;
 - (float)loadLimit;
 - (float)viewRange;
+- (int)hullTraverse;
+- (int)turretTraverse;
 
 // Calculated properties
 - (int)hitpoints;

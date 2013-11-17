@@ -11,24 +11,6 @@
 @class Tank;
 
 @interface TankViewController : UIViewController
-{
-    CGFloat fontSize;
-    UIColor *lightColor;
-    UIColor *darkColor;
-    UIColor *barColor;
-    
-    UIColor *debugGreen;
-    UIColor *debugBlue;
-    UIColor *debugPurple;
-    
-    CGFloat columnOneXLabel;
-    CGFloat columnTwoXLabel;
-    CGFloat columnThreeXLabel;
-    
-    CGFloat columnOneXValue;
-    CGFloat columnTwoXValue;
-    CGFloat columnThreeXValue;
-}
 
 @property (nonatomic) Tank *tank;
 
@@ -38,8 +20,5 @@
                    fontSize:(CGFloat)size
                   fontColor:(UIColor *)color
            andTextAlignment:(NSTextAlignment)alignment;
-
-// Rendering Methods
-- (UIView *)renderHeaderFromPoint:(CGPoint)point;
 
 @end

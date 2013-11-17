@@ -27,6 +27,11 @@
 @property (nonatomic, readonly) CGFloat columnTwoXValue;
 @property (nonatomic, readonly) CGFloat columnThreeXValue;
 
+@property (nonatomic, readonly) CGFloat labelWidth;
+@property (nonatomic, readonly) CGFloat labelHeight;
+@property (nonatomic, readonly) CGFloat valueWidth;
+@property (nonatomic, readonly) CGFloat valueHeight;
+
 + (RCFormatting *)store;
 - (UILabel *)addLabelToView:(UIView *)view
                   withFrame:(CGRect)frame

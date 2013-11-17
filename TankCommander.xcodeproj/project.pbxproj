@@ -40,6 +40,7 @@
 		9443771218381A7400E1451C /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9443771118381A7400E1451C /* default.png */; };
 		944377151839526700E1451C /* GunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377141839526700E1451C /* GunView.m */; };
 		944377181839550D00E1451C /* RCFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377171839550D00E1451C /* RCFormatting.m */; };
+		9443771B1839635200E1451C /* TankHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9443771A1839635200E1451C /* TankHeaderView.m */; };
 		946FC741182D8DFF0016708A /* AverageTank.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC740182D8DFF0016708A /* AverageTank.m */; };
 		946FC7441831AB580016708A /* TanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7431831AB580016708A /* TanksViewController.m */; };
 		946FC7491831CB900016708A /* RCBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7481831CB900016708A /* RCBaseCell.m */; };
@@ -53,6 +54,8 @@
 		946FC76A183415560016708A /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC766183415560016708A /* mediumTank.png */; };
 		946FC76B183415560016708A /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC767183415560016708A /* spg.png */; };
 		948C359F1816F1C500708761 /* Tier.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C359E1816F1C500708761 /* Tier.m */; };
+		94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C76F183969A600B23D8A /* TankSubheaderView.m */; };
+		94C8C7731839739A00B23D8A /* HullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7721839739A00B23D8A /* HullView.m */; };
 		94D4729D181CEE5000B11466 /* TankGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D4729C181CEE5000B11466 /* TankGroup.m */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +124,8 @@
 		944377141839526700E1451C /* GunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GunView.m; sourceTree = "<group>"; };
 		944377161839550D00E1451C /* RCFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFormatting.h; sourceTree = "<group>"; };
 		944377171839550D00E1451C /* RCFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFormatting.m; sourceTree = "<group>"; };
+		944377191839635200E1451C /* TankHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankHeaderView.h; sourceTree = "<group>"; };
+		9443771A1839635200E1451C /* TankHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankHeaderView.m; sourceTree = "<group>"; };
 		946FC73F182D8DFF0016708A /* AverageTank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AverageTank.h; sourceTree = "<group>"; };
 		946FC740182D8DFF0016708A /* AverageTank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AverageTank.m; sourceTree = "<group>"; };
 		946FC7421831AB570016708A /* TanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TanksViewController.h; sourceTree = "<group>"; };
@@ -140,6 +145,10 @@
 		946FC767183415560016708A /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
 		948C359D1816F1C500708761 /* Tier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tier.h; sourceTree = "<group>"; };
 		948C359E1816F1C500708761 /* Tier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tier.m; sourceTree = "<group>"; };
+		94C8C76E183969A600B23D8A /* TankSubheaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankSubheaderView.h; sourceTree = "<group>"; };
+		94C8C76F183969A600B23D8A /* TankSubheaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankSubheaderView.m; sourceTree = "<group>"; };
+		94C8C7711839739A00B23D8A /* HullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HullView.h; sourceTree = "<group>"; };
+		94C8C7721839739A00B23D8A /* HullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HullView.m; sourceTree = "<group>"; };
 		94D4729B181CEE5000B11466 /* TankGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankGroup.h; sourceTree = "<group>"; };
 		94D4729C181CEE5000B11466 /* TankGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,8 +310,14 @@
 				94437708183812B600E1451C /* TierCell.m */,
 				9443770C1838168E00E1451C /* TypeCell.h */,
 				9443770D1838168E00E1451C /* TypeCell.m */,
+				944377191839635200E1451C /* TankHeaderView.h */,
+				9443771A1839635200E1451C /* TankHeaderView.m */,
+				94C8C76E183969A600B23D8A /* TankSubheaderView.h */,
+				94C8C76F183969A600B23D8A /* TankSubheaderView.m */,
 				944377131839526700E1451C /* GunView.h */,
 				944377141839526700E1451C /* GunView.m */,
+				94C8C7711839739A00B23D8A /* HullView.h */,
+				94C8C7721839739A00B23D8A /* HullView.m */,
 				944377161839550D00E1451C /* RCFormatting.h */,
 				944377171839550D00E1451C /* RCFormatting.m */,
 				946FC7561833183F0016708A /* IB */,
@@ -430,8 +445,10 @@
 			files = (
 				948C359F1816F1C500708761 /* Tier.m in Sources */,
 				946FC741182D8DFF0016708A /* AverageTank.m in Sources */,
+				94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */,
 				941A76571814C4F70072089F /* Gun.m in Sources */,
 				946FC7441831AB580016708A /* TanksViewController.m in Sources */,
+				94C8C7731839739A00B23D8A /* HullView.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
 				941289C91818AC53008C69E7 /* Module.m in Sources */,
 				944377061838081600E1451C /* TypesViewController.m in Sources */,
@@ -445,6 +462,7 @@
 				941A76541814C4DB0072089F /* Turret.m in Sources */,
 				941A7621181494D50072089F /* main.m in Sources */,
 				946FC7491831CB900016708A /* RCBaseCell.m in Sources */,
+				9443771B1839635200E1451C /* TankHeaderView.m in Sources */,
 				944377151839526700E1451C /* GunView.m in Sources */,
 				94437709183812B600E1451C /* TierCell.m in Sources */,
 				944377181839550D00E1451C /* RCFormatting.m in Sources */,
