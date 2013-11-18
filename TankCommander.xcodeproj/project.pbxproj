@@ -60,6 +60,7 @@
 		94C8C7791839CF6B00B23D8A /* TurretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7781839CF6B00B23D8A /* TurretView.m */; };
 		94C8C77C1839DF9C00B23D8A /* RadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C77B1839DF9C00B23D8A /* RadioView.m */; };
 		94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C77E1839E66800B23D8A /* SuspensionView.m */; };
+		94C8C782183AA90D00B23D8A /* SelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C781183AA90D00B23D8A /* SelectorView.m */; };
 		94D4729D181CEE5000B11466 /* TankGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D4729C181CEE5000B11466 /* TankGroup.m */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,8 @@
 		94C8C77B1839DF9C00B23D8A /* RadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioView.m; sourceTree = "<group>"; };
 		94C8C77D1839E66800B23D8A /* SuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspensionView.h; sourceTree = "<group>"; };
 		94C8C77E1839E66800B23D8A /* SuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspensionView.m; sourceTree = "<group>"; };
+		94C8C780183AA90D00B23D8A /* SelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorView.h; sourceTree = "<group>"; };
+		94C8C781183AA90D00B23D8A /* SelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorView.m; sourceTree = "<group>"; };
 		94D4729B181CEE5000B11466 /* TankGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankGroup.h; sourceTree = "<group>"; };
 		94D4729C181CEE5000B11466 /* TankGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,6 +325,8 @@
 				94437708183812B600E1451C /* TierCell.m */,
 				9443770C1838168E00E1451C /* TypeCell.h */,
 				9443770D1838168E00E1451C /* TypeCell.m */,
+				94C8C780183AA90D00B23D8A /* SelectorView.h */,
+				94C8C781183AA90D00B23D8A /* SelectorView.m */,
 				944377191839635200E1451C /* TankHeaderView.h */,
 				9443771A1839635200E1451C /* TankHeaderView.m */,
 				94C8C76E183969A600B23D8A /* TankSubheaderView.h */,
@@ -476,6 +481,7 @@
 				94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */,
 				9443770E1838168E00E1451C /* TypeCell.m in Sources */,
 				94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */,
+				94C8C782183AA90D00B23D8A /* SelectorView.m in Sources */,
 				94D4729D181CEE5000B11466 /* TankGroup.m in Sources */,
 				941A765A1814C4FF0072089F /* Radio.m in Sources */,
 				941A76601814C5940072089F /* Engine.m in Sources */,

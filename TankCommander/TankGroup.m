@@ -203,8 +203,8 @@
                                @"accuracy", @"rateOfFire", @"gunDepression", @"gunElevation", @"weight",
                                @"specificPower", @"damagePerMinute", @"reloadTime", @"alphaDamage",
                                @"frontalHullArmor", @"sideHullArmor", @"rearHullArmor", @"frontalTurretArmor",
-                               @"sideTurretArmor", @"effectiveFrontalHullArmor", @"effectiveSideHullArmor",
-                               @"effectiveRearHullArmor", @"effectiveFrontalTurretArmor",
+                               @"sideTurretArmor", @"rearTurretArmor", @"effectiveFrontalHullArmor",
+                               @"effectiveSideHullArmor", @"effectiveRearHullArmor", @"effectiveFrontalTurretArmor",
                                @"effectiveSideTurretArmor", @"effectiveRearTurretArmor", @"hullTraverse",
                                @"turretTraverse", @"viewRange", @"horsepower", @"fireChance", @"signalRange"];
         for (NSString *key in floatKeys) {

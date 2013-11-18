@@ -3621,7 +3621,7 @@
                     "hull": {
                         "frontArmor": [
                                        120,
-                                       55
+                                       68
                                        ],
                         "sideArmor": [
                                       80,
@@ -3629,7 +3629,7 @@
                                       ],
                         "rearArmor": [
                                       60,
-                                      10
+                                      60
                                       ]
                     },
                     "turrets": {

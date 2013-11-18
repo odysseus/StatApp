@@ -16,6 +16,7 @@
 #import "EngineView.h"
 #import "RadioView.h"
 #import "SuspensionView.h"
+#import "SelectorView.h"
 
 @interface TankViewController ()
 
@@ -42,6 +43,20 @@
     [scrollView addSubview:tankView];
     [scrollView setContentSize:[tankView bounds].size];
     self.view = scrollView;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // When view is called to appear
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    for (UIView *sv in self.view.subviews) {
+        [sv removeFromSuperview];
+    }
     
     CGPoint origin = CGPointMake(0, 0);
     
@@ -49,6 +64,11 @@
     [self.view addSubview:headerView];
     // Advance the Y value on the origin point so that subsequent views render from the right spot
     origin.y += headerView.frame.size.height;
+    
+    SelectorView *selectorView = [[SelectorView alloc] initWithOrigin:origin andTank:tank];
+    [selectorView setTankView:self];
+    [self.view addSubview:selectorView];
+    origin.y += selectorView.frame.size.height;
     
     TankSubheaderView *subheader = [[TankSubheaderView alloc] initWithPoint:origin andTank:tank];
     [self.view addSubview:subheader];
@@ -79,18 +99,6 @@
     SuspensionView *suspensionView = [[SuspensionView alloc] initWithOrigin:origin andTank:tank];
     [self.view addSubview:suspensionView];
     origin.y += suspensionView.frame.size.height;
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    // When view is called to appear
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning

@@ -102,6 +102,11 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         // weight of the individual modules from the top weight to get the hull weight
         self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
         self.suspension.weight - self.radio.weight - self.engine.weight;
+        
+        self.isTop = YES;
+        self.isStock = NO;
+        
+        [self validate];
     }
     return self;
 }
@@ -247,6 +252,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
             }
         }
     }
+    self.isStock = YES;
+    self.isTop = NO;
 }
 
 - (void)setAllValuesTop
@@ -287,6 +294,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
             }
         }
     }
+    self.isTop = YES;
+    self.isStock = NO;
 }
 
 - (float)calculateProgressiveStatWithNominalStat:(float)nominalStat
@@ -506,7 +515,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
 
 - (float)effectiveRearHullArmor
 {
-    return self.hull.rearArmor.thickness;
+    return self.hull.rearArmor.effectiveThickness;
 }
 
 - (float)frontalTurretArmor

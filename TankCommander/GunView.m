@@ -40,7 +40,7 @@
         [self addSubview:barView];
         
         [format addLabelToView:self
-                     withFrame:CGRectMake(20, 10, 400, 28)
+                     withFrame:CGRectMake(20, 10, 600, 28)
                           text:[NSString stringWithFormat:@"Gun: %@", tank.gun.name]
                       fontSize:(format.fontSize * 1.5)
                      fontColor:format.darkColor

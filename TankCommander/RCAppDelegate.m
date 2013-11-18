@@ -21,16 +21,12 @@
 {
     // Debugging and Logging Code
     TankStore *allTanks = [TankStore allTanks];
-    NSLog(@"%lu Tanks in database", (unsigned long)[[allTanks combinedArray] count]);
     
     NSMutableArray *tier8 = allTanks.tier8.all.group;
     
     for (Tank *tank in tier8) {
         [tank validate];
     }
-    
-    Tank *tank = [allTanks.tier8.all findTankByName:@"AMX 13 90"];
-    NSLog(@"%@: %@", tank.name, tank.gun);
     
     NSString *key = @"viewRange";
     NSString *range = @"all";
