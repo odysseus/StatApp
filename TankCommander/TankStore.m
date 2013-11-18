@@ -72,6 +72,17 @@ static TankStore *allTanks = nil;
         self.tier9 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier9"]];
         self.tier10 = [[Tier alloc] initWithDict:[tanks objectForKey:@"tier10"]];
         
+        self.tier1.nameString = @"Tier 1";
+        self.tier2.nameString = @"Tier 2";
+        self.tier3.nameString = @"Tier 3";
+        self.tier4.nameString = @"Tier 4";
+        self.tier5.nameString = @"Tier 5";
+        self.tier6.nameString = @"Tier 6";
+        self.tier7.nameString = @"Tier 7";
+        self.tier8.nameString = @"Tier 8";
+        self.tier9.nameString = @"Tier 9";
+        self.tier10.nameString = @"Tier 10";
+        
         tanksLoaded = YES;
     }
 }

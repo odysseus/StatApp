@@ -35,6 +35,11 @@
 @property (nonatomic) float damagePerMinute;
 @property (nonatomic) float reloadTime;
 @property (nonatomic) float alphaDamage;
+@property (nonatomic) float horsepower;
+@property (nonatomic) float fireChance;
+@property (nonatomic) float signalRange;
+
+// Armor Properties
 @property (nonatomic) float frontalHullArmor;
 @property (nonatomic) float sideHullArmor;
 @property (nonatomic) float rearHullArmor;

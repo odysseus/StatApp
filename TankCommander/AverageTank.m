@@ -14,6 +14,7 @@
     aimTime, accuracy, rateOfFire, gunDepression, gunElevation, weight, damagePerMinute, reloadTime, alphaDamage,
     frontalHullArmor, sideHullArmor, rearHullArmor, frontalTurretArmor, sideTurretArmor, rearTurretArmor,
     effectiveFrontalHullArmor, effectiveSideHullArmor, effectiveRearHullArmor, effectiveFrontalTurretArmor,
-    effectiveSideTurretArmor, effectiveRearTurretArmor, hullTraverse, turretTraverse, viewRange;
+    effectiveSideTurretArmor, effectiveRearTurretArmor, hullTraverse, turretTraverse, viewRange, fireChance,
+    horsepower, signalRange;
 
 @end

@@ -6179,7 +6179,7 @@
                     "hull": {
                         "frontArmor": [
                                        150,
-                                       60
+                                       50
                                        ],
                         "sideArmor": [
                                       80,
@@ -6277,6 +6277,8 @@
                                     "autoloader": false,
                                     "accuracy": 0.37,
                                     "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
                                     "weight": 3000,
                                     "stockModule": false,
                                     "topModule": false,
@@ -6310,6 +6312,8 @@
                                     "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
                                     "weight": 3600,
                                     "stockModule": false,
                                     "topModule": true,
@@ -6369,7 +6373,7 @@
                                     "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.9,
-                                    "gunDepression": -5,
+                                    "gunDepression": -7,
                                     "gunElevation": 17,
                                     "weight": 2562,
                                     "stockModule": true,
@@ -6404,6 +6408,8 @@
                                     "autoloader": false,
                                     "accuracy": 0.37,
                                     "aimTime": 2.3,
+                                    "gunDepression": -7,
+                                    "gunElevation": 17,
                                     "weight": 3000,
                                     "stockModule": false,
                                     "topModule": false,
@@ -6437,6 +6443,8 @@
                                     "autoloader": false,
                                     "accuracy": 0.34,
                                     "aimTime": 2.3,
+                                    "gunDepression": -7,
+                                    "gunElevation": 17,
                                     "weight": 3600,
                                     "stockModule": false,
                                     "topModule": true,
@@ -6925,6 +6933,7 @@
                     "topWeight": 50.58,
                     "topSpeed": 50,
                     "hull": {
+                        "viewRange": 370,
                         "frontArmor": [
                                        150,
                                        55
@@ -7145,6 +7154,7 @@
                     "crewLevel": 100,
                     "topWeight": 60.16,
                     "hull": {
+                        "viewRange": 370,
                         "frontArmor": [
                                        228,
                                        45
@@ -7410,6 +7420,7 @@
                     "crewLevel": 100,
                     "topWeight": 66.75,
                     "hull": {
+                        "viewRange": 370,
                         "frontArmor": [
                                        200,
                                        5
@@ -7631,6 +7642,7 @@
                     "topWeight": 49.685,
                     "topSpeed": 43.12,
                     "hull": {
+                        "viewRange": 370,
                         "frontArmor": [
                                        90,
                                        30
@@ -7918,6 +7930,7 @@
                     "crewLevel": 100,
                     "topWeight": 69.68,
                     "hull": {
+                        "viewRange": 390,
                         "frontArmor": [
                                        250,
                                        30
@@ -8025,6 +8038,7 @@
                     "crewLevel": 100,
                     "topWeight": 53.1,
                     "hull": {
+                        "viewRange": 380,
                         "frontArmor": [
                                        100,
                                        50
@@ -8244,6 +8258,7 @@
                     "crewLevel": 100,
                     "topWeight": 18.57,
                     "hull": {
+                        "viewRange": 400,
                         "frontArmor": [
                                        20,
                                        45
@@ -8399,6 +8414,7 @@
                     "topWeight": 34.312,
                     "topSpeed": 54.16,
                     "hull": {
+                        "viewRange": 380,
                         "frontArmor": [
                                        120,
                                        50
@@ -8619,6 +8635,7 @@
                     "crewLevel": 100,
                     "topWeight": 59.934,
                     "hull": {
+                        "viewRange": 370,
                         "frontArmor": [
                                        254,
                                        30
@@ -8811,6 +8828,7 @@
                     }
                 },
                 "t28proto": {
+                    "viewRange": 380,
                     "name": "T28 Prototype",
                     "nationality": 0,
                     "tier": 8,
@@ -9065,6 +9083,7 @@
                     "crewLevel": 100,
                     "topWeight": 60,
                     "hull": {
+                        "viewRange": 330,
                         "frontArmor": [
                                        50,
                                        5
@@ -9218,6 +9237,7 @@
                     "crewLevel": 100,
                     "topWeight": 74.06,
                     "hull": {
+                        "viewRange": 380,
                         "frontArmor": [
                                        100,
                                        25
@@ -9371,6 +9391,7 @@
                     "crewLevel": 100,
                     "topWeight": 33,
                     "hull": {
+                        "viewRange": 360,
                         "frontArmor": [
                                        40,
                                        45
@@ -9396,7 +9417,7 @@
                                 "autoloader": false,
                                 "accuracy": 0.76,
                                 "aimTime": 6.5,
-                                "gunDepression": 0,
+                                "gunDepression": -1,
                                 "gunElevation": 45,
                                 "weight": 2675,
                                 "stockModule": true,
@@ -9416,7 +9437,7 @@
                                 "autoloader": false,
                                 "accuracy": 0.74,
                                 "aimTime": 6,
-                                "gunDepression": 0,
+                                "gunDepression": -1,
                                 "gunElevation": 45,
                                 "weight": 3989,
                                 "stockModule": false,
@@ -9515,6 +9536,7 @@
                     "crewLevel": 100,
                     "topWeight": 36.69,
                     "hull": {
+                        "viewRange": 380,
                         "frontArmor": [
                                        108,
                                        50
@@ -9679,6 +9701,7 @@
                     "crewLevel": 100,
                     "topWeight": 63.99,
                     "hull": {
+                        "viewRange": 310,
                         "frontArmor": [
                                        50,
                                        45

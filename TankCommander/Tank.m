@@ -113,7 +113,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
     // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
                           @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"gunTraverseArc",
-                          @"speedLimit", @"camoValue", @"viewRange", nil];
+                          @"speedLimit", @"camoValue", @"viewRange", @"gunDepression", @"gunElevation", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -205,6 +205,87 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         return [NSString stringWithFormat:@"*%@", name];
     } else {
         return name;
+    }
+}
+
+// Setting values to stock or top
+- (void)setAllValuesStock
+{
+    // Low hanging fruit: deal with the modules that are the same with all tanks
+    for (Engine *engineMod in self.availableEngines) {
+        if (engineMod.stockModule) {
+            self.engine = engineMod;
+        }
+    }
+    for (Radio *radioMod in self.availableRadios) {
+        if (radioMod.stockModule) {
+            self.radio = radioMod;
+        }
+    }
+    for (Suspension *suspensionMod in self.availableSuspensions) {
+        if (suspensionMod.stockModule) {
+            self.suspension = suspensionMod;
+        }
+    }
+    // Set the turret, doing it in this order allows tanks with a turret to access the right
+    // array of guns, since attributes change based on the turret used
+    if (self.hasTurret) {
+        for (Turret *turretMod in self.availableTurrets) {
+            if (turretMod.stockModule) {
+                self.turret = turretMod;
+            }
+        }
+        for (Gun *gunMod in self.turret.availableGuns) {
+            if (gunMod.stockModule) {
+                self.turret.gun = gunMod;
+            }
+        }
+    } else {
+        for (Gun *gunMod in self.hull.availableGuns) {
+            if (gunMod.stockModule) {
+                self.hull.gun = gunMod;
+            }
+        }
+    }
+}
+
+- (void)setAllValuesTop
+{
+    // Low hanging fruit: deal with the modules that are the same with all tanks
+    for (Engine *engineMod in self.availableEngines) {
+        if (engineMod.topModule) {
+            self.engine = engineMod;
+        }
+    }
+    for (Radio *radioMod in self.availableRadios) {
+        if (radioMod.topModule) {
+            self.radio = radioMod;
+        }
+    }
+    for (Suspension *suspensionMod in self.availableSuspensions) {
+        if (suspensionMod.topModule) {
+            self.suspension = suspensionMod;
+        }
+    }
+    // Set the turret, doing it in this order allows tanks with a turret to access the right
+    // array of guns, since attributes change based on the turret used
+    if (self.hasTurret) {
+        for (Turret *turretMod in self.availableTurrets) {
+            if (turretMod.topModule) {
+                self.turret = turretMod;
+            }
+        }
+        for (Gun *gunMod in self.turret.availableGuns) {
+            if (gunMod.topModule) {
+                self.turret.gun = gunMod;
+            }
+        }
+    } else {
+        for (Gun *gunMod in self.hull.availableGuns) {
+            if (gunMod.topModule) {
+                self.hull.gun = gunMod;
+            }
+        }
     }
 }
 
@@ -379,6 +460,21 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
     } else {
         return self.hull.viewRange;
     }
+}
+
+- (float)horsepower
+{
+    return self.engine.horsepower;
+}
+
+- (float)fireChance
+{
+    return self.engine.fireChance;
+}
+
+- (float)signalRange
+{
+    return self.radio.signalRange;
 }
 
 // Armor Properties

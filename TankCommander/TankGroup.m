@@ -206,7 +206,7 @@
                                @"sideTurretArmor", @"effectiveFrontalHullArmor", @"effectiveSideHullArmor",
                                @"effectiveRearHullArmor", @"effectiveFrontalTurretArmor",
                                @"effectiveSideTurretArmor", @"effectiveRearTurretArmor", @"hullTraverse",
-                               @"turretTraverse", @"viewRange"];
+                               @"turretTraverse", @"viewRange", @"horsepower", @"fireChance", @"signalRange"];
         for (NSString *key in floatKeys) {
             [average setValue:[self medianValueForKey:key] forKey:key];
         }

@@ -14,6 +14,7 @@
 @property (nonatomic, readonly) UIColor *lightColor;
 @property (nonatomic, readonly) UIColor *darkColor;
 @property (nonatomic, readonly) UIColor *barColor;
+@property (nonatomic, readonly) UIColor *darkGreenColor;
 
 @property (nonatomic, readonly) UIColor *debugGreen;
 @property (nonatomic, readonly) UIColor *debugBlue;
@@ -31,6 +32,8 @@
 @property (nonatomic, readonly) CGFloat labelHeight;
 @property (nonatomic, readonly) CGFloat valueWidth;
 @property (nonatomic, readonly) CGFloat valueHeight;
+
+@property (nonatomic, readonly) CGFloat rowHeight;
 
 + (RCFormatting *)store;
 - (UILabel *)addLabelToView:(UIView *)view

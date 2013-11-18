@@ -27,13 +27,14 @@
 - (id)initWithOrigin:(CGPoint)point andTank:(Tank *)t
 {
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat y = 45;
+    RCFormatting *format = [RCFormatting store];
+    
+    CGFloat y = format.rowHeight;
     self = [self initWithFrame:CGRectMake(point.x, point.y, screenWidth, y)];
     
     if (self) {
         tank = t;
-        RCFormatting *format = [RCFormatting store];
-                
+        
         UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(20, 40, 700, 2)];
         [barView setBackgroundColor:format.barColor];
         [self addSubview:barView];
@@ -125,7 +126,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 2, Column 1
-        y += 45;
+        y += format.rowHeight;
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
                           text:NSLocalizedString(@"Aim Time:", nil)
@@ -154,12 +155,14 @@
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.2f", tank.rateOfFire]
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y+15, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.rateOfFire]
@@ -174,12 +177,14 @@
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.0f", tank.damagePerMinute]
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y+15, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.damagePerMinute]
@@ -188,19 +193,21 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 3, Column 1
-        y += 45;
+        y += format.rowHeight;
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
                           text:NSLocalizedString(@"Depression:", nil)
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.0f", tank.gunDepression]
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y+15, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunDepression]
@@ -215,12 +222,14 @@
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.0f", tank.gunElevation]
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y+15, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunElevation]
@@ -236,6 +245,7 @@
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.0f", tank.gun.burstDamage]
@@ -243,13 +253,14 @@
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
             // Row 4, Column 1
-            y += 45;
+            y += format.rowHeight;
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
                               text:NSLocalizedString(@"Drum Capacity:", nil)
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.0f", tank.roundsInDrum]
@@ -264,6 +275,7 @@
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.2fs", tank.timeBetweenShots]
@@ -278,6 +290,7 @@
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.0fs", tank.drumReload]
@@ -285,7 +298,7 @@
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
         }
-        y += 45;
+        y += format.rowHeight;
         self.frame = CGRectMake(point.x, point.y, [UIScreen mainScreen].bounds.size.width, y);
     }
     return self;

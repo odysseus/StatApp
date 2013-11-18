@@ -56,6 +56,10 @@
 		948C359F1816F1C500708761 /* Tier.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C359E1816F1C500708761 /* Tier.m */; };
 		94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C76F183969A600B23D8A /* TankSubheaderView.m */; };
 		94C8C7731839739A00B23D8A /* HullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7721839739A00B23D8A /* HullView.m */; };
+		94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7751839CF4F00B23D8A /* EngineView.m */; };
+		94C8C7791839CF6B00B23D8A /* TurretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7781839CF6B00B23D8A /* TurretView.m */; };
+		94C8C77C1839DF9C00B23D8A /* RadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C77B1839DF9C00B23D8A /* RadioView.m */; };
+		94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C77E1839E66800B23D8A /* SuspensionView.m */; };
 		94D4729D181CEE5000B11466 /* TankGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D4729C181CEE5000B11466 /* TankGroup.m */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +153,14 @@
 		94C8C76F183969A600B23D8A /* TankSubheaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankSubheaderView.m; sourceTree = "<group>"; };
 		94C8C7711839739A00B23D8A /* HullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HullView.h; sourceTree = "<group>"; };
 		94C8C7721839739A00B23D8A /* HullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HullView.m; sourceTree = "<group>"; };
+		94C8C7741839CF4F00B23D8A /* EngineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineView.h; sourceTree = "<group>"; };
+		94C8C7751839CF4F00B23D8A /* EngineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineView.m; sourceTree = "<group>"; };
+		94C8C7771839CF6B00B23D8A /* TurretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurretView.h; sourceTree = "<group>"; };
+		94C8C7781839CF6B00B23D8A /* TurretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurretView.m; sourceTree = "<group>"; };
+		94C8C77A1839DF9C00B23D8A /* RadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioView.h; sourceTree = "<group>"; };
+		94C8C77B1839DF9C00B23D8A /* RadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioView.m; sourceTree = "<group>"; };
+		94C8C77D1839E66800B23D8A /* SuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuspensionView.h; sourceTree = "<group>"; };
+		94C8C77E1839E66800B23D8A /* SuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspensionView.m; sourceTree = "<group>"; };
 		94D4729B181CEE5000B11466 /* TankGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankGroup.h; sourceTree = "<group>"; };
 		94D4729C181CEE5000B11466 /* TankGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,16 +271,16 @@
 		946FC7451831AB9E0016708A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				941A764C1814B8E10072089F /* Tank.h */,
+				941A764D1814B8E10072089F /* Tank.m */,
+				946FC73F182D8DFF0016708A /* AverageTank.h */,
+				946FC740182D8DFF0016708A /* AverageTank.m */,
 				941A766A1815C7CB0072089F /* TankStore.h */,
 				941A766B1815C7CB0072089F /* TankStore.m */,
 				948C359D1816F1C500708761 /* Tier.h */,
 				948C359E1816F1C500708761 /* Tier.m */,
 				94D4729B181CEE5000B11466 /* TankGroup.h */,
 				94D4729C181CEE5000B11466 /* TankGroup.m */,
-				941A764C1814B8E10072089F /* Tank.h */,
-				941A764D1814B8E10072089F /* Tank.m */,
-				946FC73F182D8DFF0016708A /* AverageTank.h */,
-				946FC740182D8DFF0016708A /* AverageTank.m */,
 				941A764F1814C4D40072089F /* Hull.h */,
 				941A76501814C4D40072089F /* Hull.m */,
 				941289C71818AC53008C69E7 /* Module.h */,
@@ -318,6 +330,14 @@
 				944377141839526700E1451C /* GunView.m */,
 				94C8C7711839739A00B23D8A /* HullView.h */,
 				94C8C7721839739A00B23D8A /* HullView.m */,
+				94C8C7771839CF6B00B23D8A /* TurretView.h */,
+				94C8C7781839CF6B00B23D8A /* TurretView.m */,
+				94C8C7741839CF4F00B23D8A /* EngineView.h */,
+				94C8C7751839CF4F00B23D8A /* EngineView.m */,
+				94C8C77A1839DF9C00B23D8A /* RadioView.h */,
+				94C8C77B1839DF9C00B23D8A /* RadioView.m */,
+				94C8C77D1839E66800B23D8A /* SuspensionView.h */,
+				94C8C77E1839E66800B23D8A /* SuspensionView.m */,
 				944377161839550D00E1451C /* RCFormatting.h */,
 				944377171839550D00E1451C /* RCFormatting.m */,
 				946FC7561833183F0016708A /* IB */,
@@ -447,16 +467,20 @@
 				946FC741182D8DFF0016708A /* AverageTank.m in Sources */,
 				94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */,
 				941A76571814C4F70072089F /* Gun.m in Sources */,
+				94C8C7791839CF6B00B23D8A /* TurretView.m in Sources */,
 				946FC7441831AB580016708A /* TanksViewController.m in Sources */,
 				94C8C7731839739A00B23D8A /* HullView.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
 				941289C91818AC53008C69E7 /* Module.m in Sources */,
 				944377061838081600E1451C /* TypesViewController.m in Sources */,
+				94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */,
 				9443770E1838168E00E1451C /* TypeCell.m in Sources */,
+				94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */,
 				94D4729D181CEE5000B11466 /* TankGroup.m in Sources */,
 				941A765A1814C4FF0072089F /* Radio.m in Sources */,
 				941A76601814C5940072089F /* Engine.m in Sources */,
 				946FC74C1831CC170016708A /* TankCell.m in Sources */,
+				94C8C77C1839DF9C00B23D8A /* RadioView.m in Sources */,
 				941A76631814EE260072089F /* Armor.m in Sources */,
 				941A76691815C4B40072089F /* Shell.m in Sources */,
 				941A76541814C4DB0072089F /* Turret.m in Sources */,

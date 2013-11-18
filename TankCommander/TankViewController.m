@@ -12,6 +12,10 @@
 #import "TankSubheaderView.h"
 #import "HullView.h"
 #import "GunView.h"
+#import "TurretView.h"
+#import "EngineView.h"
+#import "RadioView.h"
+#import "SuspensionView.h"
 
 @interface TankViewController ()
 
@@ -57,6 +61,24 @@
     HullView *hullView = [[HullView alloc] initWithOrigin:origin andTank:tank];
     [self.view addSubview:hullView];
     origin.y += hullView.frame.size.height;
+    
+    if (tank.hasTurret) {
+        TurretView *turretView = [[TurretView alloc] initWithOrigin:origin andTank:tank];
+        [self.view addSubview:turretView];
+        origin.y += turretView.frame.size.height;
+    }
+    
+    EngineView *engineView = [[EngineView alloc] initWithOrigin:origin andTank:tank];
+    [self.view addSubview:engineView];
+    origin.y += engineView.frame.size.height;
+    
+    RadioView *radioView = [[RadioView alloc] initWithOrigin:origin andTank:tank];
+    [self.view addSubview:radioView];
+    origin.y += radioView.frame.size.height;
+    
+    SuspensionView *suspensionView = [[SuspensionView alloc] initWithOrigin:origin andTank:tank];
+    [self.view addSubview:suspensionView];
+    origin.y += suspensionView.frame.size.height;
     
 }
 

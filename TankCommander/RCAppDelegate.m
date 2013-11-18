@@ -32,8 +32,8 @@
     Tank *tank = [allTanks.tier8.all findTankByName:@"AMX 13 90"];
     NSLog(@"%@: %@", tank.name, tank.gun);
     
-    NSString *key = @"specificPower";
-    NSString *range = @"mediumTanks";
+    NSString *key = @"viewRange";
+    NSString *range = @"all";
     NSString *tier = @"tier8";
     BOOL smallerIsBetter = NO;
     
@@ -45,13 +45,10 @@
                       smallerValuesAreBetter:smallerIsBetter];
     NSLog(@"\n%@", list);
     
-    NSLog(@"Valid Keys: %@", [allTanks validKeys]);
-    
     //  ACTUAL METHOD
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    TanksViewController *tvc = [[TanksViewController alloc] init];
     TiersViewController *tvc = [[TiersViewController alloc] init];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tvc];

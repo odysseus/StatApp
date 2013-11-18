@@ -12,7 +12,7 @@
 
 @implementation Tier
 
-@synthesize lightTanks, mediumTanks, heavyTanks, tankDestroyers, SPGs;
+@synthesize lightTanks, mediumTanks, heavyTanks, tankDestroyers, SPGs, nameString;
 
 - (id)initWithDict:(NSDictionary *)dict
 {

@@ -83,6 +83,9 @@ typedef enum TankNationality : NSUInteger {
 - (float)timeBetweenShots;
 - (float)loadLimit;
 - (float)viewRange;
+- (float)horsepower;
+- (float)fireChance;
+- (float)signalRange;
 - (int)hullTraverse;
 - (int)turretTraverse;
 
@@ -107,6 +110,10 @@ typedef enum TankNationality : NSUInteger {
 - (float)effectiveFrontalTurretArmor;
 - (float)effectiveSideTurretArmor;
 - (float)effectiveRearTurretArmor;
+
+// Set to Stock or Top Values
+- (void)setAllValuesStock;
+- (void)setAllValuesTop;
     
 // Helper Methods
 - (BOOL)isTopTurretNeededForTopGun;
@@ -124,6 +131,8 @@ typedef enum TankNationality : NSUInteger {
 - (float)fastestAimTime;
 - (float)skillLevel;
 - (float)skillLevelVentAndBIA;
+
+// Methods used to display params
 - (UIImage *)imageForTankType;
 - (NSString *)stringNationality;
 - (NSString *)stringTankType;

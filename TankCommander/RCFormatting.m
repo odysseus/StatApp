@@ -12,7 +12,7 @@
 
 @synthesize fontSize, darkColor, lightColor, barColor, debugGreen, debugBlue, debugPurple, columnOneXLabel,
 columnOneXValue, columnTwoXLabel, columnTwoXValue, columnThreeXLabel, columnThreeXValue, labelHeight, labelWidth,
-valueHeight, valueWidth;
+valueHeight, valueWidth, rowHeight, darkGreenColor;
 
 + (RCFormatting *)store
 {
@@ -29,6 +29,7 @@ valueHeight, valueWidth;
         singleton->darkColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
         singleton->lightColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
         singleton->barColor = [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];
+        singleton->darkGreenColor = [UIColor colorWithRed:0.5 green:0.7 blue:0.5 alpha:1.0];
         
         // Debugging Colors to show the outlines of the different views
         singleton->debugGreen = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:0.8];
@@ -48,6 +49,9 @@ valueHeight, valueWidth;
         singleton->labelHeight = 24;
         singleton->valueWidth = 80;
         singleton->valueHeight = 24;
+        
+        // Row height to use when incrementing view height
+        singleton->rowHeight = 45;
 
     }
     // return the instance of this class

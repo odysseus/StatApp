@@ -60,20 +60,26 @@
         
         // Row 1, Column 2
         [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Specific Power:", nil)
+                     withFrame:CGRectMake((format.columnTwoXLabel-20), y, format.labelWidth, format.labelHeight)
+                          text:NSLocalizedString(@"Weight/Limit:", nil)
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
-                          text:[NSString stringWithFormat:@"%0.2f", tank.specificPower]
+        UILabel *loadLimit = [format addLabelToView:self
+                     withFrame:CGRectMake((format.columnTwoXValue-20), y, format.labelWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f/%0.2f", tank.weight, tank.loadLimit]
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        if (tank.weight > tank.loadLimit) {
+            [loadLimit setTextColor:[UIColor redColor]];
+        } else {
+            [loadLimit setTextColor:format.darkGreenColor];
+        }
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y+15, format.valueWidth, format.valueHeight)
-                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.specificPower]
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.weight]
                       fontSize:format.fontSize
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
