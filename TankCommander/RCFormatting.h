@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class TankViewController, Tank;
+
 @interface RCFormatting : NSObject
 
 @property (nonatomic, readonly) CGFloat fontSize;
@@ -42,5 +44,8 @@
                    fontSize:(CGFloat)size
                   fontColor:(UIColor *)color
            andTextAlignment:(NSTextAlignment)alignment;
+- (void)pushModulesViewControllerForTank:(Tank *)t
+                                     key:(NSString *)key
+                   andTankViewController:(TankViewController *)tvc;
 
 @end

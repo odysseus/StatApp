@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank;
+@class Tank, TankViewController;
 
 @interface GunView : UIView
 {
     Tank *tank;
 }
 
+@property (nonatomic) TankViewController *tankViewController;
+
 - (id)initWithOrigin:(CGPoint)point andTank:(Tank *)t;
+- (void)pushModulesViewController;
 
 @end

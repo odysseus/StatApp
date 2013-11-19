@@ -21,5 +21,6 @@
 - (id)initWithDict:(NSDictionary *)dict;
 
 - (NSString *)description;
+- (NSString *)stringSummary;
 
 @end

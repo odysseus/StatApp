@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank;
+@class Tank, TankViewController;
 
 @interface SuspensionView : UIView
 {
     Tank *tank;
 }
+
+@property (nonatomic) TankViewController *tankViewController;
 
 - (id)initWithOrigin:(CGPoint)point andTank:(Tank *)t;
 

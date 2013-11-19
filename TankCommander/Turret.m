@@ -44,4 +44,13 @@
     return self.name;
 }
 
+- (NSString *)stringSummary
+{
+    if (self.stockModule) {
+        return @"Stock Turret";
+    } else {
+        return @"Top Turret";
+    }
+}
+
 @end

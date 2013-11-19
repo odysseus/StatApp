@@ -33,6 +33,8 @@ typedef enum TankNationality : NSUInteger {
 
 // Pointer to the AverageTank for its TankGroup
 @property (nonatomic, weak) AverageTank *averageTank;
+// Pointer to the group that contains it
+@property (nonatomic, weak) TankGroup *tankGroup;
 
 // Properties that go with the tank and not a specific module
 @property (nonatomic) NSString *name;
@@ -67,10 +69,6 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) Radio *radio;
 @property (nonatomic) Suspension *suspension;
 
-// Properties to measure whether the tank is at stock values or top values
-@property (nonatomic) BOOL isStock;
-@property (nonatomic) BOOL isTop;
-
 // Pass through properties
 - (NSArray *)availableGuns;
 - (Gun *)gun;
@@ -99,6 +97,8 @@ typedef enum TankNationality : NSUInteger {
 - (float)damagePerMinute;
 - (float)reloadTime;
 - (float)alphaDamage;
+- (BOOL)isStock;
+- (BOOL)isTop;
 
 // Armor Properties
 - (float)frontalHullArmor;

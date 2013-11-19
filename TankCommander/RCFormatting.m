@@ -7,6 +7,8 @@
 //
 
 #import "RCFormatting.h"
+#import "TankViewController.h"
+#import "ModulesViewController.h"
 
 @implementation RCFormatting
 
@@ -73,6 +75,16 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     
     [view addSubview:label];
     return label;
+}
+
+
+- (void)pushModulesViewControllerForTank:(Tank *)t
+                                     key:(NSString *)key
+                   andTankViewController:(TankViewController *)tvc
+{
+    ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:t andKey:@"availableTurrets"];
+    [mvc setTankViewController:tvc];
+    [tvc.navigationController pushViewController:mvc animated:YES];
 }
 
 @end

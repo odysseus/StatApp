@@ -32,4 +32,9 @@
     return name;
 }
 
+- (NSString *)stringSummary
+{
+    return [NSString stringWithFormat:@"%@: %d", self.name, self.tier];
+}
+
 @end

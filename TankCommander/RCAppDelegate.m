@@ -25,7 +25,7 @@
     NSMutableArray *tier8 = allTanks.tier8.all.group;
     
     for (Tank *tank in tier8) {
-        [tank validate];
+        //
     }
     
     NSString *key = @"viewRange";

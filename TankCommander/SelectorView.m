@@ -11,10 +11,11 @@
 #import "Tank.h"
 #import "TankViewController.h"
 #import "Gun.h"
+#import "TankGroup.h"
 
 @implementation SelectorView
 
-@synthesize tankView;
+@synthesize tankViewController;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,41 +35,98 @@
         RCFormatting *format = [RCFormatting store];
         tank = t;
         
+        // Segmented Control for selecting all stock, or all top values
         NSArray *stockTop = @[@"Stock Values", @"Top Values"];
-        UISegmentedControl *stockOrTop = [[UISegmentedControl alloc] initWithItems:stockTop];
-        stockOrTop.frame = CGRectMake(291.5, 10, 185, 30);
-        [stockOrTop setTintColor:format.darkColor];
-        [stockOrTop addTarget:self
-                       action:@selector(stockOrTopSegmentedControl:)
+        UISegmentedControl *selectStockOrTop = [[UISegmentedControl alloc] initWithItems:stockTop];
+        selectStockOrTop.frame = CGRectMake(179, 10, 185, 30);
+        [selectStockOrTop setTintColor:format.darkColor];
+        [selectStockOrTop addTarget:self
+                       action:@selector(selectStockOrTop:)
              forControlEvents:UIControlEventValueChanged];
         if (tank.isStock) {
-            [stockOrTop setSelectedSegmentIndex:0];
+            [selectStockOrTop setSelectedSegmentIndex:0];
         } else if (tank.isTop) {
-            [stockOrTop setSelectedSegmentIndex:1];
+            [selectStockOrTop setSelectedSegmentIndex:1];
+        } else {
+            [selectStockOrTop setSelectedSegmentIndex:-1];
         }
         if (tank.premiumTank) {
-            [stockOrTop setEnabled:NO];
+            [selectStockOrTop setEnabled:NO];
         }
-        [self addSubview:stockOrTop];
+        [self addSubview:selectStockOrTop];
+        
+        // Segmented control for setting the shell type
+        NSArray *shellTypes = tank.gun.stringShellArray;
+        UISegmentedControl *selectShellType = [[UISegmentedControl alloc] initWithItems:shellTypes];
+        selectShellType.frame = CGRectMake(404, 10, 185, 30);
+        [selectShellType setTintColor:format.darkColor];
+        // Add the target
+        [selectShellType addTarget:self
+                            action:@selector(selectShellType:)
+                  forControlEvents:UIControlEventValueChanged];
+        // Check for the currently selected shell type and set the highlighted segment
+        if (tank.gun.round.shellType == ShellTypeNormal) {
+            [selectShellType setSelectedSegmentIndex:0];
+        } else if (tank.gun.round.shellType == ShellTypeGold) {
+            [selectShellType setSelectedSegmentIndex:1];
+        } else if (tank.gun.round.shellType == ShellTypeHE) {
+            [selectShellType setSelectedSegmentIndex:2];
+        } else {
+            [selectShellType setSelectedSegmentIndex:-1];
+        }
+        [self addSubview:selectShellType];
     }
     return self;
 }
 
-- (void)stockOrTopSegmentedControl:(UISegmentedControl *)stockOrTop
+- (void)selectStockOrTop:(UISegmentedControl *)stockOrTop
 {
     switch ([stockOrTop selectedSegmentIndex]) {
         case 0:
             [tank setAllValuesStock];
-            [stockOrTop setSelectedSegmentIndex:0];
-            [self.tankView viewDidLoad];
+            [self.tankViewController viewDidLoad];
             break;
         case 1:
             [tank setAllValuesTop];
-            [stockOrTop setSelectedSegmentIndex:1];
-            [self.tankView viewDidLoad];
+            [self.tankViewController viewDidLoad];
+        default:
+            break;
+    }
+}
+
+- (void)selectShellType:(UISegmentedControl *)shellType
+{
+    switch ([shellType selectedSegmentIndex]) {
+        case 0:
+            [tank.gun setNormalRounds];
+            [self.tankViewController viewDidLoad];
+            break;
+        case 1:
+            [tank.gun setGoldRounds];
+            [self.tankViewController viewDidLoad];
+            break;
+        case 2:
+            [tank.gun setHERounds];
+            [self.tankViewController viewDidLoad];
         default:
             break;
     }
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

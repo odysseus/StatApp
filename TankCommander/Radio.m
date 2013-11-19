@@ -26,4 +26,10 @@
     return self.name;
 }
 
+- (NSString *)stringSummary
+{
+    return [NSString stringWithFormat:@"Signal Range: %0.2f",
+            self.signalRange];
+}
+
 @end

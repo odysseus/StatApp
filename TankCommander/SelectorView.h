@@ -15,9 +15,10 @@
     Tank *tank;
 }
 
-@property (nonatomic, weak) TankViewController *tankView;
+@property (nonatomic, weak) TankViewController *tankViewController;
 
 - (id)initWithOrigin:(CGPoint)origin andTank:(Tank *)tank;
-- (void)stockOrTopSegmentedControl:(UISegmentedControl *)stockOrTop;
+- (void)selectStockOrTop:(UISegmentedControl *)stockOrTop;
+- (void)selectShellType:(UISegmentedControl *)shellType;
 
 @end

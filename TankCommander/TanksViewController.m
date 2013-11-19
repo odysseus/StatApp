@@ -62,7 +62,7 @@
     return [tankGroup count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (TankCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Tank *t = [tankGroup objectAtIndex:indexPath.row];
     TankCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TankCell"];

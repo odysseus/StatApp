@@ -1,16 +1,16 @@
 //
-//  TypeCell.m
+//  ModuleCell.m
 //  TankCommander
 //
-//  Created by Ryan Case on 11/16/13.
+//  Created by Ryan Case on 11/18/13.
 //  Copyright (c) 2013 Ryan Case. All rights reserved.
 //
 
-#import "TypeCell.h"
+#import "ModuleCell.h"
 
-@implementation TypeCell
+@implementation ModuleCell
 
-@synthesize typeImage, typeLabel;
+@synthesize tierLabel, nameLabel, summaryLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

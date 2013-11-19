@@ -45,9 +45,26 @@
     return self;
 }
 
+- (NSArray *)stringShellArray
+{
+    if ([self.shells count] == 2) {
+        return @[@"Normal", @"Gold"];
+    } else if ([self.shells count] == 3) {
+        return @[@"Normal", @"Gold", @"HE"];
+    } else {
+        return @[@"Normal"];
+    }
+}
+
 - (NSString *)description
 {
     return self.name;
+}
+
+- (NSString *)stringSummary
+{
+    return [NSString stringWithFormat:@"Penetration: %0.0f - Damage: %0.0f",
+            self.round.penetration, self.round.damage];
 }
 
 - (Shell *)normalRounds
@@ -62,7 +79,11 @@
 
 - (Shell *)HERounds
 {
-    return shells[2];
+    if ([self.shells count] == 3) {
+        return shells[2];
+    } else {
+        return shells[0];
+    }
 }
 
 - (void)setNormalRounds
@@ -77,7 +98,11 @@
 
 - (void)setHERounds
 {
-    round = shells[ShellTypeHE];
+    if ([self.shells count] == 3) {
+        round = shells[2];
+    } else {
+        round = shells[0];
+    }
 }
 
 - (float)burstDamage

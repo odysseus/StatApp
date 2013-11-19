@@ -61,6 +61,9 @@
 		94C8C77C1839DF9C00B23D8A /* RadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C77B1839DF9C00B23D8A /* RadioView.m */; };
 		94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C77E1839E66800B23D8A /* SuspensionView.m */; };
 		94C8C782183AA90D00B23D8A /* SelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C781183AA90D00B23D8A /* SelectorView.m */; };
+		94C8C785183AEBBC00B23D8A /* ModulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C784183AEBBC00B23D8A /* ModulesViewController.m */; };
+		94C8C788183AEBDA00B23D8A /* ModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C787183AEBDA00B23D8A /* ModuleCell.m */; };
+		94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94C8C789183AEC1000B23D8A /* ModuleCell.xib */; };
 		94D4729D181CEE5000B11466 /* TankGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D4729C181CEE5000B11466 /* TankGroup.m */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +167,11 @@
 		94C8C77E1839E66800B23D8A /* SuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuspensionView.m; sourceTree = "<group>"; };
 		94C8C780183AA90D00B23D8A /* SelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorView.h; sourceTree = "<group>"; };
 		94C8C781183AA90D00B23D8A /* SelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorView.m; sourceTree = "<group>"; };
+		94C8C783183AEBBC00B23D8A /* ModulesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModulesViewController.h; sourceTree = "<group>"; };
+		94C8C784183AEBBC00B23D8A /* ModulesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModulesViewController.m; sourceTree = "<group>"; };
+		94C8C786183AEBDA00B23D8A /* ModuleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleCell.h; sourceTree = "<group>"; };
+		94C8C787183AEBDA00B23D8A /* ModuleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleCell.m; sourceTree = "<group>"; };
+		94C8C789183AEC1000B23D8A /* ModuleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModuleCell.xib; sourceTree = "<group>"; };
 		94D4729B181CEE5000B11466 /* TankGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankGroup.h; sourceTree = "<group>"; };
 		94D4729C181CEE5000B11466 /* TankGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,8 +235,8 @@
 			children = (
 				941A7623181494D50072089F /* RCAppDelegate.h */,
 				941A7624181494D50072089F /* RCAppDelegate.m */,
-				946FC7461831ABCA0016708A /* UI */,
-				946FC7451831AB9E0016708A /* App */,
+				946FC7461831ABCA0016708A /* Views and Controllers */,
+				946FC7451831AB9E0016708A /* Models */,
 				941A766D1815FB620072089F /* Tanks.json */,
 				941A7626181494D50072089F /* Images.xcassets */,
 				946FC762183410C10016708A /* lightTank.png */,
@@ -271,7 +279,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		946FC7451831AB9E0016708A /* App */ = {
+		946FC7451831AB9E0016708A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				941A764C1814B8E10072089F /* Tank.h */,
@@ -303,10 +311,10 @@
 				941A76671815C4B40072089F /* Shell.h */,
 				941A76681815C4B40072089F /* Shell.m */,
 			);
-			name = App;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		946FC7461831ABCA0016708A /* UI */ = {
+		946FC7461831ABCA0016708A /* Views and Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				946FC75118330C980016708A /* TankViewController.h */,
@@ -317,6 +325,8 @@
 				944377021838054D00E1451C /* TiersViewController.m */,
 				944377041838081600E1451C /* TypesViewController.h */,
 				944377051838081600E1451C /* TypesViewController.m */,
+				94C8C783183AEBBC00B23D8A /* ModulesViewController.h */,
+				94C8C784183AEBBC00B23D8A /* ModulesViewController.m */,
 				946FC7471831CB900016708A /* RCBaseCell.h */,
 				946FC7481831CB900016708A /* RCBaseCell.m */,
 				946FC74A1831CC170016708A /* TankCell.h */,
@@ -325,16 +335,18 @@
 				94437708183812B600E1451C /* TierCell.m */,
 				9443770C1838168E00E1451C /* TypeCell.h */,
 				9443770D1838168E00E1451C /* TypeCell.m */,
+				94C8C786183AEBDA00B23D8A /* ModuleCell.h */,
+				94C8C787183AEBDA00B23D8A /* ModuleCell.m */,
 				94C8C780183AA90D00B23D8A /* SelectorView.h */,
 				94C8C781183AA90D00B23D8A /* SelectorView.m */,
 				944377191839635200E1451C /* TankHeaderView.h */,
 				9443771A1839635200E1451C /* TankHeaderView.m */,
 				94C8C76E183969A600B23D8A /* TankSubheaderView.h */,
 				94C8C76F183969A600B23D8A /* TankSubheaderView.m */,
-				944377131839526700E1451C /* GunView.h */,
-				944377141839526700E1451C /* GunView.m */,
 				94C8C7711839739A00B23D8A /* HullView.h */,
 				94C8C7721839739A00B23D8A /* HullView.m */,
+				944377131839526700E1451C /* GunView.h */,
+				944377141839526700E1451C /* GunView.m */,
 				94C8C7771839CF6B00B23D8A /* TurretView.h */,
 				94C8C7781839CF6B00B23D8A /* TurretView.m */,
 				94C8C7741839CF4F00B23D8A /* EngineView.h */,
@@ -347,7 +359,7 @@
 				944377171839550D00E1451C /* RCFormatting.m */,
 				946FC7561833183F0016708A /* IB */,
 			);
-			name = UI;
+			name = "Views and Controllers";
 			sourceTree = "<group>";
 		};
 		946FC7561833183F0016708A /* IB */ = {
@@ -357,6 +369,7 @@
 				946FC74D1831CC5C0016708A /* TankCell.xib */,
 				9443770A183812CA00E1451C /* TierCell.xib */,
 				9443770F183816A200E1451C /* TypeCell.xib */,
+				94C8C789183AEC1000B23D8A /* ModuleCell.xib */,
 			);
 			name = IB;
 			sourceTree = "<group>";
@@ -446,6 +459,7 @@
 				946FC763183410C10016708A /* lightTank.png in Resources */,
 				941A7627181494D50072089F /* Images.xcassets in Resources */,
 				9443771218381A7400E1451C /* default.png in Resources */,
+				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
 				946FC76A183415560016708A /* mediumTank.png in Resources */,
 				941A766E1815FB620072089F /* Tanks.json in Resources */,
 				946FC74E1831CC5C0016708A /* TankCell.xib in Resources */,
@@ -473,6 +487,7 @@
 				94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */,
 				941A76571814C4F70072089F /* Gun.m in Sources */,
 				94C8C7791839CF6B00B23D8A /* TurretView.m in Sources */,
+				94C8C788183AEBDA00B23D8A /* ModuleCell.m in Sources */,
 				946FC7441831AB580016708A /* TanksViewController.m in Sources */,
 				94C8C7731839739A00B23D8A /* HullView.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
@@ -501,6 +516,7 @@
 				941A76511814C4D40072089F /* Hull.m in Sources */,
 				944377031838054D00E1451C /* TiersViewController.m in Sources */,
 				941A765D1814C5100072089F /* Suspension.m in Sources */,
+				94C8C785183AEBBC00B23D8A /* ModulesViewController.m in Sources */,
 				941A764E1814B8E10072089F /* Tank.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -62,7 +62,7 @@
     return [keys count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (TypeCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"TypeCell";
     TypeCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -73,16 +73,11 @@
     [[cell typeLabel] setText:[currentGroup typeString]];
     [[cell typeImage] setImage:[self imageForKey:key]];
     
-
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSString *tierKey = keys[indexPath.row];
-//    TypesViewController *tvc = [[TypesViewController alloc] initWithTier:[allTanks valueForKey:tierKey]];
-//    
-//    [self.navigationController pushViewController:tvc animated:YES];
     TankGroup *group = [tier valueForKey:keys[indexPath.row]];
     TanksViewController *tvc = [[TanksViewController alloc] initWithTankGroup:group];
     [self.navigationController pushViewController:tvc animated:YES];

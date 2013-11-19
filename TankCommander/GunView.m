@@ -11,9 +11,12 @@
 #import "Tank.h"
 #import "Gun.h"
 #import "AverageTank.h"
+#import "ModulesViewController.h"
+#import "TankViewController.h"
 
 @implementation GunView
 
+@synthesize tankViewController;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -39,12 +42,19 @@
         [barView setBackgroundColor:format.barColor];
         [self addSubview:barView];
         
-        [format addLabelToView:self
-                     withFrame:CGRectMake(20, 10, 600, 28)
-                          text:[NSString stringWithFormat:@"Gun: %@", tank.gun.name]
-                      fontSize:(format.fontSize * 1.5)
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        UIButton *nameButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        nameButton.frame = CGRectMake(20, 10, 600, 28);
+        [nameButton setTitle:[NSString stringWithFormat:@"Gun: %@", tank.gun.name] forState:UIControlStateNormal];
+        [nameButton setTitle:[NSString stringWithFormat:@"Gun: %@", tank.gun.name] forState:UIControlStateNormal];
+        [nameButton setTitleColor:format.darkColor forState:UIControlStateNormal];
+        [nameButton setTitleColor:format.lightColor forState:UIControlStateHighlighted];
+        [nameButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [[nameButton titleLabel] setFont:[UIFont systemFontOfSize:(format.fontSize * 1.5)]];
+        [[nameButton titleLabel] setTextAlignment:NSTextAlignmentLeft];
+        [nameButton addTarget:self
+                       action:@selector(pushModulesViewController)
+             forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:nameButton];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(680, 10, 40, 28)
@@ -302,6 +312,13 @@
         self.frame = CGRectMake(point.x, point.y, [UIScreen mainScreen].bounds.size.width, y);
     }
     return self;
+}
+
+- (void)pushModulesViewController
+{
+    ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:@"availableGuns"];
+    [mvc setTankViewController:tankViewController];
+    [tankViewController.navigationController pushViewController:mvc animated:YES];
 }
 
 @end

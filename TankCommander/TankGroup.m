@@ -31,6 +31,7 @@
     if (self) {
         for (id key in dict) {
             Tank *currentTank = [[Tank alloc] initWithDict:[dict objectForKey:key]];
+            [currentTank setTankGroup:self];
             [self addObject:currentTank];
         }
         [self addAverageTank];

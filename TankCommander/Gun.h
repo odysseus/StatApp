@@ -28,6 +28,7 @@
 - (id)initWithDict:(NSDictionary *)dict;
 
 - (NSString *)description;
+- (NSArray *)stringShellArray;
 
 - (Shell *)normalRounds;
 - (Shell *)goldRounds;

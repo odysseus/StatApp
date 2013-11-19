@@ -27,4 +27,10 @@
     return self.name;
 }
 
+- (NSString *)stringSummary
+{
+    return [NSString stringWithFormat:@"Load Limit: %0.2f",
+            self.loadLimit];
+}
+
 @end

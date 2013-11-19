@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tankTypeLabel;
-//@property (weak, nonatomic) UITableView *tableView;
 
 
 @end

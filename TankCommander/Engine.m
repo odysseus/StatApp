@@ -27,4 +27,10 @@
     return self.name;
 }
 
+- (NSString *)stringSummary
+{
+    return [NSString stringWithFormat:@"Horsepower: %0.0f",
+            self.horsepower];
+}
+
 @end

@@ -103,9 +103,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
         self.suspension.weight - self.radio.weight - self.engine.weight;
         
-        self.isTop = YES;
-        self.isStock = NO;
-        
         [self validate];
     }
     return self;
@@ -252,8 +249,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
             }
         }
     }
-    self.isStock = YES;
-    self.isTop = NO;
 }
 
 - (void)setAllValuesTop
@@ -294,8 +289,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
             }
         }
     }
-    self.isTop = YES;
-    self.isStock = NO;
 }
 
 - (float)calculateProgressiveStatWithNominalStat:(float)nominalStat
@@ -584,6 +577,40 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
     } else {
         return self.hullTraverse;
     }
+}
+
+- (BOOL)isStock
+{
+    NSArray *modules = @[@"gun", @"engine", @"radio", @"suspension"];
+    for (NSString *key in modules) {
+        Module *mod = [self valueForKey:key];
+        if (!mod.stockModule) {
+            return NO;
+        }
+    }
+    if (self.hasTurret) {
+        if (!self.turret.stockModule) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (BOOL)isTop
+{
+    NSArray *modules = @[@"gun", @"engine", @"radio", @"suspension"];
+    for (NSString *key in modules) {
+        Module *mod = [self valueForKey:key];
+        if (!mod.topModule) {
+            return NO;
+        }
+    }
+    if (self.hasTurret) {
+        if (!self.turret.topModule) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 TankType fetchTankType (int index)

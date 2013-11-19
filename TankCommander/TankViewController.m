@@ -66,7 +66,7 @@
     origin.y += headerView.frame.size.height;
     
     SelectorView *selectorView = [[SelectorView alloc] initWithOrigin:origin andTank:tank];
-    [selectorView setTankView:self];
+    [selectorView setTankViewController:self];
     [self.view addSubview:selectorView];
     origin.y += selectorView.frame.size.height;
     
@@ -75,6 +75,7 @@
     origin.y += subheader.frame.size.height;
     
     GunView *gunView = [[GunView alloc] initWithOrigin:origin andTank:tank];
+    [gunView setTankViewController:self];
     [self.view addSubview:gunView];
     origin.y += gunView.frame.size.height;
     
@@ -84,19 +85,23 @@
     
     if (tank.hasTurret) {
         TurretView *turretView = [[TurretView alloc] initWithOrigin:origin andTank:tank];
+        [turretView setTankViewController:self];
         [self.view addSubview:turretView];
         origin.y += turretView.frame.size.height;
     }
     
     EngineView *engineView = [[EngineView alloc] initWithOrigin:origin andTank:tank];
+    [engineView setTankViewController:self];
     [self.view addSubview:engineView];
     origin.y += engineView.frame.size.height;
     
     RadioView *radioView = [[RadioView alloc] initWithOrigin:origin andTank:tank];
+    [radioView setTankViewController:self];
     [self.view addSubview:radioView];
     origin.y += radioView.frame.size.height;
     
     SuspensionView *suspensionView = [[SuspensionView alloc] initWithOrigin:origin andTank:tank];
+    [suspensionView setTankViewController:self];
     [self.view addSubview:suspensionView];
     origin.y += suspensionView.frame.size.height;
 }
