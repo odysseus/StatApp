@@ -60,6 +60,10 @@
     
     CGPoint origin = CGPointMake(0, 0);
     
+    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        origin.x += 150;
+    }
+    
     TankHeaderView *headerView = [[TankHeaderView alloc] initWithPoint:origin andTank:tank];
     [self.view addSubview:headerView];
     // Advance the Y value on the origin point so that subsequent views render from the right spot
@@ -131,6 +135,13 @@
         [view addSubview:label];
     }
     return label;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
+{
+    [self viewDidLoad];
+    NSLog(@"%0.2f, %0.2f", [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
 }
 
 @end

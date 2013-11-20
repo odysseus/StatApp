@@ -14,6 +14,7 @@
 #import "TankGroup.h"
 #import "TanksViewController.h"
 #import "TiersViewController.h"
+#import "TankViewController.h"
 
 @implementation RCAppDelegate
 
@@ -47,7 +48,17 @@
     
     TiersViewController *tvc = [[TiersViewController alloc] init];
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tvc];
+    UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:tvc];
+
+    
+//    TankViewController *tankVC = [[TankViewController alloc] init];
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        NSArray *viewControllers = @[tvc, tankVC];
+//        UISplitViewController *svc = [[UISplitViewController alloc] init];
+//        [svc setDelegate:tvc];
+//        [svc setViewControllers:viewControllers];
+//        [[self window] setRootViewController:svc];
+//    }
     
     [[self window] setRootViewController:navController];
     

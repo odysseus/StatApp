@@ -19,7 +19,7 @@
 
 @implementation TanksViewController
 
-@synthesize tankGroup;
+@synthesize tankGroup, tankView;
 
 - (id)init
 {

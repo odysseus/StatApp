@@ -10,6 +10,7 @@
 #import "Tank.h"
 #import "ModuleCell.h"
 #import "Module.h"
+#import "Gun.h"
 #import "Turret.h"
 #import "Hull.h"
 #import "TankViewController.h"
@@ -88,6 +89,21 @@
         } else {
             [tank.hull setValue:mod forKey:key];
         }
+    // To avoid confusion, when switching turrets the gun should be set to the same gun as before, if it exists
+    } else if ([key isEqualToString:@"turret"]) {
+        // Convert the module to a turret and fetch the current gun
+        Turret *mod = moduleArray[indexPath.row];
+        Gun *currentGun = tank.gun;
+        for (Gun *gun in mod.availableGuns) {
+            // Run through all available guns searching for one with the same name. Two reasons to do this instead of
+            // simply setting tank.gun = currentGun. 1) Some guns have different stats with diff turrets. 2) Stock
+            // turrets often have fewer available guns, switching from the top turret to the stock could create an
+            // impossible configuration if we don't check the names
+            if ([gun.name isEqualToString:currentGun.name]) {
+                mod.gun = gun;
+            }
+        }
+        [tank setValue:mod forKey:key];
     } else {
         [tank setValue:mod forKey:key];
     }
