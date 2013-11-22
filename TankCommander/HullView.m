@@ -11,6 +11,7 @@
 #import "AverageTank.h"
 #import "RCFormatting.h"
 #import "Suspension.h"
+#import "Hull.h"
 
 @implementation HullView
 

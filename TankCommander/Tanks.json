@@ -10374,6 +10374,265 @@
                         }
                     }
                 },
+                "is8": {
+                    "name": "IS-8",
+                    "nationality": 6,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "IS-3",
+                    "child": "IS-7",
+                    "turreted": true,
+                    "experienceNeeded": 164700,
+                    "cost": 3531000,
+                    "baseHitpoints": 1360,
+                    "gunArc": 360,
+                    "speedLimit": 50,
+                    "camoValue": 6.29,
+                    "crewLevel": 100,
+                    "topWeight": 50.851,
+                    "hull": {
+                        "frontArmor": [120, 60],
+                        "sideArmor": [80, 5],
+                        "rearArmor": [60, 50]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "T-10",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 26,
+                            "frontArmor": [201, 45],
+                            "sideArmor": [129, 30],
+                            "rearArmor": [50, 20],
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 33680,
+                            "additionalHP": 340,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "122 mm D-25T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 5.08,
+                                    "autoloader": false,
+                                    "accuracy": 0.46,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 125140
+                                },
+                                "second": {
+                                    "name": "122 mm BL-9",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 390, 1025, false],
+                                               [265, 390, 12, true],
+                                               [68, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 4.72,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 44000,
+                                    "cost": 178500
+                                },
+                                "top": {
+                                    "name": "122 mm M62-T2",
+                                    "tier": 10,
+                                    "shells": [
+                                               [258, 440, 1065, false],
+                                               [340, 440, 13, true],
+                                               [68, 530, 630, false]
+                                               ],
+                                    "rateOfFire": 4.72,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 3397,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 59300,
+                                    "cost": 335000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "T-10M",
+                            "tier": 9,
+                            "viewRange": 400,
+                            "traverseSpeed": 26,
+                            "frontArmor": [201, 45],
+                            "sideArmor": [129, 30],
+                            "rearArmor": [50, 20],
+                            "weight": 11000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 28300,
+                            "cost": 66500,
+                            "additionalHP": 440,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "122 mm D-25T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 5.31,
+                                    "autoloader": false,
+                                    "accuracy": 0.46,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 125140
+                                },
+                                "second": {
+                                    "name": "122 mm BL-9",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 390, 1025, false],
+                                               [265, 390, 12, true],
+                                               [68, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 4.88,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 44000,
+                                    "cost": 178500
+                                },
+                                "top": {
+                                    "name": "122 mm M62-T2",
+                                    "tier": 10,
+                                    "shells": [
+                                               [258, 440, 1065, false],
+                                               [340, 440, 13, true],
+                                               [68, 530, 630, false]
+                                               ],
+                                    "rateOfFire": 4.88,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 3397,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 59300,
+                                    "cost": 335000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "V-12-5",
+                            "tier": 9,
+                            "horsepower": 700,
+                            "fireChance": 0.15,
+                            "weight": 1024,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 84000
+                        },
+                        "second": {
+                            "name": "V-12-6",
+                            "tier": 9,
+                            "horsepower": 750,
+                            "fireChance": 0.15,
+                            "weight": 1024,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 26350,
+                            "cost": 84200
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "T-10",
+                            "tier": 8,
+                            "loadLimit": 50.9,
+                            "traverseSpeed": 28,
+                            "weight": 10000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 27920
+                        },
+                        "top": {
+                            "name": "T-10M",
+                            "tier": 9,
+                            "loadLimit": 58.9,
+                            "traverseSpeed": 30,
+                            "weight": 10000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 26350,
+                            "cost": 84200
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "10RK",
+                            "tier": 7,
+                            "signalRange": 440,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18600
+                        },
+                        "second": {
+                            "name": "12RT",
+                            "tier": 9,
+                            "signalRange": 625,
+                            "weight": 110,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 5600,
+                            "cost": 33600
+                        },
+                        "top": {
+                            "name": "R-113",
+                            "tier": 10,
+                            "signalRange": 730,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 8700,
+                            "cost": 52200
+                        }
+                    }
+                },
                 "m103": {
                     "name": "M103",
                     "nationality": 0,
@@ -10657,6 +10916,245 @@
                             "topModule": true,
                             "experienceNeeded": 9000,
                             "cost": 54000
+                        }
+                    }
+                },
+                "sti": {
+                    "name": "ST-I",
+                    "nationality": 6,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "KV-4",
+                    "child": "IS-4",
+                    "turreted": true,
+                    "experienceNeeded": 166000,
+                    "cost": 3561000,
+                    "baseHitpoints": 1440,
+                    "gunArc": 360,
+                    "speedLimit": 40,
+                    "camoValue": 6.29,
+                    "crewLevel": 100,
+                    "topWeight": 61.001,
+                    "hull": {
+                        "frontArmor": [140, 50],
+                        "sideArmor": [140, 30],
+                        "rearArmor": [100, 30]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Object 701-1",
+                            "tier": 8,
+                            "viewRange": 360,
+                            "traverseSpeed": 22,
+                            "frontArmor": [170, 45],
+                            "sideArmor": [170, 20],
+                            "rearArmor": [160, 20],
+                            "weight": 13000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 33680,
+                            "additionalHP": 360,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "122 mm D-25T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 5,
+                                    "autoloader": false,
+                                    "accuracy": 0.46,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 125140
+                                },
+                                "second": {
+                                    "name": "122 mm BL-9",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 390, 1025, false],
+                                               [265, 390, 12, true],
+                                               [68, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 4.55,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 44000,
+                                    "cost": 178500
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "ST-I",
+                            "tier": 9,
+                            "viewRange": 380,
+                            "traverseSpeed": 18,
+                            "frontArmor": [250, 50],
+                            "sideArmor": [160, 15],
+                            "rearArmor": [160, 5],
+                            "weight": 15200,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 25900,
+                            "cost": 61000,
+                            "additionalHP": 460,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "122 mm D-25T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 5.13,
+                                    "autoloader": false,
+                                    "accuracy": 0.46,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -8,
+                                    "gunElevation": 16,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 125140
+                                },
+                                "second": {
+                                    "name": "122 mm BL-9",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 390, 1025, false],
+                                               [265, 390, 12, true],
+                                               [68, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 4.76,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -8,
+                                    "gunElevation": 16,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 44000,
+                                    "cost": 178500
+                                },
+                                "top": {
+                                    "name": "122 mm M62-T2",
+                                    "tier": 10,
+                                    "shells": [
+                                               [258, 440, 1065, false],
+                                               [340, 440, 13, true],
+                                               [68, 530, 630, false]
+                                               ],
+                                    "rateOfFire": 4.51,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -8,
+                                    "gunElevation": 16,
+                                    "weight": 3397,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 59300,
+                                    "cost": 335000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "V-11",
+                            "tier": 8,
+                            "horsepower": 650,
+                            "fireChance": 0.15,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 55270
+                        },
+                        "second": {
+                            "name": "V-12P",
+                            "tier": 9,
+                            "horsepower": 700,
+                            "fireChance": 0.15,
+                            "weight": 1024,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23000,
+                            "cost": 84000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "ST-I",
+                            "tier": 8,
+                            "loadLimit": 58.9,
+                            "traverseSpeed": 24,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 27900
+                        },
+                        "top": {
+                            "name": "ST-I M",
+                            "tier": 9,
+                            "loadLimit": 63.5,
+                            "traverseSpeed": 26,
+                            "weight": 11000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24100,
+                            "cost": 65000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "10RK",
+                            "tier": 7,
+                            "signalRange": 440,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 18600
+                        },
+                        "second": {
+                            "name": "12RT",
+                            "tier": 9,
+                            "signalRange": 625,
+                            "weight": 110,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 5600,
+                            "cost": 33600
+                        },
+                        "top": {
+                            "name": "R-113",
+                            "tier": 10,
+                            "signalRange": 730,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 8700,
+                            "cost": 52200
                         }
                     }
                 },

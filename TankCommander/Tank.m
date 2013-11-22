@@ -100,6 +100,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         // Finding the hull weight is a pain since it's not really available anywhere, so the variable topWeight holds
         // the weight with all the top modules, since the top modules are automatically equipped we can subtract the
         // weight of the individual modules from the top weight to get the hull weight
+        
         self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
         self.suspension.weight - self.radio.weight - self.engine.weight;
         
