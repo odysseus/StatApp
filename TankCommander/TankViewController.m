@@ -60,6 +60,7 @@
     
     CGPoint origin = CGPointMake(0, 0);
     
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
         origin.x += 150;
     }
@@ -141,7 +142,6 @@
                                 duration:(NSTimeInterval)duration
 {
     [self viewDidLoad];
-    NSLog(@"%0.2f, %0.2f", [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
 }
 
 @end

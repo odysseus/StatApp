@@ -9833,7 +9833,1114 @@
         "tier9": {
             "lightTanks": {},
             "mediumTanks": {},
-            "heavyTanks": {},
+            "heavyTanks": {
+                "conqueror": {
+                    "name": "Conqueror",
+                    "nationality": 1,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "Caernarvon",
+                    "child": "FV215b",
+                    "turreted": true,
+                    "experienceNeeded": 110000,
+                    "cost": 3600000,
+                    "baseHitpoints": 1480,
+                    "gunArc": 360,
+                    "speedLimit": 34.3,
+                    "camoValue": 4.86,
+                    "crewLevel": 100,
+                    "topWeight": 65.212,
+                    "hull": {
+                        "frontArmor": [130, 50],
+                        "sideArmor": [51, 5],
+                        "rearArmor": [38, 5]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Centurion Mk. III",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 36,
+                            "frontArmor": [165, 5],
+                            "sideArmor": [112, 5],
+                            "rearArmor": [112, 5],
+                            "weight": 10400,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 42000,
+                            "additionalHP": 370,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "OQF 20-pdr Gun Type A Barrel",
+                                    "tier": 8,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 8.7,
+                                    "autoloader": false,
+                                    "accuracy": 0.33,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1242,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 120000
+                                },
+                                "second": {
+                                    "name": "OQF 20-pdr Gun Type B Barrel",
+                                    "tier": 9,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 9.23,
+                                    "autoloader": false,
+                                    "accuracy": 0.32,
+                                    "aimTime": 1.9,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1282,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 45000,
+                                    "cost": 180000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "Conqueror Mk. II",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 34,
+                            "frontArmor": [152, 55],
+                            "sideArmor": [89, 15],
+                            "rearArmor": [70, 10],
+                            "weight": 13800,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 28300,
+                            "cost": 59000,
+                            "additionalHP": 470,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "OQF 20-pdr Gun Type A Barrel",
+                                    "tier": 8,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 9.23,
+                                    "autoloader": false,
+                                    "accuracy": 0.33,
+                                    "aimTime": 1.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 15,
+                                    "weight": 1242,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 120000
+                                },
+                                "second": {
+                                    "name": "OQF 20-pdr Gun Type B Barrel",
+                                    "tier": 9,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 10,
+                                    "autoloader": false,
+                                    "accuracy": 0.32,
+                                    "aimTime": 1.7,
+                                    "gunDepression": -7,
+                                    "gunElevation": 15,
+                                    "weight": 1282,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 45000,
+                                    "cost": 180000
+                                },
+                                "top": {
+                                    "name": "120 mm Gun L1A1",
+                                    "tier": 10,
+                                    "shells": [
+                                               [259, 400, 1060, false],
+                                               [326, 400, 11, true],
+                                               [120, 515, 900, false]
+                                               ],
+                                    "rateOfFire": 5.71,
+                                    "autoloader": false,
+                                    "accuracy": 0.33,
+                                    "aimTime": 1.9,
+                                    "gunDepression": -7,
+                                    "gunElevation": 15,
+                                    "weight": 2850,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 60000,
+                                    "cost": 300000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Rolls-Royce Meteor Mk. IVB",
+                            "tier": 5,
+                            "horsepower": 650,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16000
+                        },
+                        "second": {
+                            "name": "Rolls-Royce Meteor Mk. IVC",
+                            "tier": 9,
+                            "horsepower": 750,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 31000,
+                            "cost": 84000
+                        },
+                        "third": {
+                            "name": "Rolls-Royce Meteor M120",
+                            "tier": 9,
+                            "horsepower": 810,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 27000,
+                            "cost": 92000
+                        },
+                        "fourth": {
+                            "name": "Rolls-Royce Griffon",
+                            "tier": 10,
+                            "horsepower": 950,
+                            "fireChance": 0.2,
+                            "weight": 952,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 45000,
+                            "cost": 100000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "FV214",
+                            "tier": 8,
+                            "loadLimit": 65,
+                            "traverseSpeed": 24,
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31500
+                        },
+                        "top": {
+                            "name": "FV214A",
+                            "tier": 9,
+                            "loadLimit": 68,
+                            "traverseSpeed": 26,
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23000,
+                            "cost": 62000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "WS No. 19 Mk. III",
+                            "tier": 8,
+                            "signalRange": 550,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22000
+                        },
+                        "second": {
+                            "name": "WS No. 22",
+                            "tier": 8,
+                            "signalRange": 700,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 4500,
+                            "cost": 25000
+                        },
+                        "top": {
+                            "name": "SR C42",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "e75": {
+                    "name": "E-75",
+                    "nationality": 4,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "Tiger II",
+                    "child": "E-100",
+                    "turreted": true,
+                    "experienceNeeded": 154000,
+                    "cost": 3480000,
+                    "baseHitpoints": 1456,
+                    "gunArc": 360,
+                    "speedLimit": 40,
+                    "camoValue": 4.29,
+                    "crewLevel": 100,
+                    "topWeight": 91.6,
+                    "hull": {
+                        "frontArmor": [160, 60],
+                        "sideArmor": [120, 5],
+                        "rearArmor": [120, 20]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "E 75 Ausf. A",
+                            "tier": 8,
+                            "viewRange": 390,
+                            "traverseSpeed": 24,
+                            "frontArmor": [185, 15],
+                            "sideArmor": [120, 10],
+                            "rearArmor": [120, 5],
+                            "weight": 10938,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 28000,
+                            "additionalHP": 364,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
+                                    "shells": [
+                                               [203, 240, 252, false],
+                                               [237, 240, 11, true],
+                                               [44, 295, 252, false]
+                                               ],
+                                    "rateOfFire": 7.79,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 112180
+                                },
+                                "second": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
+                                    "shells": [
+                                               [200, 320, 1030, false],
+                                               [244, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 5.94,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 17,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                },
+                                "top": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 320, 1030, false],
+                                               [285, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 5.83,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 17,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "E 75 Ausf. B",
+                            "tier": 9,
+                            "viewRange": 400,
+                            "traverseSpeed": 18,
+                            "frontArmor": [252, 15],
+                            "sideArmor": [160, 10],
+                            "rearArmor": [160, 5],
+                            "weight": 16520,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24450,
+                            "cost": 59500,
+                            "additionalHP": 464,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
+                                    "shells": [
+                                               [203, 240, 252, false],
+                                               [237, 240, 11, true],
+                                               [44, 295, 252, false]
+                                               ],
+                                    "rateOfFire": 8.22,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 112180
+                                },
+                                "second": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
+                                    "shells": [
+                                               [200, 320, 1030, false],
+                                               [244, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 6.74,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                },
+                                "third": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 320, 1030, false],
+                                               [285, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 6.59,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 17,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
+                                },
+                                "top": {
+                                    "name": "12,8 cm KwK 44 L/55",
+                                    "tier": 10,
+                                    "shells": [
+                                               [246, 490, 1070, false],
+                                               [311, 490, 12, true],
+                                               [65, 630, 935, false]
+                                               ],
+                                    "rateOfFire": 3.82,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -8,
+                                    "gunElevation": 24,
+                                    "weight": 3480,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 63000,
+                                    "cost": 310000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 230 TRM P45",
+                            "tier": 8,
+                            "horsepower": 700,
+                            "fireChance": 0.2,
+                            "weight": 1300,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 54000
+                        },
+                        "second": {
+                            "name": "Maybach HL 234 TRM P45",
+                            "tier": 9,
+                            "horsepower": 900,
+                            "fireChance": 0.2,
+                            "weight": 1300,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 26500,
+                            "cost": 92000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "E 75",
+                            "tier": 8,
+                            "loadLimit": 88,
+                            "traverseSpeed": 28,
+                            "weight": 22350,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 54000
+                        },
+                        "top": {
+                            "name": "E 75 verstärkteketten",
+                            "tier": 9,
+                            "loadLimit": 96,
+                            "traverseSpeed": 26,
+                            "weight": 22350,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 25300,
+                            "cost": 60150
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 5",
+                            "tier": 3,
+                            "signalRange": 310,
+                            "weight": 50,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 630
+                        },
+                        "second": {
+                            "name": "FuG 7",
+                            "tier": 6,
+                            "signalRange": 415,
+                            "weight": 70,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 1360,
+                            "cost": 8160
+                        },
+                        "top": {
+                            "name": "FuG 12",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
+                        }
+                    }
+                },
+                "m103": {
+                    "name": "M103",
+                    "nationality": 0,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "T32",
+                    "child": "T110E5",
+                    "turreted": true,
+                    "experienceNeeded": 168500,
+                    "cost": 3640000,
+                    "baseHitpoints": 1400,
+                    "gunArc": 360,
+                    "speedLimit": 34,
+                    "camoValue": 4.86,
+                    "crewLevel": 100,
+                    "topWeight": 56.689,
+                    "hull": {
+                        "frontArmor": [
+                                       203,
+                                       60
+                                       ],
+                        "sideArmor": [
+                                      51,
+                                      5
+                                      ],
+                        "rearArmor": [
+                                      38,
+                                      30
+                                      ]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "M89",
+                            "tier": 8,
+                            "viewRange": 370,
+                            "traverseSpeed": 32,
+                            "frontArmor": [
+                                           127,
+                                           70
+                                           ],
+                            "sideArmor": [
+                                          127,
+                                          20
+                                          ],
+                            "rearArmor": [
+                                          51,
+                                          15
+                                          ],
+                            "weight": 12000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 43500,
+                            "additionalHP": 350,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "105 mm Gun T5E1",
+                                    "tier": 8,
+                                    "shells": [
+                                               [
+                                                198,
+                                                320,
+                                                1000,
+                                                false
+                                                ],
+                                               [
+                                                245,
+                                                320,
+                                                12,
+                                                true
+                                                ],
+                                               [
+                                                53,
+                                                430,
+                                                680,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 6.12,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 15,
+                                    "weight": 2400,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 118000
+                                },
+                                "second": {
+                                    "name": "120 mm Gun T122",
+                                    "tier": 9,
+                                    "shells": [
+                                               [
+                                                242,
+                                                400,
+                                                1060,
+                                                false
+                                                ],
+                                               [
+                                                340,
+                                                400,
+                                                11,
+                                                true
+                                                ],
+                                               [
+                                                60,
+                                                515,
+                                                900,
+                                                false
+                                                ]
+                                               ],
+                                    "rateOfFire": 5.26,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.6,
+                                    "gunDepression": -8,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 25000,
+                                    "cost": 230000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "T140",
+                            "tier": 9,
+                            "viewRange": 390,
+                            "traverseSpeed": 32,
+                            "frontArmor": [
+                                           127,
+                                           70
+                                           ],
+                            "sideArmor": [
+                                          127,
+                                          20
+                                          ],
+                            "rearArmor": [
+                                          51,
+                                          15
+                                          ],
+                            "weight": 13600,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23000,
+                            "cost": 55000,
+                            "additionalHP": 450,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "105 mm Gun T5E1",
+                                    "tier": 8,
+                                    "shells": [
+                                               [ 198, 320, 1000, false ],
+                                               [ 245, 320, 12, true ],
+                                               [ 53, 430, 680, false ]
+                                               ],
+                                    "rateOfFire": 6.12,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 15,
+                                    "weight": 2400,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 118000
+                                },
+                                "second": {
+                                    "name": "120 mm Gun T122",
+                                    "tier": 9,
+                                    "shells": [
+                                               [ 242, 400, 1060, false ],
+                                               [ 340, 400, 11, true ],
+                                               [ 60, 515, 900, false ]
+                                               ],
+                                    "rateOfFire": 5.26,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.6,
+                                    "gunDepression": -8,
+                                    "gunElevation": 15,
+                                    "weight": 2790,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 25000,
+                                    "cost": 230000
+                                },
+                                "top": {
+                                    "name": "120 mm Gun M58",
+                                    "tier": 9,
+                                    "shells": [
+                                               [258, 400, 1060, false],
+                                               [340, 400, 11, true],
+                                               [60, 515, 900, false]
+                                               ],
+                                    "rateOfFire": 5.36,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -8,
+                                    "gunElevation": 15,
+                                    "weight": 3100,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 60000,
+                                    "cost": 310000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Continental AV-1790-5B",
+                            "tier": 9,
+                            "horsepower": 810,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 80000
+                        },
+                        "top": {
+                            "name": "Continental AV-1790-7C",
+                            "tier": 10,
+                            "horsepower": 860,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 45000,
+                            "cost": 100000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "T97E1",
+                            "tier": 8,
+                            "loadLimit": 57.5,
+                            "traverseSpeed": 26,
+                            "weight": 8000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31500
+                        },
+                        "top": {
+                            "name": "T97E2",
+                            "tier": 9,
+                            "loadLimit": 62.5,
+                            "traverseSpeed": 28,
+                            "weight": 8000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24300,
+                            "cost": 61500
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "AN/GRC-3",
+                            "tier": 6,
+                            "signalRange": 410,
+                            "weight": 120,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top": {
+                            "name": "AN/GRC-7",
+                            "tier": 10,
+                            "signalRange": 745,
+                            "weight": 120,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
+                "vk4502b": {
+                    "name": "VK 45.02 (P) Ausf. B",
+                    "nationality": 4,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "VK 45.02 (P) Ausf. A",
+                    "child": "Maus",
+                    "turreted": true,
+                    "experienceNeeded": 168720,
+                    "cost": 3598000,
+                    "baseHitpoints": 1480,
+                    "gunArc": 360,
+                    "speedLimit": 30,
+                    "camoValue": 4.29,
+                    "crewLevel": 100,
+                    "topWeight": 78.57,
+                    "hull": {
+                        "frontArmor": [170, 45],
+                        "sideArmor": [100, 5],
+                        "rearArmor": [100, 20]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "VK 45.02 (P) Ausf. B",
+                            "tier": 8,
+                            "viewRange": 390,
+                            "traverseSpeed": 26,
+                            "frontArmor": [220, 30],
+                            "sideArmor": [150, 10],
+                            "rearArmor": [150, 20],
+                            "weight": 13500,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31500,
+                            "additionalHP": 370,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
+                                    "shells": [
+                                               [203, 240, 252, false],
+                                               [237, 240, 11, true],
+                                               [44, 295, 252, false]
+                                               ],
+                                    "rateOfFire": 7.79,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 112180
+                                },
+                                "second": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
+                                    "shells": [
+                                               [200, 320, 1030, false],
+                                               [244, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 5.94,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -4,
+                                    "gunElevation": 17,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                },
+                                "top": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 320, 1030, false],
+                                               [285, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 5.83,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -4,
+                                    "gunElevation": 17,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "VK 45.02 (P) Ausf. B Schwerer Turm",
+                            "tier": 9,
+                            "viewRange": 400,
+                            "traverseSpeed": 18,
+                            "frontArmor": [252, 15],
+                            "sideArmor": [160, 10],
+                            "rearArmor": [160, 5],
+                            "weight": 18520,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 20400,
+                            "cost": 48000,
+                            "additionalHP": 470,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "8,8 cm KwK 43 L/71",
+                                    "tier": 8,
+                                    "shells": [
+                                               [203, 240, 252, false],
+                                               [237, 240, 11, true],
+                                               [44, 295, 252, false]
+                                               ],
+                                    "rateOfFire": 8.22,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 18,
+                                    "weight": 2562,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 112180
+                                },
+                                "second": {
+                                    "name": "10,5 cm KwK 45 L/52",
+                                    "tier": 8,
+                                    "shells": [
+                                               [200, 320, 1030, false],
+                                               [244, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 6.74,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 16800,
+                                    "cost": 116490
+                                },
+                                "third": {
+                                    "name": "10,5 cm KwK 46 L/68",
+                                    "tier": 9,
+                                    "shells": [
+                                               [225, 320, 1030, false],
+                                               [285, 320, 12, true],
+                                               [60, 420, 650, false]
+                                               ],
+                                    "rateOfFire": 6.59,
+                                    "autoloader": false,
+                                    "accuracy": 0.34,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 3600,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 46000,
+                                    "cost": 178500
+                                },
+                                "top": {
+                                    "name": "12,8 cm KwK 44 L/55",
+                                    "tier": 10,
+                                    "shells": [
+                                               [246, 490, 1070, false],
+                                               [311, 490, 12, true],
+                                               [65, 630, 935, false]
+                                               ],
+                                    "rateOfFire": 3.82,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 17,
+                                    "weight": 3480,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 63000,
+                                    "cost": 310000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "2x Porsche Typ 100/1",
+                            "tier": 6,
+                            "horsepower": 600,
+                            "fireChance": 0.2,
+                            "weight": 670,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 29900
+                        },
+                        "second": {
+                            "name": "2x Porsche Typ 100/3",
+                            "tier": 7,
+                            "horsepower": 670,
+                            "fireChance": 0.2,
+                            "weight": 720,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 12000,
+                            "cost": 39850
+                        },
+                        "third": {
+                            "name": "Porsche Deutz Typ 180/2",
+                            "tier": 8,
+                            "horsepower": 840,
+                            "fireChance": 0.15,
+                            "weight": 720,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 31000,
+                            "cost": 45300
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "VK 45.02 (P) Ausf. B",
+                            "tier": 8,
+                            "loadLimit": 75.5,
+                            "traverseSpeed": 17,
+                            "weight": 19000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31500
+                        },
+                        "top": {
+                            "name": "VK 45.02(P) Ausf. B verstärkteketten",
+                            "tier": 9,
+                            "loadLimit": 80.8,
+                            "traverseSpeed": 20,
+                            "weight": 19000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23300,
+                            "cost": 60000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "FuG 5",
+                            "tier": 3,
+                            "signalRange": 310,
+                            "weight": 50,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 630
+                        },
+                        "top": {
+                            "name": "FuG 12",
+                            "tier": 9,
+                            "signalRange": 710,
+                            "weight": 150,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 7200,
+                            "cost": 43200
+                        }
+                    }
+                }
+            },
             "tankDestroyers": {},
             "spgs": {}
         },
