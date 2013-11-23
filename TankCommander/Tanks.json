@@ -9834,6 +9834,187 @@
             "lightTanks": {},
             "mediumTanks": {},
             "heavyTanks": {
+                "amx50120": {
+                    "name": "AMX 50 120",
+                    "nationality": 3,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "AMX 50 100",
+                    "child": "AMX 50 B",
+                    "turreted": true,
+                    "experienceNeeded": 185000,
+                    "cost": 3565000,
+                    "baseHitpoints": 1400,
+                    "gunArc": 360,
+                    "speedLimit": 65,
+                    "camoValue": 4.86,
+                    "crewLevel": 100,
+                    "topWeight": 60.01,
+                    "hull": {
+                        "frontArmor": [100, 45],
+                        "sideArmor": [80, 5],
+                        "rearArmor": [60, 5]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "AMX 50 120",
+                            "tier": 9,
+                            "viewRange": 390,
+                            "traverseSpeed": 32,
+                            "frontArmor": [100, 50],
+                            "sideArmor": [80, 5],
+                            "rearArmor": [60, 5],
+                            "weight": 15300,
+                            "stockModule": true,
+                            "topModule": true,
+                            "experienceNeeded": 0,
+                            "cost": 0,
+                            "additionalHP": 350,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "90 mm DCA 45",
+                                    "tier": 8,
+                                    "shells": [
+                                               [212, 240, 255, false],
+                                               [259, 240, 12, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 8.25,
+                                    "autoloader": true,
+                                    "roundsInDrum": 6,
+                                    "timeBetweenShots": 2.73,
+                                    "drumReload": 30,
+                                    "accuracy": 0.36,
+                                    "aimTime": 3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 6,
+                                    "weight": 2750,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 121250
+                                },
+                                "second": {
+                                    "name": "100 mm SA47",
+                                    "tier": 8,
+                                    "shells": [
+                                               [232, 300, 1030, false],
+                                               [263, 300, 10, true],
+                                               [50, 400, 650, false]
+                                               ],
+                                    "rateOfFire": 7.4,
+                                    "autoloader": true,
+                                    "roundsInDrum": 6,
+                                    "timeBetweenShots": 2.73,
+                                    "drumReload": 35,
+                                    "accuracy": 0.36,
+                                    "aimTime": 3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 6,
+                                    "weight": 3000,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 34500,
+                                    "cost": 127550
+                                },
+                                "third": {
+                                    "name": "120 mm SA46",
+                                    "tier": 10,
+                                    "shells": [
+                                               [257, 400, 1060, false],
+                                               [325, 400, 12, true],
+                                               [65, 515, 900, false]
+                                               ],
+                                    "rateOfFire": 5.33,
+                                    "autoloader": true,
+                                    "roundsInDrum": 4,
+                                    "timeBetweenShots": 3.33,
+                                    "drumReload": 35,
+                                    "accuracy": 0.35,
+                                    "aimTime": 3,
+                                    "gunDepression": -6,
+                                    "gunElevation": 6,
+                                    "weight": 3580,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 63200,
+                                    "cost": 339000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Maybach HL 295",
+                            "tier": 9,
+                            "horsepower": 850,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 78000
+                        },
+                        "second": {
+                            "name": "Saurer",
+                            "tier": 9,
+                            "horsepower": 1000,
+                            "fireChance": 0.2,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 25200,
+                            "cost": 99800
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "AMX 50 120",
+                            "tier": 8,
+                            "loadLimit": 60,
+                            "traverseSpeed": 30,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31200
+                        },
+                        "top": {
+                            "name": "AMX 50 120 bis",
+                            "tier": 9,
+                            "loadLimit": 65,
+                            "traverseSpeed": 32,
+                            "weight": 11000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23500,
+                            "cost": 66500
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 400,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 21600
+                        },
+                        "top": {
+                            "name": "SCR 528F",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
                 "conqueror": {
                     "name": "Conqueror",
                     "nationality": 1,
@@ -11435,6 +11616,246 @@
                             "topModule": true,
                             "experienceNeeded": 7200,
                             "cost": 43200
+                        }
+                    }
+                },
+                "wz111": {
+                    "name": "WZ-111 model 1-4",
+                    "nationality": 2,
+                    "tier": 9,
+                    "type": 2,
+                    "premiumTank": false,
+                    "parent": "110",
+                    "child": "113",
+                    "turreted": true,
+                    "experienceNeeded": 150000,
+                    "cost": 3500000,
+                    "baseHitpoints": 1400,
+                    "gunArc": 360,
+                    "speedLimit": 50,
+                    "camoValue": 6.86,
+                    "crewLevel": 100,
+                    "topWeight": 45.0,
+                    "hull": {
+                        "frontArmor": [140, 50],
+                        "sideArmor": [140, 30],
+                        "rearArmor": [100, 30]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "IS-3",
+                            "tier": 8,
+                            "viewRange": 380,
+                            "traverseSpeed": 24,
+                            "frontArmor": [220, 45],
+                            "sideArmor": [220, 45],
+                            "rearArmor": [220, 45],
+                            "weight": 11500,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 28000,
+                            "additionalHP": 350,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "122 mm D-25T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 5.08,
+                                    "autoloader": false,
+                                    "accuracy": 0.46,
+                                    "aimTime": 3.4,
+                                    "gunDepression": -5,
+                                    "gunElevation": 19,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 135000
+                                },
+                                "second": {
+                                    "name": "100 mm 62-100T",
+                                    "tier": 9,
+                                    "shells": [
+                                               [215, 320, 1050, false],
+                                               [265, 320, 10, true],
+                                               [50, 420, 750, false]
+                                               ],
+                                    "rateOfFire": 6.67,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 19,
+                                    "weight": 2557,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 59000,
+                                    "cost": 221000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "WZ-111",
+                            "tier": 9,
+                            "viewRange": 400,
+                            "traverseSpeed": 26,
+                            "frontArmor": [230, 30],
+                            "sideArmor": [120, 45],
+                            "rearArmor": [60, 45],
+                            "weight": 12000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24000,
+                            "cost": 61000,
+                            "additionalHP": 400,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "122 mm D-25T",
+                                    "tier": 8,
+                                    "shells": [
+                                               [175, 390, 1025, false],
+                                               [217, 390, 12, true],
+                                               [61, 465, 608, false]
+                                               ],
+                                    "rateOfFire": 5.31,
+                                    "autoloader": false,
+                                    "accuracy": 0.46,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 23,
+                                    "weight": 2590,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 125140
+                                },
+                                "second": {
+                                    "name": "100 mm 62-100T",
+                                    "tier": 9,
+                                    "shells": [
+                                               [215, 320, 1050, false],
+                                               [265, 320, 10, true],
+                                               [50, 420, 750, false]
+                                               ],
+                                    "rateOfFire": 7.06,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -5,
+                                    "gunElevation": 23,
+                                    "weight": 2557,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 59000,
+                                    "cost": 221000
+                                },
+                                "top": {
+                                    "name": "130 mm 59-130T",
+                                    "tier": 10,
+                                    "shells": [
+                                               [244, 490, 1118, false],
+                                               [340, 490, 12, true],
+                                               [65, 640, 978, false]
+                                               ],
+                                    "rateOfFire": 4.29,
+                                    "autoloader": false,
+                                    "accuracy": 0.4,
+                                    "aimTime": 2.9,
+                                    "gunDepression": -5,
+                                    "gunElevation": 23,
+                                    "weight": 3090,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 66000,
+                                    "cost": 330000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "12150L",
+                            "tier": 8,
+                            "horsepower": 520,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 48000
+                        },
+                        "second": {
+                            "name": "12150LS",
+                            "tier": 9,
+                            "horsepower": 580,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 33000,
+                            "cost": 99500
+                        },
+                        "third": {
+                            "name": "12150LT",
+                            "tier": 10,
+                            "horsepower": 600,
+                            "fireChance": 0.12,
+                            "weight": 750,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 46000,
+                            "cost": 120000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "WZ-111",
+                            "tier": 8,
+                            "loadLimit": 44.7,
+                            "traverseSpeed": 26,
+                            "weight": 10000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 27920
+                        },
+                        "top": {
+                            "name": "WZ-111 model 4",
+                            "tier": 9,
+                            "loadLimit": 48,
+                            "traverseSpeed": 28,
+                            "weight": 10000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24200,
+                            "cost": 61000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "A-220",
+                            "tier": 9,
+                            "signalRange": 600,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 38000
+                        },
+                        "top": {
+                            "name": "A-220A",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9500,
+                            "cost": 54000
                         }
                     }
                 }
