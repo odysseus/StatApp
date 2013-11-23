@@ -9832,7 +9832,327 @@
         },
         "tier9": {
             "lightTanks": {},
-            "mediumTanks": {},
+            "mediumTanks": {
+                "m46patton": {
+                    "name": "M46 Patton",
+                    "nationality": 0,
+                    "tier": 9,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "M26 Pershing",
+                    "child": "M48A1 Patton",
+                    "turreted": true,
+                    "experienceNeeded": 174690,
+                    "cost": 3450000,
+                    "baseHitpoints": 1280,
+                    "gunArc": 360,
+                    "speedLimit": 48,
+                    "camoValue": 13.43,
+                    "crewLevel": 100,
+                    "topWeight": 43.099,
+                    "hull": {
+                        "frontArmor": [102, 40],
+                        "sideArmor": [76, 5],
+                        "rearArmor": [51, 5]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "M46M73",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 38,
+                            "frontArmor": [102, 30],
+                            "sideArmor": [76, 10],
+                            "rearArmor": [76, 10],
+                            "weight": 8000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 28000,
+                            "additionalHP": 320,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "90 mm Gun M3",
+                                    "tier": 7,
+                                    "shells": [
+                                               [160, 240, 255, false],
+                                               [243, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 81000
+                                },
+                                "second": {
+                                    "name": "90 mm Gun M36",
+                                    "tier": 7,
+                                    "shells": [
+                                               [172, 240, 255, false],
+                                               [262, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2080,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 12400,
+                                    "cost": 88500
+                                },
+                                "third": {
+                                    "name": "90 mm Gun T15E2M2",
+                                    "tier": 8,
+                                    "shells": [
+                                               [180, 240, 255, false],
+                                               [268, 240, 11, true],
+                                               [45, 240, 255, false]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2250,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18900,
+                                    "cost": 128900
+                                },
+                                "fourth": {
+                                    "name": "90 mm Gun T5E1M2",
+                                    "tier": 9,
+                                    "shells": [
+                                               [218, 390, 1000, false],
+                                               [265, 390, 10, true],
+                                               [53, 480, 680, false]
+                                               ],
+                                    "rateOfFire": 6,
+                                    "autoloader": false,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2400,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 68000,
+                                    "cost": 219000
+                                }
+                            }
+                        },
+                        "top": {
+                            "name": "M46T119",
+                            "tier": 9,
+                            "viewRange": 410,
+                            "traverseSpeed": 40,
+                            "frontArmor": [102, 45],
+                            "sideArmor": [76, 10],
+                            "rearArmor": [76, 10],
+                            "weight": 9700,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24400,
+                            "cost": 52000,
+                            "additionalHP": 420,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "90 mm Gun M3",
+                                    "tier": 7,
+                                    "shells": [
+                                               [160, 240, 255, false],
+                                               [243, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2050,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 81000
+                                },
+                                "first": {
+                                    "name": "105 mm M4",
+                                    "tier": 5,
+                                    "shells": [
+                                               [53, 410, 166, false],
+                                               [101, 350, 10, true]
+                                               ],
+                                    "rateOfFire": 7.5,
+                                    "autoloader": false,
+                                    "accuracy": 0.55,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2600,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 1500,
+                                    "cost": 40300
+                                },
+                                "second": {
+                                    "name": "90 mm Gun M36",
+                                    "tier": 7,
+                                    "shells": [
+                                               [172, 240, 255, false],
+                                               [262, 240, 11, true],
+                                               [45, 320, 255, false]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "autoloader": false,
+                                    "accuracy": 0.38,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2080,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 12400,
+                                    "cost": 88500
+                                },
+                                "third": {
+                                    "name": "90 mm Gun T15E2M2",
+                                    "tier": 8,
+                                    "shells": [
+                                               [180, 240, 255, false],
+                                               [268, 240, 11, true],
+                                               [45, 240, 255, false]
+                                               ],
+                                    "rateOfFire": 7.89,
+                                    "autoloader": false,
+                                    "accuracy": 0.37,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2250,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 18900,
+                                    "cost": 128900
+                                },
+                                "fourth": {
+                                    "name": "90 mm Gun T5E1M2",
+                                    "tier": 9,
+                                    "shells": [
+                                               [218, 390, 1000, false],
+                                               [265, 390, 10, true],
+                                               [53, 480, 680, false]
+                                               ],
+                                    "rateOfFire": 6,
+                                    "autoloader": false,
+                                    "accuracy": 0.42,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 22,
+                                    "weight": 2400,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 68000,
+                                    "cost": 219000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Ford GAN",
+                            "tier": 7,
+                            "horsepower": 560,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 37200
+                        },
+                        "second": {
+                            "name": "Continental AV-1790-1",
+                            "tier": 8,
+                            "horsepower": 704,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 10500,
+                            "cost": 45000
+                        },
+                        "third": {
+                            "name": "Continental AV-1790-5A",
+                            "tier": 9,
+                            "horsepower": 820,
+                            "fireChance": 0.2,
+                            "weight": 569,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 31000,
+                            "cost": 99000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "M46T80E1",
+                            "tier": 8,
+                            "loadLimit": 41.2,
+                            "traverseSpeed": 36,
+                            "weight": 10000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31700
+                        },
+                        "top": {
+                            "name": "M46T81",
+                            "tier": 9,
+                            "loadLimit": 45.05,
+                            "traverseSpeed": 38,
+                            "weight": 10000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23000,
+                            "cost": 60500
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "SCR 508",
+                            "tier": 6,
+                            "signalRange": 395,
+                            "weight": 100,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31700
+                        },
+                        "top": {
+                            "name": "SCR 528",
+                            "tier": 10,
+                            "signalRange": 745,
+                            "weight": 80,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                }
+            },
             "heavyTanks": {
                 "amx50120": {
                     "name": "AMX 50 120",
