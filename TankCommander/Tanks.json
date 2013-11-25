@@ -9833,6 +9833,256 @@
         "tier9": {
             "lightTanks": {},
             "mediumTanks": {
+                "centurion71": {
+                    "name": "Centurion Mk. 7/1",
+                    "nationality": 1,
+                    "tier": 9,
+                    "type": 1,
+                    "premiumTank": false,
+                    "parent": "Centurion Mk. I",
+                    "child": "FV4202",
+                    "turreted": true,
+                    "experienceNeeded": 165000,
+                    "cost": 3515000,
+                    "baseHitpoints": 1296,
+                    "gunArc": 360,
+                    "speedLimit": 40,
+                    "camoValue": 11.71,
+                    "crewLevel": 100,
+                    "topWeight": 52.204,
+                    "hull": {
+                        "frontArmor": [121, 45],
+                        "sideArmor": [51, 5],
+                        "rearArmor": [35, 5]
+                    },
+                    "turrets": {
+                        "stock": {
+                            "name": "Centurion Mk. 7",
+                            "tier": 8,
+                            "viewRange": 400,
+                            "traverseSpeed": 36,
+                            "frontArmor": [165, 5],
+                            "sideArmor": [112, 5],
+                            "rearArmor": [90, 5],
+                            "weight": 10400,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 50500,
+                            "additionalHP": 324,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "OQF 20-pdr Gun Type A Barrel",
+                                    "tier": 8,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 10,
+                                    "autoloader": false,
+                                    "accuracy": 0.33,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1242,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 120000
+                                },
+                                "second": {
+                                    "name": "OQF 20-pdr Gun Type B Barrel",
+                                    "tier": 9,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 10.53,
+                                    "autoloader": false,
+                                    "accuracy": 0.32,
+                                    "aimTime": 1.9,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1282,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 45000,
+                                    "cost": 180000
+                                }
+                            }
+                        },
+                        "stock": {
+                            "name": "Centurion Mk. 9",
+                            "tier": 9,
+                            "viewRange": 410,
+                            "traverseSpeed": 36,
+                            "frontArmor": [165, 5],
+                            "sideArmor": [112, 5],
+                            "rearArmor": [112, 5],
+                            "weight": 10900,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 24000,
+                            "cost": 61000,
+                            "additionalHP": 424,
+                            "availableGuns": {
+                                "stock": {
+                                    "name": "OQF 20-pdr Gun Type A Barrel",
+                                    "tier": 8,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 10,
+                                    "autoloader": false,
+                                    "accuracy": 0.33,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1242,
+                                    "stockModule": true,
+                                    "topModule": false,
+                                    "experienceNeeded": 0,
+                                    "cost": 120000
+                                },
+                                "second": {
+                                    "name": "OQF 20-pdr Gun Type B Barrel",
+                                    "tier": 9,
+                                    "shells": [
+                                               [226, 230, 680, false],
+                                               [258, 230, 11, true],
+                                               [42, 280, 170, false]
+                                               ],
+                                    "rateOfFire": 10.53,
+                                    "autoloader": false,
+                                    "accuracy": 0.32,
+                                    "aimTime": 1.9,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1282,
+                                    "stockModule": false,
+                                    "topModule": false,
+                                    "experienceNeeded": 45000,
+                                    "cost": 180000
+                                },
+                                "thrid": {
+                                    "name": "105 mm Royal Ordnance L7A1",
+                                    "tier": 10,
+                                    "shells": [
+                                               [268, 390, 1200, false],
+                                               [210, 480, 13, true],
+                                               [105, 480, 950, false]
+                                               ],
+                                    "rateOfFire": 5,
+                                    "autoloader": false,
+                                    "accuracy": 0.32,
+                                    "aimTime": 2.3,
+                                    "gunDepression": -10,
+                                    "gunElevation": 18,
+                                    "weight": 1282,
+                                    "stockModule": false,
+                                    "topModule": true,
+                                    "experienceNeeded": 55000,
+                                    "cost": 290000
+                                }
+                            }
+                        }
+                    },
+                    "engines": {
+                        "stock": {
+                            "name": "Rolls-Royce Meteor Mk. IVB",
+                            "tier": 5,
+                            "horsepower": 650,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 16000
+                        },
+                        "second": {
+                            "name": "Rolls-Royce Meteor Mk. IVC",
+                            "tier": 9,
+                            "horsepower": 750,
+                            "fireChance": 0.2,
+                            "weight": 744,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 31000,
+                            "cost": 84000
+                        },
+                        "third": {
+                            "name": "Rolls-Royce Griffon",
+                            "tier": 10,
+                            "horsepower": 950,
+                            "fireChance": 0.2,
+                            "weight": 952,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 45000,
+                            "cost": 100000
+                        }
+                    },
+                    "suspensions": {
+                        "stock": {
+                            "name": "Centurion Mk. 7",
+                            "tier": 8,
+                            "loadLimit": 51.5,
+                            "traverseSpeed": 30,
+                            "weight": 11000,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 31500
+                        },
+                        "top": {
+                            "name": "Centurion Mk. 9",
+                            "tier": 9,
+                            "loadLimit": 54,
+                            "traverseSpeed": 32,
+                            "weight": 11000,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 23000,
+                            "cost": 63000
+                        }
+                    },
+                    "radios": {
+                        "stock": {
+                            "name": "WS No. 19 Mk. III",
+                            "tier": 8,
+                            "signalRange": 550,
+                            "weight": 40,
+                            "stockModule": true,
+                            "topModule": false,
+                            "experienceNeeded": 0,
+                            "cost": 22000
+                        },
+                        "second": {
+                            "name": "WS No. 22",
+                            "tier": 8,
+                            "signalRange": 700,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": false,
+                            "experienceNeeded": 4500,
+                            "cost": 25000
+                        },
+                        "top": {
+                            "name": "SR C42",
+                            "tier": 10,
+                            "signalRange": 750,
+                            "weight": 40,
+                            "stockModule": false,
+                            "topModule": true,
+                            "experienceNeeded": 9000,
+                            "cost": 54000
+                        }
+                    }
+                },
                 "m46patton": {
                     "name": "M46 Patton",
                     "nationality": 0,
