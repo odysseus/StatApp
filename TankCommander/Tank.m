@@ -19,7 +19,7 @@
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
 availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
-baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
+baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, stockWeight;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -40,6 +40,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         self.camoValue = [[dict objectForKey:@"camoValue"] floatValue];
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
+        self.stockWeight = ([[dict objectForKey:@"stockWeight"] floatValue] * 1000);
         
         if (!self.premiumTank) {
             self.parent = [dict objectForKey:@"parent"];
@@ -58,11 +59,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
             // Init each object from the JSON
             for (id key in turretValues) {
                 Turret *currentTurret = [[Turret alloc] initWithDict:[turretValues objectForKey:key]];
-                // If the module is the top module, set it to the selected
-                // module so the top modules are the default
-                if (currentTurret.topModule) {
-                    self.turret = currentTurret;
-                }
                 // Finally, add it to the module array
                 [availableTurrets addObject:currentTurret];
             }
@@ -72,9 +68,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         availableEngines = [[NSMutableArray alloc] init];
         for (id key in engineValues) {
             Engine *currentEngine = [[Engine alloc] initWithDict:[engineValues objectForKey:key]];
-            if (currentEngine.topModule) {
-                self.engine = currentEngine;
-            }
             [availableEngines addObject:currentEngine];
         }
         
@@ -82,9 +75,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         availableSuspensions = [[NSMutableArray alloc] init];
         for (id key in suspensionValues) {
             Suspension *currentSuspension = [[Suspension alloc] initWithDict:[suspensionValues objectForKey:key]];
-            if (currentSuspension.topModule) {
-                self.suspension = currentSuspension;
-            }
             [availableSuspensions addObject:currentSuspension];
         }
         
@@ -92,18 +82,21 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank;
         availableRadios = [[NSMutableArray alloc] init];
         for (id key in radioValues) {
             Radio *currentRadio = [[Radio alloc] initWithDict:[radioValues objectForKey:key]];
-            if (currentRadio.topModule) {
-                self.radio = currentRadio;
-            }
             [availableRadios addObject:currentRadio];
         }
         // Finding the hull weight is a pain since it's not really available anywhere, so the variable topWeight holds
         // the weight with all the top modules, since the top modules are automatically equipped we can subtract the
         // weight of the individual modules from the top weight to get the hull weight
         
-        self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
-        self.suspension.weight - self.radio.weight - self.engine.weight;
-        
+        if (self.stockWeight > 0) {
+            [self setAllValuesStock];
+            self.hull.weight = self.stockWeight - self.turret.weight - self.gun.weight -
+            self.suspension.weight - self.radio.weight - self.engine.weight;
+        } else {
+            self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
+            self.suspension.weight - self.radio.weight - self.engine.weight;
+        }
+        [self setAllValuesTop];
         [self validate];
     }
     return self;

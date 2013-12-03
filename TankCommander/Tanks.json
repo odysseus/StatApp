@@ -10863,6 +10863,7 @@
                     "camoValue": 4.29,
                     "crewLevel": 100,
                     "topWeight": 91.6,
+                    "stockWeight": 85.0,
                     "hull": {
                         "frontArmor": [160, 60],
                         "sideArmor": [120, 5],

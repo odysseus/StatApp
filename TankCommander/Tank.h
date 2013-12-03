@@ -48,6 +48,7 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) float crewLevel;
 @property (nonatomic) int baseHitpoints;
 @property (nonatomic) float topWeight;
+@property (nonatomic) float stockWeight;
 @property (nonatomic) float gunTraverseArc;
 @property (nonatomic) float speedLimit;
 @property (nonatomic) float camoValue;
