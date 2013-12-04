@@ -118,4 +118,16 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     return button;
 }
 
+-(void)fullscreenPopupFromView:(UIView *)view
+{
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    UIButton *fullscreen = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)];
+    [fullscreen setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.3]];
+    [view.superview.superview addSubview:fullscreen];
+    [view bringSubviewToFront:fullscreen];
+    [fullscreen addTarget:fullscreen
+                   action:@selector(removeFromSuperview)
+         forControlEvents:UIControlEventTouchUpInside];
+}
+
 @end

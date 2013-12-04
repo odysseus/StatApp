@@ -53,6 +53,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     for (UIView *sv in self.view.subviews) {
         [sv removeFromSuperview];
@@ -109,6 +110,12 @@
     [suspensionView setTankViewController:self];
     [self.view addSubview:suspensionView];
     origin.y += suspensionView.frame.size.height;
+    
+    origin.y += 100;
+    
+    UIScrollView *scrollView = (UIScrollView *)self.view;
+    [scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, origin.y)];
+    
 }
 
 - (void)didReceiveMemoryWarning

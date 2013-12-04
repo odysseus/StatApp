@@ -62,8 +62,8 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addButtonWithTarget:self
-                           selector:@selector(greenScreen)
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromView:)
                     andControlEvent:UIControlEventTouchUpInside
                              toView:self
                           withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
@@ -263,6 +263,7 @@
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             // Row 4, Column 1
             y += format.rowHeight;
             [format addLabelToView:self
@@ -320,23 +321,6 @@
     ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:@"availableGuns"];
     [mvc setTankViewController:tankViewController];
     [tankViewController.navigationController pushViewController:mvc animated:YES];
-}
-
-- (void)greenScreen
-{
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    UIButton *fullscreen = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)];
-    [fullscreen setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.3]];
-    [self.superview addSubview:fullscreen];
-    [self bringSubviewToFront:fullscreen];
-    [fullscreen addTarget:fullscreen
-                   action:@selector(removeFromSuperview)
-         forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (void)dismissView:(id)sender
-{
-    [sender removeFromSuperview];
 }
 
 @end

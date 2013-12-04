@@ -19,7 +19,5 @@
 
 - (id)initWithOrigin:(CGPoint)point andTank:(Tank *)t;
 - (void)pushModulesViewController;
-- (void)greenScreen;
-- (void)dismissView:(id)sender;
 
 @end
