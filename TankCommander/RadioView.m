@@ -42,23 +42,15 @@
         [barView setBackgroundColor:format.barColor];
         [self addSubview:barView];
         
-        UIButton *nameButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        nameButton.frame = CGRectMake(20, 10, 600, 28);
-        [nameButton setTitle:[NSString stringWithFormat:@"Radio: %@", tank.radio.name]
-                    forState:UIControlStateNormal];
-        [nameButton setTitle:[NSString stringWithFormat:@"Radio: %@", tank.radio.name]
-                    forState:UIControlStateNormal];
-        [nameButton setTitleColor:format.darkColor
-                         forState:UIControlStateNormal];
-        [nameButton setTitleColor:format.lightColor
-                         forState:UIControlStateHighlighted];
-        [nameButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        [[nameButton titleLabel] setFont:[UIFont systemFontOfSize:(format.fontSize * 1.5)]];
-        [[nameButton titleLabel] setTextAlignment:NSTextAlignmentLeft];
-        [nameButton addTarget:self
-                       action:@selector(pushModulesViewController)
-             forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:nameButton];
+        [format addButtonWithTarget:self
+                           selector:@selector(pushModulesViewController)
+                    andControlEvent:UIControlEventTouchUpInside
+                             toView:self
+                          withFrame:CGRectMake(20, 10, 600, 28)
+                               text:[NSString stringWithFormat:@"Radio: %@", tank.radio.name]
+                           fontSize:(format.fontSize * 1.5)
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(680, 10, 40, 28)

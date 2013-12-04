@@ -9913,7 +9913,7 @@
                                 }
                             }
                         },
-                        "stock": {
+                        "second": {
                             "name": "Centurion Mk. 9",
                             "tier": 9,
                             "viewRange": 410,

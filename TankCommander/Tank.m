@@ -84,15 +84,17 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             Radio *currentRadio = [[Radio alloc] initWithDict:[radioValues objectForKey:key]];
             [availableRadios addObject:currentRadio];
         }
-        // Finding the hull weight is a pain since it's not really available anywhere, so the variable topWeight holds
-        // the weight with all the top modules, since the top modules are automatically equipped we can subtract the
-        // weight of the individual modules from the top weight to get the hull weight
         
+        // Finding the weight of the hull is done by taking either the stock or top weight and subtracting the weight
+        // of the modules. Originally it was done using topWeight, because that saved processor cycles, but I had
+        // concerns over the accuracy and availability of topWeight, so now it uses stockWeight by default, and
+        // topWeight as a fallback
         if (self.stockWeight > 0) {
             [self setAllValuesStock];
             self.hull.weight = self.stockWeight - self.turret.weight - self.gun.weight -
             self.suspension.weight - self.radio.weight - self.engine.weight;
         } else {
+            [self setAllValuesTop];
             self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
             self.suspension.weight - self.radio.weight - self.engine.weight;
         }

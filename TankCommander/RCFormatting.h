@@ -44,8 +44,20 @@
                    fontSize:(CGFloat)size
                   fontColor:(UIColor *)color
            andTextAlignment:(NSTextAlignment)alignment;
-- (void)pushModulesViewControllerForTank:(Tank *)t
-                                     key:(NSString *)key
-                   andTankViewController:(TankViewController *)tvc;
+- (UIButton *)addButtonToView:(UIView *)view
+                    withFrame:(CGRect)frame
+                         text:(NSString *)text
+                     fontSize:(CGFloat)size
+                    fontColor:(UIColor *)color
+          andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
+- (UIButton *)addButtonWithTarget:(id)target
+                         selector:(SEL)selector
+                  andControlEvent:(UIControlEvents)events
+                           toView:(UIView *)view
+                        withFrame:(CGRect)frame
+                             text:(NSString *)text
+                         fontSize:(CGFloat)size
+                        fontColor:(UIColor *)color
+              andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
 
 @end

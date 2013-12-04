@@ -54,7 +54,7 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
         
         // Row height to use when incrementing view height
         singleton->rowHeight = 45;
-
+        
     }
     // return the instance of this class
     return singleton;
@@ -77,14 +77,45 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     return label;
 }
 
-
-- (void)pushModulesViewControllerForTank:(Tank *)t
-                                     key:(NSString *)key
-                   andTankViewController:(TankViewController *)tvc
+- (UIButton *)addButtonToView:(UIView *)view
+                    withFrame:(CGRect)frame
+                         text:(NSString *)text
+                     fontSize:(CGFloat)size
+                    fontColor:(UIColor *)color
+          andContentAlignment:(UIControlContentHorizontalAlignment)alignment
 {
-    ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:t andKey:@"availableTurrets"];
-    [mvc setTankViewController:tvc];
-    [tvc.navigationController pushViewController:mvc animated:YES];
+    UIButton *button = [[UIButton alloc] initWithFrame:frame];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTitleColor:color forState:UIControlStateNormal];
+    [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
+    [button setContentHorizontalAlignment:alignment];
+    
+    [view addSubview:button];
+    
+    return button;
+}
+
+- (UIButton *)addButtonWithTarget:(id)target
+                         selector:(SEL)selector
+                  andControlEvent:(UIControlEvents)events
+                           toView:(UIView *)view
+                        withFrame:(CGRect)frame
+                             text:(NSString *)text
+                         fontSize:(CGFloat)size
+                        fontColor:(UIColor *)color
+              andContentAlignment:(UIControlContentHorizontalAlignment)alignment
+{
+    UIButton *button = [[UIButton alloc] initWithFrame:frame];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTitleColor:color forState:UIControlStateNormal];
+    [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
+    [button setContentHorizontalAlignment:alignment];
+    
+    [view addSubview:button];
+    
+    [button addTarget:target action:selector forControlEvents:events];
+    
+    return button;
 }
 
 @end

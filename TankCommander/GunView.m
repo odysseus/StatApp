@@ -42,20 +42,18 @@
         [barView setBackgroundColor:format.barColor];
         [self addSubview:barView];
         
-        UIButton *nameButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        nameButton.frame = CGRectMake(20, 10, 600, 28);
-        [nameButton setTitle:[NSString stringWithFormat:@"Gun: %@", tank.gun.name] forState:UIControlStateNormal];
-        [nameButton setTitle:[NSString stringWithFormat:@"Gun: %@", tank.gun.name] forState:UIControlStateNormal];
-        [nameButton setTitleColor:format.darkColor forState:UIControlStateNormal];
-        [nameButton setTitleColor:format.lightColor forState:UIControlStateHighlighted];
-        [nameButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        [[nameButton titleLabel] setFont:[UIFont systemFontOfSize:(format.fontSize * 1.5)]];
-        [[nameButton titleLabel] setTextAlignment:NSTextAlignmentLeft];
-        [nameButton addTarget:self
-                       action:@selector(pushModulesViewController)
-             forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:nameButton];
+        // Header - Tank gun name
+        [format addButtonWithTarget:self
+                           selector:@selector(pushModulesViewController)
+                    andControlEvent:UIControlEventTouchUpInside
+                             toView:self
+                          withFrame:CGRectMake(20, 10, 600, 28)
+                               text:[NSString stringWithFormat:@"Gun: %@", tank.gun.name]
+                           fontSize:(format.fontSize * 1.5)
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
+        // Header - Tank gun tier
         [format addLabelToView:self
                      withFrame:CGRectMake(680, 10, 40, 28)
                           text:romanStringFromInt(tank.gun.tier)
@@ -64,12 +62,15 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Penetration:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:self
+                           selector:@selector(greenScreen)
+                    andControlEvent:UIControlEventTouchUpInside
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:NSLocalizedString(@"Penetration", nil)
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
@@ -319,6 +320,23 @@
     ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:@"availableGuns"];
     [mvc setTankViewController:tankViewController];
     [tankViewController.navigationController pushViewController:mvc animated:YES];
+}
+
+- (void)greenScreen
+{
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    UIButton *fullscreen = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)];
+    [fullscreen setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.3]];
+    [self.superview addSubview:fullscreen];
+    [self bringSubviewToFront:fullscreen];
+    [fullscreen addTarget:fullscreen
+                   action:@selector(removeFromSuperview)
+         forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)dismissView:(id)sender
+{
+    [sender removeFromSuperview];
 }
 
 @end
