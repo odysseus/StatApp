@@ -9,6 +9,7 @@
 #import "RCFormatting.h"
 #import "TankViewController.h"
 #import "ModulesViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation RCFormatting
 
@@ -128,6 +129,30 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     [fullscreen addTarget:fullscreen
                    action:@selector(removeFromSuperview)
          forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIView *textView = [[UIView alloc] init];
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    CGSize popupSize = CGSizeMake(400, 300);
+    CGPoint popupOrigin = CGPointMake(((bounds.size.width - popupSize.width) / 2), 200);
+    [textView setFrame:CGRectMake(popupOrigin.x, popupOrigin.y, popupSize.width, popupSize.height)];
+    [textView setBackgroundColor:[UIColor whiteColor]];
+    textView.layer.cornerRadius = 10;
+    textView.layer.masksToBounds = YES;
+    [fullscreen addSubview:textView];
+    
+    [self addLabelToView:textView
+               withFrame:CGRectMake(50, 20, 300, 30)
+                    text:@"Penetration"
+                fontSize:(self.fontSize * 1.5)
+               fontColor:self.darkColor
+        andTextAlignment:NSTextAlignmentCenter];
+    
+    UITextView *textField = [[UITextView alloc] initWithFrame:CGRectMake(50, 60, 300, 200)];
+    [textField setText:@"The amount of armor, in mm, that the shell can penetrate"];
+    [textField setFont:[UIFont systemFontOfSize:self.fontSize]];
+    [textField setTextColor:self.darkColor];
+    [textView addSubview:textField];
 }
 
 @end
