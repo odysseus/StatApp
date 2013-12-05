@@ -121,13 +121,26 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
 
 -(void)fullscreenPopupFromView:(UIView *)view
 {
+    // Simple animation to fade the view in
+    CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    [fadeIn setDuration:0.3];
+    [fadeIn setFromValue:[NSNumber numberWithFloat:0.0]];
+    [fadeIn setToValue:[NSNumber numberWithFloat:1.0]];
+    
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     UIButton *fullscreen = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)];
     [fullscreen setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.3]];
+    
+    // Add the animation to the layer
+    [[fullscreen layer] addAnimation:fadeIn forKey:@"fadeIn"];
+    
+    // Add the subview to the main view and bring it to the front
     [view.superview.superview addSubview:fullscreen];
     [view bringSubviewToFront:fullscreen];
-    [fullscreen addTarget:fullscreen
-                   action:@selector(removeFromSuperview)
+    
+    // Add removeFromSuperview as the action for the button, this will dismiss the view
+    [fullscreen addTarget:self
+                   action:@selector(dismissView:)
          forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -153,6 +166,21 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     [textField setFont:[UIFont systemFontOfSize:self.fontSize]];
     [textField setTextColor:self.darkColor];
     [textView addSubview:textField];
+}
+
+- (void)dismissView:(id)sender
+{
+    // Cast the sender into a UIView, which it should always be anyway
+    UIView *senderView = (UIView *)sender;
+    // Fade to opaque
+    [UIView animateWithDuration:0.3 animations:^{
+        // Fun fact, if you define the animation separately, the completion code fires immediately
+        // rather than waiting for the delay as you would expect
+        senderView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        // Then remove the view once the animation finishes
+        [senderView removeFromSuperview];
+    }];
 }
 
 @end
