@@ -23,7 +23,7 @@
 - (Tank *)findTankByName:(NSString *)name;
 - (void)addAverageTank;
 - (int)count;
-- (id)objectAtIndex:(int)index;
+- (id)objectAtIndex:(long)index;
 
 // Data Sorting Methods
 - (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;

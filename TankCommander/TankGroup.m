@@ -56,7 +56,7 @@
     return (int)[group count];
 }
 
-- (id)objectAtIndex:(int)index
+- (id)objectAtIndex:(long)index
 {
     return [group objectAtIndex:index];
 }
@@ -154,7 +154,7 @@
 - (NSNumber *)medianValueForKey:(NSString *)key
 {
     NSArray *sortedList = [self sortedListForKey:key smallerValuesAreBetter:NO];
-    int count = [sortedList count];
+    int count = (int)[sortedList count];
     if (count == 0) {
         return [NSNumber numberWithFloat:0.0];
     }

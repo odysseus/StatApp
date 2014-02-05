@@ -732,7 +732,7 @@ TankNationality fetchTankNationality (int index)
     }
 }
 
-NSString *romanStringFromInt (int convert)
+NSString *romanStringFromInt (long convert)
 {
     NSString *result = @"-";
     switch (convert) {

@@ -42,7 +42,8 @@
     NSMutableArray *validKeys = [[NSMutableArray alloc] init];
     NSArray *keys = @[@"lightTanks", @"mediumTanks", @"heavyTanks", @"tankDestroyers", @"SPGs"];
     for (NSString *key in keys) {
-        if ([[self valueForKey:key] count] > 0) {
+        TankGroup *currentGroup = [self valueForKey:key];
+        if ([currentGroup count] > 0) {
             [validKeys addObject:key];
         }
     }

@@ -59,7 +59,7 @@
                          fontSize:(CGFloat)size
                         fontColor:(UIColor *)color
               andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
-- (void)fullscreenPopupFromView:(UIView *)view;
-- (void)dismissView:(id)sender;
+- (void)fullscreenPopupFromButton:(id)sender;
+
 
 @end

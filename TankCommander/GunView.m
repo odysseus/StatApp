@@ -63,7 +63,7 @@
         
         // Row 1, Column 1
         [format addButtonWithTarget:format
-                           selector:@selector(fullscreenPopupFromView:)
+                           selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                              toView:self
                           withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)

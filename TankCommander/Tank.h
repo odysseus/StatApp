@@ -141,7 +141,7 @@ typedef enum TankNationality : NSUInteger {
 - (NSString *)stringNationality;
 - (NSString *)stringTankType;
 - (NSString *)stringNationalityAndType;
-NSString *romanStringFromInt (int convert);
+NSString *romanStringFromInt (long convert);
 NSString *stringFromBool (BOOL convert);
 
 // Init methods

@@ -119,8 +119,11 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     return button;
 }
 
--(void)fullscreenPopupFromView:(UIView *)view
+- (void)fullscreenPopupFromButton:(id)sender
 {
+    UIButton *senderView = (UIButton *)sender;
+    NSLog(@"%@", senderView.titleLabel.text);
+    
     // Simple animation to fade the view in
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
     [fadeIn setDuration:0.3];
@@ -135,8 +138,8 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     [[fullscreen layer] addAnimation:fadeIn forKey:@"fadeIn"];
     
     // Add the subview to the main view and bring it to the front
-    [view.superview.superview addSubview:fullscreen];
-    [view bringSubviewToFront:fullscreen];
+    [senderView.superview.superview addSubview:fullscreen];
+    [senderView bringSubviewToFront:fullscreen];
     
     // Add removeFromSuperview as the action for the button, this will dismiss the view
     [fullscreen addTarget:self
@@ -175,7 +178,8 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     // Fade to opaque
     [UIView animateWithDuration:0.3 animations:^{
         // Fun fact, if you define the animation separately, the completion code fires immediately
-        // rather than waiting for the delay as you would expect
+        // rather than waiting for the delay as you would expect. This doesn't appear to be true
+        // When the completion is another animation, all in all, non-intuitive behavior from that
         senderView.alpha = 0.0;
     } completion:^(BOOL finished) {
         // Then remove the view once the animation finishes
