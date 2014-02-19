@@ -18,15 +18,15 @@
 {
     self = [super init];
     if (self) {
-        lightTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"lightTanks"]];
+        lightTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"lightTank"]];
         lightTanks.typeString = @"Light Tanks";
-        mediumTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"mediumTanks"]];
+        mediumTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"mediumTank"]];
         mediumTanks.typeString = @"Medium Tanks";
-        heavyTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"heavyTanks"]];
+        heavyTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"heavyTank"]];
         heavyTanks.typeString = @"Heavy Tanks";
-        tankDestroyers = [[TankGroup alloc] initWithDict:[dict objectForKey:@"tankDestroyers"]];
+        tankDestroyers = [[TankGroup alloc] initWithDict:[dict objectForKey:@"AT-SPG"]];
         tankDestroyers.typeString = @"Tank Destroyers";
-        SPGs = [[TankGroup alloc] initWithDict:[dict objectForKey:@"spgs"]];
+        SPGs = [[TankGroup alloc] initWithDict:[dict objectForKey:@"SPG"]];
         SPGs.typeString = @"Artillery/SPGs";
     }
     return self;

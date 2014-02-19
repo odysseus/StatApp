@@ -27,8 +27,10 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     if (self) {
         // Init the main attributes
         self.name = [dict objectForKey:@"name"];
+        // !!!ENUM ALERT
         self.nationality = fetchTankNationality([[dict objectForKey:@"nationality"] integerValue]);
         self.tier = [[dict objectForKey:@"tier"] integerValue];
+        // !!!ENUM ALERT
         self.type = fetchTankType([[dict objectForKey:@"type"] integerValue]);
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
         self.hasTurret = [[dict objectForKey:@"turreted"] boolValue];
