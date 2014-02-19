@@ -53,6 +53,16 @@
 		946FC769183415560016708A /* heavyTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC765183415560016708A /* heavyTank.png */; };
 		946FC76A183415560016708A /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC766183415560016708A /* mediumTank.png */; };
 		946FC76B183415560016708A /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC767183415560016708A /* spg.png */; };
+		947B490B18B43ABA00718680 /* tier1.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490118B43ABA00718680 /* tier1.json */; };
+		947B490C18B43ABA00718680 /* tier2.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490218B43ABA00718680 /* tier2.json */; };
+		947B490D18B43ABA00718680 /* tier3.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490318B43ABA00718680 /* tier3.json */; };
+		947B490E18B43ABA00718680 /* tier4.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490418B43ABA00718680 /* tier4.json */; };
+		947B490F18B43ABA00718680 /* tier5.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490518B43ABA00718680 /* tier5.json */; };
+		947B491018B43ABA00718680 /* tier6.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490618B43ABA00718680 /* tier6.json */; };
+		947B491118B43ABA00718680 /* tier7.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490718B43ABA00718680 /* tier7.json */; };
+		947B491218B43ABA00718680 /* tier8.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490818B43ABA00718680 /* tier8.json */; };
+		947B491318B43ABA00718680 /* tier9.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490918B43ABA00718680 /* tier9.json */; };
+		947B491418B43ABA00718680 /* tier10.json in Resources */ = {isa = PBXBuildFile; fileRef = 947B490A18B43ABA00718680 /* tier10.json */; };
 		948C359F1816F1C500708761 /* Tier.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C359E1816F1C500708761 /* Tier.m */; };
 		94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C76F183969A600B23D8A /* TankSubheaderView.m */; };
 		94C8C7731839739A00B23D8A /* HullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7721839739A00B23D8A /* HullView.m */; };
@@ -151,6 +161,16 @@
 		946FC765183415560016708A /* heavyTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyTank.png; sourceTree = "<group>"; };
 		946FC766183415560016708A /* mediumTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumTank.png; sourceTree = "<group>"; };
 		946FC767183415560016708A /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
+		947B490118B43ABA00718680 /* tier1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier1.json; sourceTree = "<group>"; };
+		947B490218B43ABA00718680 /* tier2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier2.json; sourceTree = "<group>"; };
+		947B490318B43ABA00718680 /* tier3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier3.json; sourceTree = "<group>"; };
+		947B490418B43ABA00718680 /* tier4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier4.json; sourceTree = "<group>"; };
+		947B490518B43ABA00718680 /* tier5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier5.json; sourceTree = "<group>"; };
+		947B490618B43ABA00718680 /* tier6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier6.json; sourceTree = "<group>"; };
+		947B490718B43ABA00718680 /* tier7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier7.json; sourceTree = "<group>"; };
+		947B490818B43ABA00718680 /* tier8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier8.json; sourceTree = "<group>"; };
+		947B490918B43ABA00718680 /* tier9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier9.json; sourceTree = "<group>"; };
+		947B490A18B43ABA00718680 /* tier10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tier10.json; sourceTree = "<group>"; };
 		948C359D1816F1C500708761 /* Tier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tier.h; sourceTree = "<group>"; };
 		948C359E1816F1C500708761 /* Tier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tier.m; sourceTree = "<group>"; };
 		94C8C76E183969A600B23D8A /* TankSubheaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankSubheaderView.h; sourceTree = "<group>"; };
@@ -237,7 +257,7 @@
 				941A7624181494D50072089F /* RCAppDelegate.m */,
 				946FC7461831ABCA0016708A /* Views and Controllers */,
 				946FC7451831AB9E0016708A /* Models */,
-				941A766D1815FB620072089F /* Tanks.json */,
+				947B490018B43A5900718680 /* Data */,
 				941A7626181494D50072089F /* Images.xcassets */,
 				946FC762183410C10016708A /* lightTank.png */,
 				946FC766183415560016708A /* mediumTank.png */,
@@ -374,6 +394,24 @@
 			name = IB;
 			sourceTree = "<group>";
 		};
+		947B490018B43A5900718680 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				947B490118B43ABA00718680 /* tier1.json */,
+				947B490218B43ABA00718680 /* tier2.json */,
+				947B490318B43ABA00718680 /* tier3.json */,
+				947B490418B43ABA00718680 /* tier4.json */,
+				947B490518B43ABA00718680 /* tier5.json */,
+				947B490618B43ABA00718680 /* tier6.json */,
+				947B490718B43ABA00718680 /* tier7.json */,
+				947B490818B43ABA00718680 /* tier8.json */,
+				947B490918B43ABA00718680 /* tier9.json */,
+				947B490A18B43ABA00718680 /* tier10.json */,
+				941A766D1815FB620072089F /* Tanks.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -450,20 +488,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947B491318B43ABA00718680 /* tier9.json in Resources */,
 				946FC75518330C980016708A /* TankViewController.xib in Resources */,
 				941A761F181494D50072089F /* InfoPlist.strings in Resources */,
 				946FC768183415560016708A /* tankDestroyer.png in Resources */,
 				9443770B183812CA00E1451C /* TierCell.xib in Resources */,
+				947B491018B43ABA00718680 /* tier6.json in Resources */,
+				947B490E18B43ABA00718680 /* tier4.json in Resources */,
+				947B490B18B43ABA00718680 /* tier1.json in Resources */,
+				947B490D18B43ABA00718680 /* tier3.json in Resources */,
 				946FC769183415560016708A /* heavyTank.png in Resources */,
 				946FC76B183415560016708A /* spg.png in Resources */,
+				947B491118B43ABA00718680 /* tier7.json in Resources */,
 				946FC763183410C10016708A /* lightTank.png in Resources */,
+				947B490C18B43ABA00718680 /* tier2.json in Resources */,
 				941A7627181494D50072089F /* Images.xcassets in Resources */,
 				9443771218381A7400E1451C /* default.png in Resources */,
+				947B491418B43ABA00718680 /* tier10.json in Resources */,
 				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
 				946FC76A183415560016708A /* mediumTank.png in Resources */,
 				941A766E1815FB620072089F /* Tanks.json in Resources */,
 				946FC74E1831CC5C0016708A /* TankCell.xib in Resources */,
 				94437710183816A200E1451C /* TypeCell.xib in Resources */,
+				947B491218B43ABA00718680 /* tier8.json in Resources */,
+				947B490F18B43ABA00718680 /* tier5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
