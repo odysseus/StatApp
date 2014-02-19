@@ -151,8 +151,8 @@ NSString *stringFromBool (BOOL convert);
 - (NSString *)description;
 
 // Used by the init method to set the enums
-TankNationality fetchTankNationality (int index);
-TankType fetchTankType (int index);
+TankNationality fetchTankNationality (NSString *nation);
+TankType fetchTankType (NSString *type);
 
 
 @end

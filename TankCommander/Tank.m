@@ -27,11 +27,9 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     if (self) {
         // Init the main attributes
         self.name = [dict objectForKey:@"name"];
-        // !!!ENUM ALERT
-        self.nationality = fetchTankNationality([[dict objectForKey:@"nationality"] integerValue]);
+        self.nationality = fetchTankNationality([dict objectForKey:@"nation"]);
         self.tier = [[dict objectForKey:@"tier"] integerValue];
-        // !!!ENUM ALERT
-        self.type = fetchTankType([[dict objectForKey:@"type"] integerValue]);
+        self.type = fetchTankType([dict objectForKey:@"type"]);
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
         self.hasTurret = [[dict objectForKey:@"turreted"] boolValue];
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
@@ -611,43 +609,41 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return YES;
 }
 
-TankType fetchTankType (int index)
+TankType fetchTankType (NSString *type)
 {
-    switch (index) {
-        case 0:
-            return LightTank;
-        case 1:
-            return MediumTank;
-        case 2:
-            return HeavyTank;
-        case 3:
-            return TankDestroyer;
-        case 4:
-            return SPG;
-        default:
-            return Vehicle;
+    if ([type isEqualToString:@"lightTank"]) {
+        return LightTank;
+    } else if ([type isEqualToString:@"mediumTank"]) {
+        return MediumTank;
+    } else if ([type isEqualToString:@"heavyTank"]) {
+        return HeavyTank;
+    } else if ([type isEqualToString:@"AT-SPG"]) {
+        return TankDestroyer;
+    } else if ([type isEqualToString:@"SPG"]) {
+        return SPG;
+    } else {
+        return Vehicle;
     }
 }
 
-TankNationality fetchTankNationality (int index)
+TankNationality fetchTankNationality (NSString *nation)
 {
-    switch (index) {
-        case 0:
-            return American;
-        case 1:
-            return British;
-        case 2:
-            return Chinese;
-        case 3:
-            return French;
-        case 4:
-            return German;
-        case 5:
-            return Japanese;
-        case 6:
-            return Russian;
-        default:
-            return Nation;
+    if ([nation isEqualToString:@"usa"]) {
+        return American;
+    } else if ([nation isEqualToString:@"uk"]) {
+        return British;
+    } else if ([nation isEqualToString:@"china"]) {
+        return Chinese;
+    } else if ([nation isEqualToString:@"france"]) {
+        return French;
+    } else if ([nation isEqualToString:@"germany"]) {
+        return German;
+    } else if ([nation isEqualToString:@"japan"]) {
+        return Japanese;
+    } else if ([nation isEqualToString:@"ussr"]) {
+        return Russian;
+    } else {
+        return Nation;
     }
 }
 
