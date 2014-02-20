@@ -152,7 +152,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         result = [self validateModuleArray:key];
     }
     
-    
     return result;
 }
 
