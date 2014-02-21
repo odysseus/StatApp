@@ -110,7 +110,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // The validation is being separated into categories, the first is floatKeys,
     // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
-                          @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"gunTraverseArc",
+                          @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"gunTraverseArc",
                           @"speedLimit", @"camoValue", @"viewRange", @"gunDepression", @"gunElevation", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
