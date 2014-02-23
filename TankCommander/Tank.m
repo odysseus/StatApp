@@ -25,7 +25,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
 {
     self = [super init];
     if (self) {
-        // Init the main attributes
+        // Mass assignment of attributes from the dictionary parsed from the JSON files
         self.name = [dict objectForKey:@"name"];
         self.nationality = fetchTankNationality([dict objectForKey:@"nation"]);
         self.tier = [[dict objectForKey:@"tier"] integerValue];
@@ -42,6 +42,9 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
         self.stockWeight = ([[dict objectForKey:@"stockWeight"] floatValue] * 1000);
         
+        // Parent and child tanks are stored as strings for now, later these will likely change to a pointer
+        // to the next/prev tank in the line, but the feature itself isn't terribly useful and there are
+        // a lot of exceptions to the 1 parent- 1 child rule that would simply make it difficult
         if (!self.premiumTank) {
             self.parent = [dict objectForKey:@"parent"];
             self.child = [dict objectForKey:@"child"];
@@ -50,8 +53,11 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         // Add the hull - init will be different depending on whether the gun is in the turret or the hull
         self.hull = [[Hull alloc] initWithDict:[dict objectForKey:@"hull"] forTurreted:hasTurret];
         
+        // Check for the presence of a turret and add guns to it, if not add the guns to the hull object
         if ([dict objectForKey:@"turrets"]) {
-            // Each of the following chunks for the module groups is functionally the same
+            // Each of the following chunks for the module groups is functionally the same so the comments
+            // apply to all of them
+            
             // First fetch the JSON for the module group
             NSDictionary *turretValues = [dict objectForKey:@"turrets"];
             // Init the NSMutableArray to hold the objects
@@ -64,6 +70,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             }
         }
         
+        // Same concept as above
         NSDictionary *engineValues = [dict objectForKey:@"engines"];
         availableEngines = [[NSMutableArray alloc] init];
         for (id key in engineValues) {
@@ -71,13 +78,15 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             [availableEngines addObject:currentEngine];
         }
         
+        // Same concept as above
         NSDictionary *suspensionValues = [dict objectForKey:@"suspensions"];
         availableSuspensions = [[NSMutableArray alloc] init];
         for (id key in suspensionValues) {
             Suspension *currentSuspension = [[Suspension alloc] initWithDict:[suspensionValues objectForKey:key]];
             [availableSuspensions addObject:currentSuspension];
         }
-        
+
+        // Same concept as above
         NSDictionary *radioValues = [dict objectForKey:@"radios"];
         availableRadios = [[NSMutableArray alloc] init];
         for (id key in radioValues) {
@@ -85,19 +94,13 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             [availableRadios addObject:currentRadio];
         }
         
-        // Finding the weight of the hull is done by taking either the stock or top weight and subtracting the weight
-        // of the modules. Originally it was done using topWeight, because that saved processor cycles, but I had
-        // concerns over the accuracy and availability of topWeight, so now it uses stockWeight by default, and
-        // topWeight as a fallback
-        if (self.stockWeight > 0) {
-            [self setAllValuesStock];
-            self.hull.weight = self.stockWeight - self.turret.weight - self.gun.weight -
-            self.suspension.weight - self.radio.weight - self.engine.weight;
-        } else {
-            [self setAllValuesTop];
-            self.hull.weight = self.topWeight - self.turret.weight - self.gun.weight -
-            self.suspension.weight - self.radio.weight - self.engine.weight;
-        }
+        // Finding the weight of the hull is done by taking the stock weight, setting the values to stock, and then
+        // subtracting the weight of all the individual modules
+        [self setAllValuesStock];
+        self.hull.weight = self.stockWeight - self.turret.weight - self.gun.weight -
+        self.suspension.weight - self.radio.weight - self.engine.weight;
+        
+        // Set all the values to top values because that is the likely preference of people using the app
         [self setAllValuesTop];
         [self validate];
     }
@@ -196,6 +199,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return result;
 }
 
+// Only used in logging/debugging, this puts and asterisk in front of premium tanks
 - (NSString *)description
 {
     if (self.premiumTank) {
@@ -205,7 +209,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
-// Setting values to stock or top
+// Setting all values to their stock configuration
 - (void)setAllValuesStock
 {
     // Low hanging fruit: deal with the modules that are the same with all tanks
@@ -232,12 +236,14 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
                 self.turret = turretMod;
             }
         }
+        // Now that the turret has been changed, we can access the guns that go with it
         for (Gun *gunMod in self.turret.availableGuns) {
             if (gunMod.stockModule) {
                 self.turret.gun = gunMod;
             }
         }
     } else {
+        // If it doesn't have a turret, then you can directly change the gun
         for (Gun *gunMod in self.hull.availableGuns) {
             if (gunMod.stockModule) {
                 self.hull.gun = gunMod;
@@ -246,6 +252,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
+// The inverse of the previous method, sets all values to their top values
 - (void)setAllValuesTop
 {
     // Low hanging fruit: deal with the modules that are the same with all tanks
@@ -286,6 +293,10 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
+// These methods incorporate the in-game math used to determine the actual stats of a tank
+// based on crew skill and equipment level
+
+// Progressive stat = the number increases as the crew improves, view range, for example
 - (float)calculateProgressiveStatWithNominalStat:(float)nominalStat
                              effectiveSkillLevel:(float)effectiveSkillLevel
                                andEquipmentBonus:(float)equipmentBonus
@@ -293,6 +304,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return ((nominalStat / 0.875) * ((0.00375 * effectiveSkillLevel + 0.5) + equipmentBonus));
 }
 
+// Degressive stat = the number decreases as the crew improves, accuracy, for example
 - (float)calculateDegressiveStatWithNominalStat:(float)nominalStat
                             effectiveSkillLevel:(float)effectiveSkillLevel
                               andEquipmentBonus:(float)equipmentBonus
@@ -300,16 +312,25 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return ((nominalStat * 0.875) / (0.00375 * effectiveSkillLevel + 0.5)) + equipmentBonus;
 }
 
-- (float)skillLevel
+// The crew gets 10% of the commanders skill points, the app doesn't include setting skill levels
+// of crew members individually, you just calculate it based on an average for the entire crew, so
+// the crewLevel * 1.1 approximates the effective level of everyone but the commander
+- (float)crewSkillLevel
 {
     return (self.crewLevel * 1.1);
 }
 
+// More of a math test than a necessary method, with improved ventilation and brothers in arms the crew
+// level gains 10% and that also counts towards the commander's additional 10% bonus, a fully trained
+// crew with BIA and vent should be at 121%
 - (float)skillLevelVentAndBIA
 {
     return ((self.crewLevel + 10.0) * 1.1);
 }
 
+// Again, calculating specific bonuses in the method rather than abstracting it, will probably be removed,
+// although rammer/vent/bia is an incredibly common configuration for many tanks. This simply includes a gun
+// rammer in the equation (10% bonus to ROF)
 - (float)topRateOfFire
 {
     return [self calculateProgressiveStatWithNominalStat:self.rateOfFire
@@ -317,6 +338,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
                                        andEquipmentBonus:0.10];
 }
 
+// This is used to check the math done in-app compared to the actual values in-game
 - (float)fastestReload
 {
     return 60.0 / self.topRateOfFire;
@@ -325,14 +347,15 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
 - (float)fastestAimTime
 {
     return [self calculateDegressiveStatWithNominalStat:self.aimTime
-                                    effectiveSkillLevel:self.skillLevel
+                                    effectiveSkillLevel:self.crewSkillLevel
                                       andEquipmentBonus:0.0];
 }
 
-// Pass through properties
+// PASS THROUGH PROPERTIES
 
 - (NSArray *)availableGuns
 {
+    // Once again need to check for the presence of a turret to find where the guns are
     if (self.hasTurret) {
         return self.turret.availableGuns;
     } else {
@@ -394,6 +417,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     if (self.autoloader) {
         return self.gun.roundsInDrum;
     } else {
+        // In case the method is accidentally called on a non-autoloader
         return 1.0;
     }
 }
@@ -425,25 +449,6 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
-- (float)weight
-{
-    return (hull.weight + turret.weight + self.gun.weight + engine.weight + suspension.weight + radio.weight) / 1000.0;
-}
-
-- (float)specificPower
-{
-    return (engine.horsepower / self.weight);
-}
-
-- (float)damagePerMinute
-{
-    return (self.gun.rateOfFire * self.gun.round.damage);
-}
-
-- (float)reloadTime
-{
-    return 60.0 / self.gun.rateOfFire;
-}
 
 - (float)loadLimit
 {
@@ -474,7 +479,30 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return self.radio.signalRange;
 }
 
-// Armor Properties
+// CALCULATED PROPERTIES
+
+- (float)weight
+{
+    return (hull.weight + turret.weight + self.gun.weight + engine.weight + suspension.weight + radio.weight) / 1000.0;
+}
+
+// Horspower per ton
+- (float)specificPower
+{
+    return (engine.horsepower / self.weight);
+}
+
+- (float)damagePerMinute
+{
+    return (self.gun.rateOfFire * self.gun.round.damage);
+}
+
+- (float)reloadTime
+{
+    return 60.0 / self.gun.rateOfFire;
+}
+
+// ARMOR PORPERTIES
 
 - (float)frontalHullArmor
 {
@@ -506,6 +534,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return self.hull.rearArmor.effectiveThickness;
 }
 
+// Turret armor methods return the hull values if there is no turret, to ensure that it always
+// returns a value, and because the representation is accurate
 - (float)frontalTurretArmor
 {
     if (self.hasTurret) {
@@ -574,6 +604,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
+// isStock and isTop are used to know when the "Stock Values" or "Top Values" section of the segmented
+// controller should be highlighted
 - (BOOL)isStock
 {
     NSArray *modules = @[@"gun", @"engine", @"radio", @"suspension"];
@@ -608,6 +640,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     return YES;
 }
 
+// Used by the init method to convert the string value to the enum value
 TankType fetchTankType (NSString *type)
 {
     if ([type isEqualToString:@"lightTank"]) {
@@ -625,6 +658,7 @@ TankType fetchTankType (NSString *type)
     }
 }
 
+// Used by the init method to convert the string value to the enum value
 TankNationality fetchTankNationality (NSString *nation)
 {
     if ([nation isEqualToString:@"usa"]) {
@@ -646,37 +680,65 @@ TankNationality fetchTankNationality (NSString *nation)
     }
 }
 
+// Used to convert the enum value to a HR string
 - (NSString *)stringNationality
 {
     NSString *result = @"Unknown";
     switch (self.nationality) {
         case American:
-            result = @"American";
-            break;
+        result = @"American";
+        break;
         case British:
-            result = @"British";
-            break;
+        result = @"British";
+        break;
         case Chinese:
-            result = @"Chinese";
-            break;
+        result = @"Chinese";
+        break;
         case French:
-            result = @"French";
-            break;
+        result = @"French";
+        break;
         case German:
-            result = @"German";
-            break;
+        result = @"German";
+        break;
         case Japanese:
-            result = @"Japanese";
-            break;
+        result = @"Japanese";
+        break;
         case Russian:
-            result = @"Russian";
-            break;
+        result = @"Russian";
+        break;
         case Nation:
-            break;
+        break;
     }
     return result;
 }
 
+// Used to convert the enum value to a HR string
+- (NSString *)stringTankType
+{
+    NSString *result = @"Unknown";
+    switch (self.type) {
+        case LightTank:
+        result = @"Light Tank";
+        break;
+        case MediumTank:
+        result = @"Medium Tank";
+        break;
+        case HeavyTank:
+        result = @"Heavy Tank";
+        break;
+        case TankDestroyer:
+        result = @"Tank Destroyer";
+        break;
+        case SPG:
+        result = @"SPG";
+        break;
+        case Vehicle:
+        break;
+    }
+    return result;
+}
+
+// Combining the two methods above
 - (NSString *)stringNationalityAndType
 {
     if (self.premiumTank) {
@@ -686,98 +748,67 @@ TankNationality fetchTankNationality (NSString *nation)
     }
 }
 
-- (NSString *)stringTankType
-{
-    NSString *result = @"Unknown";
-    switch (self.type) {
-        case LightTank:
-            result = @"Light Tank";
-            break;
-        case MediumTank:
-            result = @"Medium Tank";
-            break;
-        case HeavyTank:
-            result = @"Heavy Tank";
-            break;
-        case TankDestroyer:
-            result = @"Tank Destroyer";
-            break;
-        case SPG:
-            result = @"SPG";
-            break;
-        case Vehicle:
-            break;
-    }
-    return result;
-}
-
+// Fetches the geometric image that corresponds with the tank type (Not the outline image of the actual tank)
 - (UIImage *)imageForTankType
 {
     switch (self.type) {
         case LightTank:
-            return [UIImage imageNamed:@"lightTank"];
+        return [UIImage imageNamed:@"lightTank"];
         case MediumTank:
-            return [UIImage imageNamed:@"mediumTank"];
+        return [UIImage imageNamed:@"mediumTank"];
         case HeavyTank:
-            return [UIImage imageNamed:@"heavyTank"];
+        return [UIImage imageNamed:@"heavyTank"];
         case TankDestroyer:
-            return [UIImage imageNamed:@"tankDestroyer"];
+        return [UIImage imageNamed:@"tankDestroyer"];
         case SPG:
-            return [UIImage imageNamed:@"spg"];
+        return [UIImage imageNamed:@"spg"];
         default:
-            return [UIImage imageNamed:@"lightTank"];
+        return [UIImage imageNamed:@"lightTank"];
     }
 }
 
+// Used in pretty printing the tier numbers as Roman Numerals, switch statement is inelegant,
+// but unless they add many more tiers it gets the job done
 NSString *romanStringFromInt (long convert)
 {
     NSString *result = @"-";
     switch (convert) {
         case 1:
-            result = @"I";
-            break;
+        result = @"I";
+        break;
         case 2:
-            result = @"II";
-            break;
+        result = @"II";
+        break;
         case 3:
-            result = @"III";
-            break;
+        result = @"III";
+        break;
         case 4:
-            result = @"IV";
-            break;
+        result = @"IV";
+        break;
         case 5:
-            result = @"V";
-            break;
+        result = @"V";
+        break;
         case 6:
-            result = @"VI";
-            break;
+        result = @"VI";
+        break;
         case 7:
-            result = @"VII";
-            break;
+        result = @"VII";
+        break;
         case 8:
-            result = @"VIII";
-            break;
+        result = @"VIII";
+        break;
         case 9:
-            result = @"IX";
-            break;
+        result = @"IX";
+        break;
         case 10:
-            result = @"X";
-            break;
+        result = @"X";
+        break;
     }
     return result;
 }
 
-NSString *stringFromBool (BOOL convert)
-{
-    NSString *result = @"Unknown";
-    if (convert) {
-        result = @"True";
-    } else {
-        result = @"False";
-    }
-    return result;
-}
-
+// Will probably be deprecated, as the name implies it checks to see whether the top gun requires first
+// upgrading the turret, since the module trees aren't displayed within the app
 - (BOOL)isTopTurretNeededForTopGun
 {
     if (self.hasTurret) {
@@ -792,6 +823,7 @@ NSString *stringFromBool (BOOL convert)
     return NO;
 }
 
+// Calculate the total experience needed to unlock all modules for an individual tank
 - (int)totalExperienceNeeded
 {
     int totalExp = 0;

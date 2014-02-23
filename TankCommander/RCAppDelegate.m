@@ -20,9 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Debugging and Logging Code
+    // [TankStore allTanks] inits the singleton store and kicks of the init waterfall that inits and loads all
+    // the tanks and their attached modules
     TankStore *allTanks = [TankStore allTanks];
     
+    // Debugging and logging code, this is just manually pulling a group to manipulate in this method, it will
+    // be removed from the final product
     NSMutableArray *tier8 = allTanks.tier8.all.group;
     
     for (Tank *tank in tier8) {
@@ -42,26 +45,20 @@
                       smallerValuesAreBetter:smallerIsBetter];
     NSLog(@"\n%@", list);
     
+    // END DEBUGGING/LOGGING
+    
     //  ACTUAL METHOD
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // The tiers view controller is the root for displaying all the tanks
     TiersViewController *tvc = [[TiersViewController alloc] init];
     
+    // Init a nav controller with the tiers view controller
     UINavigationController *navController =  [[UINavigationController alloc] initWithRootViewController:tvc];
-
-    
-//    TankViewController *tankVC = [[TankViewController alloc] init];
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        NSArray *viewControllers = @[tvc, tankVC];
-//        UISplitViewController *svc = [[UISplitViewController alloc] init];
-//        [svc setDelegate:tvc];
-//        [svc setViewControllers:viewControllers];
-//        [[self window] setRootViewController:svc];
-//    }
-    
+    // And set it as the RVC
     [[self window] setRootViewController:navController];
-    
+    // Make it visible
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

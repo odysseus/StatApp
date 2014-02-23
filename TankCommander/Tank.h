@@ -133,7 +133,7 @@ typedef enum TankNationality : NSUInteger {
 - (float)topRateOfFire;
 - (float)fastestReload;
 - (float)fastestAimTime;
-- (float)skillLevel;
+- (float)crewSkillLevel;
 - (float)skillLevelVentAndBIA;
 
 // Methods used to display params
@@ -142,7 +142,6 @@ typedef enum TankNationality : NSUInteger {
 - (NSString *)stringTankType;
 - (NSString *)stringNationalityAndType;
 NSString *romanStringFromInt (long convert);
-NSString *stringFromBool (BOOL convert);
 
 // Init methods
 - (id)initWithDict:(NSDictionary *)dict;

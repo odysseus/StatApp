@@ -45,6 +45,7 @@
     return self;
 }
 
+// Used in the UI to generate the strings for the segmentedController
 - (NSArray *)stringShellArray
 {
     if ([self.shells count] == 2) {
