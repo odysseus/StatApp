@@ -25,8 +25,6 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        UINavigationItem *n = [self navigationItem];
-        [n setTitle:NSLocalizedString(@"Tanks", nil])];
     }
     return self;
 }
@@ -41,6 +39,8 @@
     self = [self init];
     if (self) {
         tankGroup = group;
+        UINavigationItem *n = [self navigationItem];
+        [n setTitle:tankGroup.typeString];
     }
     return self;
 }
@@ -55,6 +55,11 @@
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"TankCell"];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return tankGroup.typeString;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

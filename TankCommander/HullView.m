@@ -48,7 +48,7 @@
         
         [format addLabelToView:self
                      withFrame:CGRectMake(680, 10, 40, 28)
-                          text:romanStringFromInt(tank.suspension.tier)
+                          text:romanStringFromInt(tank.tier)
                       fontSize:(format.fontSize * 1.5)
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentRight];

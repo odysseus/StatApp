@@ -20,13 +20,17 @@
         // Init the shells
         NSArray *shellValues = [dict objectForKey:@"shells"];
         Shell *normal = [[Shell alloc] initWithShellIndex:0 andArray:shellValues[0]];
-        Shell *gold = [[Shell alloc] initWithShellIndex:1 andArray:shellValues[1]];
         // Because some howitzers and arty have only two shells, we need to check and see if there are three values before initializing the HE rounds
         if ([shellValues count] == 3) {
+            Shell *gold = [[Shell alloc] initWithShellIndex:1 andArray:shellValues[1]];
             Shell *he = [[Shell alloc] initWithShellIndex:2 andArray:shellValues[2]];
             self.shells = [NSArray arrayWithObjects:normal, gold, he, nil];
         } else if ([shellValues count] == 2) {
+            Shell *gold = [[Shell alloc] initWithShellIndex:1 andArray:shellValues[1]];
             self.shells = [NSArray arrayWithObjects:normal, gold, nil];
+            
+        } else if ([shellValues count] == 1) {
+            self.shells = [NSArray arrayWithObjects:normal, nil];
         }
         // Init the rest of the gun values
         self.rateOfFire = [[dict objectForKey:@"rateOfFire"] floatValue];

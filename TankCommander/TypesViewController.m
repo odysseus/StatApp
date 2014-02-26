@@ -35,6 +35,8 @@
     if (self) {
         tier = t;
         keys = [tier fetchValidKeys];
+        UINavigationItem *n = [self navigationItem];
+        [n setTitle:tier.nameString];
     }
     return self;
 }
@@ -55,6 +57,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return tier.nameString;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
