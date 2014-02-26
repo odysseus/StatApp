@@ -663,6 +663,8 @@ TankNationality fetchTankNationality (NSString *nation)
 {
     if ([nation isEqualToString:@"usa"]) {
         return American;
+    } else if ([nation isEqualToString:@"gb"]) {
+        return British;
     } else if ([nation isEqualToString:@"uk"]) {
         return British;
     } else if ([nation isEqualToString:@"china"]) {
