@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank, TankViewController;
+@class Tank, TankIPadViewController;
 
 @interface SelectorView : UIView
 {
     Tank *tank;
 }
 
-@property (nonatomic, weak) TankViewController *tankViewController;
+@property (nonatomic, weak) TankIPadViewController *tankViewController;
 
 - (id)initWithOrigin:(CGPoint)origin andTank:(Tank *)tank;
 - (void)selectStockOrTop:(UISegmentedControl *)stockOrTop;

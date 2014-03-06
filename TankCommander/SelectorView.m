@@ -9,7 +9,7 @@
 #import "SelectorView.h"
 #import "RCFormatting.h"
 #import "Tank.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 #import "Gun.h"
 #import "TankGroup.h"
 

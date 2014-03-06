@@ -11,7 +11,7 @@
 #import "AverageTank.h"
 #import "Radio.h"
 #import "RCFormatting.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 #import "ModulesViewController.h"
 
 @implementation RadioView

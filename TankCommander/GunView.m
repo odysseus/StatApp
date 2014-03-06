@@ -12,7 +12,7 @@
 #import "Gun.h"
 #import "AverageTank.h"
 #import "ModulesViewController.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 
 @implementation GunView
 

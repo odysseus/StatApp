@@ -12,7 +12,7 @@
 #import "AverageTank.h"
 #import "Engine.h"
 #import "ModulesViewController.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 
 @implementation EngineView
 

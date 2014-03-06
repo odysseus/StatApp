@@ -10,7 +10,7 @@
 
 @class Tank;
 
-@interface TankViewController : UIViewController
+@interface TankIPadViewController : UIViewController
 
 @property (nonatomic) Tank *tank;
 

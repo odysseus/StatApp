@@ -11,7 +11,7 @@
 #import "AverageTank.h"
 #import "Suspension.h"
 #import "RCFormatting.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 #import "ModulesViewController.h"
 
 @implementation SuspensionView

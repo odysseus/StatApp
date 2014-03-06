@@ -12,7 +12,7 @@
 #import "AverageTank.h"
 #import "Turret.h"
 #import "ModulesViewController.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 
 @implementation TurretView
 

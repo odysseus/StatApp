@@ -14,7 +14,7 @@
 #import "TankGroup.h"
 #import "TanksViewController.h"
 #import "TiersViewController.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 
 @implementation RCAppDelegate
 

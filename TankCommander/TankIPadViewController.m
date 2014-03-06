@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Ryan Case. All rights reserved.
 //
 
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 #import "Tank.h"
 #import "TankHeaderView.h"
 #import "TankSubheaderView.h"
@@ -18,11 +18,11 @@
 #import "SuspensionView.h"
 #import "SelectorView.h"
 
-@interface TankViewController ()
+@interface TankIPadViewController ()
 
 @end
 
-@implementation TankViewController
+@implementation TankIPadViewController
 
 @synthesize tank;
 
@@ -121,6 +121,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    self.view = nil;
     // Dispose of any resources that can be recreated.
 }
 

@@ -13,7 +13,7 @@
 #import "Gun.h"
 #import "Turret.h"
 #import "Hull.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 
 @interface ModulesViewController ()
 

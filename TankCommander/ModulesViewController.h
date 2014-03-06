@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank, TankViewController;
+@class Tank, TankIPadViewController;
 
 @interface ModulesViewController : UITableViewController
 
 @property (nonatomic) Tank *tank;
 @property (nonatomic) NSArray *moduleArray;
-@property (nonatomic) TankViewController *tankViewController;
+@property (nonatomic) TankIPadViewController *tankViewController;
 
 - (id)initWithTank:(Tank *)t andKey:(NSString *)key;
 

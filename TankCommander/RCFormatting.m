@@ -7,7 +7,7 @@
 //
 
 #import "RCFormatting.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 #import "ModulesViewController.h"
 #import <QuartzCore/QuartzCore.h>
 

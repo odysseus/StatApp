@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class TankViewController, Tank;
+@class TankIPadViewController, Tank;
 
 @interface RCFormatting : NSObject
 

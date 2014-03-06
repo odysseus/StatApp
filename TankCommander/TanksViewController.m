@@ -7,7 +7,7 @@
 //
 
 #import "TanksViewController.h"
-#import "TankViewController.h"
+#import "TankIPadViewController.h"
 #import "TankStore.h"
 #import "Tank.h"
 #import "TankCell.h"
@@ -81,7 +81,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TankViewController *tvc = [[TankViewController alloc] init];
+    TankIPadViewController *tvc = [[TankIPadViewController alloc] init];
     Tank *t = [tankGroup objectAtIndex:indexPath.row];
     [tvc setTank:t];
     
