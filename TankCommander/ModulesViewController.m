@@ -14,6 +14,7 @@
 #import "Turret.h"
 #import "Hull.h"
 #import "TankIPadViewController.h"
+#import "TankIPhoneViewController.h"
 
 @interface ModulesViewController ()
 
@@ -21,7 +22,7 @@
 
 @implementation ModulesViewController
 
-@synthesize tank, moduleArray, tankViewController;
+@synthesize tank, moduleArray, tankIPadViewController, tankIPhoneViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -107,7 +108,13 @@
     } else {
         [tank setValue:mod forKey:key];
     }
-    [tankViewController viewDidLoad];
+    
+    if (tankIPadViewController) {
+        [tankIPadViewController viewDidLoad];
+    } else if (tankIPhoneViewController) {
+        [tankIPhoneViewController.tableView reloadData];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

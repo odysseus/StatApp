@@ -264,7 +264,7 @@
 - (void)pushModulesViewController
 {
     ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:@"availableTurrets"];
-    [mvc setTankViewController:tankViewController];
+    [mvc setTankIPadViewController:tankViewController];
     [tankViewController.navigationController pushViewController:mvc animated:YES];
 }
 

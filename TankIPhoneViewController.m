@@ -8,6 +8,7 @@
 
 #import "TankIPhoneViewController.h"
 #import "Tank.h"
+#import "ModulesViewController.h"
 
 @interface TankIPhoneViewController ()
 
@@ -60,11 +61,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    if (self.tank.hasTurret) {
-        return 6;
-    } else {
-        return 5;
-    }
+    return self.tank.equippedModulesNameArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -73,42 +70,6 @@
     return 3;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSArray *sectionTitles;
-    if (self.tank.hasTurret) {
-        sectionTitles = @[@"Hull", @"Turret", @"Gun", @"Engine", @"Suspension", @"Radio"];
-    } else {
-        sectionTitles = @[@"Hull", @"Gun", @"Engine", @"Suspension", @"Radio"];
-    }
-    return sectionTitles[section];
-}
-
-//- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 100.0;
-//}
-//
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    NSArray *sectionTitles;
-//    if (self.tank.hasTurret) {
-//        sectionTitles = @[@"Hull", @"Turret", @"Gun", @"Engine", @"Suspension", @"Radio"];
-//    } else {
-//        sectionTitles = @[@"Hull", @"Gun", @"Engine", @"Suspension", @"Radio"];
-//    }
-//    
-//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 300, 44)];
-//    
-//    UIButton *b = [[UIButton alloc] initWithFrame:CGRectZero];
-//    b.backgroundColor = [UIColor clearColor];
-//    b.opaque = NO;
-//    b.frame = CGRectMake(10, 0, 100, 30);
-//    [b setTitle:sectionTitles[section] forState:UIControlStateNormal];
-//    [headerView addSubview:b];
-//    
-//    return headerView;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -119,6 +80,47 @@
     
     return cell;
 }
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44.0;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSArray *modArray = self.tank.equippedModulesNameArray;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, width, 44)];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
+    [button setTitle:modArray[section] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [[button titleLabel] setFont:[UIFont systemFontOfSize:16.0]];
+    [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
+    
+    [button addTarget:self
+               action:@selector(pushModulesViewController)
+     forControlEvents:UIControlEventTouchUpInside];
+    
+    [headerView addSubview:button];
+    
+    return headerView;
+}
+
+- (void)pushModulesViewController
+{
+    ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:@"availableGuns"];
+    [mvc setTankIPhoneViewController:self];
+    [self.navigationController pushViewController:mvc animated:YES];
+}
+
+- (void)buttonPress
+{
+    NSLog(@"Button Pressed");
+}
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -212,6 +212,31 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
+// Used for displaying the module names in the iPhone UITableView
+- (NSArray *)equippedModulesNameArray
+{
+    if (self.hasTurret) {
+        // Hull, Turret, Gun, Suspension, Engine, Radio
+        NSArray *final = @[
+                           [NSString stringWithFormat:@"Hull: %@", self.name],
+                           [NSString stringWithFormat:@"Turret: %@", self.turret.name],
+                           [NSString stringWithFormat:@"Gun: %@", self.gun.name],
+                           [NSString stringWithFormat:@"Suspension: %@", self.suspension.name],
+                           [NSString stringWithFormat:@"Radio: %@", self.radio.name]
+                           ];
+        return final;
+    } else {
+        // Hull, Gun, Suspension, Engine, Radio
+        NSArray *final = @[
+                           [NSString stringWithFormat:@"Hull: %@", self.name],
+                           [NSString stringWithFormat:@"Gun: %@", self.gun.name],
+                           [NSString stringWithFormat:@"Suspension: %@", self.suspension.name],
+                           [NSString stringWithFormat:@"Radio: %@", self.radio.name]
+                           ];
+        return final;
+    }
+}
+
 // Setting all values to their stock configuration
 - (void)setAllValuesStock
 {
@@ -295,6 +320,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         }
     }
 }
+
+// VARIABLE STAT CALCULATIONS
 
 // These methods incorporate the in-game math used to determine the actual stats of a tank
 // based on crew skill and equipment level

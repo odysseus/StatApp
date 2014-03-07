@@ -14,4 +14,6 @@
 
 @property (nonatomic) Tank *tank;
 
+- (void)pushModulesViewController;
+
 @end

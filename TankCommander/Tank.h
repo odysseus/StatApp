@@ -71,6 +71,9 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) Radio *radio;
 @property (nonatomic) Suspension *suspension;
 
+// Descriptive Methods
+- (NSArray *)equippedModulesNameArray;
+
 // Pass through properties
 - (NSArray *)availableGuns;
 - (Gun *)gun;
