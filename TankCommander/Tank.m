@@ -19,7 +19,7 @@
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
 availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
-baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, stockWeight;
+baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, stockWeight, available;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -31,6 +31,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         self.tier = [[dict objectForKey:@"tier"] integerValue];
         self.type = fetchTankType([dict objectForKey:@"type"]);
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
+        self.available = [[dict objectForKey:@"available"] boolValue];
         self.hasTurret = [[dict objectForKey:@"turreted"] boolValue];
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
         self.cost = [[dict objectForKey:@"cost"] integerValue];

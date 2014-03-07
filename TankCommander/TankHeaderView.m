@@ -91,9 +91,14 @@
                                           fontColor:format.lightColor
                                    andTextAlignment:NSTextAlignmentLeft];
         
-        // Display cost differently if the tank is a premium
+        // If the tank is a premium, display the cost in gold
         if (tank.premiumTank) {
             [costValue setTextColor:[UIColor orangeColor]];
+        }
+        // But if the tank is premium and not available in the store, then set the
+        // price color to blue
+        if (!tank.available && tank.premiumTank) {
+            [costValue setTextColor:[UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.6]];
         }
         
         // Tank Tier as a Roman Numeral
