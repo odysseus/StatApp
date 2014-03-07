@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Tank;
+
 @interface TankIPhoneViewController : UIViewController
+
+@property (nonatomic) Tank *tank;
 
 @end

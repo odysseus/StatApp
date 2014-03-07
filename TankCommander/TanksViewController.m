@@ -8,6 +8,7 @@
 
 #import "TanksViewController.h"
 #import "TankIPadViewController.h"
+#import "TankIPhoneViewController.h"
 #import "TankStore.h"
 #import "Tank.h"
 #import "TankCell.h"
@@ -81,11 +82,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TankIPadViewController *tvc = [[TankIPadViewController alloc] init];
-    Tank *t = [tankGroup objectAtIndex:indexPath.row];
-    [tvc setTank:t];
-    
-    [[self navigationController] pushViewController:tvc animated:YES];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        // iPad View
+        TankIPadViewController *tvc = [[TankIPadViewController alloc] init];
+        Tank *t = [tankGroup objectAtIndex:indexPath.row];
+        [tvc setTank:t];
+        
+        [[self navigationController] pushViewController:tvc animated:YES];
+    } else {
+        // iPhone View
+        TankIPhoneViewController *tvc = [[TankIPhoneViewController alloc] init];
+        Tank *t = [tankGroup objectAtIndex:indexPath.row];
+        [[tvc view] setBackgroundColor:[UIColor blueColor]];
+        [tvc setTank:t];
+        
+        [[self navigationController] pushViewController:tvc animated:YES];
+    }
 }
 
 @end

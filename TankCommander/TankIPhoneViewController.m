@@ -7,12 +7,15 @@
 //
 
 #import "TankIPhoneViewController.h"
+#import "Tank.h"
 
 @interface TankIPhoneViewController ()
 
 @end
 
 @implementation TankIPhoneViewController
+
+@synthesize tank;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
