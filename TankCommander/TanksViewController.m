@@ -93,7 +93,6 @@
         // iPhone View
         TankIPhoneViewController *tvc = [[TankIPhoneViewController alloc] init];
         Tank *t = [tankGroup objectAtIndex:indexPath.row];
-        [[tvc view] setBackgroundColor:[UIColor blueColor]];
         [tvc setTank:t];
         
         [[self navigationController] pushViewController:tvc animated:YES];

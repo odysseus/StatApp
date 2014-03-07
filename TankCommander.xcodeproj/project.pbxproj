@@ -40,7 +40,7 @@
 		944377151839526700E1451C /* GunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377141839526700E1451C /* GunView.m */; };
 		944377181839550D00E1451C /* RCFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377171839550D00E1451C /* RCFormatting.m */; };
 		9443771B1839635200E1451C /* TankHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9443771A1839635200E1451C /* TankHeaderView.m */; };
-		9449D70018C9130C00E18A94 /* TankIPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449D6FF18C9130C00E18A94 /* TankIPhoneViewController.m */; };
+		9449D70318C98C5C00E18A94 /* TankIPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449D70218C98C5C00E18A94 /* TankIPhoneViewController.m */; };
 		946FC741182D8DFF0016708A /* AverageTank.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC740182D8DFF0016708A /* AverageTank.m */; };
 		946FC7441831AB580016708A /* TanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7431831AB580016708A /* TanksViewController.m */; };
 		946FC7491831CB900016708A /* RCBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7481831CB900016708A /* RCBaseCell.m */; };
@@ -143,8 +143,8 @@
 		944377171839550D00E1451C /* RCFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFormatting.m; sourceTree = "<group>"; };
 		944377191839635200E1451C /* TankHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankHeaderView.h; sourceTree = "<group>"; };
 		9443771A1839635200E1451C /* TankHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankHeaderView.m; sourceTree = "<group>"; };
-		9449D6FE18C9130C00E18A94 /* TankIPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankIPhoneViewController.h; sourceTree = "<group>"; };
-		9449D6FF18C9130C00E18A94 /* TankIPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankIPhoneViewController.m; sourceTree = "<group>"; };
+		9449D70118C98C5C00E18A94 /* TankIPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankIPhoneViewController.h; path = ../TankIPhoneViewController.h; sourceTree = "<group>"; };
+		9449D70218C98C5C00E18A94 /* TankIPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TankIPhoneViewController.m; path = ../TankIPhoneViewController.m; sourceTree = "<group>"; };
 		946FC73F182D8DFF0016708A /* AverageTank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AverageTank.h; sourceTree = "<group>"; };
 		946FC740182D8DFF0016708A /* AverageTank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AverageTank.m; sourceTree = "<group>"; };
 		946FC7421831AB570016708A /* TanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TanksViewController.h; sourceTree = "<group>"; };
@@ -340,8 +340,8 @@
 			children = (
 				946FC75118330C980016708A /* TankIPadViewController.h */,
 				946FC75218330C980016708A /* TankIPadViewController.m */,
-				9449D6FE18C9130C00E18A94 /* TankIPhoneViewController.h */,
-				9449D6FF18C9130C00E18A94 /* TankIPhoneViewController.m */,
+				9449D70118C98C5C00E18A94 /* TankIPhoneViewController.h */,
+				9449D70218C98C5C00E18A94 /* TankIPhoneViewController.m */,
 				946FC7421831AB570016708A /* TanksViewController.h */,
 				946FC7431831AB580016708A /* TanksViewController.m */,
 				944377011838054D00E1451C /* TiersViewController.h */,
@@ -548,7 +548,7 @@
 				94C8C782183AA90D00B23D8A /* SelectorView.m in Sources */,
 				94D4729D181CEE5000B11466 /* TankGroup.m in Sources */,
 				941A765A1814C4FF0072089F /* Radio.m in Sources */,
-				9449D70018C9130C00E18A94 /* TankIPhoneViewController.m in Sources */,
+				9449D70318C98C5C00E18A94 /* TankIPhoneViewController.m in Sources */,
 				941A76601814C5940072089F /* Engine.m in Sources */,
 				946FC74C1831CC170016708A /* TankCell.m in Sources */,
 				94C8C77C1839DF9C00B23D8A /* RadioView.m in Sources */,

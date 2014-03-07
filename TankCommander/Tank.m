@@ -114,8 +114,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // The validation is being separated into categories, the first is floatKeys,
     // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
-                          @"tier", @"cost", @"crewLevel", @"baseHitpoints", @"gunTraverseArc",
-                          @"speedLimit", @"camoValue", @"viewRange", @"gunDepression", @"gunElevation", nil];
+                          @"tier", @"crewLevel", @"baseHitpoints", @"gunTraverseArc", @"gunElevation",
+                          @"speedLimit", @"camoValue", @"viewRange", @"gunDepression", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -125,7 +125,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // These keys check only for the presence of a value
     NSArray *presenceKeys = [NSArray arrayWithObjects:
                              @"name", @"nationality", @"type", @"hasTurret", @"premiumTank", @"experienceNeeded",
-                             @"hull", @"engine", @"radio", @"suspension", nil];
+                             @"hull", @"engine", @"radio", @"suspension", @"cost", nil];
     for (NSString *key in presenceKeys) {
         if (![self valueForKey:key]) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -133,17 +133,19 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         }
     }
     // Some validations are not needed if the tank is a premium
-    if (!self.premiumTank) {
-        if (self.experienceNeeded < 1) {
-            NSLog(@"Non-premium tank %@ is missing experience needed",
-                  self.name);
-            result = NO;
-        }
-        if (!self.parent | !self.child) {
-            NSLog(@"%@ is missing parent and/or child: parent: %@, child: %@", self.name, self.parent, self.child);
-            result = NO;
-        }
-    }
+    // These are commented out for now since there's no easy way to get this data from the API or elsewhere
+//    if (!self.premiumTank) {
+//        if (self.experienceNeeded < 1) {
+//            NSLog(@"Non-premium tank %@ is missing experience needed",
+//                  self.name);
+//            result = NO;
+//        }
+//        if (!self.parent | !self.child) {
+//            NSLog(@"%@ is missing parent and/or child: parent: %@, child: %@", self.name, self.parent, self.child);
+//            result = NO;
+//        }
+//    }
+    
     // Finally, validate the module arrays to ensure there is only one stock and one top module for each
     NSMutableArray *moduleArrayKeys = [NSMutableArray arrayWithObjects:
                                        @"availableEngines", @"availableSuspensions", @"availableRadios", @"availableGuns",
