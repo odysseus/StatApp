@@ -15,5 +15,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *countryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tankTypeLabel;
 
-
 @end

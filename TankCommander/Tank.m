@@ -237,6 +237,79 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     }
 }
 
+// Rather than store all the information in this hash, it will instead contain the name of the traits
+// to be pulled and that will in turn be used to access them from within the view
+- (NSDictionary *)traitHash
+{
+    NSMutableDictionary *final = [[NSMutableDictionary alloc] init];
+    
+    // Set up the dicitonary structure
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"hull"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"gun"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"suspension"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"radio"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"engine"];
+    if (self.hasTurret) {
+        [final setValue:[[NSMutableArray alloc] init] forKey:@"turret"];
+    }
+    
+    // Other Properties (Either fit them in a list section
+    // or a smaller view at the top
+    // Hitpoints
+    // Weight / Limit
+    // Camo Value
+    
+    // Gun
+    NSMutableArray *gunArr = [final objectForKey:@"gun"];
+    [gunArr addObject:@"penetration"];
+    [gunArr addObject:@"damage"];
+    [gunArr addObject:@"accuracy"];
+    [gunArr addObject:@"aimTime"];
+    [gunArr addObject:@"rateOfFire"];
+    [gunArr addObject:@"damagePerMinute"];
+    [gunArr addObject:@"gunDepression"];
+    [gunArr addObject:@"gunElevation"];
+    
+    // Hull
+    NSMutableArray *hullArr = [final valueForKey:@"hull"];
+    [hullArr addObject:@"frontalHullArmor"];
+    [hullArr addObject:@"sideHullArmor"];
+    [hullArr addObject:@"rearHullArmor"];
+    if (!self.hasTurret) {
+        [hullArr addObject:@"viewRange"];
+        [hullArr addObject:@"gunTraverseArc"];
+    }
+    
+    // Turret (if needed)
+    if (self.hasTurret) {
+        NSMutableArray *turretArr = [final objectForKey:@"turret"];
+        [turretArr addObject:@"frontalTurretArmor"];
+        [turretArr addObject:@"sideTurretArmor"];
+        [turretArr addObject:@"rearTurretArmor"];
+        [turretArr addObject:@"turretTraverse"];
+        [turretArr addObject:@"viewRange"];
+        [turretArr addObject:@"gunTraverseArc"];
+    }
+    
+    // Engine
+    NSMutableArray *engineArr = [final objectForKey:@"engine"];
+    [engineArr addObject:@"horsepower"];
+    [engineArr addObject:@"specificPower"];
+    [engineArr addObject:@"fireChance"];
+    
+    // Radio
+    NSMutableArray *radioArr = [final objectForKey:@"radio"];
+    [radioArr addObject:@"signalRange"];
+    
+    // Suspension
+    NSMutableArray *suspensionArr = [final objectForKey:@"suspension"];
+    [suspensionArr addObject:@"hullTraverse"];
+    [suspensionArr addObject:@"loadLimit"];
+    
+    
+    return final;
+}
+
 // Setting all values to their stock configuration
 - (void)setAllValuesStock
 {
