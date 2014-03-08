@@ -8,6 +8,7 @@
 
 #import "TankIPhoneViewController.h"
 #import "Tank.h"
+#import "AverageTank.h"
 #import "ModulesViewController.h"
 #import "RCButton.h"
 #import "StatCell.h"
@@ -18,13 +19,15 @@
 
 @implementation TankIPhoneViewController
 
-@synthesize tank;
+@synthesize tank, turretedIndex, nonTurretedIndex;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.turretedIndex = @[@"gun", @"hull", @"turret", @"suspension", @"engine", @"radio"];
+        self.nonTurretedIndex = @[@"gun", @"hull", @"suspension", @"engine", @"radio"];
     }
     return self;
 }
@@ -58,9 +61,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    NSDictionary *tankHash = tank.attributesHash;
+    if (tank.hasTurret) {
+        NSArray *modArr = [tankHash valueForKey:turretedIndex[section]];
+        return [modArr count];
+    } else {
+        NSArray *modArr = [tankHash valueForKey:nonTurretedIndex[section]];
+        return [modArr count];
+    }
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -68,9 +77,22 @@
     StatCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    [[cell stat] setText:@"Hello"];
-    [[cell statValue] setText:@"fun"];
-    [[cell statAverage] setText:@"world!"];
+    NSDictionary *tankHash = tank.attributesHash;
+    NSArray *attArr = [[NSArray alloc] init];
+    if (tank.hasTurret) {
+        attArr = [tankHash objectForKey:turretedIndex[indexPath.section]];
+    } else {
+        attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
+    }
+    
+    NSString *name = [NSString stringWithFormat:@"%@", attArr[indexPath.row][1]];
+    NSString *value = [NSString stringWithFormat:@"%@", [tank valueForKey:attArr[indexPath.row][0]]];
+    NSString *average = [NSString stringWithFormat:@"%@", [tank.averageTank valueForKey:attArr[indexPath.row][0]]];
+    
+    NSLog(@"%@", attArr[indexPath.row]);
+    [[cell stat] setText:name];
+    [[cell statValue] setText:value];
+    [[cell statAverage] setText:average];
     
     return cell;
 }
@@ -120,12 +142,6 @@
         [self.navigationController pushViewController:mvc animated:YES];
     }
 }
-
-- (void)buttonPress
-{
-    NSLog(@"Button Pressed");
-}
-
 
 /*
 // Override to support conditional editing of the table view.

@@ -15,6 +15,6 @@
     frontalHullArmor, sideHullArmor, rearHullArmor, frontalTurretArmor, sideTurretArmor, rearTurretArmor,
     effectiveFrontalHullArmor, effectiveSideHullArmor, effectiveRearHullArmor, effectiveFrontalTurretArmor,
     effectiveSideTurretArmor, effectiveRearTurretArmor, hullTraverse, turretTraverse, viewRange, fireChance,
-    horsepower, signalRange;
+    horsepower, signalRange, loadLimit;
 
 @end

@@ -12,7 +12,9 @@
 
 @interface TankIPhoneViewController : UITableViewController
 
-@property (nonatomic) Tank *tank;
+@property (nonatomic, weak) Tank *tank;
+@property (nonatomic) NSArray *turretedIndex;
+@property (nonatomic) NSArray *nonTurretedIndex;
 
 - (void)pushModulesViewController:(RCButton *)sender;
 

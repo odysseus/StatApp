@@ -38,6 +38,7 @@
 @property (nonatomic) float horsepower;
 @property (nonatomic) float fireChance;
 @property (nonatomic) float signalRange;
+@property (nonatomic) float loadLimit;
 
 // Armor Properties
 @property (nonatomic) float frontalHullArmor;

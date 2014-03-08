@@ -73,7 +73,7 @@ typedef enum TankNationality : NSUInteger {
 
 // Descriptive Methods
 - (NSArray *)equippedModulesNameArray;
-- (NSDictionary *)traitHash;
+- (NSDictionary *)attributesHash;
 
 // Pass through properties
 - (NSArray *)availableGuns;
@@ -88,6 +88,8 @@ typedef enum TankNationality : NSUInteger {
 - (float)roundsInDrum;
 - (float)drumReload;
 - (float)timeBetweenShots;
+- (float)burstDamage;
+- (float)burstLength;
 - (float)loadLimit;
 - (float)viewRange;
 - (float)horsepower;
