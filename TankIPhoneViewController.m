@@ -10,6 +10,7 @@
 #import "Tank.h"
 #import "ModulesViewController.h"
 #import "RCButton.h"
+#import "StatCell.h"
 
 @interface TankIPhoneViewController ()
 
@@ -37,7 +38,7 @@
     
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
-           forCellReuseIdentifier:@"Cell"];
+           forCellReuseIdentifier:@"StatCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,10 +64,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"StatCell";
+    StatCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    [[cell stat] setText:@"Hello"];
+    [[cell statValue] setText:@"fun"];
+    [[cell statAverage] setText:@"world!"];
     
     return cell;
 }
@@ -78,11 +82,15 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    // Grab the array of modules for the tank
     NSArray *modArray = self.tank.equippedModulesNameArray;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
+    // Create a view to add the button to
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, width, 44)];
+    [headerView setBackgroundColor:[UIColor whiteColor]];
     
+    // Create and format the button
     RCButton *button = [[RCButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
     [button setButtonData:modArray[section][1]];
     [button setTitle:modArray[section][0] forState:UIControlStateNormal];
@@ -91,12 +99,15 @@
     [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     
+    // Set the button target
     [button addTarget:self
                action:@selector(pushModulesViewController:)
      forControlEvents:UIControlEventTouchUpInside];
     
+    // Add it to the container view
     [headerView addSubview:button];
     
+    // and return it
     return headerView;
 }
 
