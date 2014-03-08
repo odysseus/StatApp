@@ -42,6 +42,10 @@
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
+    
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+    [header setBackgroundColor:[UIColor blueColor]];
+    self.tableView.tableHeaderView = header;
 }
 
 - (void)didReceiveMemoryWarning
