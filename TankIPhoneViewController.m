@@ -9,6 +9,7 @@
 #import "TankIPhoneViewController.h"
 #import "Tank.h"
 #import "ModulesViewController.h"
+#import "RCButton.h"
 
 @interface TankIPhoneViewController ()
 
@@ -27,23 +28,12 @@
     return self;
 }
 
-//- (void)viewDidLoad
-//{
-//    [super viewDidLoad];
-//
-//    // Uncomment the following line to preserve selection between presentations.
-//    // self.clearsSelectionOnViewWillAppear = NO;
-// 
-//    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Load the nib file
-    UINib *nib = [UINib nibWithNibName:@"TankCell" bundle:nil];
+    UINib *nib = [UINib nibWithNibName:@"StatCell" bundle:nil];
     
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
@@ -93,15 +83,16 @@
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, width, 44)];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
-    [button setTitle:modArray[section] forState:UIControlStateNormal];
+    RCButton *button = [[RCButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
+    [button setButtonData:modArray[section][1]];
+    [button setTitle:modArray[section][0] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont systemFontOfSize:16.0]];
     [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     
     [button addTarget:self
-               action:@selector(pushModulesViewController)
+               action:@selector(pushModulesViewController:)
      forControlEvents:UIControlEventTouchUpInside];
     
     [headerView addSubview:button];
@@ -109,11 +100,14 @@
     return headerView;
 }
 
-- (void)pushModulesViewController
+- (void)pushModulesViewController:(RCButton *)sender
 {
-    ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:@"availableGuns"];
-    [mvc setTankIPhoneViewController:self];
-    [self.navigationController pushViewController:mvc animated:YES];
+    NSString *key = sender.buttonData;
+    if (![key isEqualToString:@"hull"]) {
+        ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:key];
+        [mvc setTankIPhoneViewController:self];
+        [self.navigationController pushViewController:mvc animated:YES];
+    }
 }
 
 - (void)buttonPress

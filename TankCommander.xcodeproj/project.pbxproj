@@ -30,6 +30,9 @@
 		941A76631814EE260072089F /* Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76621814EE260072089F /* Armor.m */; };
 		941A76691815C4B40072089F /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A76681815C4B40072089F /* Shell.m */; };
 		941A766C1815C7CB0072089F /* TankStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 941A766B1815C7CB0072089F /* TankStore.m */; };
+		941E81CA18CA97F200939CB7 /* RCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 941E81C918CA97F200939CB7 /* RCButton.m */; };
+		941E81CF18CA9EDC00939CB7 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 941E81CE18CA9EDC00939CB7 /* StatCell.m */; };
+		941E81D118CA9EFD00939CB7 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941E81D018CA9EFD00939CB7 /* StatCell.xib */; };
 		944377031838054D00E1451C /* TiersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377021838054D00E1451C /* TiersViewController.m */; };
 		944377061838081600E1451C /* TypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377051838081600E1451C /* TypesViewController.m */; };
 		94437709183812B600E1451C /* TierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94437708183812B600E1451C /* TierCell.m */; };
@@ -126,6 +129,11 @@
 		941A76681815C4B40072089F /* Shell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shell.m; sourceTree = "<group>"; };
 		941A766A1815C7CB0072089F /* TankStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankStore.h; sourceTree = "<group>"; };
 		941A766B1815C7CB0072089F /* TankStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankStore.m; sourceTree = "<group>"; };
+		941E81C818CA97F200939CB7 /* RCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCButton.h; sourceTree = "<group>"; };
+		941E81C918CA97F200939CB7 /* RCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCButton.m; sourceTree = "<group>"; };
+		941E81CD18CA9EDC00939CB7 /* StatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatCell.h; path = ../StatCell.h; sourceTree = "<group>"; };
+		941E81CE18CA9EDC00939CB7 /* StatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatCell.m; path = ../StatCell.m; sourceTree = "<group>"; };
+		941E81D018CA9EFD00939CB7 /* StatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatCell.xib; path = ../StatCell.xib; sourceTree = "<group>"; };
 		944377011838054D00E1451C /* TiersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiersViewController.h; sourceTree = "<group>"; };
 		944377021838054D00E1451C /* TiersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiersViewController.m; sourceTree = "<group>"; };
 		944377041838081600E1451C /* TypesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypesViewController.h; sourceTree = "<group>"; };
@@ -352,6 +360,8 @@
 				94C8C784183AEBBC00B23D8A /* ModulesViewController.m */,
 				946FC7471831CB900016708A /* RCBaseCell.h */,
 				946FC7481831CB900016708A /* RCBaseCell.m */,
+				941E81C818CA97F200939CB7 /* RCButton.h */,
+				941E81C918CA97F200939CB7 /* RCButton.m */,
 				946FC74A1831CC170016708A /* TankCell.h */,
 				946FC74B1831CC170016708A /* TankCell.m */,
 				94437707183812B600E1451C /* TierCell.h */,
@@ -360,6 +370,8 @@
 				9443770D1838168E00E1451C /* TypeCell.m */,
 				94C8C786183AEBDA00B23D8A /* ModuleCell.h */,
 				94C8C787183AEBDA00B23D8A /* ModuleCell.m */,
+				941E81CD18CA9EDC00939CB7 /* StatCell.h */,
+				941E81CE18CA9EDC00939CB7 /* StatCell.m */,
 				94C8C780183AA90D00B23D8A /* SelectorView.h */,
 				94C8C781183AA90D00B23D8A /* SelectorView.m */,
 				944377191839635200E1451C /* TankHeaderView.h */,
@@ -389,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				946FC75318330C980016708A /* TankIPadViewController.xib */,
+				941E81D018CA9EFD00939CB7 /* StatCell.xib */,
 				946FC74D1831CC5C0016708A /* TankCell.xib */,
 				9443770A183812CA00E1451C /* TierCell.xib */,
 				9443770F183816A200E1451C /* TypeCell.xib */,
@@ -491,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				946FC75518330C980016708A /* TankIPadViewController.xib in Resources */,
+				941E81D118CA9EFD00939CB7 /* StatCell.xib in Resources */,
 				941A761F181494D50072089F /* InfoPlist.strings in Resources */,
 				946FC768183415560016708A /* tankDestroyer.png in Resources */,
 				9443770B183812CA00E1451C /* TierCell.xib in Resources */,
@@ -535,6 +549,7 @@
 				946FC741182D8DFF0016708A /* AverageTank.m in Sources */,
 				94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */,
 				941A76571814C4F70072089F /* Gun.m in Sources */,
+				941E81CA18CA97F200939CB7 /* RCButton.m in Sources */,
 				94C8C7791839CF6B00B23D8A /* TurretView.m in Sources */,
 				94C8C788183AEBDA00B23D8A /* ModuleCell.m in Sources */,
 				946FC7441831AB580016708A /* TanksViewController.m in Sources */,
@@ -568,6 +583,7 @@
 				941A765D1814C5100072089F /* Suspension.m in Sources */,
 				94C8C785183AEBBC00B23D8A /* ModulesViewController.m in Sources */,
 				941A764E1814B8E10072089F /* Tank.m in Sources */,
+				941E81CF18CA9EDC00939CB7 /* StatCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

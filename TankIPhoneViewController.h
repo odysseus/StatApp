@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank;
+@class Tank, RCButton;
 
 @interface TankIPhoneViewController : UITableViewController
 
 @property (nonatomic) Tank *tank;
 
-- (void)pushModulesViewController;
+- (void)pushModulesViewController:(RCButton *)sender;
 
 @end

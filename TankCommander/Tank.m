@@ -218,20 +218,20 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     if (self.hasTurret) {
         // Hull, Turret, Gun, Suspension, Engine, Radio
         NSArray *final = @[
-                           [NSString stringWithFormat:@"Hull: %@", self.name],
-                           [NSString stringWithFormat:@"Turret: %@", self.turret.name],
-                           [NSString stringWithFormat:@"Gun: %@", self.gun.name],
-                           [NSString stringWithFormat:@"Suspension: %@", self.suspension.name],
-                           [NSString stringWithFormat:@"Radio: %@", self.radio.name]
+                           @[[NSString stringWithFormat:@"Hull: %@", self.name], @"hull"],
+                           @[[NSString stringWithFormat:@"Turret: %@", self.turret.name], @"availableTurrets"],
+                           @[[NSString stringWithFormat:@"Gun: %@", self.gun.name], @"availableGuns"],
+                           @[[NSString stringWithFormat:@"Suspension: %@", self.suspension.name], @"availableSuspensions"],
+                           @[[NSString stringWithFormat:@"Radio: %@", self.radio.name], @"availableRadios"]
                            ];
         return final;
     } else {
         // Hull, Gun, Suspension, Engine, Radio
         NSArray *final = @[
-                           [NSString stringWithFormat:@"Hull: %@", self.name],
-                           [NSString stringWithFormat:@"Gun: %@", self.gun.name],
-                           [NSString stringWithFormat:@"Suspension: %@", self.suspension.name],
-                           [NSString stringWithFormat:@"Radio: %@", self.radio.name]
+                           @[[NSString stringWithFormat:@"Hull: %@", self.name], @"hull"],
+                           @[[NSString stringWithFormat:@"Gun: %@", self.gun.name], @"availableGuns"],
+                           @[[NSString stringWithFormat:@"Suspension: %@", self.suspension.name], @"availableSuspensions"],
+                           @[[NSString stringWithFormat:@"Radio: %@", self.radio.name], @"availableRadios"]
                            ];
         return final;
     }
