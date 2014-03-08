@@ -43,6 +43,7 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
     
+    // Header for the entire table
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
     [header setBackgroundColor:[UIColor blueColor]];
     self.tableView.tableHeaderView = header;
