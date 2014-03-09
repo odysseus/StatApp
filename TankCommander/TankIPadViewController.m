@@ -45,6 +45,11 @@
     self.view = scrollView;
 }
 
+- (void)reloadData
+{
+    [self viewDidLoad];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     // When view is called to appear
@@ -71,7 +76,7 @@
     // Advance the Y value on the origin point so that subsequent views render from the right spot
     origin.y += headerView.frame.size.height;
     
-    SelectorView *selectorView = [[SelectorView alloc] initWithOrigin:origin andTank:tank];
+    SelectorView *selectorView = [[SelectorView alloc] initForIPadWithOrigin:origin andTank:tank];
     [selectorView setTankViewController:self];
     [self.view addSubview:selectorView];
     origin.y += selectorView.frame.size.height;
@@ -123,27 +128,6 @@
     [super didReceiveMemoryWarning];
     self.view = nil;
     // Dispose of any resources that can be recreated.
-}
-
-- (UILabel *)addLabelToView:(UIView *)view
-                  withFrame:(CGRect)frame
-                       text:(NSString *)text
-                   fontSize:(CGFloat)size
-                  fontColor:(UIColor *)color
-           andTextAlignment:(NSTextAlignment)alignment
-{
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    [label setText:text];
-    [label setFont:[UIFont systemFontOfSize:size]];
-    [label setTextColor:color];
-    [label setTextAlignment:alignment];
-    // If the supplied UIView is nil, add it to self.view by default
-    if (!view) {
-        [self.view addSubview:label];
-    } else {
-        [view addSubview:label];
-    }
-    return label;
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation

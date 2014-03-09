@@ -12,6 +12,8 @@
 #import "ModulesViewController.h"
 #import "RCButton.h"
 #import "StatCell.h"
+#import "RCFormatting.h"
+#import "SelectorView.h"
 
 @interface TankIPhoneViewController ()
 
@@ -43,9 +45,26 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
     
-    // Header for the entire table
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
-    [header setBackgroundColor:[UIColor blueColor]];
+    // Additional Formatting for the header
+    RCFormatting *format = [RCFormatting store];
+    // Container view
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 120)];
+    [header setBackgroundColor:[UIColor whiteColor]];
+    
+    [format addLabelToView:header
+                 withFrame:CGRectMake(0, 10, width, 30)
+                      text:tank.name
+                  fontSize:(format.fontSize * 1.5)
+                 fontColor:format.darkColor
+          andTextAlignment:NSTextAlignmentCenter];
+    
+    CGPoint origin = CGPointMake(0, 40);
+    SelectorView *selectorView = [[SelectorView alloc] initForIPhoneWithOrigin:origin andTank:tank];
+    [selectorView setTankViewController:self];
+    [header addSubview:selectorView];
+        
+    // Finally set the tableHeaderView property
     self.tableView.tableHeaderView = header;
 }
 
@@ -94,7 +113,6 @@
     NSString *value = [NSString stringWithFormat:@"%@", [tank valueForKey:attArr[indexPath.row][0]]];
     NSString *average = [NSString stringWithFormat:@"%@", [tank.averageTank valueForKey:attArr[indexPath.row][0]]];
     
-    NSLog(@"%@", attArr[indexPath.row]);
     [[cell stat] setText:name];
     [[cell statValue] setText:value];
     [[cell statAverage] setText:average];
@@ -147,56 +165,5 @@
         [self.navigationController pushViewController:mvc animated:YES];
     }
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

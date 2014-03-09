@@ -14,11 +14,4 @@
 
 @property (nonatomic) Tank *tank;
 
-- (UILabel *)addLabelToView:(UIView *)view
-                  withFrame:(CGRect)frame
-                       text:(NSString *)text
-                   fontSize:(CGFloat)size
-                  fontColor:(UIColor *)color
-           andTextAlignment:(NSTextAlignment)alignment;
-
 @end
