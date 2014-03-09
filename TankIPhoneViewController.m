@@ -21,7 +21,7 @@
 
 @implementation TankIPhoneViewController
 
-@synthesize tank, turretedIndex, nonTurretedIndex;
+@synthesize tank, turretedIndex, nonTurretedIndex, format;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,6 +30,7 @@
         // Custom initialization
         self.turretedIndex = @[@"gun", @"hull", @"turret", @"suspension", @"engine", @"radio"];
         self.nonTurretedIndex = @[@"gun", @"hull", @"suspension", @"engine", @"radio"];
+        self.format = [RCFormatting store];
     }
     return self;
 }
@@ -45,23 +46,29 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
     
+    
+    CGPoint origin = CGPointMake(0, 10);
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        origin.x += 120;
+    }
+    
     [self.tableView reloadData];
     
     // Adding the Header
-    RCFormatting *format = [RCFormatting store];
     // Container view
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 120)];
     [header setBackgroundColor:[UIColor whiteColor]];
     
     [format addLabelToView:header
-                 withFrame:CGRectMake(0, 10, width, 30)
+                 withFrame:CGRectMake(origin.x, origin.y, width, 30)
                       text:tank.name
                   fontSize:(format.fontSize * 1.5)
                  fontColor:format.darkColor
           andTextAlignment:NSTextAlignmentCenter];
     
-    CGPoint origin = CGPointMake(0, 40);
+    origin.y += 40;
     SelectorView *selectorView = [[SelectorView alloc] initForIPhoneWithOrigin:origin andTank:tank];
     [selectorView setTankViewController:self];
     [header addSubview:selectorView];
@@ -141,7 +148,7 @@
     RCButton *button = [[RCButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
     [button setButtonData:modArray[section][1]];
     [button setTitle:modArray[section][0] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:format.darkColor forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont systemFontOfSize:16.0]];
     [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
@@ -166,6 +173,12 @@
         [mvc setTankViewController:self];
         [self.navigationController pushViewController:mvc animated:YES];
     }
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
+{
+    [self viewDidLoad];
 }
 
 @end

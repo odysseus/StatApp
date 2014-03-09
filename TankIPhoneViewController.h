@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank, RCButton;
+@class Tank, RCButton, RCFormatting;
 
 @interface TankIPhoneViewController : UITableViewController
 
 @property (nonatomic, weak) Tank *tank;
 @property (nonatomic) NSArray *turretedIndex;
 @property (nonatomic) NSArray *nonTurretedIndex;
+@property (nonatomic) RCFormatting *format;
 
 - (void)pushModulesViewController:(RCButton *)sender;
 
