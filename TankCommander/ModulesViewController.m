@@ -22,7 +22,7 @@
 
 @implementation ModulesViewController
 
-@synthesize tank, moduleArray, tankIPadViewController, tankIPhoneViewController;
+@synthesize tank, moduleArray, tankViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -109,11 +109,7 @@
         [tank setValue:mod forKey:key];
     }
     
-    if (tankIPadViewController) {
-        [tankIPadViewController viewDidLoad];
-    } else if (tankIPhoneViewController) {
-        [tankIPhoneViewController.tableView reloadData];
-    }
+    [self.tankViewController viewDidLoad];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -280,6 +280,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     
     // Hull
     NSMutableArray *hullArr = [final valueForKey:@"hull"];
+    [hullArr addObject:@[@"hitpoints", @"Hitpoints"]];
+    [hullArr addObject:@[@"camoValue", @"Camo Value"]];
     [hullArr addObject:@[@"frontalHullArmor", @"Frontal Hull"]];
     [hullArr addObject:@[@"sideHullArmor", @"Side Hull"]];
     [hullArr addObject:@[@"rearHullArmor", @"Rear Hull"]];

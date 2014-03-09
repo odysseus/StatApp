@@ -14,8 +14,7 @@
 
 @property (nonatomic) Tank *tank;
 @property (nonatomic) NSArray *moduleArray;
-@property (nonatomic) TankIPadViewController *tankIPadViewController;
-@property (nonatomic) TankIPhoneViewController *tankIPhoneViewController;
+@property (nonatomic) UIViewController *tankViewController;
 
 - (id)initWithTank:(Tank *)t andKey:(NSString *)key;
 

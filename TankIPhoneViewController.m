@@ -45,7 +45,9 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
     
-    // Additional Formatting for the header
+    [self.tableView reloadData];
+    
+    // Adding the Header
     RCFormatting *format = [RCFormatting store];
     // Container view
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
@@ -161,7 +163,7 @@
     NSString *key = sender.buttonData;
     if (![key isEqualToString:@"hull"]) {
         ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:key];
-        [mvc setTankIPhoneViewController:self];
+        [mvc setTankViewController:self];
         [self.navigationController pushViewController:mvc animated:YES];
     }
 }
