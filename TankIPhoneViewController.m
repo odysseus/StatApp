@@ -117,10 +117,32 @@
     } else {
         attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
     }
+    // Fetching the key, value, and HR variant
+    NSString *key = attArr[indexPath.row][0];
     
     NSString *name = [NSString stringWithFormat:@"%@", attArr[indexPath.row][1]];
-    NSString *value = [NSString stringWithFormat:@"%@", [tank valueForKey:attArr[indexPath.row][0]]];
-    NSString *average = [NSString stringWithFormat:@"%@", [tank.averageTank valueForKey:attArr[indexPath.row][0]]];
+    NSString *value = [NSString stringWithFormat:@"%@", [tank valueForKey:key]];
+    
+    // Autoloaders have stats that don't need averages, the following code ensures that they don't
+    // cause an error by trying to retrieve a nonexistent value from the average tank
+    
+    // List of keys that don't need average values
+    NSArray *noAverages = @[@"roundsInDrum", @"drumReload", @"burstDamage", @"timeBetweenShots"];
+    // Take the current key, loop through the array to make sure it is not included
+    BOOL needsAverage = YES;
+    for (NSString *s in noAverages) {
+        if ([key isEqualToString:s]) {
+            needsAverage = NO;
+        }
+    }
+    
+    // Conditional sets the average value string based on the result of the above loop
+    NSString *average = [[NSString alloc] init];
+    if (needsAverage) {
+        average = [NSString stringWithFormat:@"%@", [tank.averageTank valueForKey:attArr[indexPath.row][0]]];
+    } else {
+        average = @"--";
+    }
     
     [[cell stat] setText:name];
     [[cell statValue] setText:value];
