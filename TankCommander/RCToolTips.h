@@ -14,4 +14,6 @@
 
 + (RCToolTips *)store;
 
+- (NSArray *)valuesForKey:(NSString *)key;
+
 @end

@@ -115,7 +115,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
                           @"tier", @"crewLevel", @"baseHitpoints", @"gunTraverseArc", @"gunElevation",
-                          @"speedLimit", @"camoValue", @"viewRange", @"gunDepression", nil];
+                          @"speedLimit", @"camoValue", @"viewRange", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -125,7 +125,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // These keys check only for the presence of a value
     NSArray *presenceKeys = [NSArray arrayWithObjects:
                              @"name", @"nationality", @"type", @"hasTurret", @"premiumTank", @"experienceNeeded",
-                             @"hull", @"engine", @"radio", @"suspension", @"cost", nil];
+                             @"hull", @"engine", @"radio", @"suspension", @"cost",  @"gunDepression", nil];
     for (NSString *key in presenceKeys) {
         if (![self valueForKey:key]) {
             NSLog(@"%@ is missing %@", self.name, key);

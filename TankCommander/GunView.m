@@ -139,12 +139,17 @@
         
         // Row 2, Column 1
         y += format.rowHeight;
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Aim Time:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"aimTime"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Aim Time"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
