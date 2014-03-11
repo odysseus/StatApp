@@ -65,6 +65,7 @@
         [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"penetration"
                              toView:self
                           withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
                                text:NSLocalizedString(@"Penetration", nil)

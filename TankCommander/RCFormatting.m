@@ -9,6 +9,7 @@
 #import "RCFormatting.h"
 #import "TankIPadViewController.h"
 #import "ModulesViewController.h"
+#import "RCButton.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation RCFormatting
@@ -61,6 +62,11 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     return singleton;
 }
 
+- (RCFormatting *)init
+{
+    return [[self class] store];
+}
+
 - (UILabel *)addLabelToView:(UIView *)view
                   withFrame:(CGRect)frame
                        text:(NSString *)text
@@ -96,7 +102,7 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     return button;
 }
 
-- (UIButton *)addButtonWithTarget:(id)target
+- (RCButton *)addButtonWithTarget:(id)target
                          selector:(SEL)selector
                   andControlEvent:(UIControlEvents)events
                            toView:(UIView *)view
@@ -106,10 +112,35 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
                         fontColor:(UIColor *)color
               andContentAlignment:(UIControlContentHorizontalAlignment)alignment
 {
-    UIButton *button = [[UIButton alloc] initWithFrame:frame];
+    RCButton *button = [[RCButton alloc] initWithFrame:frame];
     [button setTitle:text forState:UIControlStateNormal];
     [button setTitleColor:color forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
+    [button setContentHorizontalAlignment:alignment];
+    
+    [view addSubview:button];
+    
+    [button addTarget:target action:selector forControlEvents:events];
+    
+    return button;
+}
+
+- (RCButton *)addButtonWithTarget:(id)target
+                         selector:(SEL)selector
+                  andControlEvent:(UIControlEvents)events
+                   withButtonData:(NSString *)buttonData
+                           toView:(UIView *)view
+                        withFrame:(CGRect)frame
+                             text:(NSString *)text
+                         fontSize:(CGFloat)size
+                        fontColor:(UIColor *)color
+              andContentAlignment:(UIControlContentHorizontalAlignment)alignment
+{
+    RCButton *button = [[RCButton alloc] initWithFrame:frame];
+    [button setTitle:text forState:UIControlStateNormal];
+    [button setTitleColor:color forState:UIControlStateNormal];
+    [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
+    [button setButtonData:buttonData];
     [button setContentHorizontalAlignment:alignment];
     
     [view addSubview:button];
@@ -145,7 +176,6 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     [fullscreen addTarget:self
                    action:@selector(dismissView:)
          forControlEvents:UIControlEventTouchUpInside];
-    
     
     UIView *textView = [[UIView alloc] init];
     CGRect bounds = [UIScreen mainScreen].bounds;

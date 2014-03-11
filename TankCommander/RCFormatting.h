@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class TankIPadViewController, Tank;
+@class TankIPadViewController, Tank, RCButton;
 
 @interface RCFormatting : NSObject
 
@@ -50,9 +50,19 @@
                      fontSize:(CGFloat)size
                     fontColor:(UIColor *)color
           andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
-- (UIButton *)addButtonWithTarget:(id)target
+- (RCButton *)addButtonWithTarget:(id)target
                          selector:(SEL)selector
                   andControlEvent:(UIControlEvents)events
+                           toView:(UIView *)view
+                        withFrame:(CGRect)frame
+                             text:(NSString *)text
+                         fontSize:(CGFloat)size
+                        fontColor:(UIColor *)color
+              andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
+- (RCButton *)addButtonWithTarget:(id)target
+                         selector:(SEL)selector
+                  andControlEvent:(UIControlEvents)events
+                   withButtonData:(NSString *)buttonData
                            toView:(UIView *)view
                         withFrame:(CGRect)frame
                              text:(NSString *)text

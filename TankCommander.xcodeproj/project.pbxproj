@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		941289C91818AC53008C69E7 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 941289C81818AC53008C69E7 /* Module.m */; };
+		9418A83718CE4A6C00C3A06B /* RCToolTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418A83618CE4A6C00C3A06B /* RCToolTips.m */; };
+		9418A83918CE82F500C3A06B /* tooltips.json in Resources */ = {isa = PBXBuildFile; fileRef = 9418A83818CE82F500C3A06B /* tooltips.json */; };
 		941A7615181494D50072089F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7614181494D50072089F /* Foundation.framework */; };
 		941A7617181494D50072089F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7616181494D50072089F /* CoreGraphics.framework */; };
 		941A7619181494D50072089F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941A7618181494D50072089F /* UIKit.framework */; };
@@ -93,6 +95,9 @@
 /* Begin PBXFileReference section */
 		941289C71818AC53008C69E7 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		941289C81818AC53008C69E7 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		9418A83518CE4A6C00C3A06B /* RCToolTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCToolTips.h; sourceTree = "<group>"; };
+		9418A83618CE4A6C00C3A06B /* RCToolTips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCToolTips.m; sourceTree = "<group>"; };
+		9418A83818CE82F500C3A06B /* tooltips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tooltips.json; path = ../../../../../Copy/code/ruby/wot_data/tooltips.json; sourceTree = "<group>"; };
 		941A7611181494D50072089F /* TankCommander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankCommander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941A7614181494D50072089F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		941A7616181494D50072089F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -392,6 +397,8 @@
 				94C8C77E1839E66800B23D8A /* SuspensionView.m */,
 				944377161839550D00E1451C /* RCFormatting.h */,
 				944377171839550D00E1451C /* RCFormatting.m */,
+				9418A83518CE4A6C00C3A06B /* RCToolTips.h */,
+				9418A83618CE4A6C00C3A06B /* RCToolTips.m */,
 				946FC7561833183F0016708A /* IB */,
 			);
 			name = "Views and Controllers";
@@ -413,6 +420,7 @@
 		947B490018B43A5900718680 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9418A83818CE82F500C3A06B /* tooltips.json */,
 				94B87C2D18BD9A0200D6E395 /* tier1.json */,
 				94B87C2E18BD9A0200D6E395 /* tier2.json */,
 				94B87C2F18BD9A0200D6E395 /* tier3.json */,
@@ -520,6 +528,7 @@
 				9443771218381A7400E1451C /* default.png in Resources */,
 				94B87C3B18BD9A0200D6E395 /* tier5.json in Resources */,
 				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
+				9418A83918CE82F500C3A06B /* tooltips.json in Resources */,
 				94B87C3A18BD9A0200D6E395 /* tier4.json in Resources */,
 				946FC76A183415560016708A /* mediumTank.png in Resources */,
 				94B87C3C18BD9A0200D6E395 /* tier6.json in Resources */,
@@ -547,6 +556,7 @@
 			files = (
 				948C359F1816F1C500708761 /* Tier.m in Sources */,
 				946FC741182D8DFF0016708A /* AverageTank.m in Sources */,
+				9418A83718CE4A6C00C3A06B /* RCToolTips.m in Sources */,
 				94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */,
 				941A76571814C4F70072089F /* Gun.m in Sources */,
 				941E81CA18CA97F200939CB7 /* RCButton.m in Sources */,
