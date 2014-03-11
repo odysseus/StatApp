@@ -62,11 +62,6 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     return singleton;
 }
 
-- (RCFormatting *)init
-{
-    return [[self class] store];
-}
-
 - (UILabel *)addLabelToView:(UIView *)view
                   withFrame:(CGRect)frame
                        text:(NSString *)text
