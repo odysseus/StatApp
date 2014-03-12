@@ -62,7 +62,7 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addButtonWithTarget:format
+        [format addButtonWithTarget:tankViewController
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"penetration"
@@ -140,7 +140,7 @@
         // Row 2, Column 1
         y += format.rowHeight;
         
-        [format addButtonWithTarget:format
+        [format addButtonWithTarget:tankViewController
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"aimTime"

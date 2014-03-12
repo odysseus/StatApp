@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *stat;
 @property (weak, nonatomic) IBOutlet UILabel *statValue;
 @property (weak, nonatomic) IBOutlet UILabel *statAverage;
+@property (nonatomic) NSString *dataString;
 
 @end

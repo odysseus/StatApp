@@ -10,6 +10,6 @@
 
 @interface RCButton : UIButton
 
-@property (nonatomic, weak) NSString *buttonData;
+@property (nonatomic, weak) NSString *dataString;
 
 @end

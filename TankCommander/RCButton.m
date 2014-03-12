@@ -10,7 +10,7 @@
 
 @implementation RCButton
 
-@synthesize buttonData;
+@synthesize dataString;
 
 - (id)initWithFrame:(CGRect)frame
 {

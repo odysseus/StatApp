@@ -20,7 +20,7 @@
     if (self) {
         self.viewRange = [[dict objectForKey:@"viewRange"] floatValue];
         self.traverseSpeed = [[dict objectForKey:@"traverseSpeed"] floatValue];
-        self.additionalHP = [[dict objectForKey:@"additionalHP"] integerValue];
+        self.additionalHP = [[dict objectForKey:@"additionalHP"] intValue];
         self.frontArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"frontArmor"]];
         self.sideArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"sideArmor"]];
         self.rearArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"rearArmor"]];

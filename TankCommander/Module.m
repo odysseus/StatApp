@@ -17,12 +17,12 @@
     self = [super init];
     if (self) {
         self.name = [dict objectForKey:@"name"];
-        self.tier = [[dict objectForKey:@"tier"] integerValue];
+        self.tier = [[dict objectForKey:@"tier"] intValue];
         self.weight = [[dict objectForKey:@"weight"] floatValue];
         self.stockModule = [[dict objectForKey:@"stockModule"] boolValue];
         self.topModule = [[dict objectForKey:@"topModule"] boolValue];
-        self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
-        self.cost = [[dict objectForKey:@"cost"] integerValue];
+        self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] intValue];
+        self.cost = [[dict objectForKey:@"cost"] intValue];
     }
     return self;
 }

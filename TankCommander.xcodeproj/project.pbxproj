@@ -364,10 +364,6 @@
 				94C8C783183AEBBC00B23D8A /* ModulesViewController.h */,
 				94C8C784183AEBBC00B23D8A /* ModulesViewController.m */,
 				946FC74A1831CC170016708A /* TankCell.h */,
-				946FC7471831CB900016708A /* RCBaseCell.h */,
-				946FC7481831CB900016708A /* RCBaseCell.m */,
-				941E81C818CA97F200939CB7 /* RCButton.h */,
-				941E81C918CA97F200939CB7 /* RCButton.m */,
 				946FC74B1831CC170016708A /* TankCell.m */,
 				94437707183812B600E1451C /* TierCell.h */,
 				94437708183812B600E1451C /* TierCell.m */,
@@ -399,6 +395,10 @@
 				944377171839550D00E1451C /* RCFormatting.m */,
 				9418A83518CE4A6C00C3A06B /* RCToolTips.h */,
 				9418A83618CE4A6C00C3A06B /* RCToolTips.m */,
+				946FC7471831CB900016708A /* RCBaseCell.h */,
+				946FC7481831CB900016708A /* RCBaseCell.m */,
+				941E81C818CA97F200939CB7 /* RCButton.h */,
+				941E81C918CA97F200939CB7 /* RCButton.m */,
 				946FC7561833183F0016708A /* IB */,
 			);
 			name = "Views and Controllers";
@@ -480,7 +480,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RC;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ryan Case";
 				TargetAttributes = {
 					941A762B181494D50072089F = {
@@ -639,7 +639,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -679,7 +678,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -738,7 +736,6 @@
 		941A7641181494D50072089F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TankCommander.app/TankCommander";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -761,7 +758,6 @@
 		941A7642181494D50072089F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TankCommander.app/TankCommander";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

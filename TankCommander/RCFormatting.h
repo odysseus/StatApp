@@ -69,7 +69,6 @@
                          fontSize:(CGFloat)size
                         fontColor:(UIColor *)color
               andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
-- (void)fullscreenPopupFromButton:(id)sender;
 
 
 @end

@@ -28,14 +28,14 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         // Mass assignment of attributes from the dictionary parsed from the JSON files
         self.name = [dict objectForKey:@"name"];
         self.nationality = fetchTankNationality([dict objectForKey:@"nation"]);
-        self.tier = [[dict objectForKey:@"tier"] integerValue];
+        self.tier = [[dict objectForKey:@"tier"] intValue];
         self.type = fetchTankType([dict objectForKey:@"type"]);
         self.premiumTank = [[dict objectForKey:@"premiumTank"] boolValue];
         self.available = [[dict objectForKey:@"available"] boolValue];
         self.hasTurret = [[dict objectForKey:@"turreted"] boolValue];
-        self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] integerValue];
-        self.cost = [[dict objectForKey:@"cost"] integerValue];
-        self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] integerValue];
+        self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] intValue];
+        self.cost = [[dict objectForKey:@"cost"] intValue];
+        self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] intValue];
         self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
         self.speedLimit = [[dict objectForKey:@"speedLimit"] floatValue];
         self.camoValue = [[dict objectForKey:@"camoValue"] floatValue];

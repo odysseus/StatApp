@@ -10,7 +10,7 @@
 
 @implementation StatCell
 
-@synthesize stat, statAverage, statValue;
+@synthesize stat, statAverage, statValue, dataString;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

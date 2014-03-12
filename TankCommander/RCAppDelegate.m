@@ -25,13 +25,7 @@
     TankStore *allTanks = [TankStore allTanks];
     
     // Debugging and logging code, this is just manually pulling a group to manipulate in this method, it will
-    // be removed from the final product
-    NSMutableArray *tier8 = allTanks.tier8.all.group;
-    
-    for (Tank *tank in tier8) {
-        //
-    }
-    
+    // be removed from the final product    
     NSString *key = @"viewRange";
     NSString *range = @"all";
     NSString *tier = @"tier8";

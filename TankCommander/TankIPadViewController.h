@@ -14,4 +14,7 @@
 
 @property (nonatomic) Tank *tank;
 
+- (void)fullscreenPopupFromButton:(id)sender;
+- (void)dismissView:(id)sender;
+
 @end

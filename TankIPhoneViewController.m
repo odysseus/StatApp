@@ -14,6 +14,7 @@
 #import "StatCell.h"
 #import "RCFormatting.h"
 #import "SelectorView.h"
+#import "RCToolTips.h"
 
 @interface TankIPhoneViewController ()
 
@@ -147,8 +148,30 @@
     [[cell stat] setText:name];
     [[cell statValue] setText:value];
     [[cell statAverage] setText:average];
+    [cell setDataString:key];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Grab the data and push a viewController with the information about the stat
+    NSDictionary *tankHash = tank.attributesHash;
+    NSArray *attArr = [[NSArray alloc] init];
+    if (tank.hasTurret) {
+        attArr = [tankHash objectForKey:turretedIndex[indexPath.section]];
+    } else {
+        attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
+    }
+    // Fetching the key
+    NSString *key = attArr[indexPath.row][0];
+    // Retrieve the data from the tooltips store
+    RCToolTips *tooltips = [RCToolTips store];
+    NSArray *data = [tooltips valuesForKey:key];
+    
+    UIViewController *statView = [[UIViewController alloc] init];
+    [[statView view] setBackgroundColor:format.debugBlue];
+    [self.navigationController pushViewController:statView animated:YES];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -168,7 +191,7 @@
     
     // Create and format the button
     RCButton *button = [[RCButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
-    [button setButtonData:modArray[section][1]];
+    [button setDataString:modArray[section][1]];
     [button setTitle:modArray[section][0] forState:UIControlStateNormal];
     [button setTitleColor:format.darkColor forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont systemFontOfSize:16.0]];
@@ -189,7 +212,7 @@
 
 - (void)pushModulesViewController:(RCButton *)sender
 {
-    NSString *key = sender.buttonData;
+    NSString *key = sender.dataString;
     if (![key isEqualToString:@"hull"]) {
         ModulesViewController *mvc = [[ModulesViewController alloc] initWithTank:tank andKey:key];
         [mvc setTankViewController:self];
