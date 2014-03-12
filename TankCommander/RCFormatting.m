@@ -17,7 +17,7 @@
 
 @synthesize fontSize, darkColor, lightColor, barColor, debugGreen, debugBlue, debugPurple, columnOneXLabel,
 columnOneXValue, columnTwoXLabel, columnTwoXValue, columnThreeXLabel, columnThreeXValue, labelHeight, labelWidth,
-valueHeight, valueWidth, rowHeight, darkGreenColor;
+valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
 
 + (RCFormatting *)store
 {
@@ -28,6 +28,10 @@ valueHeight, valueWidth, rowHeight, darkGreenColor;
     if (nil == singleton) {
         singleton  = [[[self class] alloc] init];
         // initialize variables here
+        
+        // Store the screen width and height for view centering and such
+        singleton->screenWidth = [UIScreen mainScreen].bounds.size.width;
+        singleton->screenHeight = [UIScreen mainScreen].bounds.size.height;
         
         // Variables to provide consistent layout and colors
         singleton->fontSize = 16.0;

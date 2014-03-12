@@ -23,21 +23,10 @@
     // [TankStore allTanks] inits the singleton store and kicks of the init waterfall that inits and loads all
     // the tanks and their attached modules
     TankStore *allTanks = [TankStore allTanks];
-    
-    // Debugging and logging code, this is just manually pulling a group to manipulate in this method, it will
-    // be removed from the final product    
-    NSString *key = @"viewRange";
-    NSString *range = @"all";
-    NSString *tier = @"tier8";
-    BOOL smallerIsBetter = NO;
-    
-    NSLog(@"Average %@ for %@ in %@: %@",
-          key, range, tier, [[[allTanks valueForKey:tier] valueForKey:range] averageValueForKey:key]);
-    
-    NSString *list = [[[allTanks valueForKey:tier] valueForKey:range]
-                      stringSortedListForKey:key
-                      smallerValuesAreBetter:smallerIsBetter];
-    NSLog(@"\n%@", list);
+    // Mainly to dismiss the annoying "unused variable"
+    if (allTanks) {
+        NSLog(@"Tanks loaded");
+    }
     
     // END DEBUGGING/LOGGING
     

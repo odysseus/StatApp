@@ -12,6 +12,9 @@
 
 @interface RCFormatting : NSObject
 
+@property (nonatomic, readonly) CGFloat screenWidth;
+@property (nonatomic, readonly) CGFloat screenHeight;
+
 @property (nonatomic, readonly) CGFloat fontSize;
 @property (nonatomic, readonly) UIColor *lightColor;
 @property (nonatomic, readonly) UIColor *darkColor;

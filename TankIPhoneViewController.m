@@ -169,8 +169,27 @@
     RCToolTips *tooltips = [RCToolTips store];
     NSArray *data = [tooltips valuesForKey:key];
     
+    // Create a VC to display the stat information
     UIViewController *statView = [[UIViewController alloc] init];
-    [[statView view] setBackgroundColor:format.debugBlue];
+    [[statView view] setBackgroundColor:[UIColor whiteColor]];
+    
+    [format addLabelToView:[statView view]
+                 withFrame:CGRectMake((format.screenWidth - 200) / 2, 80, 200, 44)
+                      text:data[0]
+                  fontSize:format.fontSize * 1.5
+                 fontColor:format.darkColor
+          andTextAlignment:NSTextAlignmentCenter];
+    
+    // Text view with the stat description
+    UITextView *textField = [[UITextView alloc]
+                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 200)];
+    [textField setText:data[2]];
+    [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
+    [textField setTextColor:format.darkColor];
+    [textField setUserInteractionEnabled:NO];
+    
+    [[statView view] addSubview:textField];
+    
     [self.navigationController pushViewController:statView animated:YES];
 }
 
