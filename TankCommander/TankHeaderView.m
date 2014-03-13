@@ -29,6 +29,7 @@
         RCFormatting *format = [RCFormatting store];
         tank = t;
         
+        // Number formatter to pretty-print the cost and XP numbers
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
         [numberFormatter setGroupingSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
         [numberFormatter setGroupingSize:3];
@@ -41,7 +42,7 @@
         
         // Tank Name
         [format addLabelToView:self
-                     withFrame:CGRectMake(60, 0, 360, 50)
+                     withFrame:CGRectMake(60, 0, 400, 50)
                           text:tank.name
                       fontSize:(format.fontSize * 2)
                      fontColor:format.darkColor

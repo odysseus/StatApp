@@ -97,16 +97,24 @@
         [selectStockOrTop addTarget:self
                              action:@selector(selectStockOrTop:)
                    forControlEvents:UIControlEventValueChanged];
-        if (tank.isStock) {
-            [selectStockOrTop setSelectedSegmentIndex:0];
-        } else if (tank.isTop) {
+        // Checking the tank's equipped modules to see which segment to highlight
+        // If the tank only has one set of modules, like premium and tier 10 tanks, set the top segment
+        // and disable the controller, since it wouldn't do anything anyway
+        if (tank.isTop && tank.isStock) {
             [selectStockOrTop setSelectedSegmentIndex:1];
+            [selectStockOrTop setEnabled:NO];
+        } else if (tank.isTop) {
+            // If all values are top, set that segment as highlighted
+            [selectStockOrTop setSelectedSegmentIndex:1];
+        } else if (tank.isStock) {
+            // Same with the stock values
+            [selectStockOrTop setSelectedSegmentIndex:0];
         } else {
+            // If the modules are mixed (some stock, some top, and/or some in between)
+            // then remove the highlights from all segments
             [selectStockOrTop setSelectedSegmentIndex:-1];
         }
-        if (tank.premiumTank) {
-            [selectStockOrTop setEnabled:NO];
-        }
+
         [self addSubview:selectStockOrTop];
         
         // Segmented control for setting the shell type

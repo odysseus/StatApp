@@ -64,20 +64,72 @@
     
     // Container view
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 120)];
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 160)];
     [header setBackgroundColor:[UIColor whiteColor]];
     
+    // Tank Name
     [format addLabelToView:header
-                 withFrame:CGRectMake(origin.x, origin.y, width, 30)
+                 withFrame:CGRectMake(origin.x, origin.y, width, 40)
                       text:tank.name
                   fontSize:(format.fontSize * 1.5)
                  fontColor:format.darkColor
           andTextAlignment:NSTextAlignmentCenter];
     
-    origin.y += 40;
+    origin.y += 25;
+    
+    [format addLabelToView:header
+                 withFrame:CGRectMake(origin.x, origin.y, width, 32)
+                      text:tank.stringNationalityAndType
+                  fontSize:format.fontSize * 0.8
+                 fontColor:format.lightColor
+          andTextAlignment:NSTextAlignmentCenter];
+    
+    origin.y += 25;
+    
+    // UISegmentedControllers to select shell type and stock or top values
     SelectorView *selectorView = [[SelectorView alloc] initForIPhoneWithOrigin:origin andTank:tank];
     [selectorView setTankViewController:self];
     [header addSubview:selectorView];
+    
+    origin.y += 75;
+    
+    UILabel *weightLimit = [format addLabelToView:header
+                                        withFrame:CGRectMake(origin.x + 10, origin.y, 200, 24)
+                                             text:[NSString stringWithFormat:@"Weight/Limit: %0.2f/%0.2f", tank.weight, tank.loadLimit]
+                                         fontSize:format.fontSize * 0.8
+                                        fontColor:format.darkColor
+                                 andTextAlignment:NSTextAlignmentLeft];
+    // Conditional sets the text to red if the tank is over the suspension weight limit
+    if (tank.weight < tank.loadLimit) {
+        [weightLimit setTextColor:format.darkGreenColor];
+    } else {
+        [weightLimit setTextColor:[UIColor redColor]];
+    }
+    
+    // Number formatter to pretty-print the price of the tank
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setGroupingSeparator:[[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
+    [numberFormatter setGroupingSize:3];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    UILabel *costLabel = [format addLabelToView:header
+                                      withFrame:CGRectMake(origin.x + 210, origin.y, 100, 24)
+                                           text:[NSString stringWithFormat:@"Price: %@",
+                                                 [numberFormatter stringFromNumber:
+                                                  [NSNumber numberWithInteger:tank.cost]]]
+                                       fontSize:format.fontSize * 0.8
+                                      fontColor:format.darkColor
+                               andTextAlignment:NSTextAlignmentRight];
+    // Set the price color depending on whether it is a premium or a normal tank
+    if (tank.premiumTank) {
+        [costLabel setTextColor:[UIColor orangeColor]];
+    } else {
+        [costLabel setTextColor:format.lightColor];
+    }
+    // Finally, if the tank is premium but not in the shop, show the price as blue rather than gold
+    if (!tank.available && tank.premiumTank) {
+        [costLabel setTextColor:[UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.6]];
+    }
     
     return header;
 }

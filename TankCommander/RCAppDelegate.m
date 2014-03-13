@@ -20,17 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // [TankStore allTanks] inits the singleton store and kicks of the init waterfall that inits and loads all
+    // [TankStore allTanks] inits the singleton store and kicks off the init waterfall that inits and loads all
     // the tanks and their attached modules
     TankStore *allTanks = [TankStore allTanks];
-    // Mainly to dismiss the annoying "unused variable"
     if (allTanks) {
         NSLog(@"Tanks loaded");
     }
     
+    // BEGIN DEBUGGING/LOGGING
     // END DEBUGGING/LOGGING
     
-    //  ACTUAL METHOD
+    // MAIN EXECUTION
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
