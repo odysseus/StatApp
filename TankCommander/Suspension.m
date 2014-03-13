@@ -10,7 +10,7 @@
 
 @implementation Suspension
 
-@synthesize loadLimit, traverseSpeed;
+@synthesize loadLimit, traverseSpeed, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -18,6 +18,10 @@
     if (self) {
         self.loadLimit = [[dict objectForKey:@"loadLimit"] floatValue];
         self.traverseSpeed = [[dict objectForKey:@"traverseSpeed"] floatValue];
+        NSArray *terrainResistance = [dict objectForKey:@"terrainResistance"];
+        self.hardTerrainResistance = [terrainResistance[0] floatValue];
+        self.mediumTerrainResistance = [terrainResistance[1] floatValue];
+        self.softTerrainResistance = [terrainResistance[2] floatValue];
     }
     return self;
 }

@@ -28,6 +28,12 @@
     }
     
     // BEGIN DEBUGGING/LOGGING
+    
+    // TODO
+    // Incorporate accuracy stats based on turret/tread movement
+    // Double check the proper inclusion of all stats
+    // Is there more in the data that should go in the app, or is it where it needs to be?
+    
     // END DEBUGGING/LOGGING
     
     // MAIN EXECUTION

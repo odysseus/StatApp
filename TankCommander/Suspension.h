@@ -13,6 +13,9 @@
 
 @property (nonatomic) float loadLimit;
 @property (nonatomic) int traverseSpeed;
+@property (nonatomic) float hardTerrainResistance;
+@property (nonatomic) float mediumTerrainResistance;
+@property (nonatomic) float softTerrainResistance;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

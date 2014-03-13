@@ -315,6 +315,10 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     NSMutableArray *suspensionArr = [final objectForKey:@"suspension"];
     [suspensionArr addObject:@[@"hullTraverse", @"Hull Traverse"]];
     [suspensionArr addObject:@[@"loadLimit", @"Load Limit"]];
+    [suspensionArr addObject:@[@"speedLimit", @"Speed Limit"]];
+    [suspensionArr addObject:@[@"hardTerrainResistance", @"Hard Ground Resist"]];
+    [suspensionArr addObject:@[@"mediumTerrainResistance", @"Medium Ground Resist"]];
+    [suspensionArr addObject:@[@"softTerrainResistance", @"Soft Ground Resist"]];
     
     return final;
 }
@@ -724,6 +728,21 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     } else {
         return self.hullTraverse;
     }
+}
+
+- (float)hardTerrainResistance
+{
+    return self.suspension.hardTerrainResistance;
+}
+
+- (float)mediumTerrainResistance
+{
+    return self.suspension.mediumTerrainResistance;
+}
+
+- (float)softTerrainResistance
+{
+    return self.suspension.softTerrainResistance;
 }
 
 // isStock and isTop are used to know when the "Stock Values" or "Top Values" section of the segmented

@@ -140,71 +140,8 @@
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
         
-        // Row 2, Column 1
-        y += format.rowHeight;
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Effective Front:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
-        
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXValue, y, 80, 24)
-                          text:[NSString stringWithFormat:@"%0.0fmm", tank.effectiveFrontalHullArmor]
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
-        
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXValue, y+15, 80, 24)
-                          text:[NSString stringWithFormat:@"%0.0fmm", tank.averageTank.effectiveFrontalHullArmor]
-                      fontSize:format.fontSize
-                     fontColor:format.lightColor
-              andTextAlignment:NSTextAlignmentLeft];
-        
-        // Row 2, Column 2
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Effective Side:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXValue, y, 80, 24)
-                          text:[NSString stringWithFormat:@"%0.0fmm", tank.effectiveSideHullArmor]
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXValue, y+15, 80, 24)
-                          text:[NSString stringWithFormat:@"%0.0fmm", tank.averageTank.effectiveSideHullArmor]
-                      fontSize:format.fontSize
-                     fontColor:format.lightColor
-              andTextAlignment:NSTextAlignmentLeft];
-        
-        // Row 2, Column 3
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Effective Rear:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXValue, y, 80, 24)
-                          text:[NSString stringWithFormat:@"%0.0fmm", tank.effectiveRearHullArmor]
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXValue, y+15, 80, 24)
-                          text:[NSString stringWithFormat:@"%0.0fmm", tank.averageTank.effectiveRearHullArmor]
-                      fontSize:format.fontSize
-                     fontColor:format.lightColor
-              andTextAlignment:NSTextAlignmentLeft];
-        
         if (!tank.hasTurret) {
-            // Row 3, Column 1
+            // Row 2, Column 1
             y += format.rowHeight;
 
             [format addButtonWithTarget:tankViewController

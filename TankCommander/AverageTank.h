@@ -39,6 +39,9 @@
 @property (nonatomic) float fireChance;
 @property (nonatomic) float signalRange;
 @property (nonatomic) float loadLimit;
+@property (nonatomic) float hardTerrainResistance;
+@property (nonatomic) float mediumTerrainResistance;
+@property (nonatomic) float softTerrainResistance;
 
 // Armor Properties
 @property (nonatomic) float frontalHullArmor;

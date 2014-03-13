@@ -111,6 +111,115 @@
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
         
+        // Row 1, Column 3
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"speedLimit"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Speed Limit:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.0f", tank.speedLimit]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.speedLimit]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        // Row 2
+        y += format.rowHeight;
+        
+        //Row 2, Column 1
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"terrainResistance"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth + 10, format.labelHeight)
+                               text:@"Hard Ground Resist:"
+                           fontSize:format.fontSize * 0.8
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.hardTerrainResistance]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnOneXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.hardTerrainResistance]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        //Row 2, Column 2
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"terrainResistance"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Med Ground Resist:"
+                           fontSize:format.fontSize * 0.8
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.mediumTerrainResistance]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnTwoXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.mediumTerrainResistance]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        //Row 2, Column 3
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"terrainResistance"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Soft Ground Resist:"
+                           fontSize:format.fontSize * 0.8
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.softTerrainResistance]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.softTerrainResistance]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        
+        // Finally, set the frame for the entire view
         y += format.rowHeight;
         self.frame = CGRectMake(point.x, point.y, screenWidth, y);
     }

@@ -97,6 +97,9 @@ typedef enum TankNationality : NSUInteger {
 - (float)signalRange;
 - (int)hullTraverse;
 - (int)turretTraverse;
+- (float)hardTerrainResistance;
+- (float)mediumTerrainResistance;
+- (float)softTerrainResistance;
 
 // Calculated properties
 - (int)hitpoints;
