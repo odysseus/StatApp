@@ -12,8 +12,11 @@
 #import "RCFormatting.h"
 #import "Suspension.h"
 #import "Hull.h"
+#import "TankIPadViewController.h"
 
 @implementation HullView
+
+@synthesize tankViewController;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -54,12 +57,16 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Frontal Hull:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"frontalHullArmor"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Frontal Hull:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, 80, 24)
@@ -83,12 +90,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Side Hull:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"sideHullArmor"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Side Hull:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, 80, 24)
@@ -105,12 +116,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Rear Hull:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"rearHullArmor"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Rear Hull:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y, 80, 24)
@@ -191,18 +206,25 @@
         if (!tank.hasTurret) {
             // Row 3, Column 1
             y += format.rowHeight;
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnOneXLabel, y, 120, 24)
-                              text:NSLocalizedString(@"View Range:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
+
+            [format addButtonWithTarget:tankViewController
+                               selector:@selector(fullscreenPopupFromButton:)
+                        andControlEvent:UIControlEventTouchUpInside
+                         withButtonData:@"viewRange"
+                                 toView:self
+                              withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                                   text:@"View Range:"
+                               fontSize:format.fontSize
+                              fontColor:format.darkColor
+                    andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnOneXValue, y, 80, 24)
                               text:[NSString stringWithFormat:@"%0.0f", tank.viewRange]
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnOneXValue, y+15, 80, 24)
                               text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.viewRange]
@@ -211,18 +233,24 @@
                   andTextAlignment:NSTextAlignmentLeft];
             
             // Row 3, Column 2
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnTwoXLabel, y, 120, 24)
-                              text:NSLocalizedString(@"Gun Arc:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
+            [format addButtonWithTarget:tankViewController
+                               selector:@selector(fullscreenPopupFromButton:)
+                        andControlEvent:UIControlEventTouchUpInside
+                         withButtonData:@"gunTraverseArc"
+                                 toView:self
+                              withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                                   text:@"Gun Arc:"
+                               fontSize:format.fontSize
+                              fontColor:format.darkColor
+                    andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnTwoXValue, y, 80, 24)
                               text:[NSString stringWithFormat:@"%0.0f", tank.gunTraverseArc]
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
+            
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnTwoXValue, y+15, 80, 24)
                               text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunTraverseArc]

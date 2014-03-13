@@ -95,6 +95,7 @@
     origin.y += gunView.frame.size.height;
     
     HullView *hullView = [[HullView alloc] initWithOrigin:origin andTank:tank];
+    [hullView setTankViewController:self];
     [self.view addSubview:hullView];
     origin.y += hullView.frame.size.height;
     

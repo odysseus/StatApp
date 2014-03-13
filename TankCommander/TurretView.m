@@ -31,7 +31,7 @@
 {
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     RCFormatting *format = [RCFormatting store];
-
+    
     CGFloat y = format.rowHeight;
     self = [self initWithFrame:CGRectMake(point.x, point.y, screenWidth, y)];
     
@@ -41,7 +41,7 @@
         UIView *barView = [[UIView alloc] initWithFrame:CGRectMake(20, 40, 700, 2)];
         [barView setBackgroundColor:format.barColor];
         [self addSubview:barView];
-                
+        
         [format addButtonWithTarget:self
                            selector:@selector(pushModulesViewController)
                     andControlEvent:UIControlEventTouchUpInside
@@ -60,12 +60,16 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Frontal Turret:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"frontalTurretArmor"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Frontal Turret:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, 80, 24)
@@ -89,12 +93,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Side Turret:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"sideTurretArmor"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Side Turret:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, 80, 24)
@@ -111,12 +119,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Rear Turret:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"rearTurretArmor"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Rear Turret:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y, 80, 24)
@@ -196,18 +208,25 @@
         
         // Row 3, Column 1
         y += format.rowHeight;
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, 120, 24)
-                          text:NSLocalizedString(@"Turret Traverse:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"turretTraverse"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Turret Traverse:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, 80, 24)
                           text:[NSString stringWithFormat:@"%d", tank.turretTraverse]
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y+15, 80, 24)
                           text:[NSString stringWithFormat:@"%d", tank.averageTank.turretTraverse]
@@ -215,46 +234,58 @@
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
         
-            // Row 3, Column 2
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnTwoXLabel, y, 120, 24)
-                              text:NSLocalizedString(@"View Range:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnTwoXValue, y, 80, 24)
-                              text:[NSString stringWithFormat:@"%0.0f", tank.viewRange]
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnTwoXValue, y+15, 80, 24)
-                              text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.viewRange]
-                          fontSize:format.fontSize
-                         fontColor:format.lightColor
-                  andTextAlignment:NSTextAlignmentLeft];
-            
-            // Row 3, Column 3
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXLabel, y, 120, 24)
-                              text:NSLocalizedString(@"Gun Arc:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXValue, y, 80, 24)
-                              text:[NSString stringWithFormat:@"%0.0f", tank.gunTraverseArc]
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXValue, y+15, 80, 24)
-                              text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunTraverseArc]
-                          fontSize:format.fontSize
-                         fontColor:format.lightColor
-                  andTextAlignment:NSTextAlignmentLeft];
-
+        // Row 3, Column 2
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"viewRange"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"View Range:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnTwoXValue, y, 80, 24)
+                          text:[NSString stringWithFormat:@"%0.0f", tank.viewRange]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnTwoXValue, y+15, 80, 24)
+                          text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.viewRange]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        // Row 3, Column 3
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"gunTraverseArc"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Gun Arc:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y, 80, 24)
+                          text:[NSString stringWithFormat:@"%0.0f", tank.gunTraverseArc]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y+15, 80, 24)
+                          text:[NSString stringWithFormat:@"%0.0f", tank.averageTank.gunTraverseArc]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
         y += format.rowHeight;
         self.frame = CGRectMake(point.x, point.y, screenWidth, y);
     }
