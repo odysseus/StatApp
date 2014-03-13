@@ -10,8 +10,11 @@
 #import "Tank.h"
 #import "AverageTank.h"
 #import "RCFormatting.h"
+#import "TankIPadViewController.h"
 
 @implementation TankSubheaderView
+
+@synthesize tankViewController;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -32,13 +35,15 @@
         
         CGFloat y = 20;
         
-        // Row 1, Column 1
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Hitpoints:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        // Row 1, Column 1        
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"hitpoints" toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight) text:@"Hitpoints"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%d", tank.hitpoints]
@@ -71,26 +76,25 @@
                       fontSize:format.fontSize
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
+        // Conditional to set the color of the vehicle weight if the modules weigh more than the
+        // suspension can take
         if (tank.weight > tank.loadLimit) {
             [loadLimit setTextColor:[UIColor redColor]];
         } else {
             [loadLimit setTextColor:format.darkGreenColor];
         }
         
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXValue, y+15, format.valueWidth, format.valueHeight)
-                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.weight]
-                      fontSize:format.fontSize
-                     fontColor:format.lightColor
-              andTextAlignment:NSTextAlignmentLeft];
-        
         // Row 1, Column 3
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Camo Value:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"camoValue"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Camo Value:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.2f", tank.camoValue]

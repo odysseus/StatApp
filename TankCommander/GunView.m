@@ -95,12 +95,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Damage:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"alphaDamage"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Damage: "
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
@@ -117,12 +121,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Accuracy:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"accuracy"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Accuracy"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
@@ -173,6 +181,17 @@
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
         
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"rateOfFire"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Rate of Fire: "
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
                           text:[NSString stringWithFormat:@"%0.2f", tank.rateOfFire]
@@ -188,12 +207,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 2, Column 3
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"DPM:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"damagePerMinute"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"DPM:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
@@ -211,12 +234,17 @@
         
         // Row 3, Column 1
         y += format.rowHeight;
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Depression:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"gunDepression"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Depression:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
@@ -233,12 +261,16 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 3, Column 2
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
-                          text:NSLocalizedString(@"Elevation:", nil)
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor
-              andTextAlignment:NSTextAlignmentLeft];
+        [format addButtonWithTarget:tankViewController
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"gunElevation"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Elevation:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
         
         [format addLabelToView:self
                      withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
@@ -256,12 +288,16 @@
         
         if (tank.autoloader) {
             // Row 3, Column 3
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
-                              text:NSLocalizedString(@"Burst Damage:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
+            [format addButtonWithTarget:tankViewController
+                               selector:@selector(fullscreenPopupFromButton:)
+                        andControlEvent:UIControlEventTouchUpInside
+                         withButtonData:@"burstDamage"
+                                 toView:self
+                              withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                                   text:@"Burst Damage:"
+                               fontSize:format.fontSize
+                              fontColor:format.darkColor
+                    andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
@@ -272,12 +308,17 @@
             
             // Row 4, Column 1
             y += format.rowHeight;
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
-                              text:NSLocalizedString(@"Drum Capacity:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
+            
+            [format addButtonWithTarget:tankViewController
+                               selector:@selector(fullscreenPopupFromButton:)
+                        andControlEvent:UIControlEventTouchUpInside
+                         withButtonData:@"roundsInDrum"
+                                 toView:self
+                              withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                                   text:@"Drum Capacity:"
+                               fontSize:format.fontSize
+                              fontColor:format.darkColor
+                    andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
@@ -287,12 +328,16 @@
                   andTextAlignment:NSTextAlignmentLeft];
             
             // Row 4, Column 2
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
-                              text:NSLocalizedString(@"Between Shots:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
+            [format addButtonWithTarget:tankViewController
+                               selector:@selector(fullscreenPopupFromButton:)
+                        andControlEvent:UIControlEventTouchUpInside
+                         withButtonData:@"timeBetweenShots"
+                                 toView:self
+                              withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                                   text:@"Between Shots:"
+                               fontSize:format.fontSize
+                              fontColor:format.darkColor
+                    andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
@@ -302,12 +347,16 @@
                   andTextAlignment:NSTextAlignmentLeft];
             
             // Row 4, Column 3
-            [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
-                              text:NSLocalizedString(@"Full Reload:", nil)
-                          fontSize:format.fontSize
-                         fontColor:format.darkColor
-                  andTextAlignment:NSTextAlignmentLeft];
+            [format addButtonWithTarget:tankViewController
+                               selector:@selector(fullscreenPopupFromButton:)
+                        andControlEvent:UIControlEventTouchUpInside
+                         withButtonData:@"drumReload"
+                                 toView:self
+                              withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                                   text:@"Full Reload:"
+                               fontSize:format.fontSize
+                              fontColor:format.darkColor
+                    andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
                          withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)

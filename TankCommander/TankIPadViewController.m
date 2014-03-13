@@ -85,6 +85,7 @@
     origin.y += selectorView.frame.size.height;
     
     TankSubheaderView *subheader = [[TankSubheaderView alloc] initWithPoint:origin andTank:tank];
+    [subheader setTankViewController:self];
     [self.view addSubview:subheader];
     origin.y += subheader.frame.size.height;
     

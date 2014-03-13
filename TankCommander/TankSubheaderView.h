@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank;
+@class Tank, TankIPadViewController;
 
 @interface TankSubheaderView : UIView
 {
     Tank *tank;
 }
+
+@property (nonatomic) TankIPadViewController *tankViewController;
 
 - (id)initWithPoint:(CGPoint)point andTank:(Tank *)t;
 
