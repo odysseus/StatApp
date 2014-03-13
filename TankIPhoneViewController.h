@@ -17,6 +17,7 @@
 @property (nonatomic) NSArray *nonTurretedIndex;
 @property (nonatomic) RCFormatting *format;
 
+- (UIView *)tableHeaderView;
 - (void)pushModulesViewController:(RCButton *)sender;
 
 @end

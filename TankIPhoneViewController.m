@@ -47,16 +47,21 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
     
+    // Reload data to deal with changed modules, etc.
+    [self.tableView reloadData];
     
+    // Adding the Header
+    self.tableView.tableHeaderView = [self tableHeaderView];
+}
+
+- (UIView *)tableHeaderView
+{
     CGPoint origin = CGPointMake(0, 10);
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
         origin.x += 120;
     }
     
-    [self.tableView reloadData];
-    
-    // Adding the Header
     // Container view
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 120)];
@@ -73,9 +78,8 @@
     SelectorView *selectorView = [[SelectorView alloc] initForIPhoneWithOrigin:origin andTank:tank];
     [selectorView setTankViewController:self];
     [header addSubview:selectorView];
-        
-    // Finally set the tableHeaderView property
-    self.tableView.tableHeaderView = header;
+    
+    return header;
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,33 +122,54 @@
     } else {
         attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
     }
-    // Fetching the key, value, and HR variant
+    // Fetching the key and HR variant
     NSString *key = attArr[indexPath.row][0];
-    
     NSString *name = [NSString stringWithFormat:@"%@", attArr[indexPath.row][1]];
-    NSString *value = [NSString stringWithFormat:@"%@", [tank valueForKey:key]];
+    
+
+    
+    // Int and float keys should be displayed differently
+    // Create a list of float keys to check against the cell key
+    NSArray *floatKeys = @[@"accuracy", @"aimTime", @"rateOfFire", @"timeBetweenShots", @"specificPower",
+                           @"loadLimit", @"camoValue", @"fireChance"];
+    NSNumber *valueNum = [NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]];
+    NSString *value = [[NSString alloc] init];
+    // If the cell key is a float, then format the string as such
+    // otherwise it will be formatted as an int
+    if ([floatKeys containsObject:key]) {
+        value = [NSString stringWithFormat:@"%0.2f", [valueNum floatValue]];
+    } else {
+        value = [NSString stringWithFormat:@"%ld", (long)[valueNum integerValue]];
+    }
     
     // Autoloaders have stats that don't need averages, the following code ensures that they don't
     // cause an error by trying to retrieve a nonexistent value from the average tank
     
     // List of keys that don't need average values
-    NSArray *noAverages = @[@"roundsInDrum", @"drumReload", @"burstDamage", @"timeBetweenShots"];
-    // Take the current key, loop through the array to make sure it is not included
+    NSArray *noAverages = @[@"roundsInDrum", @"drumReload", @"burstDamage", @"timeBetweenShots", @"loadLimit"];
+    // Test for array inclusion, if the key is not present then it needs an average value displayed
     BOOL needsAverage = YES;
-    for (NSString *s in noAverages) {
-        if ([key isEqualToString:s]) {
-            needsAverage = NO;
-        }
+    if ([noAverages containsObject:key]) {
+        needsAverage = NO;
     }
     
     // Conditional sets the average value string based on the result of the above loop
+    NSNumber *averageNum = [[NSNumber alloc] init];
     NSString *average = [[NSString alloc] init];
-    if (needsAverage) {
-        average = [NSString stringWithFormat:@"%@", [tank.averageTank valueForKey:attArr[indexPath.row][0]]];
-    } else {
+    if (!needsAverage) {
         average = @"--";
+    } else {
+        // If it does need an average, fetch it, then figure out whether it needs to be formatted
+        // as an int or as a float
+        averageNum = [NSNumber numberWithFloat:[[tank.averageTank valueForKey:key] floatValue]];
+        if ([floatKeys containsObject:key]) {
+            average = [NSString stringWithFormat:@"%0.2f", [averageNum floatValue]];
+        } else {
+            average = [NSString stringWithFormat:@"%ld", (long)[averageNum integerValue]];
+        }
     }
     
+    // Set the fields in the cell
     [[cell stat] setText:name];
     [[cell statValue] setText:value];
     [[cell statAverage] setText:average];
@@ -182,7 +207,7 @@
     
     // Text view with the stat description
     UITextView *textField = [[UITextView alloc]
-                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 200)];
+                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 300)];
     [textField setText:data[2]];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];
@@ -229,6 +254,7 @@
     return headerView;
 }
 
+// Pushes a UITableView with the available modules when someone taps on a section header
 - (void)pushModulesViewController:(RCButton *)sender
 {
     NSString *key = sender.dataString;
@@ -242,6 +268,8 @@
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
                                 duration:(NSTimeInterval)duration
 {
+    // Calling this to ensure the view and data reloads on rotation. Probably overkill, but the app
+    // runs in such a small memory footprint anyway it's hard to justify heavy optimization
     [self viewDidLoad];
 }
 
