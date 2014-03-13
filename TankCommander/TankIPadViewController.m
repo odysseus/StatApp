@@ -171,7 +171,7 @@
     // White square to display text
     UIView *popupSquare = [[UIView alloc] init];
     CGRect bounds = [UIScreen mainScreen].bounds;
-    CGSize popupSize = CGSizeMake(400, 300);
+    CGSize popupSize = CGSizeMake(400, 360);
     CGPoint popupOrigin = CGPointMake(0, 0);
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
         popupOrigin = CGPointMake(((bounds.size.height - popupSize.width) / 2), 200);
@@ -196,7 +196,7 @@
           andTextAlignment:NSTextAlignmentCenter];
     
     // Text view with the stat description
-    UITextView *textField = [[UITextView alloc] initWithFrame:CGRectMake(50, 60, 300, 200)];
+    UITextView *textField = [[UITextView alloc] initWithFrame:CGRectMake(50, 60, 300, 260)];
     [textField setText:tooltipArr[2]];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];
