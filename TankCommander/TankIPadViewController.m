@@ -200,7 +200,7 @@
     [textField setText:tooltipArr[2]];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];
-    [textField setUserInteractionEnabled:NO];
+    [textField setEditable:NO];
     
     [popupSquare addSubview:textField];
 }

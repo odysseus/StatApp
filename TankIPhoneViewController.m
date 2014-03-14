@@ -264,7 +264,7 @@
     [textField setText:data[2]];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];
-    [textField setUserInteractionEnabled:NO];
+    [textField setEditable:NO];
     
     [[statView view] addSubview:textField];
     

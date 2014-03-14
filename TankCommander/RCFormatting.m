@@ -33,8 +33,10 @@ valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
         singleton->screenWidth = [UIScreen mainScreen].bounds.size.width;
         singleton->screenHeight = [UIScreen mainScreen].bounds.size.height;
         
-        // Variables to provide consistent layout and colors
-        singleton->fontSize = 16.0;
+        // Font size settings
+        singleton->fontSize = 16;
+        
+        // Color Variables
         singleton->darkColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
         singleton->lightColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
         singleton->barColor = [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];
@@ -88,6 +90,7 @@ valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
     [label setFont:[UIFont systemFontOfSize:size]];
     [label setTextColor:color];
     [label setTextAlignment:alignment];
+    [label setBackgroundColor:[UIColor clearColor]];
     
     [view addSubview:label];
     return label;
@@ -105,6 +108,7 @@ valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
     [button setTitleColor:color forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
     [button setContentHorizontalAlignment:alignment];
+    [button setBackgroundColor:[UIColor clearColor]];
     
     [view addSubview:button];
     
@@ -126,6 +130,7 @@ valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
     [button setTitleColor:color forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
     [button setContentHorizontalAlignment:alignment];
+    [button setBackgroundColor:[UIColor clearColor]];
     
     [view addSubview:button];
     
@@ -151,6 +156,7 @@ valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
     [[button titleLabel] setFont:[UIFont systemFontOfSize:size]];
     [button setDataString:buttonData];
     [button setContentHorizontalAlignment:alignment];
+    [button setBackgroundColor:[UIColor clearColor]];
     
     [view addSubview:button];
     

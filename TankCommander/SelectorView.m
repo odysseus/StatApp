@@ -39,7 +39,14 @@
         // Segmented Control for selecting all stock, or all top values
         NSArray *stockTop = @[@"Stock Values", @"Top Values"];
         UISegmentedControl *selectStockOrTop = [[UISegmentedControl alloc] initWithItems:stockTop];
-        selectStockOrTop.frame = CGRectMake(179, 10, 185, 30);
+        
+        // Frame needs to be different for iOS 6 and iOS 7
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+            selectStockOrTop.frame = CGRectMake(150, 10, 240, 30);
+        } else {
+            selectStockOrTop.frame = CGRectMake(179, 10, 185, 30);
+        }
+        
         [selectStockOrTop setTintColor:format.darkColor];
         [selectStockOrTop addTarget:self
                        action:@selector(selectStockOrTop:)
@@ -54,12 +61,19 @@
         if (tank.premiumTank) {
             [selectStockOrTop setEnabled:NO];
         }
+        
         [self addSubview:selectStockOrTop];
         
         // Segmented control for setting the shell type
         NSArray *shellTypes = tank.gun.stringShellArray;
         UISegmentedControl *selectShellType = [[UISegmentedControl alloc] initWithItems:shellTypes];
-        selectShellType.frame = CGRectMake(404, 10, 185, 30);
+        // Set the frame based on the iOS version
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+            selectShellType.frame = CGRectMake(404, 10, 220, 30);
+        } else {
+            selectShellType.frame = CGRectMake(404, 10, 185, 30);
+        }
+        
         [selectShellType setTintColor:format.darkColor];
         // Add the target
         [selectShellType addTarget:self
@@ -75,6 +89,7 @@
         } else {
             [selectShellType setSelectedSegmentIndex:-1];
         }
+        
         [self addSubview:selectShellType];
     }
     return self;
@@ -92,7 +107,14 @@
         // Segmented Control for selecting all stock, or all top values
         NSArray *stockTop = @[@"Stock Values", @"Top Values"];
         UISegmentedControl *selectStockOrTop = [[UISegmentedControl alloc] initWithItems:stockTop];
-        selectStockOrTop.frame = CGRectMake(65, 5, 185, 30);
+        
+        // Make the segmented controls larger on iOS 6 to compensate for the giant font
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+            selectStockOrTop.frame = CGRectMake(40, 5, 240, 30);
+        } else {
+            selectStockOrTop.frame = CGRectMake(65, 5, 185, 30);
+        }
+        
         [selectStockOrTop setTintColor:format.darkColor];
         [selectStockOrTop addTarget:self
                              action:@selector(selectStockOrTop:)
@@ -120,7 +142,14 @@
         // Segmented control for setting the shell type
         NSArray *shellTypes = tank.gun.stringShellArray;
         UISegmentedControl *selectShellType = [[UISegmentedControl alloc] initWithItems:shellTypes];
-        selectShellType.frame = CGRectMake(65, 40, 185, 30);
+        
+        // Make the segmented controls larger on iOS 6 to compensate for the giant font
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+            selectShellType.frame = CGRectMake(40, 40, 240, 30);
+        } else {
+            selectShellType.frame = CGRectMake(65, 40, 185, 30);
+        }
+        
         [selectShellType setTintColor:format.darkColor];
         // Add the target
         [selectShellType addTarget:self
