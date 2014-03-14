@@ -33,6 +33,9 @@
     // Incorporate accuracy stats based on turret/tread movement
     // Double check the proper inclusion of all stats
     // Is there more in the data that should go in the app, or is it where it needs to be?
+    // Make it workable in iOS 6
+    
+    NSLog(@"iOS Version: %@", [[UIDevice currentDevice] systemVersion]);
     
     // END DEBUGGING/LOGGING
     

@@ -281,13 +281,21 @@
     // Grab the array of modules for the tank
     NSArray *modArray = self.tank.equippedModulesNameArray;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
     // Create a view to add the button to
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, width, 44)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, width-10, 44)];
     [headerView setBackgroundColor:[UIColor whiteColor]];
+    // Expand the size when the device rotates to fit long names
+    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        headerView.frame = CGRectMake(10, 0, height-10, 44);
+    }
     
     // Create and format the button
-    RCButton *button = [[RCButton alloc] initWithFrame:CGRectMake(10, 0, width, 42)];
+    RCButton *button = [[RCButton alloc] initWithFrame:CGRectMake(10, 0, width-10, 44)];
+    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        button.frame = CGRectMake(10, 0, height-10, 44);
+    }
     [button setDataString:modArray[section][1]];
     [button setTitle:modArray[section][0] forState:UIControlStateNormal];
     [button setTitleColor:format.darkColor forState:UIControlStateNormal];
