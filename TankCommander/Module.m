@@ -10,7 +10,7 @@
 
 @implementation Module
 
-@synthesize name, weight, stockModule, topModule, experienceNeeded, cost;
+@synthesize name, weight, stockModule, topModule, experienceNeeded, cost, modScore;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -23,6 +23,7 @@
         self.topModule = [[dict objectForKey:@"topModule"] boolValue];
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] intValue];
         self.cost = [[dict objectForKey:@"cost"] intValue];
+        self.modScore = [[dict objectForKey:@"modScore"] intValue];
     }
     return self;
 }
@@ -37,4 +38,19 @@
     return [NSString stringWithFormat:@"%@: %d", self.name, self.tier];
 }
 
+- (NSComparisonResult)compare:(Module *)otherModule
+{
+    return [[NSNumber numberWithInt:self.modScore] compare:[NSNumber numberWithInt:otherModule.modScore]];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+

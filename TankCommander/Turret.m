@@ -35,6 +35,7 @@
                 self.gun = currentGun;
             }
         }
+        [availableGuns sortUsingSelector:@selector(compare:)];
     }
     return self;
 }

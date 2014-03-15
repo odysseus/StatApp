@@ -17,6 +17,7 @@
 @property (nonatomic) BOOL topModule;
 @property (nonatomic) int experienceNeeded;
 @property (nonatomic) int cost;
+@property (nonatomic) int modScore;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

@@ -33,7 +33,8 @@
     // Incorporate accuracy stats based on turret/tread movement
     // Double check the proper inclusion of all stats
     // Is there more in the data that should go in the app, or is it where it needs to be?
-    // Make it workable in iOS 6
+    // Add a glossary VC and the data to populate it, place that in the footer of the tiersVC
+    // Make it so the module arrays are sorted by module score
     
     NSLog(@"iOS Version: %@", [[UIDevice currentDevice] systemVersion]);
     

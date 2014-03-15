@@ -69,6 +69,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
                 // Finally, add it to the module array
                 [availableTurrets addObject:currentTurret];
             }
+            [availableTurrets sortUsingSelector:@selector(compare:)];
         }
         
         // Same concept as above
@@ -78,6 +79,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             Engine *currentEngine = [[Engine alloc] initWithDict:[engineValues objectForKey:key]];
             [availableEngines addObject:currentEngine];
         }
+        [availableEngines sortUsingSelector:@selector(compare:)];
         
         // Same concept as above
         NSDictionary *suspensionValues = [dict objectForKey:@"suspensions"];
@@ -86,6 +88,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             Suspension *currentSuspension = [[Suspension alloc] initWithDict:[suspensionValues objectForKey:key]];
             [availableSuspensions addObject:currentSuspension];
         }
+        [availableSuspensions sortUsingSelector:@selector(compare:)];
 
         // Same concept as above
         NSDictionary *radioValues = [dict objectForKey:@"radios"];
@@ -94,6 +97,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
             Radio *currentRadio = [[Radio alloc] initWithDict:[radioValues objectForKey:key]];
             [availableRadios addObject:currentRadio];
         }
+        [availableRadios sortUsingSelector:@selector(compare:)];
         
         // Finding the weight of the hull is done by taking the stock weight, setting the values to stock, and then
         // subtracting the weight of all the individual modules

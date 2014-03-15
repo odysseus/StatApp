@@ -24,6 +24,7 @@
         self.rearArmor = [[Armor alloc] initWithArray:[dict objectForKey:@"rearArmor"]];
         if (!hasTurret) {
             self.viewRange = [[dict objectForKey:@"viewRange"] floatValue];
+            
             availableGuns = [[NSMutableArray alloc] init];
             NSDictionary *gunValues = [dict objectForKey:@"availableGuns"];
             for (id key in gunValues) {
@@ -34,6 +35,7 @@
                     self.gun = currentGun;
                 }
             }
+            [availableGuns sortUsingSelector:@selector(compare:)];
         }
     }
     return self;
