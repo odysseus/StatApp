@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tier;
+@class Tier, Tank;
 
 @interface TypesViewController : UITableViewController
 
 @property (nonatomic) NSArray *keys;
 @property (nonatomic) Tier *tier;
+@property (nonatomic, weak) Tank *compareTank;
 
-- (id)initWithTier:(Tier *)tier;
+- (id)initWithTier:(Tier *)t;
+- (id)initForCompareWithTier:(Tier *)t andTank:(Tank *)tank;
 
 @end

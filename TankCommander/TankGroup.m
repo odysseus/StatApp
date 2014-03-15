@@ -67,6 +67,15 @@
     return result;
 }
 
+- (void)sort
+{
+    NSSortDescriptor *nationSort = [[NSSortDescriptor alloc] initWithKey:@"nationality" ascending:YES];
+    NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:nationSort, nameSort, nil];
+    
+    [self.group sortUsingDescriptors:sortDescriptors];
+}
+
 - (Tank *)findTankByName:(NSString *)name
 {
     NSArray *result = [group filteredArrayUsingPredicate:
@@ -200,7 +209,7 @@
         for (NSString *key in intKeys) {
             [average setValue:[self medianValueForKey:key] forKey:key];
         }
-        NSArray *floatKeys = @[@"gunTraverseArc", @"speedLimit", @"camoValue", @"penetration", @"aimTime",
+        NSArray *floatKeys = @[@"gunTraverseArc", @"speedLimit", @"penetration", @"aimTime",
                                @"accuracy", @"rateOfFire", @"gunDepression", @"gunElevation", @"weight",
                                @"specificPower", @"damagePerMinute", @"reloadTime", @"alphaDamage",
                                @"frontalHullArmor", @"sideHullArmor", @"rearHullArmor", @"frontalTurretArmor",
@@ -209,7 +218,8 @@
                                @"effectiveSideTurretArmor", @"effectiveRearTurretArmor", @"hullTraverse",
                                @"turretTraverse", @"viewRange", @"horsepower", @"fireChance", @"signalRange",
                                @"loadLimit", @"hardTerrainResistance", @"mediumTerrainResistance",
-                               @"softTerrainResistance"];
+                               @"softTerrainResistance", @"camoValueStationary", @"camoValueMoving",
+                               @"camoValueShooting"];
         for (NSString *key in floatKeys) {
             [average setValue:[self medianValueForKey:key] forKey:key];
         }

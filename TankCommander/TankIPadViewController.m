@@ -20,6 +20,7 @@
 #import "RCButton.h"
 #import "RCFormatting.h"
 #import "RCToolTips.h"
+#import "TiersViewController.h"
 
 @interface TankIPadViewController ()
 
@@ -73,6 +74,9 @@
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
         origin.x += 150;
     }
+    
+    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStyleBordered target:self action:@selector(tankCompare)];
+    [self.navigationItem setRightBarButtonItem:compareButton];
     
     TankHeaderView *headerView = [[TankHeaderView alloc] initWithPoint:origin andTank:tank];
     [self.view addSubview:headerView];
@@ -233,6 +237,12 @@
                                 duration:(NSTimeInterval)duration
 {
     [self viewDidLoad];
+}
+
+- (void)tankCompare
+{
+    TiersViewController *tvc = [[TiersViewController alloc] initForCompareWithTank:tank];
+    [self.navigationController pushViewController:tvc animated:YES];
 }
 
 @end

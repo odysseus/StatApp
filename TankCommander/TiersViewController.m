@@ -18,7 +18,7 @@
 
 @implementation TiersViewController
 
-@synthesize keys, keyStrings, allTanks;
+@synthesize keys, keyStrings, allTanks, compareTank;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,6 +36,18 @@
         allTanks = [TankStore allTanks];
         UINavigationItem *n = [self navigationItem];
         [n setTitle:NSLocalizedString(@"Tanks", nil)];
+    }
+    return self;
+}
+
+// To reuse the drill down system when doing tank comparisons, the VCs have a different init
+// method when being init'ed for comparing that stores a pointer to the first tank and carries
+// it through all the new VCs
+- (id)initForCompareWithTank:(Tank *)t
+{
+    self = [self init];
+    if (self) {
+        self.compareTank = t;
     }
     return self;
 }
@@ -82,9 +94,29 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *tierKey = keys[indexPath.row];
-    TypesViewController *tvc = [[TypesViewController alloc] initWithTier:[allTanks valueForKey:tierKey]];
+    TypesViewController *tvc;
+    
+    // If a comparison tank is present, then init the next view controller with a pointer to the
+    // comparison tank as well, this ensures that the final view controller recognizes the need
+    // to push a comparison view and not just a stat view
+    if (self.compareTank) {
+        tvc = [[TypesViewController alloc] initForCompareWithTier:[allTanks valueForKey:tierKey]
+                                                          andTank:self.compareTank];
+    } else {
+        tvc = [[TypesViewController alloc] initWithTier:[allTanks valueForKey:tierKey]];
+    }
     
     [self.navigationController pushViewController:tvc animated:YES];
 }
 
 @end
+
+
+
+
+
+
+
+
+
+

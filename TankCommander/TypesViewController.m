@@ -11,6 +11,7 @@
 #import "TypeCell.h"
 #import "TankGroup.h"
 #import "TanksViewController.h"
+#import "Tank.h"
 
 @interface TypesViewController ()
 
@@ -37,6 +38,15 @@
         keys = [tier fetchValidKeys];
         UINavigationItem *n = [self navigationItem];
         [n setTitle:tier.nameString];
+    }
+    return self;
+}
+
+- (id)initForCompareWithTier:(Tier *)t andTank:(Tank *)tank
+{
+    self = [self initWithTier:t];
+    if (self) {
+        self.compareTank = tank;
     }
     return self;
 }
@@ -87,7 +97,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TankGroup *group = [tier valueForKey:keys[indexPath.row]];
-    TanksViewController *tvc = [[TanksViewController alloc] initWithTankGroup:group];
+    TanksViewController *tvc;
+    
+    if (self.compareTank) {
+        // Init a TanksViewController with the comparison tank stored
+        tvc = [[TanksViewController alloc] initForCompareWithTankGroup:group andTank:self.compareTank];
+    } else {
+        // Init a TanksViewController normally
+        tvc = [[TanksViewController alloc] initWithTankGroup:group];
+    }
+    
     [self.navigationController pushViewController:tvc animated:YES];
 }
 

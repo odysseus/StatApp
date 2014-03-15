@@ -10,11 +10,12 @@
 
 @implementation AverageTank
 
-@synthesize name, experienceNeeded, cost, hitpoints, gunTraverseArc, specificPower, speedLimit, camoValue, penetration,
+@synthesize name, experienceNeeded, cost, hitpoints, gunTraverseArc, specificPower, speedLimit, penetration,
     aimTime, accuracy, rateOfFire, gunDepression, gunElevation, weight, damagePerMinute, reloadTime, alphaDamage,
     frontalHullArmor, sideHullArmor, rearHullArmor, frontalTurretArmor, sideTurretArmor, rearTurretArmor,
     effectiveFrontalHullArmor, effectiveSideHullArmor, effectiveRearHullArmor, effectiveFrontalTurretArmor,
     effectiveSideTurretArmor, effectiveRearTurretArmor, hullTraverse, turretTraverse, viewRange, fireChance,
-    horsepower, signalRange, loadLimit, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance;
+    horsepower, signalRange, loadLimit, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance,
+    camoValueStationary, camoValueMoving, camoValueShooting;
 
 @end

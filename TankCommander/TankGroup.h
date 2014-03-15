@@ -24,6 +24,7 @@
 - (void)addAverageTank;
 - (int)count;
 - (id)objectAtIndex:(long)index;
+- (void)sort;
 
 // Data Sorting Methods
 - (NSArray *)sortedListForKey:(NSString *)key smallerValuesAreBetter:(BOOL)yesno;

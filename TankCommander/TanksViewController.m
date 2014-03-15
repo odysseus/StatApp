@@ -20,7 +20,7 @@
 
 @implementation TanksViewController
 
-@synthesize tankGroup, tankView;
+@synthesize tankGroup, tankView, compareTank;
 
 - (id)init
 {
@@ -42,6 +42,15 @@
         tankGroup = group;
         UINavigationItem *n = [self navigationItem];
         [n setTitle:tankGroup.typeString];
+    }
+    return self;
+}
+
+- (id)initForCompareWithTankGroup:(TankGroup *)group andTank:(Tank *)tank
+{
+    self = [self initWithTankGroup:group];
+    if (self) {
+        self.compareTank = tank;
     }
     return self;
 }
@@ -82,20 +91,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        // iPad View
-        TankIPadViewController *tvc = [[TankIPadViewController alloc] init];
-        Tank *t = [tankGroup objectAtIndex:indexPath.row];
-        [tvc setTank:t];
-        
-        [[self navigationController] pushViewController:tvc animated:YES];
+    if (self.compareTank) {
+        // Create a comparison view instead of the tank view
+        NSLog(@"Tank Compare");
     } else {
-        // iPhone View
-        TankIPhoneViewController *tvc = [[TankIPhoneViewController alloc] init];
-        Tank *t = [tankGroup objectAtIndex:indexPath.row];
-        [tvc setTank:t];
-        
-        [[self navigationController] pushViewController:tvc animated:YES];
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            // iPad View
+            TankIPadViewController *tvc = [[TankIPadViewController alloc] init];
+            Tank *t = [tankGroup objectAtIndex:indexPath.row];
+            [tvc setTank:t];
+            
+            [[self navigationController] pushViewController:tvc animated:YES];
+        } else {
+            // iPhone View
+            TankIPhoneViewController *tvc = [[TankIPhoneViewController alloc] init];
+            Tank *t = [tankGroup objectAtIndex:indexPath.row];
+            [tvc setTank:t];
+            
+            [[self navigationController] pushViewController:tvc animated:YES];
+        }
     }
 }
 

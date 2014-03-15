@@ -68,7 +68,7 @@
 
 - (NSString *)stringSummary
 {
-    return [NSString stringWithFormat:@"Penetration: %0.0f - Damage: %0.0f - ROF: %0.2f",
+    return [NSString stringWithFormat:@"Pen: %0.0f - Dmg: %0.0f - ROF: %0.2f",
             self.round.penetration, self.round.damage, self.rateOfFire];
 }
 

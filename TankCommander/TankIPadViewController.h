@@ -16,5 +16,6 @@
 
 - (void)fullscreenPopupFromButton:(id)sender;
 - (void)dismissView:(id)sender;
+- (void)tankCompare;
 
 @end

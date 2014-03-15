@@ -20,14 +20,19 @@
     if (self) {
         lightTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"lightTank"]];
         lightTanks.typeString = @"Light Tanks";
+        [lightTanks sort];
         mediumTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"mediumTank"]];
         mediumTanks.typeString = @"Medium Tanks";
+        [mediumTanks sort];
         heavyTanks = [[TankGroup alloc] initWithDict:[dict objectForKey:@"heavyTank"]];
         heavyTanks.typeString = @"Heavy Tanks";
+        [heavyTanks sort];
         tankDestroyers = [[TankGroup alloc] initWithDict:[dict objectForKey:@"AT-SPG"]];
         tankDestroyers.typeString = @"Tank Destroyers";
+        [tankDestroyers sort];
         SPGs = [[TankGroup alloc] initWithDict:[dict objectForKey:@"SPG"]];
         SPGs.typeString = @"Artillery/SPGs";
+        [SPGs sort];
     }
     return self;
 }

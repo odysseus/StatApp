@@ -52,7 +52,9 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) float stockWeight;
 @property (nonatomic) float gunTraverseArc;
 @property (nonatomic) float speedLimit;
-@property (nonatomic) float camoValue;
+@property (nonatomic) float camoValueStationary;
+@property (nonatomic) float camoValueMoving;
+@property (nonatomic) float camoValueShooting;
 
 // Strings to define the tanks before and after it
 @property (nonatomic) NSString *parent;

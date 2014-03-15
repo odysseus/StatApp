@@ -69,6 +69,8 @@
 		94B87C3E18BD9A0200D6E395 /* tier8.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B87C3418BD9A0200D6E395 /* tier8.json */; };
 		94B87C3F18BD9A0200D6E395 /* tier9.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B87C3518BD9A0200D6E395 /* tier9.json */; };
 		94B87C4018BD9A0200D6E395 /* tier10.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B87C3618BD9A0200D6E395 /* tier10.json */; };
+		94BF603B18D4D1BF0007D0BC /* RCDictionaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF603A18D4D1BF0007D0BC /* RCDictionaryTableViewController.m */; };
+		94BF603E18D4E9060007D0BC /* TankComparisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF603D18D4E9060007D0BC /* TankComparisonTableViewController.m */; };
 		94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C76F183969A600B23D8A /* TankSubheaderView.m */; };
 		94C8C7731839739A00B23D8A /* HullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7721839739A00B23D8A /* HullView.m */; };
 		94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7751839CF4F00B23D8A /* EngineView.m */; };
@@ -187,6 +189,10 @@
 		94B87C3418BD9A0200D6E395 /* tier8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tier8.json; path = ../../../../../Copy/code/ruby/wot_data/tier_files/tier8.json; sourceTree = "<group>"; };
 		94B87C3518BD9A0200D6E395 /* tier9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tier9.json; path = ../../../../../Copy/code/ruby/wot_data/tier_files/tier9.json; sourceTree = "<group>"; };
 		94B87C3618BD9A0200D6E395 /* tier10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tier10.json; path = ../../../../../Copy/code/ruby/wot_data/tier_files/tier10.json; sourceTree = "<group>"; };
+		94BF603918D4D1BF0007D0BC /* RCDictionaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDictionaryTableViewController.h; sourceTree = "<group>"; };
+		94BF603A18D4D1BF0007D0BC /* RCDictionaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDictionaryTableViewController.m; sourceTree = "<group>"; };
+		94BF603C18D4E9060007D0BC /* TankComparisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankComparisonTableViewController.h; sourceTree = "<group>"; };
+		94BF603D18D4E9060007D0BC /* TankComparisonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankComparisonTableViewController.m; sourceTree = "<group>"; };
 		94C8C76E183969A600B23D8A /* TankSubheaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankSubheaderView.h; sourceTree = "<group>"; };
 		94C8C76F183969A600B23D8A /* TankSubheaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankSubheaderView.m; sourceTree = "<group>"; };
 		94C8C7711839739A00B23D8A /* HullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HullView.h; sourceTree = "<group>"; };
@@ -355,6 +361,8 @@
 				946FC75218330C980016708A /* TankIPadViewController.m */,
 				9449D70118C98C5C00E18A94 /* TankIPhoneViewController.h */,
 				9449D70218C98C5C00E18A94 /* TankIPhoneViewController.m */,
+				94BF603C18D4E9060007D0BC /* TankComparisonTableViewController.h */,
+				94BF603D18D4E9060007D0BC /* TankComparisonTableViewController.m */,
 				946FC7421831AB570016708A /* TanksViewController.h */,
 				946FC7431831AB580016708A /* TanksViewController.m */,
 				944377011838054D00E1451C /* TiersViewController.h */,
@@ -363,6 +371,8 @@
 				944377051838081600E1451C /* TypesViewController.m */,
 				94C8C783183AEBBC00B23D8A /* ModulesViewController.h */,
 				94C8C784183AEBBC00B23D8A /* ModulesViewController.m */,
+				94BF603918D4D1BF0007D0BC /* RCDictionaryTableViewController.h */,
+				94BF603A18D4D1BF0007D0BC /* RCDictionaryTableViewController.m */,
 				946FC74A1831CC170016708A /* TankCell.h */,
 				946FC74B1831CC170016708A /* TankCell.m */,
 				94437707183812B600E1451C /* TierCell.h */,
@@ -577,6 +587,8 @@
 				941A76601814C5940072089F /* Engine.m in Sources */,
 				946FC74C1831CC170016708A /* TankCell.m in Sources */,
 				94C8C77C1839DF9C00B23D8A /* RadioView.m in Sources */,
+				94BF603B18D4D1BF0007D0BC /* RCDictionaryTableViewController.m in Sources */,
+				94BF603E18D4E9060007D0BC /* TankComparisonTableViewController.m in Sources */,
 				941A76631814EE260072089F /* Armor.m in Sources */,
 				941A76691815C4B40072089F /* Shell.m in Sources */,
 				941A76541814C4DB0072089F /* Turret.m in Sources */,

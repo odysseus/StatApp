@@ -183,8 +183,9 @@
     // Int and float keys should be displayed differently
     // Create a list of float keys to check against the cell key
     NSArray *floatKeys = @[@"accuracy", @"aimTime", @"rateOfFire", @"timeBetweenShots", @"specificPower",
-                           @"loadLimit", @"camoValue", @"fireChance", @"hardTerrainResistance",
-                           @"mediumTerrainResistance", @"softTerrainResistance"];
+                           @"loadLimit", @"fireChance", @"camoValueStationary", @"camoValueMoving",
+                           @"camoValueShooting", @"hardTerrainResistance", @"mediumTerrainResistance",
+                           @"softTerrainResistance"];
     NSNumber *valueNum = [NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]];
     NSString *value = [[NSString alloc] init];
     // If the cell key is a float, then format the string as such

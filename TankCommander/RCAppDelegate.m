@@ -34,7 +34,12 @@
     // Double check the proper inclusion of all stats
     // Is there more in the data that should go in the app, or is it where it needs to be?
     // Add a glossary VC and the data to populate it, place that in the footer of the tiersVC
-    // Make it so the module arrays are sorted by module score
+    // Possibly add a new root VC to deal with the new stuff being added
+    // TankScore
+    // Add ability to get sorted lists of individual stats?
+    // Add camo values for on the move and after firing
+    // Add accuracy loss numbers
+    //
     
     NSLog(@"iOS Version: %@", [[UIDevice currentDevice] systemVersion]);
     

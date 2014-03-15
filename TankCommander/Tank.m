@@ -19,7 +19,8 @@
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
 availableSuspensions, availableTurrets, experienceNeeded, cost, premiumTank, gunTraverseArc, crewLevel, speedLimit,
-baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, stockWeight, available;
+baseHitpoints, parent, child, nationality, tier, type, averageTank, stockWeight, available, camoValueStationary,
+camoValueMoving, camoValueShooting;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -38,7 +39,10 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
         self.baseHitpoints = [[dict objectForKey:@"baseHitpoints"] intValue];
         self.gunTraverseArc = [[dict objectForKey:@"gunArc"] floatValue];
         self.speedLimit = [[dict objectForKey:@"speedLimit"] floatValue];
-        self.camoValue = [[dict objectForKey:@"camoValue"] floatValue];
+        NSArray *camoValues = [dict objectForKey:@"camoValues"];
+        self.camoValueStationary = [camoValues[0] floatValue];
+        self.camoValueMoving = [camoValues[1] floatValue];
+        self.camoValueShooting = [camoValues[2] floatValue];
         self.crewLevel = [[dict objectForKey:@"crewLevel"] floatValue];
         self.topWeight = ([[dict objectForKey:@"topWeight"] floatValue] * 1000);
         self.stockWeight = ([[dict objectForKey:@"stockWeight"] floatValue] * 1000);
@@ -119,7 +123,8 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // which require both non-null and nonzero values
     NSArray *floatKeys = [NSArray arrayWithObjects:
                           @"tier", @"crewLevel", @"baseHitpoints", @"gunTraverseArc", @"gunElevation",
-                          @"speedLimit", @"camoValue", @"viewRange", nil];
+                          @"speedLimit", @"camoValueStationary", @"camoValueMoving",
+                          @"camoValueShooting", @"viewRange", nil];
     for (NSString *key in floatKeys) {
         if ([[self valueForKey:key] floatValue] == 0.0) {
             NSLog(@"%@ is missing %@", self.name, key);
@@ -285,7 +290,7 @@ baseHitpoints, parent, child, nationality, tier, type, camoValue, averageTank, s
     // Hull
     NSMutableArray *hullArr = [final valueForKey:@"hull"];
     [hullArr addObject:@[@"hitpoints", @"Hitpoints"]];
-    [hullArr addObject:@[@"camoValue", @"Camo Value"]];
+    [hullArr addObject:@[@"camoValueStationary", @"Camo Value"]];
     [hullArr addObject:@[@"frontalHullArmor", @"Frontal Hull"]];
     [hullArr addObject:@[@"sideHullArmor", @"Side Hull"]];
     [hullArr addObject:@[@"rearHullArmor", @"Rear Hull"]];

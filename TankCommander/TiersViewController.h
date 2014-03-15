@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class TankStore;
+@class TankStore, Tank;
 
 @interface TiersViewController : UITableViewController
 
 @property (nonatomic) NSArray *keys;
 @property (nonatomic) NSArray *keyStrings;
 @property (nonatomic) TankStore *allTanks;
+@property (nonatomic, weak) Tank *compareTank;
+
+- (id)initForCompareWithTank:(Tank *)t;
 
 @end
