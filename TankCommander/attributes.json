@@ -4,220 +4,264 @@
                         "Penetration",
                         "Penetration",
                         "int",
-                        "The average amount of armor, in mm, that the shell can penetrate at 100 meters.  Penetration is randomized, and the actual value will be +/- 25% of what is listed. So a gun that does 200 average penetration will penetrate between 150mm and 250mm of armor in game, depending on the random number generator (RNG)."
+                        "The average amount of armor, in mm, that the shell can penetrate at 100 meters.  Penetration is randomized, and the actual value will be +/- 25% of what is listed. So a gun that does 200 average penetration will penetrate between 150mm and 250mm of armor in game, depending on the random number generator (RNG).",
+                        "increasing"
                         ],
         "aimTime": [
                     "Aim Time",
                     "Aim Time",
                     "float",
-                    "The time, in seconds, required for the aiming circle to shrink to a third of its size. Normally this means the gun will reach maximum accuracy by this time, but damaged guns, or aiming after shooting can cause aiming to take longer than the stated aim time."
+                    "The time, in seconds, required for the aiming circle to shrink to a third of its size. Normally this means the gun will reach maximum accuracy by this time, but damaged guns, or aiming after shooting can cause aiming to take longer than the stated aim time.",
+                    "decreasing"
                     ],
         "alphaDamage": [
                         "Damage",
                         "Damage",
                         "int",
-                        "Average damage per shot dealt by a penetrating hit. Shots that do not penetrate the hull of the vehicle deal no damage. The actual damage dealt is randomized, and will be +/- 25% of the number listed. For example: A T34 deals 400 average damage per shot, but due to randomization, a single shot can deal as little as 300 or as much as 500 damage."
+                        "Average damage per shot dealt by a penetrating hit. Shots that do not penetrate the hull of the vehicle deal no damage. The actual damage dealt is randomized, and will be +/- 25% of the number listed. For example: A T34 deals 400 average damage per shot, but due to randomization, a single shot can deal as little as 300 or as much as 500 damage.",
+                        "increasing"
                         ],
         "accuracy": [
                      "Accuracy",
                      "Accuracy",
                      "float",
-                     "The accuracy, in meters, of a gun at 100m. So 0.40 accuracy means that at 100m >95% of your shots will land within 0.40m of the middle of the aiming circle. Where shots land is based on the normal distribution, roughly two thirds of your shots will land in the middle half of the circle, and about 96% will land within the whole aiming circle."
+                     "The accuracy, in meters, of a gun at 100m. So 0.40 accuracy means that at 100m >95% of your shots will land within 0.40m of the middle of the aiming circle. Where shots land is based on the normal distribution, roughly two thirds of your shots will land in the middle half of the circle, and about 96% will land within the whole aiming circle.",
+                     "decreasing"
                      ],
         "rateOfFire": [
                        "Rate of Fire",
                        "Rate of Fire",
                        "float",
-                       "The number of rounds fired each minute. For autoloaders this number is calculated by determining the number of shots fired in ten minutes and dividing by ten to prevent the drum reload time from throwing off the number."
+                       "The number of rounds fired each minute. For autoloaders this number is calculated by determining the number of shots fired in ten minutes and dividing by ten to prevent the drum reload time from throwing off the number.",
+                       "increasing"
+                       ],
+        "reloadTime": [
+                       "Reload Time",
+                       "Reload (s)",
+                       "float",
+                       "The time, in seconds, to reload the main gun with 100% crew and no equipment or skills modifying",
+                       "decreasing"
                        ],
         "damagePerMinute": [
                             "Damage Per Minute",
                             "DPM",
                             "int",
-                            "Maximum possible damage per minute from the selected shell and gun."
+                            "Maximum possible damage per minute from the selected shell and gun.",
+                            "increasing"
                             ],
         "gunDepression": [
                           "Gun Depression",
                           "Gun Depression",
                           "int",
-                          "With the gun barrel pointing straight out as zero degrees, gun depression (AKA turret depression) is the number of degrees the gun barrel is capable of pointing down. Gun depression is useful when fighting on hills and uneven terrain."
+                          "With the gun barrel pointing straight out as zero degrees, gun depression (AKA turret depression) is the number of degrees the gun barrel is capable of pointing down. Gun depression is useful when fighting on hills and uneven terrain.",
+                          "decreasing"
                           ],
         "gunElevation": [
                          "Gun Elevation",
                          "Gun Elevation",
                          "int",
-                         "With the gun barrel pointing straight out as zero degrees, gun elevation is the number of degrees the gun barrel is capable of pointing upwards. Less useful than gun depression, elevation is used when fighting tanks above you."
+                         "With the gun barrel pointing straight out as zero degrees, gun elevation is the number of degrees the gun barrel is capable of pointing upwards. Less useful than gun depression, elevation is used when fighting tanks above you.",
+                         "increasing"
                          ],
         "burstDamage": [
                         "Burst Damage",
                         "Burst Damage",
                         "int",
-                        "Autoloader-only stat. This number represents the average combined damage from all the rounds in an autoloader drum. In other words, the burst of damage you can generate from firing a full drum."
+                        "Autoloader-only stat. This number represents the average combined damage from all the rounds in an autoloader drum. In other words, the burst of damage you can generate from firing a full drum.",
+                        "increasing"
                         ],
         "roundsInDrum": [
                          "Full Drum Capacity",
                          "Drum Capacity",
                          "int",
-                         "Autoloader-only stat. The number of rounds in a full drum that can be fired before needing a full drum reload."
+                         "Autoloader-only stat. The number of rounds in a full drum that can be fired before needing a full drum reload.",
+                         "increasing"
                          ],
         "timeBetweenShots": [
                              "Time Between Shots",
                              "Between Shots",
                              "float",
-                             "Autoloader only stat. The time, in seconds, between shots when the autoloading drum is not empty."
+                             "Autoloader only stat. The time, in seconds, between shots when the autoloading drum is not empty.",
+                             "decreasing"
                              ],
         "drumReload": [
                        "Full Drum Reload",
                        "Drum Reload",
                        "int",
-                       "Autoloader only stat. The time, in seconds, required to reload the entire drum on an autoloader. To manually trigger reload, hit C in game, note that the full reload time doesn't get any shorter when reloading a drum that is already partially full."
+                       "Autoloader only stat. The time, in seconds, required to reload the entire drum on an autoloader. To manually trigger reload, hit C in game, note that the full reload time doesn't get any shorter when reloading a drum that is already partially full.",
+                       "decreasing"
                        ],
         "frontalHullArmor": [
                              "Frontal Hull Armor",
                              "Frontal Hull",
                              "int",
-                             "Armor, in mm, of the front hull plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce. Also note that most tanks have frontal weakspots on the hull that have less armor than this number indicates."
+                             "Armor, in mm, of the front hull plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce. Also note that most tanks have frontal weakspots on the hull that have less armor than this number indicates.",
+                             "increasing"
                              ],
         "sideHullArmor": [
                           "Side Hull Armor",
                           "Side Hull",
                           "int",
-                          "Armor, in mm, on of the side hull plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce."
+                          "Armor, in mm, on of the side hull plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce.",
+                          "increasing"
                           ],
         "rearHullArmor": [
                           "Rear Hull Armor",
                           "Rear Hull",
                           "int",
-                          "Armor, in mm, of the rear hull plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce."
+                          "Armor, in mm, of the rear hull plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce.",
+                          "increasing"
                           ],
         "frontalTurretArmor": [
                                "Frontal Turret Armor",
                                "Frontal Turret",
                                "int",
-                               "Armor, in mm, of the frontal turret plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce. Also note that most tanks have frontal weakspots on the turret that have less armor than the number indicates."
+                               "Armor, in mm, of the frontal turret plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce. Also note that most tanks have frontal weakspots on the turret that have less armor than the number indicates.",
+                               "increasing"
                                ],
         "sideTurretArmor": [
                             "Side Turret Armor",
                             "Side Turret",
                             "int",
-                            "Armor, in mm, of the side turret plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce."
+                            "Armor, in mm, of the side turret plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce.",
+                            "increasing"
                             ],
         "rearTurretArmor": [
                             "Rear Turret Armor",
                             "Rear Turret",
                             "int",
-                            "Armor, in mm, of the rear turret plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce."
+                            "Armor, in mm, of the rear turret plate. This number is simply the thickness of the plate, the effective thickness of the armor will change based on the angle of the armor relative to the shot hitting it. A shell hitting flat armor dead on is considered zero degrees. At 60 degrees the effective armor will be 2X the base armor, above 70 degrees all shots will bounce.",
+                            "increasing"
                             ],
         "turretTraverse": [
                            "Turret Traverse",
                            "Turret Traverse",
                            "int",
-                           "Speed, in degrees, that the turret turns every second."
+                           "Speed, in degrees, that the turret turns every second.",
+                           "increasing"
                            ],
         "viewRange": [
                       "View Range",
                       "View Range",
                       "int",
-                      "The furthest distance, in meters, at which the vehicle can spot another tank. Just because a tank is within a vehicle's view range is not a guarantee it will be spotted.  Camo values, cover, equipement, skills, obstructions, and line of sight all affect the ability to spot."
+                      "The furthest distance, in meters, at which the vehicle can spot another tank. Just because a tank is within a vehicle's view range is not a guarantee it will be spotted.  Camo values, cover, equipement, skills, obstructions, and line of sight all affect the ability to spot.",
+                      "increasing"
                       ],
         "gunTraverseArc": [
                            "Gun Sweep Arc",
                            "Gun Arc",
                            "int",
-                           "Number of degrees the gun can move back and forth without moving the tracks. This number is mainly important for artillery and tank destroyers without a turret, because moving the tracks will cause the aiming circle to widen considerably, so aiming after moving the tracks will take much longer. A wider gun arc means you can aim and shoot faster over a wider area."
+                           "Number of degrees the gun can move back and forth without moving the tracks. This number is mainly important for artillery and tank destroyers without a turret, because moving the tracks will cause the aiming circle to widen considerably, so aiming after moving the tracks will take much longer. A wider gun arc means you can aim and shoot faster over a wider area.",
+                           "increasing"
                            ],
         "horsepower": [
                        "Horsepower",
                        "Horsepower",
                        "int",
-                       "Power of the engine, in horsepower"
+                       "Power of the engine, in horsepower",
+                       "increasing"
                        ],
         "specificPower": [
                           "Specific Power",
                           "Specific Power",
                           "float",
-                          "Horsepower per ton, specific power is a better measurement of a tank's speed and agility than horsepower or speed limit because it takes the weight of the tank into account."
+                          "Horsepower per ton, specific power is a better measurement of a tank's speed and agility than horsepower or speed limit because it takes the weight of the tank into account.",
+                          "increasing"
                           ],
         "fireChance": [
                        "Fire Chance",
                        "Fire Chance",
                        "float",
-                       "The odds that a shot to the engine will cause it to catch on fire, expressed as a probability (Eg: 0.20 = 20%). Only shots to the engine have a chance of causing fire."
+                       "The odds that a shot to the engine will cause it to catch on fire, expressed as a probability (Eg: 0.20 = 20%). Only shots to the engine have a chance of causing fire.",
+                       "decreasing"
                        ],
         "signalRange": [
                         "Signal Range",
                         "Signal Range",
                         "int",
-                        "The range, in meters, that the radio can send and receive signals. If friendly tanks are beyond this range, they will not appear on radar nor will any tanks they have spotted."
+                        "The range, in meters, that the radio can send and receive signals. If friendly tanks are beyond this range, they will not appear on radar nor will any tanks they have spotted.",
+                        "increasing"
                         ],
         "hullTraverse": [
                          "Tread Traverse",
                          "Tread Traverse",
                          "int",
-                         "Number of degrees per second the hull can rotate."
+                         "Number of degrees per second the hull can rotate.",
+                         "increasing"
                          ],
         "loadLimit": [
                       "Load Limit",
                       "Load Limit",
                       "float",
-                      "Amount of weight the suspension can hold, in metric tons."
+                      "Amount of weight the suspension can hold, in metric tons.",
+                      "increasing"
                       ],
         "hitpoints": [
                       "Hitpoints",
                       "Hitpoints",
                       "int",
-                      "The number of points in damage a vehicle can take before being destroyed"
+                      "The number of points in damage a vehicle can take before being destroyed",
+                      "increasing"
                       ],
         "speedLimit": [
                        "Speed Limit",
                        "Speed Limit",
                        "int",
-                       "Maximum speed of the tank, in KPH. Speed limit is a confusing stat, it does not tell you how fast a tank will normally go, only how fast the tank can possibly go, as limited by the transmission. For some tanks the speed limit will only be achieved when driving down steep hills. \n\nIn other words, don't assume that a speed limit of 55kph means the tank will actually go 55kph on a regular basis. For a better indicator of how fast a tank is, use specific power."
+                       "Maximum speed of the tank, in KPH. Speed limit is a confusing stat, it does not tell you how fast a tank will normally go, only how fast the tank can possibly go, as limited by the transmission. For some tanks the speed limit will only be achieved when driving down steep hills. \n\nIn other words, don't assume that a speed limit of 55kph means the tank will actually go 55kph on a regular basis. For a better indicator of how fast a tank is, use specific power.",
+                       "increasing"
                        ],
         "weight": [
                    "Weight",
                    "Weight",
                    "float",
-                   "The weight of the vehicle, in metric tons. Vehicle weight is a major factor in determining damage from ramming. Extremely heavy tanks like the KV-4, which weighs in at over 100 tons, can do significant amounts of damage from a high speed ram, whereas light tanks, which are often less than 20 tons, will do next to no damage when ramming anything aside from fellow light tanks."
+                   "The weight of the vehicle, in metric tons. Vehicle weight is a major factor in determining damage from ramming. Extremely heavy tanks like the KV-4, which weighs in at over 100 tons, can do significant amounts of damage from a high speed ram, whereas light tanks, which are often less than 20 tons, will do next to no damage when ramming anything aside from fellow light tanks.",
+                   "increasing"
                    ],
         "softTerrainResistance": [
                                   "Terrain Resistance",
                                   "Soft Ground Resist",
                                   "float",
-                                  "The amount of resistance offered by different types of terrain, larger numbers mean more resistance. How the stat actually works in game is a bit of a mystery, but as the numbers get larger your tank will struggle more / lose more power from crossing that type of terrain. All tanks will have the most resistance from soft ground. Very heavy tanks, or those with thin tracks or other design issues will struggle more than their lighter/nimbler counterparts in adverse terrain."
+                                  "The amount of resistance offered by different types of terrain, larger numbers mean more resistance. How the stat actually works in game is a bit of a mystery, but as the numbers get larger your tank will struggle more / lose more power from crossing that type of terrain. All tanks will have the most resistance from soft ground. Very heavy tanks, or those with thin tracks or other design issues will struggle more than their lighter/nimbler counterparts in adverse terrain.",
+                                  "decreasing"
                                   ],
         "mediumTerrainResistance": [
                                     "Terrain Resistance",
                                     "Med Ground Resist",
                                     "float",
-                                    "The amount of resistance offered by different types of terrain, larger numbers mean more resistance. How the stat actually works in game is a bit of a mystery, but as the numbers get larger your tank will struggle more / lose more power from crossing that type of terrain. All tanks will have the most resistance from soft ground. Very heavy tanks, or those with thin tracks or other design issues will struggle more than their lighter/nimbler counterparts in adverse terrain."
+                                    "The amount of resistance offered by different types of terrain, larger numbers mean more resistance. How the stat actually works in game is a bit of a mystery, but as the numbers get larger your tank will struggle more / lose more power from crossing that type of terrain. All tanks will have the most resistance from soft ground. Very heavy tanks, or those with thin tracks or other design issues will struggle more than their lighter/nimbler counterparts in adverse terrain.",
+                                    "decreasing"
                                     ],
         "hardTerrainResistance": [
                                   "Terrain Resistance",
                                   "Hard Ground Resist",
                                   "float",
-                                  "The amount of resistance offered by different types of terrain, larger numbers mean more resistance. How the stat actually works in game is a bit of a mystery, but as the numbers get larger your tank will struggle more / lose more power from crossing that type of terrain. All tanks will have the most resistance from soft ground. Very heavy tanks, or those with thin tracks or other design issues will struggle more than their lighter/nimbler counterparts in adverse terrain."
+                                  "The amount of resistance offered by different types of terrain, larger numbers mean more resistance. How the stat actually works in game is a bit of a mystery, but as the numbers get larger your tank will struggle more / lose more power from crossing that type of terrain. All tanks will have the most resistance from soft ground. Very heavy tanks, or those with thin tracks or other design issues will struggle more than their lighter/nimbler counterparts in adverse terrain.",
+                                  "decreasing"
                                   ],
         "camoValueStationary": [
                                 "Camo Value",
                                 "Stationary Camo",
                                 "float",
-                                "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills."
+                                "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills.",
+                                "increasing"
                                 ],
         "camoValueMoving": [
                             "Camo Value",
                             "Moving Camo",
                             "float",
-                            "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills."
+                            "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills.",
+                            "increasing"
                             ],
         "camoValueShooting": [
                               "Camo Value",
                               "Shooting Camo",
                               "float",
-                              "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills."
+                              "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills.",
+                              "increasing"
                               ]
     }
 }
+
 
 
 

@@ -178,10 +178,43 @@
         averageStatString = @"--";
     }
     
+    // Setting the strings
     [[cell statName] setText:stat.displayName];
     [[cell tankOneValue] setText:tankOneStatString];
     [[cell tankTwoValue] setText:tankTwoStatString];
     [[cell averageValue] setText:averageStatString];
+    
+    // Setting the colors
+    if (tankOneStat && tankTwoStat) {
+        // If both compare tanks have the stat
+        if (stat.largerValuesAreBetter) {
+            // If the better value is the larger one:
+            if ([tankOneStat.value floatValue] == [tankTwoStat.value floatValue]) {
+                [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
+                [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
+            } else if ([tankOneStat.value floatValue] > [tankTwoStat.value floatValue]) {
+                // Place a light green highlight background on whichever cell wins the comparison
+                [[cell tankOneValue] setBackgroundColor:self.format.highlightGreen];
+                [[cell tankTwoValue] setBackgroundColor:[UIColor clearColor]];
+            } else {
+                [[cell tankTwoValue] setBackgroundColor:self.format.highlightGreen];
+                [[cell tankOneValue] setBackgroundColor:[UIColor clearColor]];
+            }
+        } else {
+            // The better value is the smaller one
+            if ([tankOneStat.value floatValue] == [tankTwoStat.value floatValue]) {
+                [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
+                [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
+            } else if ([tankOneStat.value floatValue] < [tankTwoStat.value floatValue]) {
+                // Place a light green highlight background on whichever cell wins the comparison
+                [[cell tankOneValue] setBackgroundColor:self.format.highlightGreen];
+                [[cell tankTwoValue] setBackgroundColor:[UIColor clearColor]];
+            } else {
+                [[cell tankTwoValue] setBackgroundColor:self.format.highlightGreen];
+                [[cell tankOneValue] setBackgroundColor:[UIColor clearColor]];
+            }
+        }
+    }
     [[cell averageValue] setTextColor:self.format.lightColor];
     
     return cell;

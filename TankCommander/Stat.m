@@ -11,7 +11,7 @@
 
 @implementation Stat
 
-@synthesize key, displayName, glossaryName, definition;
+@synthesize key, displayName, glossaryName, definition, value, statType, largerValuesAreBetter;
 
 - (id)initWithKey:(NSString *)k andValue:(NSNumber *)v
 {

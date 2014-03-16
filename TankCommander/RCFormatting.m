@@ -17,7 +17,8 @@
 
 @synthesize fontSize, darkColor, lightColor, barColor, debugGreen, debugBlue, debugPurple, columnOneXLabel,
 columnOneXValue, columnTwoXLabel, columnTwoXValue, columnThreeXLabel, columnThreeXValue, labelHeight, labelWidth,
-valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
+valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth, highlightGreen, highlightRed,
+highlightYellow;
 
 + (RCFormatting *)store
 {
@@ -46,6 +47,11 @@ valueHeight, valueWidth, rowHeight, darkGreenColor, screenHeight, screenWidth;
         singleton->debugGreen = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:0.8];
         singleton->debugBlue = [UIColor colorWithRed:0.9 green:0.9 blue:1.0 alpha:0.8];
         singleton->debugPurple = [UIColor colorWithRed:0.9 green:0.8 blue:1.0 alpha:0.8];
+        
+        // Highlight Colors for use in the Comparison view, to display which tank wins which stat
+        singleton->highlightGreen = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:0.8];
+        singleton->highlightRed = [UIColor colorWithRed:1.0 green:0.9 blue:0.9 alpha:0.8];
+        singleton->highlightYellow = [UIColor colorWithRed:1.0 green:1.0 blue:0.9 alpha:0.8];
         
         // Setting column values
         singleton->columnOneXLabel = 20;

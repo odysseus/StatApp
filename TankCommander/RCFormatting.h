@@ -25,6 +25,10 @@
 @property (nonatomic, readonly) UIColor *debugBlue;
 @property (nonatomic, readonly) UIColor *debugPurple;
 
+@property (nonatomic, readonly) UIColor *highlightGreen;
+@property (nonatomic, readonly) UIColor *highlightRed;
+@property (nonatomic, readonly) UIColor *highlightYellow;
+
 @property (nonatomic, readonly) CGFloat columnOneXLabel;
 @property (nonatomic, readonly) CGFloat columnTwoXLabel;
 @property (nonatomic, readonly) CGFloat columnThreeXLabel;

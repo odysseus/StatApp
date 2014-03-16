@@ -44,6 +44,11 @@
             } else {
                 s.statType = IntStat;
             }
+            if ([statHash[attKey][4] isEqualToString:@"increasing"]) {
+                s.largerValuesAreBetter = YES;
+            } else {
+                s.largerValuesAreBetter = NO;
+            }
             [final setValue:s forKey:attKey];
         }
         singleton->stats = final;
