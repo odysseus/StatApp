@@ -12,10 +12,14 @@
 
 @interface TankComparisonTableViewController : UITableViewController
 
+// The tanks
 @property (nonatomic, weak) Tank *tankOne;
 @property (nonatomic, weak) Tank *tankTwo;
-@property (nonatomic) NSDictionary *keyHash;
-@property (nonatomic) NSArray *keyIndex;
+
+// The keys
+@property (nonatomic) NSArray *combinedKeys;
+
+// The singletons with useful things
 @property (nonatomic) RCFormatting *format;
 @property (nonatomic) RCToolTips *tooltips;
 

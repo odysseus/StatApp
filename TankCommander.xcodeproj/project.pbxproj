@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940744CC18D53AF400183DF4 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 940744CB18D53AF400183DF4 /* Stat.m */; };
+		940744CF18D53C0D00183DF4 /* StatStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 940744CE18D53C0D00183DF4 /* StatStore.m */; };
+		940744D118D5479C00183DF4 /* attributes.json in Resources */ = {isa = PBXBuildFile; fileRef = 940744D018D5479C00183DF4 /* attributes.json */; };
 		941289C91818AC53008C69E7 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 941289C81818AC53008C69E7 /* Module.m */; };
 		9418A83718CE4A6C00C3A06B /* RCToolTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418A83618CE4A6C00C3A06B /* RCToolTips.m */; };
 		9418A83918CE82F500C3A06B /* tooltips.json in Resources */ = {isa = PBXBuildFile; fileRef = 9418A83818CE82F500C3A06B /* tooltips.json */; };
@@ -97,6 +100,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940744CA18D53AF400183DF4 /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
+		940744CB18D53AF400183DF4 /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
+		940744CD18D53C0D00183DF4 /* StatStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatStore.h; sourceTree = "<group>"; };
+		940744CE18D53C0D00183DF4 /* StatStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatStore.m; sourceTree = "<group>"; };
+		940744D018D5479C00183DF4 /* attributes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = attributes.json; sourceTree = "<group>"; };
 		941289C71818AC53008C69E7 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		941289C81818AC53008C69E7 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
 		9418A83518CE4A6C00C3A06B /* RCToolTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCToolTips.h; sourceTree = "<group>"; };
@@ -355,6 +363,10 @@
 				941A76621814EE260072089F /* Armor.m */,
 				941A76671815C4B40072089F /* Shell.h */,
 				941A76681815C4B40072089F /* Shell.m */,
+				940744CA18D53AF400183DF4 /* Stat.h */,
+				940744CB18D53AF400183DF4 /* Stat.m */,
+				940744CD18D53C0D00183DF4 /* StatStore.h */,
+				940744CE18D53C0D00183DF4 /* StatStore.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -439,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				9418A83818CE82F500C3A06B /* tooltips.json */,
+				940744D018D5479C00183DF4 /* attributes.json */,
 				94B87C2D18BD9A0200D6E395 /* tier1.json */,
 				94B87C2E18BD9A0200D6E395 /* tier2.json */,
 				94B87C2F18BD9A0200D6E395 /* tier3.json */,
@@ -544,6 +557,7 @@
 				94B87C3F18BD9A0200D6E395 /* tier9.json in Resources */,
 				94B87C3918BD9A0200D6E395 /* tier3.json in Resources */,
 				9443771218381A7400E1451C /* default.png in Resources */,
+				940744D118D5479C00183DF4 /* attributes.json in Resources */,
 				94B87C3B18BD9A0200D6E395 /* tier5.json in Resources */,
 				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
 				94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */,
@@ -582,10 +596,12 @@
 				94C8C7791839CF6B00B23D8A /* TurretView.m in Sources */,
 				94C8C788183AEBDA00B23D8A /* ModuleCell.m in Sources */,
 				946FC7441831AB580016708A /* TanksViewController.m in Sources */,
+				940744CC18D53AF400183DF4 /* Stat.m in Sources */,
 				94C8C7731839739A00B23D8A /* HullView.m in Sources */,
 				941A766C1815C7CB0072089F /* TankStore.m in Sources */,
 				941289C91818AC53008C69E7 /* Module.m in Sources */,
 				944377061838081600E1451C /* TypesViewController.m in Sources */,
+				940744CF18D53C0D00183DF4 /* StatStore.m in Sources */,
 				94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */,
 				9443770E1838168E00E1451C /* TypeCell.m in Sources */,
 				94BF604318D4F1C60007D0BC /* CompareiPadTableViewCell.m in Sources */,

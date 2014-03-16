@@ -15,6 +15,8 @@
 #import "TanksViewController.h"
 #import "TiersViewController.h"
 #import "TankIPadViewController.h"
+#import "Stat.h"
+#import "StatStore.h"
 
 @implementation RCAppDelegate
 
@@ -29,6 +31,7 @@
     
     // BEGIN DEBUGGING/LOGGING
     
+    //
     // TODO
     // Incorporate accuracy stats based on turret/tread movement
     // Double check the proper inclusion of all stats
@@ -37,12 +40,19 @@
     // Possibly add a new root VC to deal with the new stuff being added
     // TankScore
     // Add ability to get sorted lists of individual stats?
-    // Add camo values for on the move and after firing
+    // Add camo values for on the move and after firing to the iPad view
     // Add accuracy loss numbers
     // Add a screen that compares the stats between types of tanks in a tier (Eg: Tier 8 mediums have X
     // penetration, heavies have Y avg. pen, etc. etc.)
     // Add reload time
+    // Add additional stats to comparison view, ie: if you compare a TD with a turreted tank, show the
+    // turret stats anyway because it is a meaningful difference, despite the massive pain in the ass
+    // that stems from figuring that data
     //
+    
+    StatStore *stats = [StatStore store];
+    Stat *test = [stats statForKey:@"aimTime"];
+    NSLog(@"%@", test.definition);
     
     // END DEBUGGING/LOGGING
     
