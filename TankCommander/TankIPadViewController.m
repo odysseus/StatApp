@@ -75,7 +75,10 @@
         origin.x += 150;
     }
     
-    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStyleBordered target:self action:@selector(tankCompare)];
+    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare"
+                                                                      style:UIBarButtonItemStyleBordered
+                                                                     target:self
+                                                                     action:@selector(tankCompare)];
     [self.navigationItem setRightBarButtonItem:compareButton];
     
     TankHeaderView *headerView = [[TankHeaderView alloc] initWithPoint:origin andTank:tank];

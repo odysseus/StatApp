@@ -15,6 +15,7 @@
 #import "RCFormatting.h"
 #import "SelectorView.h"
 #import "RCToolTips.h"
+#import "TiersViewController.h"
 
 @interface TankIPhoneViewController ()
 
@@ -32,6 +33,7 @@
         self.turretedIndex = @[@"gun", @"hull", @"turret", @"suspension", @"engine", @"radio"];
         self.nonTurretedIndex = @[@"gun", @"hull", @"suspension", @"engine", @"radio"];
         self.format = [RCFormatting store];
+        self.tooltips = [RCToolTips store];
     }
     return self;
 }
@@ -46,6 +48,12 @@
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
+    
+    UIBarButtonItem *tankCompare = [[UIBarButtonItem alloc] initWithTitle:@"Compare"
+                                                                    style:UIBarButtonItemStyleBordered
+                                                                   target:self
+                                                                   action:@selector(tankCompare)];
+    [self.navigationItem setRightBarButtonItem:tankCompare];
     
     // Reload data to deal with changed modules, etc.
     [self.tableView reloadData];
@@ -175,25 +183,19 @@
         attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
     }
     // Fetching the key and HR variant
-    NSString *key = attArr[indexPath.row][0];
-    NSString *name = [NSString stringWithFormat:@"%@", attArr[indexPath.row][1]];
+    NSString *key = attArr[indexPath.row];
+    NSArray *keyArr = [self.tooltips valuesForKey:key];
+    NSString *name = keyArr[1];
     
-
-    
-    // Int and float keys should be displayed differently
-    // Create a list of float keys to check against the cell key
-    NSArray *floatKeys = @[@"accuracy", @"aimTime", @"rateOfFire", @"timeBetweenShots", @"specificPower",
-                           @"loadLimit", @"fireChance", @"camoValueStationary", @"camoValueMoving",
-                           @"camoValueShooting", @"hardTerrainResistance", @"mediumTerrainResistance",
-                           @"softTerrainResistance"];
+    // Grab the value from the tank, stored in an NSNumber
     NSNumber *valueNum = [NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]];
+    // Create an empty string to hold the formatted value
     NSString *value = [[NSString alloc] init];
-    // If the cell key is a float, then format the string as such
-    // otherwise it will be formatted as an int
-    if ([floatKeys containsObject:key]) {
+    
+    if ([keyArr[2] isEqualToString:@"float"]) {
         value = [NSString stringWithFormat:@"%0.2f", [valueNum floatValue]];
     } else {
-        value = [NSString stringWithFormat:@"%ld", (long)[valueNum integerValue]];
+        value = [NSString stringWithFormat:@"%d", [valueNum integerValue]];
     }
     
     // Autoloaders have stats that don't need averages, the following code ensures that they don't
@@ -211,15 +213,16 @@
     NSNumber *averageNum = [[NSNumber alloc] init];
     NSString *average = [[NSString alloc] init];
     if (!needsAverage) {
+        // Doesn't need an average, so set a placeholder string
         average = @"--";
     } else {
-        // If it does need an average, fetch it, then figure out whether it needs to be formatted
-        // as an int or as a float
+        // It needs an average, so fetch the number
         averageNum = [NSNumber numberWithFloat:[[tank.averageTank valueForKey:key] floatValue]];
-        if ([floatKeys containsObject:key]) {
+        // And format it as an int or float, same as above
+        if ([keyArr[2] isEqualToString:@"float"]) {
             average = [NSString stringWithFormat:@"%0.2f", [averageNum floatValue]];
         } else {
-            average = [NSString stringWithFormat:@"%ld", (long)[averageNum integerValue]];
+            average = [NSString stringWithFormat:@"%d", [averageNum integerValue]];
         }
     }
     
@@ -243,7 +246,7 @@
         attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
     }
     // Fetching the key
-    NSString *key = attArr[indexPath.row][0];
+    NSString *key = attArr[indexPath.row];
     // Retrieve the data from the tooltips store
     RCToolTips *tooltips = [RCToolTips store];
     NSArray *data = [tooltips valuesForKey:key];
@@ -262,7 +265,7 @@
     // Text view with the stat description
     UITextView *textField = [[UITextView alloc]
                              initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 300)];
-    [textField setText:data[2]];
+    [textField setText:data[3]];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];
     [textField setEditable:NO];
@@ -333,6 +336,12 @@
     // Calling this to ensure the view and data reloads on rotation. Probably overkill, but the app
     // runs in such a small memory footprint anyway it's hard to justify heavy optimization
     [self viewDidLoad];
+}
+
+- (void)tankCompare
+{
+    TiersViewController *tvc = [[TiersViewController alloc] initForCompareWithTank:tank];
+    [self.navigationController pushViewController:tvc animated:YES];
 }
 
 @end

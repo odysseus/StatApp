@@ -71,6 +71,8 @@
 		94B87C4018BD9A0200D6E395 /* tier10.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B87C3618BD9A0200D6E395 /* tier10.json */; };
 		94BF603B18D4D1BF0007D0BC /* RCDictionaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF603A18D4D1BF0007D0BC /* RCDictionaryTableViewController.m */; };
 		94BF603E18D4E9060007D0BC /* TankComparisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF603D18D4E9060007D0BC /* TankComparisonTableViewController.m */; };
+		94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BF603F18D4F06F0007D0BC /* CompareiPadTableViewCell.xib */; };
+		94BF604318D4F1C60007D0BC /* CompareiPadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF604218D4F1C60007D0BC /* CompareiPadTableViewCell.m */; };
 		94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C76F183969A600B23D8A /* TankSubheaderView.m */; };
 		94C8C7731839739A00B23D8A /* HullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7721839739A00B23D8A /* HullView.m */; };
 		94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7751839CF4F00B23D8A /* EngineView.m */; };
@@ -193,6 +195,9 @@
 		94BF603A18D4D1BF0007D0BC /* RCDictionaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDictionaryTableViewController.m; sourceTree = "<group>"; };
 		94BF603C18D4E9060007D0BC /* TankComparisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankComparisonTableViewController.h; sourceTree = "<group>"; };
 		94BF603D18D4E9060007D0BC /* TankComparisonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankComparisonTableViewController.m; sourceTree = "<group>"; };
+		94BF603F18D4F06F0007D0BC /* CompareiPadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompareiPadTableViewCell.xib; sourceTree = "<group>"; };
+		94BF604118D4F1C60007D0BC /* CompareiPadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareiPadTableViewCell.h; sourceTree = "<group>"; };
+		94BF604218D4F1C60007D0BC /* CompareiPadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareiPadTableViewCell.m; sourceTree = "<group>"; };
 		94C8C76E183969A600B23D8A /* TankSubheaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankSubheaderView.h; sourceTree = "<group>"; };
 		94C8C76F183969A600B23D8A /* TankSubheaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankSubheaderView.m; sourceTree = "<group>"; };
 		94C8C7711839739A00B23D8A /* HullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HullView.h; sourceTree = "<group>"; };
@@ -383,6 +388,8 @@
 				94C8C787183AEBDA00B23D8A /* ModuleCell.m */,
 				941E81CD18CA9EDC00939CB7 /* StatCell.h */,
 				941E81CE18CA9EDC00939CB7 /* StatCell.m */,
+				94BF604118D4F1C60007D0BC /* CompareiPadTableViewCell.h */,
+				94BF604218D4F1C60007D0BC /* CompareiPadTableViewCell.m */,
 				94C8C780183AA90D00B23D8A /* SelectorView.h */,
 				94C8C781183AA90D00B23D8A /* SelectorView.m */,
 				944377191839635200E1451C /* TankHeaderView.h */,
@@ -423,6 +430,7 @@
 				9443770A183812CA00E1451C /* TierCell.xib */,
 				9443770F183816A200E1451C /* TypeCell.xib */,
 				94C8C789183AEC1000B23D8A /* ModuleCell.xib */,
+				94BF603F18D4F06F0007D0BC /* CompareiPadTableViewCell.xib */,
 			);
 			name = IB;
 			sourceTree = "<group>";
@@ -538,6 +546,7 @@
 				9443771218381A7400E1451C /* default.png in Resources */,
 				94B87C3B18BD9A0200D6E395 /* tier5.json in Resources */,
 				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
+				94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */,
 				9418A83918CE82F500C3A06B /* tooltips.json in Resources */,
 				94B87C3A18BD9A0200D6E395 /* tier4.json in Resources */,
 				946FC76A183415560016708A /* mediumTank.png in Resources */,
@@ -579,6 +588,7 @@
 				944377061838081600E1451C /* TypesViewController.m in Sources */,
 				94C8C77F1839E66800B23D8A /* SuspensionView.m in Sources */,
 				9443770E1838168E00E1451C /* TypeCell.m in Sources */,
+				94BF604318D4F1C60007D0BC /* CompareiPadTableViewCell.m in Sources */,
 				94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */,
 				94C8C782183AA90D00B23D8A /* SelectorView.m in Sources */,
 				94D4729D181CEE5000B11466 /* TankGroup.m in Sources */,

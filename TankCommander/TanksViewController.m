@@ -13,6 +13,7 @@
 #import "Tank.h"
 #import "TankCell.h"
 #import "TankGroup.h"
+#import "TankComparisonTableViewController.h"
 
 @interface TanksViewController ()
 
@@ -92,9 +93,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.compareTank) {
-        // Create a comparison view instead of the tank view
-        NSLog(@"Tank Compare");
+        // Grab the tank from the selected index
+        Tank *t = [tankGroup objectAtIndex:indexPath.row];
+        
+        // Create a comparison view instead of the tank view and set the tanks to be compared
+        TankComparisonTableViewController *cvc = [[TankComparisonTableViewController alloc]
+                                                  initWithTankOne:self.compareTank andTwo:t];
+        
+        [self.navigationController pushViewController:cvc animated:YES];
     } else {
+        // If there is no compareTank present, then the view is being initialized to view the stats
+        // of a single tank, so create and push a view for that
+        // Test whether the device is an iPhone or iPad
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             // iPad View
             TankIPadViewController *tvc = [[TankIPadViewController alloc] init];

@@ -264,71 +264,82 @@ camoValueMoving, camoValueShooting;
         [final setValue:[[NSMutableArray alloc] init] forKey:@"turret"];
     }
     
-    // Other Properties (Either fit them in a list section
-    // or a smaller view at the top
-    // Hitpoints
-    // Weight / Limit
-    // Camo Value
-    
     // Gun
     NSMutableArray *gunArr = [final objectForKey:@"gun"];
-    [gunArr addObject:@[@"penetration", @"Penetration (mm)"]];
-    [gunArr addObject:@[@"alphaDamage", @"Damage"]];
-    [gunArr addObject:@[@"accuracy", @"Accuracy"]];
-    [gunArr addObject:@[@"aimTime", @"Aim Time (s)"]];
-    [gunArr addObject:@[@"rateOfFire", @"Rate of Fire (RPM)"]];
-    [gunArr addObject:@[@"damagePerMinute", @"DPM"]];
-    [gunArr addObject:@[@"gunDepression", @"Gun Depression (deg)"]];
-    [gunArr addObject:@[@"gunElevation", @"Gun Elevation (deg)"]];
+    [gunArr addObject:@"penetration"];
+    [gunArr addObject:@"alphaDamage"];
+    [gunArr addObject:@"accuracy"];
+    [gunArr addObject:@"aimTime"];
+    [gunArr addObject:@"rateOfFire"];
+    [gunArr addObject:@"damagePerMinute"];
+    [gunArr addObject:@"gunDepression"];
+    [gunArr addObject:@"gunElevation"];
     if (self.autoloader) {
-        [gunArr addObject:@[@"roundsInDrum", @"Rounds in Drum"]];
-        [gunArr addObject:@[@"timeBetweenShots", @"Time Between Shots (s)"]];
-        [gunArr addObject:@[@"drumReload", @"Full Reload (s)"]];
-        [gunArr addObject:@[@"burstDamage", @"Burst Damage"]];
+        [gunArr addObject:@"roundsInDrum"];
+        [gunArr addObject:@"timeBetweenShots"];
+        [gunArr addObject:@"drumReload"];
+        [gunArr addObject:@"burstDamage"];
     }
     
     // Hull
     NSMutableArray *hullArr = [final valueForKey:@"hull"];
-    [hullArr addObject:@[@"hitpoints", @"Hitpoints"]];
-    [hullArr addObject:@[@"camoValueStationary", @"Camo Value"]];
-    [hullArr addObject:@[@"frontalHullArmor", @"Frontal Hull"]];
-    [hullArr addObject:@[@"sideHullArmor", @"Side Hull"]];
-    [hullArr addObject:@[@"rearHullArmor", @"Rear Hull"]];
+    [hullArr addObject:@"weight"];
+    [hullArr addObject:@"hitpoints"];
+    [hullArr addObject:@"camoValueStationary"];
+    [hullArr addObject:@"camoValueMoving"];
+    [hullArr addObject:@"camoValueShooting"];
+    [hullArr addObject:@"frontalHullArmor"];
+    [hullArr addObject:@"sideHullArmor"];
+    [hullArr addObject:@"rearHullArmor"];
     if (!self.hasTurret) {
-        [hullArr addObject:@[@"viewRange", @"View Range"]];
-        [hullArr addObject:@[@"gunTraverseArc", @"Gun Traverse"]];
+        [hullArr addObject:@"viewRange"];
+        [hullArr addObject:@"gunTraverseArc"];
     }
     
     // Turret (if needed)
     if (self.hasTurret) {
         NSMutableArray *turretArr = [final objectForKey:@"turret"];
-        [turretArr addObject:@[@"frontalTurretArmor", @"Frontal Turret"]];
-        [turretArr addObject:@[@"sideTurretArmor", @"Side Turret"]];
-        [turretArr addObject:@[@"rearTurretArmor", @"Rear Turret"]];
-        [turretArr addObject:@[@"turretTraverse", @"Turret Traverse"]];
-        [turretArr addObject:@[@"viewRange", @"View Range"]];
-        [turretArr addObject:@[@"gunTraverseArc", @"Gun Traverse"]];
+        [turretArr addObject:@"frontalTurretArmor"];
+        [turretArr addObject:@"sideTurretArmor"];
+        [turretArr addObject:@"rearTurretArmor"];
+        [turretArr addObject:@"turretTraverse"];
+        [turretArr addObject:@"viewRange"];
+        [turretArr addObject:@"gunTraverseArc"];
     }
     
     // Engine
     NSMutableArray *engineArr = [final objectForKey:@"engine"];
-    [engineArr addObject:@[@"horsepower", @"Horsepower"]];
-    [engineArr addObject:@[@"specificPower", @"Specific Power"]];
-    [engineArr addObject:@[@"fireChance", @"Fire Chance"]];
+    [engineArr addObject:@"horsepower"];
+    [engineArr addObject:@"specificPower"];
+    [engineArr addObject:@"fireChance"];
     
     // Radio
     NSMutableArray *radioArr = [final objectForKey:@"radio"];
-    [radioArr addObject:@[@"signalRange", @"Signal Range"]];
+    [radioArr addObject:@"signalRange"];
     
     // Suspension
     NSMutableArray *suspensionArr = [final objectForKey:@"suspension"];
-    [suspensionArr addObject:@[@"hullTraverse", @"Hull Traverse"]];
-    [suspensionArr addObject:@[@"loadLimit", @"Load Limit"]];
-    [suspensionArr addObject:@[@"speedLimit", @"Speed Limit"]];
-    [suspensionArr addObject:@[@"hardTerrainResistance", @"Hard Ground Resist"]];
-    [suspensionArr addObject:@[@"mediumTerrainResistance", @"Medium Ground Resist"]];
-    [suspensionArr addObject:@[@"softTerrainResistance", @"Soft Ground Resist"]];
+    [suspensionArr addObject:@"hullTraverse"];
+    [suspensionArr addObject:@"loadLimit"];
+    [suspensionArr addObject:@"speedLimit"];
+    [suspensionArr addObject:@"hardTerrainResistance"];
+    [suspensionArr addObject:@"mediumTerrainResistance"];
+    [suspensionArr addObject:@"softTerrainResistance"];
     
+    return final;
+}
+
+// Creates a flat list of all the tank's attributes, same idea as above, but not separated
+// into the individual modules, used in the compare views
+- (NSArray *)attributesList
+{
+    NSDictionary *hash = self.attributesHash;
+    NSMutableArray *final = [[NSMutableArray alloc] init];
+    for (NSString *key in hash) {
+        for (NSString *att in hash[key]) {
+            [final addObject:att];
+        }
+    }
     return final;
 }
 
