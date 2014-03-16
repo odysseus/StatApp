@@ -13,7 +13,7 @@
 
 @synthesize key, displayName, glossaryName, definition;
 
-- (id)initForKey:(NSString *)k withValue:(NSNumber *)v
+- (id)initWithKey:(NSString *)k andValue:(NSNumber *)v
 {
     self = [super init];
     if (self) {
@@ -27,6 +27,31 @@
         self.statType = data.statType;
     }
     return self;
+}
+
+- (id)initWithStat:(Stat *)s andValue:(NSNumber *)v
+{
+    self = [super init];
+    if (self) {
+        self.key = s.key;
+        self.definition = s.definition;
+        self.displayName = s.displayName;
+        self.glossaryName = s.glossaryName;
+        self.statType = s.statType;
+        self.value = v;
+    }
+    return self;
+}
+
+- (NSString *)formatted
+{
+    NSString *final;
+    if (self.statType ==FloatStat) {
+        final = [NSString stringWithFormat:@"%0.2f", [self.value floatValue]];
+    } else {
+        final = [NSString stringWithFormat:@"%ld", (long)[self.value integerValue]];
+    }
+    return final;
 }
 
 @end

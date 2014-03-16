@@ -12,6 +12,8 @@
 #import "CompareiPadTableViewCell.h"
 #import "RCFormatting.h"
 #import "RCToolTips.h"
+#import "Stat.h"
+#import "StatStore.h"
 
 @interface TankComparisonTableViewController ()
 
@@ -19,7 +21,7 @@
 
 @implementation TankComparisonTableViewController
 
-@synthesize tankOne, tankTwo, combinedKeys;
+@synthesize tankOne, tankTwo, combinedKeys, tankOneKeys, tankTwoKeys;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -41,19 +43,18 @@
         
         // Grab the singleton data stores for formatting and tooltips
         self.format = [RCFormatting store];
-        self.tooltips = [RCToolTips store];
         
         // Grab the arrays of attributes for both tanks
-        NSArray *tankOneList = [self.tankOne attributesList];
-        NSArray *tankTwoList = [self.tankTwo attributesList];
+        self.tankOneKeys = [self.tankOne attributesList];
+        self.tankTwoKeys = [self.tankTwo attributesList];
         NSMutableArray *combined = [[NSMutableArray alloc] init];
         // Include each unique key once, so:
         // Add everything from tank one
-        for (NSString *key in tankOneList) {
+        for (NSString *key in self.tankOneKeys) {
             [combined addObject:key];
         }
         // Then everything from tank two that wasn't in tank one
-        for (NSString *key in tankTwoList) {
+        for (NSString *key in self.tankTwoKeys) {
             if (![combined containsObject:key]) {
                 [combined addObject:key];
             }
@@ -100,88 +101,88 @@
     CompareiPadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CompareCell"
                                                                      forIndexPath:indexPath];
     
+    StatStore *stats = [StatStore store];
+    
     // Configure the cell...
-    // Get the key and the Tooltips values for the key
+    // Get the key and the associated Stat object
     NSString *key = self.combinedKeys[indexPath.row];
-    NSArray *keyArr = [self.tooltips valuesForKey:key];
+    Stat *stat = [stats statForKey:key];
     
-    // Lots of testing needs to be done to see which of the three tanks (compare1, compare2, average) actually
-    // have and/or need that value to be displayed, and after that what they need to be formatted as
+    // Three tanks will be displayed (compare1, compare2, average) and they can all have a different list of
+    // attributes, so first we need to figure out which ones need displaying
     
-    // List of keys that don't need average values
+    // First, the list of keys that aren't on the average tank
     NSArray *noAverages = @[@"roundsInDrum", @"drumReload", @"burstDamage", @"timeBetweenShots", @"loadLimit"];
     // Test for array inclusion, if the key is not present then it needs an average value displayed
     BOOL needsAverage = YES;
     if ([noAverages containsObject:key]) {
         needsAverage = NO;
     }
-
     
-//    // Store the value for the first tank in an NSNumber
-//    NSNumber *tankOneValue = [NSNumber numberWithFloat:[[self.tankOne valueForKey:key] floatValue]];
-//
-//
-//    // Then based on the above result, either find the average value or set it to nil
-//    NSNumber *averageTankValue;
-//    if (needsAverage) {
-//        averageTankValue = [NSNumber numberWithFloat:[[self.tankOne.averageTank valueForKey:key] floatValue]];
-//    } else {
-//        averageTankValue = nil;
-//    }
-//    
-//    // Check to see if the second tank has the same stat
-//    NSArray *tankTwoAttributes = [self.tankTwo attributesList];
-//    NSNumber *tankTwoValue;
-//    if ([self.keyIndex containsObject:key] && [tankTwoAttributes containsObject:key]) {
-//        // Both tanks have the same key, so grab the value
-//        tankTwoValue = [NSNumber numberWithFloat:[[self.tankTwo valueForKey:key] floatValue]];
-//    } else {
-//        // The second tank doesn't have the same stat, set the value to nil
-//        tankTwoValue = nil;
-//    }
-//    
-//    // Now format both numbers (or nil values) for display in the app
-//    NSString *tankOneString;
-//    NSString *tankTwoString;
-//    // Long conditional chain to figure out the presence and formatting of the two values
-//    if (tankTwoValue && [keyArr[2] isEqualToString:@"float"]) {
-//        // Both keys exist and are float values
-//        tankOneString = [NSString stringWithFormat:@"%0.2f", [tankOneValue floatValue]];
-//        tankTwoString = [NSString stringWithFormat:@"%0.2f", [tankTwoValue floatValue]];
-//    } else if (tankTwoValue) {
-//        // Both keys exist and are not floats
-//        tankOneString = [NSString stringWithFormat:@"%d", [tankOneValue integerValue]];
-//        tankTwoString = [NSString stringWithFormat:@"%d", [tankTwoValue integerValue]];
-//    } else if (!tankTwoValue && [keyArr[2] isEqualToString:@"float"]) {
-//        // Second key does not exist, key formatting is float
-//        tankOneString = [NSString stringWithFormat:@"%0.2f", [tankOneValue floatValue]];
-//        tankTwoString = @"--";
-//    } else {
-//        // Second key does not exist, key formatting is integer
-//        tankOneString = [NSString stringWithFormat:@"%d", [tankOneValue integerValue]];
-//        tankTwoString = @"--";
-//    }
-//    
-//    // Finally, because of autoloaders and other stuff, the average tank value needs to be
-//    // figured separately
-//    NSString *averageString;
-//    if (needsAverage && [keyArr[2] isEqualToString:@"float"]) {
-//        // Needs average and is a float
-//        averageString = [NSString stringWithFormat:@"%0.2f", [averageTankValue floatValue]];
-//    } else if (needsAverage) {
-//        // Needs average and is an int
-//        averageString = [NSString stringWithFormat:@"%d", [averageTankValue integerValue]];
-//    } else {
-//        // Doesn't need an average
-//        averageString = @"--";
-//    }
-//    
-//    // Finally, with all the strings figured out we can set up the cells
-//    [[cell statName] setText:keyArr[1]];
-//    [[cell tankOneValue] setText:tankOneString];
-//    [[cell tankTwoValue] setText:tankTwoString];
-//    [[cell averageValue] setText:averageString];
-//    [[cell averageValue] setTextColor:self.format.lightColor];
+    // If it needs an average, begin that process
+    Stat *averageStat;
+    if (needsAverage) {
+        // We know that one tank or the other has this attribute, so we need to figure out which
+        // Default to tankOne
+        if ([self.tankOneKeys containsObject:key]) {
+            averageStat = [[Stat alloc] initWithStat:stat
+                                            andValue:[self.tankOne.averageTank valueForKey:key]];
+        } else {
+            // Because the key exists in the combinedKeys, we know it exists on one or the other so
+            // we can call this without fear of raising an error
+            averageStat = [[Stat alloc] initWithStat:stat
+                                            andValue:[self.tankTwo.averageTank valueForKey:key]];
+        }
+    }
+    
+    // Next find the stat for tankOne
+    Stat *tankOneStat;
+    if ([self.tankOneKeys containsObject:key]) {
+        // The key exists on tankOne, so init the stat with the value
+        tankOneStat = [[Stat alloc] initWithStat:stat
+                                        andValue:[NSNumber numberWithFloat:
+                                                  [[self.tankOne valueForKey:key] floatValue]]];
+    }
+    
+    // And the stat for tankTwo
+    Stat *tankTwoStat;
+    if ([self.tankTwoKeys containsObject:key]) {
+        tankTwoStat = [[Stat alloc] initWithStat:stat
+                                        andValue:[NSNumber numberWithFloat:
+                                                  [[self.tankTwo valueForKey:key] floatValue]]];
+    }
+    
+    // Now that we have all three stats (if they exist) we need to format them
+    
+    // tankOne
+    NSString *tankOneStatString;
+    if (tankOneStat) {
+        tankOneStatString = [tankOneStat formatted];
+    } else {
+        tankOneStatString = @"--";
+    }
+    
+    // tankTwo
+    NSString *tankTwoStatString;
+    if (tankTwoStat) {
+        tankTwoStatString = [tankTwoStat formatted];
+    } else {
+        tankTwoStatString = @"--";
+    }
+    
+    // average
+    NSString *averageStatString;
+    if (averageStat) {
+        averageStatString = [averageStat formatted];
+    } else {
+        averageStatString = @"--";
+    }
+    
+    [[cell statName] setText:stat.displayName];
+    [[cell tankOneValue] setText:tankOneStatString];
+    [[cell tankTwoValue] setText:tankTwoStatString];
+    [[cell averageValue] setText:averageStatString];
+    [[cell averageValue] setTextColor:self.format.lightColor];
     
     return cell;
 }

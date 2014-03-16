@@ -18,10 +18,11 @@
 
 // The keys
 @property (nonatomic) NSArray *combinedKeys;
+@property (nonatomic) NSArray *tankOneKeys;
+@property (nonatomic) NSArray *tankTwoKeys;
 
 // The singletons with useful things
 @property (nonatomic) RCFormatting *format;
-@property (nonatomic) RCToolTips *tooltips;
 
 - (id)initWithTankOne:(Tank *)t1 andTwo:(Tank *)t2;
 

@@ -10,6 +10,12 @@
 		940744CC18D53AF400183DF4 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 940744CB18D53AF400183DF4 /* Stat.m */; };
 		940744CF18D53C0D00183DF4 /* StatStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 940744CE18D53C0D00183DF4 /* StatStore.m */; };
 		940744D118D5479C00183DF4 /* attributes.json in Resources */ = {isa = PBXBuildFile; fileRef = 940744D018D5479C00183DF4 /* attributes.json */; };
+		940744DD18D62EAF00183DF4 /* heavyTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 940744D818D62EAF00183DF4 /* heavyTank.png */; };
+		940744DE18D62EAF00183DF4 /* lightTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 940744D918D62EAF00183DF4 /* lightTank.png */; };
+		940744DF18D62EAF00183DF4 /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 940744DA18D62EAF00183DF4 /* mediumTank.png */; };
+		940744E018D62EAF00183DF4 /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 940744DB18D62EAF00183DF4 /* spg.png */; };
+		940744E118D62EAF00183DF4 /* tankDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 940744DC18D62EAF00183DF4 /* tankDestroyer.png */; };
+		940744E318D630BC00183DF4 /* lightTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 940744E218D630BC00183DF4 /* lightTank@2x.png */; };
 		941289C91818AC53008C69E7 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 941289C81818AC53008C69E7 /* Module.m */; };
 		9418A83718CE4A6C00C3A06B /* RCToolTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 9418A83618CE4A6C00C3A06B /* RCToolTips.m */; };
 		9418A83918CE82F500C3A06B /* tooltips.json in Resources */ = {isa = PBXBuildFile; fileRef = 9418A83818CE82F500C3A06B /* tooltips.json */; };
@@ -44,7 +50,6 @@
 		9443770B183812CA00E1451C /* TierCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9443770A183812CA00E1451C /* TierCell.xib */; };
 		9443770E1838168E00E1451C /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9443770D1838168E00E1451C /* TypeCell.m */; };
 		94437710183816A200E1451C /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9443770F183816A200E1451C /* TypeCell.xib */; };
-		9443771218381A7400E1451C /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9443771118381A7400E1451C /* default.png */; };
 		944377151839526700E1451C /* GunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377141839526700E1451C /* GunView.m */; };
 		944377181839550D00E1451C /* RCFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377171839550D00E1451C /* RCFormatting.m */; };
 		9443771B1839635200E1451C /* TankHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9443771A1839635200E1451C /* TankHeaderView.m */; };
@@ -56,11 +61,6 @@
 		946FC74E1831CC5C0016708A /* TankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946FC74D1831CC5C0016708A /* TankCell.xib */; };
 		946FC75418330C980016708A /* TankIPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC75218330C980016708A /* TankIPadViewController.m */; };
 		946FC75518330C980016708A /* TankIPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946FC75318330C980016708A /* TankIPadViewController.xib */; };
-		946FC763183410C10016708A /* lightTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC762183410C10016708A /* lightTank.png */; };
-		946FC768183415560016708A /* tankDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC764183415560016708A /* tankDestroyer.png */; };
-		946FC769183415560016708A /* heavyTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC765183415560016708A /* heavyTank.png */; };
-		946FC76A183415560016708A /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC766183415560016708A /* mediumTank.png */; };
-		946FC76B183415560016708A /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 946FC767183415560016708A /* spg.png */; };
 		948C359F1816F1C500708761 /* Tier.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C359E1816F1C500708761 /* Tier.m */; };
 		94B87C3718BD9A0200D6E395 /* tier1.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B87C2D18BD9A0200D6E395 /* tier1.json */; };
 		94B87C3818BD9A0200D6E395 /* tier2.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B87C2E18BD9A0200D6E395 /* tier2.json */; };
@@ -105,6 +105,12 @@
 		940744CD18D53C0D00183DF4 /* StatStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatStore.h; sourceTree = "<group>"; };
 		940744CE18D53C0D00183DF4 /* StatStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatStore.m; sourceTree = "<group>"; };
 		940744D018D5479C00183DF4 /* attributes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = attributes.json; sourceTree = "<group>"; };
+		940744D818D62EAF00183DF4 /* heavyTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyTank.png; sourceTree = "<group>"; };
+		940744D918D62EAF00183DF4 /* lightTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightTank.png; sourceTree = "<group>"; };
+		940744DA18D62EAF00183DF4 /* mediumTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumTank.png; sourceTree = "<group>"; };
+		940744DB18D62EAF00183DF4 /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
+		940744DC18D62EAF00183DF4 /* tankDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankDestroyer.png; sourceTree = "<group>"; };
+		940744E218D630BC00183DF4 /* lightTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightTank@2x.png"; sourceTree = "<group>"; };
 		941289C71818AC53008C69E7 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		941289C81818AC53008C69E7 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
 		9418A83518CE4A6C00C3A06B /* RCToolTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCToolTips.h; sourceTree = "<group>"; };
@@ -161,7 +167,6 @@
 		9443770C1838168E00E1451C /* TypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeCell.h; sourceTree = "<group>"; };
 		9443770D1838168E00E1451C /* TypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
 		9443770F183816A200E1451C /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
-		9443771118381A7400E1451C /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		944377131839526700E1451C /* GunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunView.h; sourceTree = "<group>"; };
 		944377141839526700E1451C /* GunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GunView.m; sourceTree = "<group>"; };
 		944377161839550D00E1451C /* RCFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFormatting.h; sourceTree = "<group>"; };
@@ -182,11 +187,6 @@
 		946FC75118330C980016708A /* TankIPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankIPadViewController.h; sourceTree = "<group>"; };
 		946FC75218330C980016708A /* TankIPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankIPadViewController.m; sourceTree = "<group>"; };
 		946FC75318330C980016708A /* TankIPadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TankIPadViewController.xib; sourceTree = "<group>"; };
-		946FC762183410C10016708A /* lightTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightTank.png; sourceTree = "<group>"; };
-		946FC764183415560016708A /* tankDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankDestroyer.png; sourceTree = "<group>"; };
-		946FC765183415560016708A /* heavyTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyTank.png; sourceTree = "<group>"; };
-		946FC766183415560016708A /* mediumTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumTank.png; sourceTree = "<group>"; };
-		946FC767183415560016708A /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
 		948C359D1816F1C500708761 /* Tier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tier.h; sourceTree = "<group>"; };
 		948C359E1816F1C500708761 /* Tier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tier.m; sourceTree = "<group>"; };
 		94B87C2D18BD9A0200D6E395 /* tier1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tier1.json; path = ../../../../../Copy/code/ruby/wot_data/tier_files/tier1.json; sourceTree = "<group>"; };
@@ -292,12 +292,12 @@
 				946FC7451831AB9E0016708A /* Models */,
 				947B490018B43A5900718680 /* Data */,
 				941A7626181494D50072089F /* Images.xcassets */,
-				946FC762183410C10016708A /* lightTank.png */,
-				946FC766183415560016708A /* mediumTank.png */,
-				946FC765183415560016708A /* heavyTank.png */,
-				946FC764183415560016708A /* tankDestroyer.png */,
-				946FC767183415560016708A /* spg.png */,
-				9443771118381A7400E1451C /* default.png */,
+				940744E218D630BC00183DF4 /* lightTank@2x.png */,
+				940744D818D62EAF00183DF4 /* heavyTank.png */,
+				940744D918D62EAF00183DF4 /* lightTank.png */,
+				940744DA18D62EAF00183DF4 /* mediumTank.png */,
+				940744DB18D62EAF00183DF4 /* spg.png */,
+				940744DC18D62EAF00183DF4 /* tankDestroyer.png */,
 				941A761B181494D50072089F /* Supporting Files */,
 			);
 			path = TankCommander;
@@ -542,28 +542,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940744E318D630BC00183DF4 /* lightTank@2x.png in Resources */,
+				940744DF18D62EAF00183DF4 /* mediumTank.png in Resources */,
 				946FC75518330C980016708A /* TankIPadViewController.xib in Resources */,
 				941E81D118CA9EFD00939CB7 /* StatCell.xib in Resources */,
+				940744DE18D62EAF00183DF4 /* lightTank.png in Resources */,
 				941A761F181494D50072089F /* InfoPlist.strings in Resources */,
-				946FC768183415560016708A /* tankDestroyer.png in Resources */,
 				9443770B183812CA00E1451C /* TierCell.xib in Resources */,
-				946FC769183415560016708A /* heavyTank.png in Resources */,
 				94B87C3E18BD9A0200D6E395 /* tier8.json in Resources */,
 				94B87C3718BD9A0200D6E395 /* tier1.json in Resources */,
-				946FC76B183415560016708A /* spg.png in Resources */,
-				946FC763183410C10016708A /* lightTank.png in Resources */,
 				941A7627181494D50072089F /* Images.xcassets in Resources */,
 				94B87C3D18BD9A0200D6E395 /* tier7.json in Resources */,
 				94B87C3F18BD9A0200D6E395 /* tier9.json in Resources */,
+				940744E118D62EAF00183DF4 /* tankDestroyer.png in Resources */,
+				940744DD18D62EAF00183DF4 /* heavyTank.png in Resources */,
 				94B87C3918BD9A0200D6E395 /* tier3.json in Resources */,
-				9443771218381A7400E1451C /* default.png in Resources */,
 				940744D118D5479C00183DF4 /* attributes.json in Resources */,
+				940744E018D62EAF00183DF4 /* spg.png in Resources */,
 				94B87C3B18BD9A0200D6E395 /* tier5.json in Resources */,
 				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
 				94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */,
 				9418A83918CE82F500C3A06B /* tooltips.json in Resources */,
 				94B87C3A18BD9A0200D6E395 /* tier4.json in Resources */,
-				946FC76A183415560016708A /* mediumTank.png in Resources */,
 				94B87C3C18BD9A0200D6E395 /* tier6.json in Resources */,
 				94B87C4018BD9A0200D6E395 /* tier10.json in Resources */,
 				946FC74E1831CC5C0016708A /* TankCell.xib in Resources */,

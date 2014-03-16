@@ -22,6 +22,8 @@ typedef enum StatType : NSUInteger {
 @property (nonatomic) NSNumber *value;
 @property (nonatomic) StatType statType;
 
-- (id)initForKey:(NSString *)k withValue:(NSNumber *)v;
+- (id)initWithKey:(NSString *)k andValue:(NSNumber *)v;
+- (id)initWithStat:(Stat *)s andValue:(NSNumber *)v;
+- (NSString *)formatted;
 
 @end

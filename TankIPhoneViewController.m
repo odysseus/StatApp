@@ -195,7 +195,7 @@
     if ([keyArr[2] isEqualToString:@"float"]) {
         value = [NSString stringWithFormat:@"%0.2f", [valueNum floatValue]];
     } else {
-        value = [NSString stringWithFormat:@"%d", [valueNum integerValue]];
+        value = [NSString stringWithFormat:@"%ld", (long)[valueNum integerValue]];
     }
     
     // Autoloaders have stats that don't need averages, the following code ensures that they don't
@@ -222,7 +222,7 @@
         if ([keyArr[2] isEqualToString:@"float"]) {
             average = [NSString stringWithFormat:@"%0.2f", [averageNum floatValue]];
         } else {
-            average = [NSString stringWithFormat:@"%d", [averageNum integerValue]];
+            average = [NSString stringWithFormat:@"%ld", (long)[averageNum integerValue]];
         }
     }
     
