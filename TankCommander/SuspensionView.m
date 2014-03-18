@@ -60,7 +60,7 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"hullTraverse"
@@ -93,7 +93,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"loadLimit"
@@ -112,7 +112,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"speedLimit"
@@ -141,7 +141,7 @@
         y += format.rowHeight;
         
         //Row 2, Column 1
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"terrainResistance"
@@ -167,7 +167,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         //Row 2, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"terrainResistance"
@@ -193,7 +193,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         //Row 2, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"terrainResistance"

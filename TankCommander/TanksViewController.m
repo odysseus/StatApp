@@ -21,7 +21,7 @@
 
 @implementation TanksViewController
 
-@synthesize tankGroup, tankView, compareTank;
+@synthesize tankGroup, compareTank, tankViewController;
 
 - (id)init
 {
@@ -99,6 +99,7 @@
         // Create a comparison view instead of the tank view and set the tanks to be compared
         TankComparisonTableViewController *cvc = [[TankComparisonTableViewController alloc]
                                                   initWithTankOne:self.compareTank andTwo:t];
+        [cvc setTankViewController:self.tankViewController];
         
         [self.navigationController pushViewController:cvc animated:YES];
     } else {

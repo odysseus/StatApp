@@ -57,7 +57,7 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"frontalHullArmor"
@@ -90,7 +90,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"sideHullArmor"
@@ -116,7 +116,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"rearHullArmor"
@@ -144,7 +144,7 @@
             // Row 2, Column 1
             y += format.rowHeight;
 
-            [format addButtonWithTarget:tankViewController
+            [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"viewRange"
@@ -170,7 +170,7 @@
                   andTextAlignment:NSTextAlignmentLeft];
             
             // Row 3, Column 2
-            [format addButtonWithTarget:tankViewController
+            [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"gunTraverseArc"

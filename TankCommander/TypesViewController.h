@@ -15,6 +15,8 @@
 @property (nonatomic) NSArray *keys;
 @property (nonatomic) Tier *tier;
 @property (nonatomic, weak) Tank *compareTank;
+@property (nonatomic, weak) UIViewController *tankViewController;
+
 
 - (id)initWithTier:(Tier *)t;
 - (id)initForCompareWithTier:(Tier *)t andTank:(Tank *)tank;

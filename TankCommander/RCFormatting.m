@@ -11,7 +11,8 @@
 #import "ModulesViewController.h"
 #import "RCButton.h"
 #import "RCToolTips.h"
-#import <QuartzCore/QuartzCore.h>
+#import "Stat.h"
+#import "StatStore.h"
 
 @implementation RCFormatting
 
@@ -175,11 +176,13 @@ highlightYellow;
 - (void)fullscreenPopupFromButton:(id)sender
 {
     // Grab the singleton pointers for formatting and tooltip info
-    RCToolTips *tooltips = [RCToolTips store];
     RCFormatting *format = [RCFormatting store];
     
     // Capture and cast the button as an RCButton to use the dataString property
     RCButton *senderButton = (RCButton *)sender;
+    
+    // Grab the Stat object
+    Stat *stat = [[StatStore store] statForKey:senderButton.dataString];
     
     // Simple animation to fade the view in
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -226,25 +229,50 @@ highlightYellow;
     popupSquare.layer.masksToBounds = YES;
     [fullscreen addSubview:popupSquare];
     
-    // Fetch the values from the tooltips singleton to fill in the data
-    NSArray *tooltipArr = [tooltips valuesForKey:senderButton.dataString];
-    
     // Label with the stat title
     [format addLabelToView:popupSquare
                  withFrame:CGRectMake(50, 20, 300, 30)
-                      text:tooltipArr[0]
+                      text:stat.glossaryName
                   fontSize:(format.fontSize * 1.5)
                  fontColor:format.darkColor
           andTextAlignment:NSTextAlignmentCenter];
     
     // Text view with the stat description
     UITextView *textField = [[UITextView alloc] initWithFrame:CGRectMake(50, 60, 300, 260)];
-    [textField setText:tooltipArr[2]];
+    [textField setText:stat.definition];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];
     [textField setEditable:NO];
     
     [popupSquare addSubview:textField];
+}
+
+- (UIViewController *)iPhoneStatViewControllerForStat:(Stat *)stat
+{
+    // Create a VC to display the stat information
+    UIViewController *statView = [[UIViewController alloc] init];
+    [[statView view] setBackgroundColor:[UIColor whiteColor]];
+    
+    RCFormatting *format = [RCFormatting store];
+    
+    [format addLabelToView:[statView view]
+                 withFrame:CGRectMake((format.screenWidth - 200) / 2, 80, 200, 44)
+                      text:stat.glossaryName
+                  fontSize:format.fontSize * 1.5
+                 fontColor:format.darkColor
+          andTextAlignment:NSTextAlignmentCenter];
+    
+    // Text view with the stat description
+    UITextView *textField = [[UITextView alloc]
+                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 300)];
+    [textField setText:stat.definition];
+    [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
+    [textField setTextColor:format.darkColor];
+    [textField setEditable:NO];
+    
+    [[statView view] addSubview:textField];
+    
+    return statView;
 }
 
 @end

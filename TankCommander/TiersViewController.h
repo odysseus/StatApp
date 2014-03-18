@@ -16,6 +16,7 @@
 @property (nonatomic) NSArray *keyStrings;
 @property (nonatomic) TankStore *allTanks;
 @property (nonatomic, weak) Tank *compareTank;
+@property (nonatomic, weak) UIViewController *tankViewController;
 
 - (id)initForCompareWithTank:(Tank *)t;
 

@@ -18,7 +18,7 @@
 
 @implementation TiersViewController
 
-@synthesize keys, keyStrings, allTanks, compareTank;
+@synthesize keys, keyStrings, allTanks, compareTank, tankViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -102,6 +102,7 @@
     if (self.compareTank) {
         tvc = [[TypesViewController alloc] initForCompareWithTier:[allTanks valueForKey:tierKey]
                                                           andTank:self.compareTank];
+        [tvc setTankViewController:self.tankViewController];
     } else {
         tvc = [[TypesViewController alloc] initWithTier:[allTanks valueForKey:tierKey]];
     }

@@ -16,6 +16,8 @@
 #import "SelectorView.h"
 #import "RCToolTips.h"
 #import "TiersViewController.h"
+#import "StatStore.h"
+#import "Stat.h"
 
 @interface TankIPhoneViewController ()
 
@@ -245,33 +247,12 @@
     } else {
         attArr = [tankHash objectForKey:nonTurretedIndex[indexPath.section]];
     }
-    // Fetching the key
+    // Fetching the key and Stat object
     NSString *key = attArr[indexPath.row];
-    // Retrieve the data from the tooltips store
-    RCToolTips *tooltips = [RCToolTips store];
-    NSArray *data = [tooltips valuesForKey:key];
+    Stat *stat = [[StatStore store] statForKey:key];
     
-    // Create a VC to display the stat information
-    UIViewController *statView = [[UIViewController alloc] init];
-    [[statView view] setBackgroundColor:[UIColor whiteColor]];
-    
-    [format addLabelToView:[statView view]
-                 withFrame:CGRectMake((format.screenWidth - 200) / 2, 80, 200, 44)
-                      text:data[0]
-                  fontSize:format.fontSize * 1.5
-                 fontColor:format.darkColor
-          andTextAlignment:NSTextAlignmentCenter];
-    
-    // Text view with the stat description
-    UITextView *textField = [[UITextView alloc]
-                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 300)];
-    [textField setText:data[3]];
-    [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
-    [textField setTextColor:format.darkColor];
-    [textField setEditable:NO];
-    
-    [[statView view] addSubview:textField];
-    
+    // Generate the VC from the format method, and push it on the VC stack
+    UIViewController *statView = [self.format iPhoneStatViewControllerForStat:stat];
     [self.navigationController pushViewController:statView animated:YES];
 }
 
@@ -341,6 +322,7 @@
 - (void)tankCompare
 {
     TiersViewController *tvc = [[TiersViewController alloc] initForCompareWithTank:tank];
+    [tvc setTankViewController:self];
     [self.navigationController pushViewController:tvc animated:YES];
 }
 

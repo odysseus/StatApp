@@ -21,7 +21,7 @@
 
 @implementation TankComparisonTableViewController
 
-@synthesize tankOne, tankTwo, combinedKeys, tankOneKeys, tankTwoKeys;
+@synthesize tankOne, tankTwo, combinedKeys, tankOneKeys, tankTwoKeys, tankViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -79,6 +79,26 @@
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"CompareCell"];
+    
+    // Other Setup
+    // Create a bar button item that pops to the root view controller so you don't have to hit
+    // "Back" seven times when going from a comparison view
+    UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithTitle:@"Home"
+                                                             style:UIBarButtonItemStyleBordered
+                                                            target:self.navigationController
+                                                            action:@selector(popToRootViewControllerAnimated:)];
+    UIBarButtonItem *tank = [[UIBarButtonItem alloc] initWithTitle:self.tankOne.name
+                                                                style:UIBarButtonItemStyleBordered
+                                                               target:self
+                                                               action:@selector(popToTankViewController)];
+    
+    NSArray *rightBarButtons = @[home, tank];
+    self.navigationItem.rightBarButtonItems = rightBarButtons;
+}
+
+- (void)popToTankViewController
+{
+    [self.navigationController popToViewController:self.tankViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -322,6 +342,8 @@
     
     return cell;
 }
+
+
 
 @end
 

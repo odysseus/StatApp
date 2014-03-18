@@ -60,7 +60,7 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"frontalTurretArmor"
@@ -93,7 +93,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"sideTurretArmor"
@@ -119,7 +119,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"rearTurretArmor"
@@ -146,7 +146,7 @@
         // Row 2, Column 1
         y += format.rowHeight;
         
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"turretTraverse"
@@ -172,7 +172,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 2, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"viewRange"
@@ -198,7 +198,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 2, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"gunTraverseArc"

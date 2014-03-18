@@ -24,6 +24,11 @@
 // The singletons with useful things
 @property (nonatomic) RCFormatting *format;
 
+// The tankViewController for the first tank
+@property (nonatomic, weak) UIViewController *tankViewController;
+
 - (id)initWithTankOne:(Tank *)t1 andTwo:(Tank *)t2;
+
+- (void)popToTankViewController;
 
 @end

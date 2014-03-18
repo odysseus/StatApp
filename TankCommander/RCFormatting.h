@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class TankIPadViewController, Tank, RCButton;
+@class TankIPadViewController, Tank, RCButton, StatStore, Stat;
 
 @interface RCFormatting : NSObject
 
@@ -77,6 +77,7 @@
                         fontColor:(UIColor *)color
               andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
 - (void)fullscreenPopupFromButton:(id)sender;
+- (UIViewController *)iPhoneStatViewControllerForStat:(Stat *)stat;
 
 
 @end

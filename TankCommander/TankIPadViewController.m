@@ -245,6 +245,7 @@
 - (void)tankCompare
 {
     TiersViewController *tvc = [[TiersViewController alloc] initForCompareWithTank:tank];
+    [tvc setTankViewController:self];
     [self.navigationController pushViewController:tvc animated:YES];
 }
 

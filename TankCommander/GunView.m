@@ -62,7 +62,7 @@
               andTextAlignment:NSTextAlignmentRight];
         
         // Row 1, Column 1
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"penetration"
@@ -95,7 +95,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"alphaDamage"
@@ -121,7 +121,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 1, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"accuracy"
@@ -148,7 +148,7 @@
         // Row 2, Column 1
         y += format.rowHeight;
         
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"aimTime"
@@ -181,7 +181,7 @@
                      fontColor:format.darkColor
               andTextAlignment:NSTextAlignmentLeft];
         
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"rateOfFire"
@@ -207,7 +207,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 2, Column 3
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"damagePerMinute"
@@ -235,7 +235,7 @@
         // Row 3, Column 1
         y += format.rowHeight;
         
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"gunDepression"
@@ -261,7 +261,7 @@
               andTextAlignment:NSTextAlignmentLeft];
         
         // Row 3, Column 2
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"gunElevation"
@@ -288,7 +288,7 @@
         
         if (tank.autoloader) {
             // Row 3, Column 3
-            [format addButtonWithTarget:tankViewController
+            [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"burstDamage"
@@ -309,7 +309,7 @@
             // Row 4, Column 1
             y += format.rowHeight;
             
-            [format addButtonWithTarget:tankViewController
+            [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"roundsInDrum"
@@ -328,7 +328,7 @@
                   andTextAlignment:NSTextAlignmentLeft];
             
             // Row 4, Column 2
-            [format addButtonWithTarget:tankViewController
+            [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"timeBetweenShots"
@@ -347,7 +347,7 @@
                   andTextAlignment:NSTextAlignmentLeft];
             
             // Row 4, Column 3
-            [format addButtonWithTarget:tankViewController
+            [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"drumReload"
