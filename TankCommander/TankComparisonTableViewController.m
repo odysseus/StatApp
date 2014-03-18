@@ -101,11 +101,82 @@
     return [self.combinedKeys count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *header = [[UIView alloc] init];
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    header.frame = CGRectMake(0, 0, width, 44);
+    header.frame = CGRectMake(0, 0, width, 60);
+    header.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *tankOneName = [self.format addLabelToView:header
+                                             withFrame:CGRectMake(10, 24, 100, 18)
+                                                  text:self.tankOne.name
+                                              fontSize:14
+                                             fontColor:self.format.darkColor
+                                      andTextAlignment:NSTextAlignmentCenter];
+    tankOneName.autoresizingMask =
+    UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleTopMargin |
+    UIViewAutoresizingFlexibleBottomMargin |
+    UIViewAutoresizingFlexibleRightMargin;
+    
+    UILabel *tankTwoName = [self.format addLabelToView:header
+                                             withFrame:CGRectMake(110, 24, 100, 18)
+                                                  text:self.tankTwo.name
+                                              fontSize:14
+                                             fontColor:self.format.darkColor
+                                      andTextAlignment:NSTextAlignmentCenter];
+    tankTwoName.autoresizingMask =
+    UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleTopMargin |
+    UIViewAutoresizingFlexibleBottomMargin |
+    UIViewAutoresizingFlexibleRightMargin |
+    UIViewAutoresizingFlexibleLeftMargin;
+    
+    UILabel *averageLabel = [self.format addLabelToView:header
+                                              withFrame:CGRectMake(210, 24, 100, 18)
+                                                   text:@"Average"
+                                               fontSize:14
+                                              fontColor:self.format.darkColor
+                                       andTextAlignment:NSTextAlignmentCenter];
+    averageLabel.autoresizingMask =
+    UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleTopMargin |
+    UIViewAutoresizingFlexibleBottomMargin |
+    UIViewAutoresizingFlexibleLeftMargin;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        tankOneName.frame = CGRectMake(320, 24, 140, 18);
+        tankOneName.font = [UIFont systemFontOfSize:17];
+        tankOneName.autoresizingMask =
+        UIViewAutoresizingFlexibleTopMargin |
+        UIViewAutoresizingFlexibleBottomMargin |
+        UIViewAutoresizingFlexibleLeftMargin |
+        UIViewAutoresizingFlexibleRightMargin |
+        UIViewAutoresizingFlexibleWidth;
+        
+        tankTwoName.frame = CGRectMake(470, 24, 140, 18);
+        tankTwoName.font = [UIFont systemFontOfSize:17];
+        tankTwoName.autoresizingMask =
+        UIViewAutoresizingFlexibleTopMargin |
+        UIViewAutoresizingFlexibleBottomMargin |
+        UIViewAutoresizingFlexibleRightMargin |
+        UIViewAutoresizingFlexibleLeftMargin |
+        UIViewAutoresizingFlexibleWidth;
+        
+        averageLabel.frame = CGRectMake(620, 24, 140, 18);
+        averageLabel.font = [UIFont systemFontOfSize:17];
+        averageLabel.autoresizingMask =
+        UIViewAutoresizingFlexibleLeftMargin |
+        UIViewAutoresizingFlexibleTopMargin |
+        UIViewAutoresizingFlexibleBottomMargin |
+        UIViewAutoresizingFlexibleWidth;
+    }
     
     return header;
 }
