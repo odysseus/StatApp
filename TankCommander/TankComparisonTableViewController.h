@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tank, RCFormatting, RCToolTips;
+@class Tank, RCFormatting;
 
 @interface TankComparisonTableViewController : UITableViewController
 

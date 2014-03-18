@@ -14,7 +14,6 @@
 #import "StatCell.h"
 #import "RCFormatting.h"
 #import "SelectorView.h"
-#import "RCToolTips.h"
 #import "TiersViewController.h"
 #import "StatStore.h"
 #import "Stat.h"
@@ -35,7 +34,6 @@
         self.turretedIndex = @[@"gun", @"hull", @"turret", @"suspension", @"engine", @"radio"];
         self.nonTurretedIndex = @[@"gun", @"hull", @"suspension", @"engine", @"radio"];
         self.format = [RCFormatting store];
-        self.tooltips = [RCToolTips store];
     }
     return self;
 }
@@ -186,19 +184,8 @@
     }
     // Fetching the key and HR variant
     NSString *key = attArr[indexPath.row];
-    NSArray *keyArr = [self.tooltips valuesForKey:key];
-    NSString *name = keyArr[1];
-    
-    // Grab the value from the tank, stored in an NSNumber
-    NSNumber *valueNum = [NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]];
-    // Create an empty string to hold the formatted value
-    NSString *value = [[NSString alloc] init];
-    
-    if ([keyArr[2] isEqualToString:@"float"]) {
-        value = [NSString stringWithFormat:@"%0.2f", [valueNum floatValue]];
-    } else {
-        value = [NSString stringWithFormat:@"%ld", (long)[valueNum integerValue]];
-    }
+    Stat *tankStat = [[Stat alloc] initWithKey:key
+                                      andValue:[NSNumber numberWithFloat:[[tank valueForKey:key] floatValue]]];
     
     // Autoloaders have stats that don't need averages, the following code ensures that they don't
     // cause an error by trying to retrieve a nonexistent value from the average tank
@@ -212,25 +199,20 @@
     }
     
     // Conditional sets the average value string based on the result of the above loop
-    NSNumber *averageNum = [[NSNumber alloc] init];
     NSString *average = [[NSString alloc] init];
     if (!needsAverage) {
         // Doesn't need an average, so set a placeholder string
         average = @"--";
     } else {
-        // It needs an average, so fetch the number
-        averageNum = [NSNumber numberWithFloat:[[tank.averageTank valueForKey:key] floatValue]];
-        // And format it as an int or float, same as above
-        if ([keyArr[2] isEqualToString:@"float"]) {
-            average = [NSString stringWithFormat:@"%0.2f", [averageNum floatValue]];
-        } else {
-            average = [NSString stringWithFormat:@"%ld", (long)[averageNum integerValue]];
-        }
+        Stat *averageStat = [[Stat alloc] initWithKey:key
+                                             andValue:[NSNumber numberWithFloat:
+                                                       [[tank.averageTank valueForKey:key] floatValue]]];
+        average = [averageStat formatted];
     }
     
     // Set the fields in the cell
-    [[cell stat] setText:name];
-    [[cell statValue] setText:value];
+    [[cell stat] setText:tankStat.displayName];
+    [[cell statValue] setText:[tankStat formatted]];
     [[cell statAverage] setText:average];
     [cell setDataString:key];
     

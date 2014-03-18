@@ -77,6 +77,7 @@
                         fontColor:(UIColor *)color
               andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
 - (void)fullscreenPopupFromButton:(id)sender;
+- (void)dismissView:(id)sender;
 - (UIViewController *)iPhoneStatViewControllerForStat:(Stat *)stat;
 
 

@@ -10,7 +10,6 @@
 #import "TankIPadViewController.h"
 #import "ModulesViewController.h"
 #import "RCButton.h"
-#import "RCToolTips.h"
 #import "Stat.h"
 #import "StatStore.h"
 
@@ -245,6 +244,22 @@ highlightYellow;
     [textField setEditable:NO];
     
     [popupSquare addSubview:textField];
+}
+
+- (void)dismissView:(id)sender
+{
+    // Cast the sender into a UIView, which it should always be anyway
+    UIView *senderView = (UIView *)sender;
+    // Fade to opaque
+    [UIView animateWithDuration:0.3 animations:^{
+        // Fun fact, if you define the animation separately, the completion code fires immediately
+        // rather than waiting for the delay as you would expect. This doesn't appear to be true
+        // When the completion is another animation, all in all, non-intuitive behavior from that
+        senderView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        // Then remove the view once the animation finishes
+        [senderView removeFromSuperview];
+    }];
 }
 
 - (UIViewController *)iPhoneStatViewControllerForStat:(Stat *)stat

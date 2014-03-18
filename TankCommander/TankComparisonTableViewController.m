@@ -11,7 +11,6 @@
 #import "AverageTank.h"
 #import "CompareiPadTableViewCell.h"
 #import "RCFormatting.h"
-#import "RCToolTips.h"
 #import "Stat.h"
 #import "StatStore.h"
 
