@@ -69,7 +69,12 @@
     [super viewDidLoad];
     
     // Load the nib file
-    UINib *nib = [UINib nibWithNibName:@"CompareiPadTableViewCell" bundle:nil];
+    UINib *nib;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        nib = [UINib nibWithNibName:@"CompareiPadTableViewCell" bundle:nil];
+    } else {
+        nib = [UINib nibWithNibName:@"CompareiPhoneTableViewCell" bundle:nil];
+    }
     
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
@@ -94,6 +99,24 @@
 {
     // Return the number of rows in the section.
     return [self.combinedKeys count];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *header = [[UIView alloc] init];
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    header.frame = CGRectMake(0, 0, width, 44);
+    
+    return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return 44;
+    } else {
+        return 60;
+    }
 }
 
 - (CompareiPadTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -157,8 +180,10 @@
     // tankOne
     NSString *tankOneStatString;
     if (tankOneStat) {
+        // Use the Stat method to return a formatted string
         tankOneStatString = [tankOneStat formatted];
     } else {
+        // If the stat doesn't exist, just use dashes
         tankOneStatString = @"--";
     }
     
@@ -185,11 +210,17 @@
     [[cell averageValue] setText:averageStatString];
     
     // Setting the colors
+    // Highlight the better stat with green
     if (tankOneStat && tankTwoStat) {
-        // If both compare tanks have the stat
+        // If both compare tanks have the stat we can continue
+        // REFACTORING CAVEAT: Don't be tempted to remove the seemingly redundant code that
+        // sets the color for both labels every time. Because iOS dequeues and reuses cells,
+        // once the background color has been set it will stay that way if it is not set
+        // every time, leading to a lot of erroneous highlighting when you scroll back up
         if (stat.largerValuesAreBetter) {
             // If the better value is the larger one:
             if ([tankOneStat.value floatValue] == [tankTwoStat.value floatValue]) {
+                // Make them both yellow if they are equal
                 [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
                 [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
             } else if ([tankOneStat.value floatValue] > [tankTwoStat.value floatValue]) {
@@ -215,11 +246,37 @@
             }
         }
     }
+    // Set the average value to a light gray
     [[cell averageValue] setTextColor:self.format.lightColor];
     
     return cell;
 }
 
-
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

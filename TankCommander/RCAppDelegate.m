@@ -30,12 +30,10 @@
     }
     
     // BEGIN DEBUGGING/LOGGING
-    
     //
     // TODO
     // Incorporate accuracy stats based on turret/tread movement
     // Double check the proper inclusion of all stats
-    // Is there more in the data that should go in the app, or is it where it needs to be?
     // Add a glossary VC and the data to populate it, place that in the footer of the tiersVC
     // Possibly add a new root VC to deal with the new stuff being added
     // TankScore
@@ -50,9 +48,9 @@
     // that stems from figuring that data
     //
     
-    StatStore *stats = [StatStore store];
-    Stat *test = [stats statForKey:@"aimTime"];
-    NSLog(@"%@", test.definition);
+    // iPad Dimensions: 1024x768
+    // iPhone 4" Dimensions: 320x568
+    // iPhone 3.5" Dimensions: 320x480
     
     // END DEBUGGING/LOGGING
     

@@ -54,6 +54,7 @@
 		944377181839550D00E1451C /* RCFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377171839550D00E1451C /* RCFormatting.m */; };
 		9443771B1839635200E1451C /* TankHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9443771A1839635200E1451C /* TankHeaderView.m */; };
 		9449D70318C98C5C00E18A94 /* TankIPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449D70218C98C5C00E18A94 /* TankIPhoneViewController.m */; };
+		9455E24F18D7C5620089C74E /* CompareiPhoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9455E24E18D7C5620089C74E /* CompareiPhoneTableViewCell.xib */; };
 		946FC741182D8DFF0016708A /* AverageTank.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC740182D8DFF0016708A /* AverageTank.m */; };
 		946FC7441831AB580016708A /* TanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7431831AB580016708A /* TanksViewController.m */; };
 		946FC7491831CB900016708A /* RCBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 946FC7481831CB900016708A /* RCBaseCell.m */; };
@@ -175,6 +176,7 @@
 		9443771A1839635200E1451C /* TankHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankHeaderView.m; sourceTree = "<group>"; };
 		9449D70118C98C5C00E18A94 /* TankIPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankIPhoneViewController.h; path = ../TankIPhoneViewController.h; sourceTree = "<group>"; };
 		9449D70218C98C5C00E18A94 /* TankIPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TankIPhoneViewController.m; path = ../TankIPhoneViewController.m; sourceTree = "<group>"; };
+		9455E24E18D7C5620089C74E /* CompareiPhoneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompareiPhoneTableViewCell.xib; sourceTree = "<group>"; };
 		946FC73F182D8DFF0016708A /* AverageTank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AverageTank.h; sourceTree = "<group>"; };
 		946FC740182D8DFF0016708A /* AverageTank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AverageTank.m; sourceTree = "<group>"; };
 		946FC7421831AB570016708A /* TanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TanksViewController.h; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				9443770F183816A200E1451C /* TypeCell.xib */,
 				94C8C789183AEC1000B23D8A /* ModuleCell.xib */,
 				94BF603F18D4F06F0007D0BC /* CompareiPadTableViewCell.xib */,
+				9455E24E18D7C5620089C74E /* CompareiPhoneTableViewCell.xib */,
 			);
 			name = IB;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				940744E118D62EAF00183DF4 /* tankDestroyer.png in Resources */,
 				940744DD18D62EAF00183DF4 /* heavyTank.png in Resources */,
 				94B87C3918BD9A0200D6E395 /* tier3.json in Resources */,
+				9455E24F18D7C5620089C74E /* CompareiPhoneTableViewCell.xib in Resources */,
 				940744D118D5479C00183DF4 /* attributes.json in Resources */,
 				940744E018D62EAF00183DF4 /* spg.png in Resources */,
 				94B87C3B18BD9A0200D6E395 /* tier5.json in Resources */,
