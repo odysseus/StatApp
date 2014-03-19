@@ -76,9 +76,27 @@
                          fontSize:(CGFloat)size
                         fontColor:(UIColor *)color
               andContentAlignment:(UIControlContentHorizontalAlignment)alignment;
+
+- (UIView *)fullscreenPopupForKey:(NSString *)key;
 - (void)fullscreenPopupFromButton:(id)sender;
 - (void)dismissView:(id)sender;
+- (UIViewController *)iPhoneStatViewControllerForKey:(NSString *)key;
 - (UIViewController *)iPhoneStatViewControllerForStat:(Stat *)stat;
 
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

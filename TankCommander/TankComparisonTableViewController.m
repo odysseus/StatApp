@@ -342,7 +342,20 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *key = self.combinedKeys[indexPath.row];
+    Stat *stat = [[StatStore store] statForKey:key];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        UIView *popup = [self.format fullscreenPopupForKey:stat.key];
+        [self.view addSubview:popup];
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    } else {
+        UIViewController *vc = [self.format iPhoneStatViewControllerForStat:stat];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 
 @end
 

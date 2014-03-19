@@ -77,6 +77,7 @@ typedef enum TankNationality : NSUInteger {
 - (NSArray *)equippedModulesNameArray;
 - (NSDictionary *)attributesHash;
 - (NSArray *)attributesList;
++ (NSDictionary *)allAttributes;
 
 // Pass through properties
 - (NSArray *)availableGuns;

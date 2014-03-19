@@ -171,17 +171,11 @@ highlightYellow;
     return button;
 }
 
-// Presents a popup explaining the stat when you tap on the stat's name.
-- (void)fullscreenPopupFromButton:(id)sender
+- (UIView *)fullscreenPopupForKey:(NSString *)key
 {
-    // Grab the singleton pointers for formatting and tooltip info
-    RCFormatting *format = [RCFormatting store];
-    
-    // Capture and cast the button as an RCButton to use the dataString property
-    RCButton *senderButton = (RCButton *)sender;
-    
-    // Grab the Stat object
-    Stat *stat = [[StatStore store] statForKey:senderButton.dataString];
+    // Grab the Stat object and the pointer to the formatting singleton
+    Stat *stat = [[StatStore store] statForKey:key];
+    RCFormatting *format  = [RCFormatting store];
     
     // Simple animation to fade the view in
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -202,10 +196,6 @@ highlightYellow;
     
     // Add the animation to the layer
     [[fullscreen layer] addAnimation:fadeIn forKey:@"fadeIn"];
-    
-    // Add the subview to the main view and bring it to the front
-    [senderButton.superview.superview addSubview:fullscreen];
-    [senderButton bringSubviewToFront:fullscreen];
     
     // Add removeFromSuperview as the action for the button, this will dismiss the view
     [fullscreen addTarget:self
@@ -244,6 +234,21 @@ highlightYellow;
     [textField setEditable:NO];
     
     [popupSquare addSubview:textField];
+    
+    return fullscreen;
+}
+
+// Presents a popup explaining the stat when you tap on the stat's name.
+- (void)fullscreenPopupFromButton:(id)sender
+{
+    // Capture and cast the button as an RCButton to use the dataString property
+    RCButton *senderButton = (RCButton *)sender;
+    
+    UIView *fullscreen = [self fullscreenPopupForKey:senderButton.dataString];
+    
+    // Add the subview to the main view and bring it to the front
+    [senderButton.superview.superview addSubview:fullscreen];
+    [senderButton bringSubviewToFront:fullscreen];
 }
 
 - (void)dismissView:(id)sender
@@ -260,6 +265,12 @@ highlightYellow;
         // Then remove the view once the animation finishes
         [senderView removeFromSuperview];
     }];
+}
+
+- (UIViewController *)iPhoneStatViewControllerForKey:(NSString *)key
+{
+    Stat *stat = [[StatStore store] statForKey:key];
+    return [self iPhoneStatViewControllerForStat:stat];
 }
 
 - (UIViewController *)iPhoneStatViewControllerForStat:(Stat *)stat

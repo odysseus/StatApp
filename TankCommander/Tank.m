@@ -93,7 +93,7 @@ camoValueMoving, camoValueShooting;
             [availableSuspensions addObject:currentSuspension];
         }
         [availableSuspensions sortUsingSelector:@selector(compare:)];
-
+        
         // Same concept as above
         NSDictionary *radioValues = [dict objectForKey:@"radios"];
         availableRadios = [[NSMutableArray alloc] init];
@@ -143,17 +143,17 @@ camoValueMoving, camoValueShooting;
     }
     // Some validations are not needed if the tank is a premium
     // These are commented out for now since there's no easy way to get this data from the API or elsewhere
-//    if (!self.premiumTank) {
-//        if (self.experienceNeeded < 1) {
-//            NSLog(@"Non-premium tank %@ is missing experience needed",
-//                  self.name);
-//            result = NO;
-//        }
-//        if (!self.parent | !self.child) {
-//            NSLog(@"%@ is missing parent and/or child: parent: %@, child: %@", self.name, self.parent, self.child);
-//            result = NO;
-//        }
-//    }
+    //    if (!self.premiumTank) {
+    //        if (self.experienceNeeded < 1) {
+    //            NSLog(@"Non-premium tank %@ is missing experience needed",
+    //                  self.name);
+    //            result = NO;
+    //        }
+    //        if (!self.parent | !self.child) {
+    //            NSLog(@"%@ is missing parent and/or child: parent: %@, child: %@", self.name, self.parent, self.child);
+    //            result = NO;
+    //        }
+    //    }
     
     // Finally, validate the module arrays to ensure there is only one stock and one top module for each
     NSMutableArray *moduleArrayKeys = [NSMutableArray arrayWithObjects:
@@ -321,6 +321,77 @@ camoValueMoving, camoValueShooting;
     NSMutableArray *suspensionArr = [final objectForKey:@"suspension"];
     [suspensionArr addObject:@"hullTraverse"];
     [suspensionArr addObject:@"loadLimit"];
+    [suspensionArr addObject:@"speedLimit"];
+    [suspensionArr addObject:@"hardTerrainResistance"];
+    [suspensionArr addObject:@"mediumTerrainResistance"];
+    [suspensionArr addObject:@"softTerrainResistance"];
+    
+    return final;
+}
+
+// This purpose of this method is to provide a structure for the compare views
+// so some stats are removed and many are restructured to provide a
+// one-size-fits all approach
++ (NSDictionary *)allAttributes
+{
+    NSMutableDictionary *final = [[NSMutableDictionary alloc] init];
+    
+    // Set up the dicitonary structure
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"hull"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"gun"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"suspension"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"radio"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"engine"];
+    [final setValue:[[NSMutableArray alloc] init] forKey:@"turret"];
+    
+    // Gun
+    NSMutableArray *gunArr = [final objectForKey:@"gun"];
+    [gunArr addObject:@"penetration"];
+    [gunArr addObject:@"alphaDamage"];
+    [gunArr addObject:@"accuracy"];
+    [gunArr addObject:@"aimTime"];
+    [gunArr addObject:@"rateOfFire"];
+    [gunArr addObject:@"damagePerMinute"];
+    [gunArr addObject:@"gunDepression"];
+    [gunArr addObject:@"gunElevation"];
+    [gunArr addObject:@"roundsInDrum"];
+    [gunArr addObject:@"timeBetweenShots"];
+    [gunArr addObject:@"drumReload"];
+    [gunArr addObject:@"burstDamage"];
+    
+    // Hull
+    NSMutableArray *hullArr = [final valueForKey:@"hull"];
+    [hullArr addObject:@"hitpoints"];
+    [hullArr addObject:@"weight"];
+    [hullArr addObject:@"frontalHullArmor"];
+    [hullArr addObject:@"sideHullArmor"];
+    [hullArr addObject:@"rearHullArmor"];
+    [hullArr addObject:@"camoValueStationary"];
+    [hullArr addObject:@"camoValueMoving"];
+    [hullArr addObject:@"camoValueShooting"];
+    [hullArr addObject:@"viewRange"];
+    [hullArr addObject:@"gunTraverseArc"];
+    
+    // Turret (if needed)
+    NSMutableArray *turretArr = [final objectForKey:@"turret"];
+    [turretArr addObject:@"frontalTurretArmor"];
+    [turretArr addObject:@"sideTurretArmor"];
+    [turretArr addObject:@"rearTurretArmor"];
+    [turretArr addObject:@"turretTraverse"];
+
+    
+    // Engine
+    NSMutableArray *engineArr = [final objectForKey:@"engine"];
+    [engineArr addObject:@"specificPower"];
+    [engineArr addObject:@"fireChance"];
+    
+    // Radio
+    NSMutableArray *radioArr = [final objectForKey:@"radio"];
+    [radioArr addObject:@"signalRange"];
+    
+    // Suspension
+    NSMutableArray *suspensionArr = [final objectForKey:@"suspension"];
+    [suspensionArr addObject:@"hullTraverse"];
     [suspensionArr addObject:@"speedLimit"];
     [suspensionArr addObject:@"hardTerrainResistance"];
     [suspensionArr addObject:@"mediumTerrainResistance"];
@@ -849,28 +920,28 @@ TankNationality fetchTankNationality (NSString *nation)
     NSString *result = @"Unknown";
     switch (self.nationality) {
         case American:
-        result = @"American";
-        break;
+            result = @"American";
+            break;
         case British:
-        result = @"British";
-        break;
+            result = @"British";
+            break;
         case Chinese:
-        result = @"Chinese";
-        break;
+            result = @"Chinese";
+            break;
         case French:
-        result = @"French";
-        break;
+            result = @"French";
+            break;
         case German:
-        result = @"German";
-        break;
+            result = @"German";
+            break;
         case Japanese:
-        result = @"Japanese";
-        break;
+            result = @"Japanese";
+            break;
         case Russian:
-        result = @"Russian";
-        break;
+            result = @"Russian";
+            break;
         case Nation:
-        break;
+            break;
     }
     return result;
 }
@@ -881,22 +952,22 @@ TankNationality fetchTankNationality (NSString *nation)
     NSString *result = @"Unknown";
     switch (self.type) {
         case LightTank:
-        result = @"Light Tank";
-        break;
+            result = @"Light Tank";
+            break;
         case MediumTank:
-        result = @"Medium Tank";
-        break;
+            result = @"Medium Tank";
+            break;
         case HeavyTank:
-        result = @"Heavy Tank";
-        break;
+            result = @"Heavy Tank";
+            break;
         case TankDestroyer:
-        result = @"Tank Destroyer";
-        break;
+            result = @"Tank Destroyer";
+            break;
         case SPG:
-        result = @"SPG";
-        break;
+            result = @"SPG";
+            break;
         case Vehicle:
-        break;
+            break;
     }
     return result;
 }
@@ -916,17 +987,17 @@ TankNationality fetchTankNationality (NSString *nation)
 {
     switch (self.type) {
         case LightTank:
-        return [UIImage imageNamed:@"lightTank"];
+            return [UIImage imageNamed:@"lightTank"];
         case MediumTank:
-        return [UIImage imageNamed:@"mediumTank"];
+            return [UIImage imageNamed:@"mediumTank"];
         case HeavyTank:
-        return [UIImage imageNamed:@"heavyTank"];
+            return [UIImage imageNamed:@"heavyTank"];
         case TankDestroyer:
-        return [UIImage imageNamed:@"tankDestroyer"];
+            return [UIImage imageNamed:@"tankDestroyer"];
         case SPG:
-        return [UIImage imageNamed:@"spg"];
+            return [UIImage imageNamed:@"spg"];
         default:
-        return [UIImage imageNamed:@"lightTank"];
+            return [UIImage imageNamed:@"lightTank"];
     }
 }
 
@@ -937,35 +1008,35 @@ NSString *romanStringFromInt (long convert)
     NSString *result = @"-";
     switch (convert) {
         case 1:
-        result = @"I";
-        break;
+            result = @"I";
+            break;
         case 2:
-        result = @"II";
-        break;
+            result = @"II";
+            break;
         case 3:
-        result = @"III";
-        break;
+            result = @"III";
+            break;
         case 4:
-        result = @"IV";
-        break;
+            result = @"IV";
+            break;
         case 5:
-        result = @"V";
-        break;
+            result = @"V";
+            break;
         case 6:
-        result = @"VI";
-        break;
+            result = @"VI";
+            break;
         case 7:
-        result = @"VII";
-        break;
+            result = @"VII";
+            break;
         case 8:
-        result = @"VIII";
-        break;
+            result = @"VIII";
+            break;
         case 9:
-        result = @"IX";
-        break;
+            result = @"IX";
+            break;
         case 10:
-        result = @"X";
-        break;
+            result = @"X";
+            break;
     }
     return result;
 }
