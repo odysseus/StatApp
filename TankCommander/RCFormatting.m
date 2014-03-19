@@ -171,7 +171,7 @@ highlightYellow;
     return button;
 }
 
-- (UIView *)fullscreenPopupForKey:(NSString *)key
+- (UIView *)fullscreenPopupForKey:(NSString *)key fromPresentationOrigin:(CGPoint)origin
 {
     // Grab the Stat object and the pointer to the formatting singleton
     Stat *stat = [[StatStore store] statForKey:key];
@@ -184,15 +184,11 @@ highlightYellow;
     [fadeIn setToValue:[NSNumber numberWithFloat:1.0]];
     
     // Fullscreen background button to dismiss the popup
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
     UIButton *fullscreen = [[UIButton alloc] init];
-    // Check device orientation to make sure it displays properly
-    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
-        [fullscreen setFrame:CGRectMake(0, 0, screenSize.height, screenSize.width)];
-    } else {
-        [fullscreen setFrame:CGRectMake(0, 0, screenSize.width, screenSize.height)];
-    }
+    // Frame is giant to ensure it covers everything regardless of scrolling, screensize, etc.
+    [fullscreen setFrame:CGRectMake(0, 0, 4000, 10000)];
     [fullscreen setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.3]];
+    fullscreen.tag = 100;
     
     // Add the animation to the layer
     [[fullscreen layer] addAnimation:fadeIn forKey:@"fadeIn"];
@@ -202,20 +198,30 @@ highlightYellow;
                    action:@selector(dismissView:)
          forControlEvents:UIControlEventTouchUpInside];
     
+    // The Popup Square
+    
     // White square to display text
     UIView *popupSquare = [[UIView alloc] init];
-    CGRect bounds = [UIScreen mainScreen].bounds;
     CGSize popupSize = CGSizeMake(400, 360);
+    
+    // The point of origin for the presentation layer, needed to set up the position of the popup
+    CGPoint presentationOrigin = origin;
+    
+    // Ensure the popup frame
+    CGRect bounds = [UIScreen mainScreen].bounds;
     CGPoint popupOrigin = CGPointMake(0, 0);
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
-        popupOrigin = CGPointMake(((bounds.size.height - popupSize.width) / 2), 200);
+        popupOrigin = CGPointMake(((bounds.size.height - popupSize.width) / 2), 200 + presentationOrigin.y);
     } else {
-        popupOrigin = CGPointMake(((bounds.size.width - popupSize.width) / 2), 200);
+        popupOrigin = CGPointMake(((bounds.size.width - popupSize.width) / 2), 200 + presentationOrigin.y);
     }
     [popupSquare setFrame:CGRectMake(popupOrigin.x, popupOrigin.y, popupSize.width, popupSize.height)];
+    
+    // Formatting the square (background, rounded corners, etc.)
     [popupSquare setBackgroundColor:[UIColor whiteColor]];
     popupSquare.layer.cornerRadius = 10;
     popupSquare.layer.masksToBounds = YES;
+    popupSquare.tag = 200;
     [fullscreen addSubview:popupSquare];
     
     // Label with the stat title
@@ -244,7 +250,9 @@ highlightYellow;
     // Capture and cast the button as an RCButton to use the dataString property
     RCButton *senderButton = (RCButton *)sender;
     
-    UIView *fullscreen = [self fullscreenPopupForKey:senderButton.dataString];
+    CGPoint presentationOrigin = [[senderButton.superview.superview.layer presentationLayer] bounds].origin;
+    UIView *fullscreen = [self fullscreenPopupForKey:senderButton.dataString
+                              fromPresentationOrigin:presentationOrigin];
     
     // Add the subview to the main view and bring it to the front
     [senderButton.superview.superview addSubview:fullscreen];

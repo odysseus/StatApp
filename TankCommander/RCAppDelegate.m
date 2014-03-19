@@ -39,7 +39,6 @@
     // TankScore
     // Add ability to get sorted lists of individual stats?
     // Add camo values for on the move and after firing to the iPad view
-    // Add accuracy loss numbers
     // Add a screen that compares the stats between types of tanks in a tier (Eg: Tier 8 mediums have X
     // penetration, heavies have Y avg. pen, etc. etc.)
     // Add reload time

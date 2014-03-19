@@ -348,7 +348,10 @@
     Stat *stat = [[StatStore store] statForKey:key];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        UIView *popup = [self.format fullscreenPopupForKey:stat.key];
+        CGPoint presOrigin = [self.view.layer.presentationLayer bounds].origin;
+        UIView *popup = [self.format fullscreenPopupForKey:stat.key
+                                    fromPresentationOrigin:presOrigin];
+        
         [self.view addSubview:popup];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     } else {

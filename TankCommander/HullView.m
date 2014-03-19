@@ -140,8 +140,88 @@
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
         
+        // Row 2, Column 1
+        y += format.rowHeight;
+        
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"camoValueStationary"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Stationary Camo:"
+                           fontSize:format.fontSize * 0.9
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.camoValueStationary]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnOneXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.camoValueStationary]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        // Row 2, Column 2
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"camoValueMoving"
+                             toView:self
+                          withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Moving Camo:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.camoValueMoving]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnTwoXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.camoValueMoving]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        // Row 2, Column 3
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"camoValueShooting"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Shooting Camo:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.camoValueShooting]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.camoValueShooting]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
         if (!tank.hasTurret) {
-            // Row 2, Column 1
+            // Row 3, Column 1
             y += format.rowHeight;
 
             [format addButtonWithTarget:format

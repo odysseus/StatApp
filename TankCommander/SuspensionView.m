@@ -144,7 +144,7 @@
         [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
-                     withButtonData:@"terrainResistance"
+                     withButtonData:@"softTerrainResistance"
                              toView:self
                           withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth + 10, format.labelHeight)
                                text:@"Hard Ground Resist:"
@@ -170,7 +170,7 @@
         [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
-                     withButtonData:@"terrainResistance"
+                     withButtonData:@"mediumTerrainResistance"
                              toView:self
                           withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
                                text:@"Med Ground Resist:"
@@ -196,7 +196,7 @@
         [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
-                     withButtonData:@"terrainResistance"
+                     withButtonData:@"softTerrainResistance"
                              toView:self
                           withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
                                text:@"Soft Ground Resist:"
@@ -217,7 +217,6 @@
                       fontSize:format.fontSize
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
-        
         
         // Finally, set the frame for the entire view
         y += format.rowHeight;
