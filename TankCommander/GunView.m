@@ -286,42 +286,70 @@
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
         
+        // Row 3, Column 3
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"reloadTime"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Reload Time:"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2fs", tank.reloadTime]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnThreeXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2fs", tank.averageTank.reloadTime]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+
+        
         if (tank.autoloader) {
-            // Row 3, Column 3
+            
+            y += format.rowHeight;
+            
+            // Row 4, Column 1
             [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"burstDamage"
                                  toView:self
-                              withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                              withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
                                    text:@"Burst Damage:"
                                fontSize:format.fontSize
                               fontColor:format.darkColor
                     andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
+                         withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.0f", tank.gun.burstDamage]
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
             
-            // Row 4, Column 1
-            y += format.rowHeight;
-            
+            // Row 4, Column 2
             [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"roundsInDrum"
                                  toView:self
-                              withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                              withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
                                    text:@"Drum Capacity:"
                                fontSize:format.fontSize
                               fontColor:format.darkColor
                     andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
+                         withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.0f", tank.roundsInDrum]
                           fontSize:format.fontSize
                          fontColor:format.darkColor
@@ -333,34 +361,36 @@
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"timeBetweenShots"
                                  toView:self
-                              withFrame:CGRectMake(format.columnTwoXLabel, y, format.labelWidth, format.labelHeight)
+                              withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
                                    text:@"Between Shots:"
                                fontSize:format.fontSize
                               fontColor:format.darkColor
                     andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnTwoXValue, y, format.valueWidth, format.valueHeight)
+                         withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
                               text:[NSString stringWithFormat:@"%0.2fs", tank.timeBetweenShots]
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
             
-            // Row 4, Column 3
+            // Row 5, Column 1
+            y += format.rowHeight;
+            
             [format addButtonWithTarget:format
                                selector:@selector(fullscreenPopupFromButton:)
                         andControlEvent:UIControlEventTouchUpInside
                          withButtonData:@"drumReload"
                                  toView:self
-                              withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                              withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
                                    text:@"Full Reload:"
                                fontSize:format.fontSize
                               fontColor:format.darkColor
                     andContentAlignment:UIControlContentHorizontalAlignmentLeft];
             
             [format addLabelToView:self
-                         withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
-                              text:[NSString stringWithFormat:@"%0.0fs", tank.drumReload]
+                         withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
+                              text:[NSString stringWithFormat:@"%0.2fs", tank.drumReload]
                           fontSize:format.fontSize
                          fontColor:format.darkColor
                   andTextAlignment:NSTextAlignmentLeft];
