@@ -21,9 +21,9 @@ typedef enum ShellType : NSUInteger {
 @property (nonatomic) float damage;
 @property (nonatomic) float cost;
 @property (nonatomic) BOOL isPremiumShell;
-@property (nonatomic) NSString *shellTypeString;
 
+
+-(void)setShellTypeWithString:(NSString *)shellTypeString;
 - (id)initWithArr:(NSArray *)arr;
--(void)setShellType;
 
 @end

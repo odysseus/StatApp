@@ -155,16 +155,14 @@
         [selectShellType addTarget:self
                             action:@selector(selectShellType:)
                   forControlEvents:UIControlEventValueChanged];
-        // Check for the currently selected shell type and set the highlighted segment
-        if (tank.gun.round.shellType == ShellTypeNormal) {
-            [selectShellType setSelectedSegmentIndex:0];
-        } else if (tank.gun.round.shellType == ShellTypeGold) {
-            [selectShellType setSelectedSegmentIndex:1];
-        } else if (tank.gun.round.shellType == ShellTypeHE) {
-            [selectShellType setSelectedSegmentIndex:2];
-        } else {
-            [selectShellType setSelectedSegmentIndex:-1];
+        
+        [selectShellType setSelectedSegmentIndex:-1];
+        for (int i=0; i < [tank.gun.shells count]; i++) {
+            if (tank.gun.round == tank.gun.shells[i]) {
+                [selectShellType setSelectedSegmentIndex:i];
+            }
         }
+        
         [self addSubview:selectShellType];
     }
     return self;
@@ -187,21 +185,9 @@
 
 - (void)selectShellType:(UISegmentedControl *)shellType
 {
-    switch ([shellType selectedSegmentIndex]) {
-        case 0:
-            [tank.gun setNormalRounds];
-            [self.tankViewController viewDidLoad];
-            break;
-        case 1:
-            [tank.gun setGoldRounds];
-            [self.tankViewController viewDidLoad];
-            break;
-        case 2:
-            [tank.gun setHERounds];
-            [self.tankViewController viewDidLoad];
-        default:
-            break;
-    }
+    Shell *shell = tank.gun.shells[[shellType selectedSegmentIndex]];
+    tank.gun.round = shell;
+    [self.tankViewController viewDidLoad];
 }
 
 @end

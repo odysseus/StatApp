@@ -33,10 +33,7 @@
 
 - (NSString *)description;
 - (NSArray *)stringShellArray;
-
-- (BOOL)hasNormalRound;
-- (BOOL)hasGoldRound;
-- (BOOL)hasHERound;
+- (NSArray *)shellTypeArray;
 
 - (float)burstDamage;
 - (float)burstLength;

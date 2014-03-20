@@ -49,24 +49,27 @@ normalRound, heRound, goldRound;
             self.drumReload = [[dict objectForKey:@"drumReload"] floatValue];
             self.timeBetweenShots = [[dict objectForKey:@"timeBetweenShots"] floatValue];
         }
-        [self setNormalRounds];
+        self.round = self.shells[0];
     }
     return self;
 }
 
 - (NSArray *)stringShellArray
 {
-    NSMutableArray *stringShells = [[NSMutableArray alloc] init];
-    if (self.hasNormalRound) {
-        [stringShells addObject:@"Normal"];
+    NSMutableArray *final = [[NSMutableArray alloc] init];
+    for (Shell *shell in self.shells) {
+        [final addObject:[shell description]];
     }
-    if (self.hasGoldRound) {
-        [stringShells addObject:@"Gold"];
+    return final;
+}
+
+- (NSArray *)shellTypeArray
+{
+    NSMutableArray *final = [[NSMutableArray alloc] init];
+    for (Shell *shell in self.shells) {
+        [final addObject:shell];
     }
-    if (self.hasHERound) {
-        [stringShells addObject:@"HE"];
-    }
-    return stringShells;
+    return final;
 }
 
 - (NSString *)description
@@ -78,40 +81,6 @@ normalRound, heRound, goldRound;
 {
     return [NSString stringWithFormat:@"Pen: %0.0f - Dmg: %0.0f - ROF: %0.2f",
             self.round.penetration, self.round.damage, self.rateOfFire];
-}
-
-// Used in the UI to generate the strings for the segmentedController
-- (BOOL)hasNormalRound
-{
-    if (self.normalRound) {
-        NSLog(@"Has Normal");
-        return YES;
-    } else {
-        NSLog(@"No Normal");
-        return NO;
-    }
-}
-
-- (BOOL)hasGoldRound
-{
-    if (self.goldRound) {
-        NSLog(@"Has Gold");
-        return YES;
-    } else {
-        NSLog(@"No Gold");
-        return NO;
-    }
-}
-
-- (BOOL)hasHERound
-{
-    if (self.heRound) {
-        NSLog(@"Has HE");
-        return YES;
-    } else {
-        NSLog(@"No HE");
-        return NO;
-    }
 }
 
 - (void)setNormalRounds
