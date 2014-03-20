@@ -16,18 +16,14 @@ typedef enum ShellType : NSUInteger {
     ShellTypeHE
 } ShellType;
 
-typedef enum Currency : NSUInteger {
-    CurrencyTypeSilver,
-    CurrencyTypeGold
-} Currency;
-
 @property ShellType shellType;
 @property (nonatomic) float penetration;
 @property (nonatomic) float damage;
 @property (nonatomic) float cost;
-@property (nonatomic) Currency shellCurrency;
+@property (nonatomic) BOOL isPremiumShell;
+@property (nonatomic) NSString *shellTypeString;
 
-- (id)initWithShellIndex:(int)index andArray:(NSArray *)arr;
-ShellType fetchShellType (int index);
+- (id)initWithArr:(NSArray *)arr;
+-(void)setShellType;
 
 @end

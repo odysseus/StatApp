@@ -10,34 +10,32 @@
 
 @implementation Shell
 
-- (id)initWithShellIndex:(int)index andArray:(NSArray *)arr
+- (id)initWithArr:(NSArray *)arr
 {
     self = [super init];
     if (self) {
-        self.shellType = fetchShellType(index);
         self.penetration = [arr[0] floatValue];
         self.damage = [arr[1] floatValue];
         self.cost = [arr[2] floatValue];
-        if (arr[3]) {
-            self.shellCurrency = CurrencyTypeGold;
+        self.shellTypeString = arr[4];
+        if ([arr[3] boolValue]) {
+            self.isPremiumShell = YES;
         } else {
-            self.shellCurrency = CurrencyTypeSilver;
+            self.isPremiumShell = NO;
         }
+        [self setShellType];
     }
     return self;
 }
 
-ShellType fetchShellType (int index)
+-(void)setShellType
 {
-    switch (index) {
-        case 0:
-            return ShellTypeNormal;
-        case 1:
-            return ShellTypeGold;
-        case 2:
-            return ShellTypeHE;
-        default:
-            return ShellTypeNormal;
+    if (self.isPremiumShell) {
+        self.shellType = ShellTypeGold;
+    } else if ([self.shellTypeString isEqualToString:@"high_explosive"]) {
+        self.shellType = ShellTypeHE;
+    } else  {
+        self.shellType = ShellTypeNormal;
     }
 }
 

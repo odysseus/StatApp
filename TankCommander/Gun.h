@@ -24,15 +24,19 @@
 @property (nonatomic) float drumReload;
 @property (nonatomic) float timeBetweenShots;
 
+@property (nonatomic) Shell *normalRound;
+@property (nonatomic) Shell *heRound;
+@property (nonatomic) Shell *goldRound;
+
 
 - (id)initWithDict:(NSDictionary *)dict;
 
 - (NSString *)description;
 - (NSArray *)stringShellArray;
 
-- (Shell *)normalRounds;
-- (Shell *)goldRounds;
-- (Shell *)HERounds;
+- (BOOL)hasNormalRound;
+- (BOOL)hasGoldRound;
+- (BOOL)hasHERound;
 
 - (float)burstDamage;
 - (float)burstLength;

@@ -11,7 +11,8 @@
 
 @implementation Gun
 
-@synthesize shells, round, rateOfFire, accuracy, aimTime, roundsInDrum, drumReload, timeBetweenShots;
+@synthesize shells, round, rateOfFire, accuracy, aimTime, roundsInDrum, drumReload, timeBetweenShots,
+normalRound, heRound, goldRound;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -19,19 +20,23 @@
     if (self) {
         // Init the shells
         NSArray *shellValues = [dict objectForKey:@"shells"];
-        Shell *normal = [[Shell alloc] initWithShellIndex:0 andArray:shellValues[0]];
-        // Because some howitzers and arty have only two shells, we need to check and see if there are three values before initializing the HE rounds
-        if ([shellValues count] == 3) {
-            Shell *gold = [[Shell alloc] initWithShellIndex:1 andArray:shellValues[1]];
-            Shell *he = [[Shell alloc] initWithShellIndex:2 andArray:shellValues[2]];
-            self.shells = [NSArray arrayWithObjects:normal, gold, he, nil];
-        } else if ([shellValues count] == 2) {
-            Shell *gold = [[Shell alloc] initWithShellIndex:1 andArray:shellValues[1]];
-            self.shells = [NSArray arrayWithObjects:normal, gold, nil];
-            
-        } else if ([shellValues count] == 1) {
-            self.shells = [NSArray arrayWithObjects:normal, nil];
+        NSMutableArray *shellsArr = [[NSMutableArray alloc] init];
+        for (NSArray *shellArray in shellValues) {
+            Shell *s = [[Shell alloc] initWithArr:shellArray];
+            // Set the gun properties for each shell based on shell type
+            if (s.shellType == ShellTypeNormal) {
+                self.normalRound = s;
+            } else if (s.shellType == ShellTypeGold) {
+                self.goldRound = s;
+            } else if (s.shellType == ShellTypeHE) {
+                self.heRound = s;
+            }
+            [shellsArr addObject:s];
         }
+        NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc] initWithKey:@"shellType" ascending:YES];
+        [shellsArr sortedArrayUsingDescriptors:@[sortDesc]];
+        self.shells = shellsArr;
+        
         // Init the rest of the gun values
         self.rateOfFire = [[dict objectForKey:@"rateOfFire"] floatValue];
         self.accuracy = [[dict objectForKey:@"accuracy"] floatValue];
@@ -49,16 +54,19 @@
     return self;
 }
 
-// Used in the UI to generate the strings for the segmentedController
 - (NSArray *)stringShellArray
 {
-    if ([self.shells count] == 2) {
-        return @[@"Normal", @"Gold"];
-    } else if ([self.shells count] == 3) {
-        return @[@"Normal", @"Gold", @"HE"];
-    } else {
-        return @[@"Normal"];
+    NSMutableArray *stringShells = [[NSMutableArray alloc] init];
+    if (self.hasNormalRound) {
+        [stringShells addObject:@"Normal"];
     }
+    if (self.hasGoldRound) {
+        [stringShells addObject:@"Gold"];
+    }
+    if (self.hasHERound) {
+        [stringShells addObject:@"HE"];
+    }
+    return stringShells;
 }
 
 - (NSString *)description
@@ -72,41 +80,56 @@
             self.round.penetration, self.round.damage, self.rateOfFire];
 }
 
-- (Shell *)normalRounds
+// Used in the UI to generate the strings for the segmentedController
+- (BOOL)hasNormalRound
 {
-    return shells[0];
-}
-
-- (Shell *)goldRounds
-{
-    return shells[1];
-}
-
-- (Shell *)HERounds
-{
-    if ([self.shells count] == 3) {
-        return shells[2];
+    if (self.normalRound) {
+        NSLog(@"Has Normal");
+        return YES;
     } else {
-        return shells[0];
+        NSLog(@"No Normal");
+        return NO;
+    }
+}
+
+- (BOOL)hasGoldRound
+{
+    if (self.goldRound) {
+        NSLog(@"Has Gold");
+        return YES;
+    } else {
+        NSLog(@"No Gold");
+        return NO;
+    }
+}
+
+- (BOOL)hasHERound
+{
+    if (self.heRound) {
+        NSLog(@"Has HE");
+        return YES;
+    } else {
+        NSLog(@"No HE");
+        return NO;
     }
 }
 
 - (void)setNormalRounds
 {
-    round = shells[ShellTypeNormal];
+    round = self.normalRound;
 }
 
 - (void)setGoldRounds
 {
-    round = shells[ShellTypeGold];
+    if (self.goldRound) {
+        round = self.goldRound;
+    }
 }
 
 - (void)setHERounds
 {
-    if ([self.shells count] == 3) {
-        round = shells[2];
-    } else {
-        round = shells[0];
+    if (self.heRound) {
+        round = self.heRound;
     }
 }
 
