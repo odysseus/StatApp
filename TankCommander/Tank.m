@@ -330,6 +330,18 @@ camoValueMoving, camoValueShooting;
     return final;
 }
 
++ (NSArray *)turretedIndex
+{
+    NSArray *final = @[@"gun", @"hull", @"turret", @"engine", @"suspension", @"radio"];
+    return final;
+}
+
++ (NSArray *)nonTurretedIndex
+{
+    NSArray *final = @[@"gun", @"hull", @"engine", @"suspension", @"radio"];
+    return final;
+}
+
 // This purpose of this method is to provide a structure for the compare views
 // so some stats are removed and many are restructured to provide a
 // one-size-fits all approach
@@ -398,6 +410,47 @@ camoValueMoving, camoValueShooting;
     [suspensionArr addObject:@"hardTerrainResistance"];
     [suspensionArr addObject:@"mediumTerrainResistance"];
     [suspensionArr addObject:@"softTerrainResistance"];
+    
+    return final;
+}
+
+- (NSArray *)combinedModulesKeyArrayWithTank:(Tank *)t
+{
+    NSArray *keys = [[NSArray alloc] init];
+    if (self.hasTurret || t.hasTurret) {
+        keys = [Tank turretedIndex];
+    } else {
+        keys = [Tank nonTurretedIndex];
+    }
+    return keys;
+}
+
+// Combines the attributes of two tanks for a comparison view
+- (NSDictionary *)combinedAttributesHashWithTank:(Tank *)t
+{
+    NSDictionary *fullList = [Tank allAttributes];
+    NSArray *tankOneAtt = [self attributesList];
+    NSArray *tankTwoAtt = [t attributesList];
+    NSMutableDictionary *final = [[NSMutableDictionary alloc] init];
+    
+    // Grab the modules list depending on if one or the other has a turret
+    NSArray *keys = [self combinedModulesKeyArrayWithTank:t];
+    
+    // Set up the final structure based on the index keys
+    for (NSString *key in keys) {
+        [final setObject:[[NSMutableArray alloc] init] forKey:key];
+    }
+    
+    // Go through the list of all possible keys, if one of the two tanks has it
+    // add that to the final dictionary to use when creating the the comparison
+    for (NSString *key in fullList) {
+        NSArray *attArr = fullList[key];
+        for (NSString *att in attArr) {
+            if ([tankOneAtt containsObject:att] || [tankTwoAtt containsObject:att]) {
+                [final[key] addObject:att];
+            }
+        }
+    }
     
     return final;
 }

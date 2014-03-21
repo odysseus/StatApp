@@ -73,11 +73,17 @@ typedef enum TankNationality : NSUInteger {
 @property (nonatomic) Radio *radio;
 @property (nonatomic) Suspension *suspension;
 
-// Descriptive Methods
+// Template values for all tanks
++ (NSDictionary *)allAttributes;
++ (NSArray *)turretedIndex;
++ (NSArray *)nonTurretedIndex;
+
+// Descriptive methods used to construct tableViews and comparisons
 - (NSArray *)equippedModulesNameArray;
 - (NSDictionary *)attributesHash;
 - (NSArray *)attributesList;
-+ (NSDictionary *)allAttributes;
+- (NSArray *)combinedModulesKeyArrayWithTank:(Tank *)t;
+- (NSDictionary *)combinedAttributesHashWithTank:(Tank *)t;
 
 // Pass through properties
 - (NSArray *)availableGuns;

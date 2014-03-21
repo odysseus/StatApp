@@ -20,7 +20,7 @@
 
 @implementation TankComparisonTableViewController
 
-@synthesize tankOne, tankTwo, combinedKeys, tankOneKeys, tankTwoKeys, tankViewController;
+@synthesize tankOne, tankTwo, tankViewController, compareDict, moduleKeys, tankOneKeys, tankTwoKeys;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -43,22 +43,12 @@
         // Grab the singleton data stores for formatting and tooltips
         self.format = [RCFormatting store];
         
-        // Grab the arrays of attributes for both tanks
+        self.compareDict = [self.tankOne combinedAttributesHashWithTank:tankTwo];
+        self.moduleKeys = [self.tankOne combinedModulesKeyArrayWithTank:tankTwo];
+        
+//        // Grab the arrays of attributes for both tanks
         self.tankOneKeys = [self.tankOne attributesList];
         self.tankTwoKeys = [self.tankTwo attributesList];
-        NSMutableArray *combined = [[NSMutableArray alloc] init];
-        // Include each unique key once, so:
-        // Add everything from tank one
-        for (NSString *key in self.tankOneKeys) {
-            [combined addObject:key];
-        }
-        // Then everything from tank two that wasn't in tank one
-        for (NSString *key in self.tankTwoKeys) {
-            if (![combined containsObject:key]) {
-                [combined addObject:key];
-            }
-        }
-        self.combinedKeys = combined;
     }
     return self;
 }
@@ -93,6 +83,8 @@
     
     NSArray *rightBarButtons = @[home, tank];
     self.navigationItem.rightBarButtonItems = rightBarButtons;
+    
+    self.tableView.tableHeaderView = [self tableHeaderView];
 }
 
 - (void)popToTankViewController
@@ -111,21 +103,27 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [self.moduleKeys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.combinedKeys count];
+    NSString *key = self.moduleKeys[section];
+    return [[self.compareDict valueForKey:key] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 44;
+    return 32;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [self.moduleKeys[section] capitalizedString];
+}
+
+- (UIView *)tableHeaderView
 {
     UIView *header = [[UIView alloc] init];
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
@@ -214,12 +212,11 @@
     CompareiPadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CompareCell"
                                                                      forIndexPath:indexPath];
     
-    StatStore *stats = [StatStore store];
-    
     // Configure the cell...
     // Get the key and the associated Stat object
-    NSString *key = self.combinedKeys[indexPath.row];
-    Stat *stat = [stats statForKey:key];
+    NSString *modKey = self.moduleKeys[indexPath.section];
+    NSString *key = [self.compareDict valueForKey:modKey][indexPath.row];
+    Stat *stat = [[StatStore store] statForKey:key];
     
     // Three tanks will be displayed (compare1, compare2, average) and they can all have a different list of
     // attributes, so first we need to figure out which ones need displaying
@@ -344,7 +341,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *key = self.combinedKeys[indexPath.row];
+    NSString *modKey = self.moduleKeys[indexPath.section];
+    NSString *key = [self.compareDict valueForKey:modKey][indexPath.row];
     Stat *stat = [[StatStore store] statForKey:key];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {

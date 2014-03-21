@@ -31,8 +31,8 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.turretedIndex = @[@"gun", @"hull", @"turret", @"suspension", @"engine", @"radio"];
-        self.nonTurretedIndex = @[@"gun", @"hull", @"suspension", @"engine", @"radio"];
+        self.turretedIndex = [Tank turretedIndex];
+        self.nonTurretedIndex = [Tank nonTurretedIndex];
         self.format = [RCFormatting store];
     }
     return self;

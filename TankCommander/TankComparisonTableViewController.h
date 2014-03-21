@@ -17,7 +17,8 @@
 @property (nonatomic, weak) Tank *tankTwo;
 
 // The keys
-@property (nonatomic) NSArray *combinedKeys;
+@property (nonatomic) NSDictionary *compareDict;
+@property (nonatomic) NSArray *moduleKeys;
 @property (nonatomic) NSArray *tankOneKeys;
 @property (nonatomic) NSArray *tankTwoKeys;
 
@@ -28,7 +29,7 @@
 @property (nonatomic, weak) UIViewController *tankViewController;
 
 - (id)initWithTankOne:(Tank *)t1 andTwo:(Tank *)t2;
-
 - (void)popToTankViewController;
+- (UIView *)tableHeaderView;
 
 @end
