@@ -36,14 +36,12 @@
     // Double check the proper inclusion of all stats
     // Add a glossary VC and the data to populate it, place that in the footer of the tiersVC
     // Possibly add a new root VC to deal with the new stuff being added
+    
+    // Things for the Ruby project
     // TankScore
     // Add ability to get sorted lists of individual stats?
     // Add a screen that compares the stats between types of tanks in a tier (Eg: Tier 8 mediums have X
     // penetration, heavies have Y avg. pen, etc. etc.)
-    // Add reload time
-    // Add additional stats to comparison view, ie: if you compare a TD with a turreted tank, show the
-    // turret stats anyway because it is a meaningful difference, despite the massive pain in the ass
-    // that stems from figuring that data
     //
     
     // iPad Dimensions: 1024x768
