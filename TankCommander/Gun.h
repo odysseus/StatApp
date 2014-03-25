@@ -42,4 +42,6 @@
 - (void)setGoldRounds;
 - (void)setHERounds;
 
++ (int)count;
+
 @end

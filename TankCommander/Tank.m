@@ -15,6 +15,8 @@
 #import "Suspension.h"
 #import "Armor.h"
 
+static int tankCount = 0;
+
 @implementation Tank
 
 @synthesize name, hull, turret, engine, radio, suspension, availableEngines, availableRadios, topWeight, hasTurret,
@@ -112,6 +114,8 @@ camoValueMoving, camoValueShooting;
         // Set all the values to top values because that is the likely preference of people using the app
         [self setAllValuesTop];
         [self validate];
+        
+        tankCount++;
     }
     return self;
 }
@@ -209,6 +213,11 @@ camoValueMoving, camoValueShooting;
         result = NO;
     }
     return result;
+}
+
++ (int)count
+{
+    return tankCount;
 }
 
 // Only used in logging/debugging, this puts and asterisk in front of premium tanks
@@ -343,8 +352,8 @@ camoValueMoving, camoValueShooting;
 }
 
 // This purpose of this method is to provide a structure for the compare views
-// so some stats are removed and many are restructured to provide a
-// one-size-fits all approach
+// only relevant stats are included, and some are restructured to provide a
+// one size fits all approach
 + (NSDictionary *)allAttributes
 {
     NSMutableDictionary *final = [[NSMutableDictionary alloc] init];
@@ -771,7 +780,11 @@ camoValueMoving, camoValueShooting;
 
 - (float)reloadTime
 {
-    return 60.0 / self.gun.rateOfFire;
+    if (!self.autoloader) {
+        return 60.0 / self.gun.rateOfFire;
+    } else {
+        return self.drumReload;
+    }
 }
 
 // ARMOR PORPERTIES

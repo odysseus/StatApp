@@ -10,6 +10,8 @@
 #import "Armor.h"
 #import "Gun.h"
 
+static int turretCount = 0;
+
 @implementation Turret
 
 @synthesize viewRange, traverseSpeed, frontArmor, sideArmor, rearArmor, additionalHP, availableGuns, gun;
@@ -36,8 +38,15 @@
             }
         }
         [availableGuns sortUsingSelector:@selector(compare:)];
+        
+        turretCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return turretCount;
 }
 
 - (NSString *)description

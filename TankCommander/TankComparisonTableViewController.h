@@ -30,6 +30,7 @@
 
 - (id)initWithTankOne:(Tank *)t1 andTwo:(Tank *)t2;
 - (void)popToTankViewController;
+- (void)popToRootViewController;
 - (UIView *)tableHeaderView;
 
 @end

@@ -167,6 +167,7 @@ NSString *romanStringFromInt (long convert);
 - (id)initWithDict:(NSDictionary *)dict;
 
 // Override Methods
++ (int)count;
 - (NSString *)description;
 
 // Used by the init method to set the enums

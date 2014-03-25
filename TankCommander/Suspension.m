@@ -8,6 +8,8 @@
 
 #import "Suspension.h"
 
+static int suspensionCount = 0;
+
 @implementation Suspension
 
 @synthesize loadLimit, traverseSpeed, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance;
@@ -22,8 +24,15 @@
         self.hardTerrainResistance = [terrainResistance[0] floatValue];
         self.mediumTerrainResistance = [terrainResistance[1] floatValue];
         self.softTerrainResistance = [terrainResistance[2] floatValue];
+        
+        suspensionCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return suspensionCount;
 }
 
 - (NSString *)description

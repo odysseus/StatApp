@@ -10,6 +10,8 @@
 #import "Armor.h"
 #import "Gun.h"
 
+static int hullCount = 0;
+
 @implementation Hull
 
 @synthesize weight, frontArmor, sideArmor, rearArmor, availableGuns, gun, viewRange;
@@ -37,8 +39,15 @@
             }
             [availableGuns sortUsingSelector:@selector(compare:)];
         }
+        
+        hullCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return hullCount;
 }
 
 

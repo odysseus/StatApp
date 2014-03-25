@@ -10,6 +10,8 @@
 
 @implementation Module
 
+static int moduleCount = 0;
+
 @synthesize name, weight, stockModule, topModule, experienceNeeded, cost, modScore;
 
 - (id)initWithDict:(NSDictionary *)dict
@@ -24,8 +26,15 @@
         self.experienceNeeded = [[dict objectForKey:@"experienceNeeded"] intValue];
         self.cost = [[dict objectForKey:@"cost"] intValue];
         self.modScore = [[dict objectForKey:@"modScore"] intValue];
+        
+        moduleCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return moduleCount;
 }
 
 - (NSString *)description

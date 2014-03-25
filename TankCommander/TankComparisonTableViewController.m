@@ -75,7 +75,7 @@
     UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithTitle:@"Home"
                                                              style:UIBarButtonItemStyleBordered
                                                             target:self.navigationController
-                                                            action:@selector(popToRootViewControllerAnimated:)];
+                                                            action:@selector(popToRootViewController)];
     UIBarButtonItem *tank = [[UIBarButtonItem alloc] initWithTitle:self.tankOne.name
                                                                 style:UIBarButtonItemStyleBordered
                                                                target:self
@@ -90,6 +90,11 @@
 - (void)popToTankViewController
 {
     [self.navigationController popToViewController:self.tankViewController animated:YES];
+}
+
+- (void)popToRootViewController
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

@@ -6,17 +6,21 @@
 //  Copyright (c) 2013 Ryan Case. All rights reserved.
 //
 
+// Necessary Imports
 #import "RCAppDelegate.h"
-#import "Tank.h"
-#import "Tier.h"
-#import "TankStore.h"
-#import "Gun.h"
-#import "TankGroup.h"
-#import "TanksViewController.h"
 #import "TiersViewController.h"
-#import "TankIPadViewController.h"
-#import "Stat.h"
-#import "StatStore.h"
+#import "TankStore.h"
+
+// Debug Imports
+#import "Tank.h"
+#import "Module.h"
+#import "Gun.h"
+#import "Hull.h"
+#import "Turret.h"
+#import "Radio.h"
+#import "Engine.h"
+#import "Suspension.h"
+
 
 @implementation RCAppDelegate
 
@@ -28,6 +32,15 @@
     if (allTanks) {
         NSLog(@"Tanks loaded");
     }
+    
+    NSLog(@"Tanks: %d", [Tank count]);
+    NSLog(@"Hulls: %d", [Hull count]);
+    NSLog(@"Turrets: %d", [Turret count]);
+    NSLog(@"Guns: %d", [Gun count]);
+    NSLog(@"Engines: %d", [Engine count]);
+    NSLog(@"Radios: %d", [Radio count]);
+    NSLog(@"Suspensions: %d", [Suspension count]);
+    NSLog(@"Modules: %d", [Module count]);
     
     // BEGIN DEBUGGING/LOGGING
     //

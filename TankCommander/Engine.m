@@ -8,6 +8,8 @@
 
 #import "Engine.h"
 
+static int engineCount = 0;
+
 @implementation Engine
 
 @synthesize horsepower, fireChance;
@@ -18,8 +20,15 @@
     if (self) {
         self.horsepower = [[dict objectForKey:@"horsepower"] floatValue];
         self.fireChance = [[dict objectForKey:@"fireChance"] floatValue];
+        
+        engineCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return engineCount;
 }
 
 - (NSString *)description;

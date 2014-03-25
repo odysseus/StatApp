@@ -8,6 +8,8 @@
 
 #import "Radio.h"
 
+static int radioCount = 0;
+
 @implementation Radio
 
 @synthesize signalRange;
@@ -17,8 +19,15 @@
     self = [super initWithDict:dict];
     if (self) {
         self.signalRange = [[dict objectForKey:@"signalRange"] floatValue];
+        
+        radioCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return radioCount;
 }
 
 - (NSString *)description

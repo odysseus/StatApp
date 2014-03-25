@@ -22,5 +22,6 @@
 
 
 - (id)initWithDict:(NSDictionary *)dict forTurreted:(BOOL)hasTurret;
++ (int)count;
 
 @end

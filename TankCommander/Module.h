@@ -23,5 +23,6 @@
 
 - (NSString *)description;
 - (NSString *)stringSummary;
++ (int)count;
 
 @end

@@ -18,6 +18,7 @@
 - (id)initWithDict:(NSDictionary *)dict;
 
 - (NSString *)description;
++ (int)count;
 
 
 @end

@@ -9,6 +9,8 @@
 #import "Gun.h"
 #import "Shell.h"
 
+static int gunCount = 0;
+
 @implementation Gun
 
 @synthesize shells, round, rateOfFire, accuracy, aimTime, roundsInDrum, drumReload, timeBetweenShots,
@@ -50,8 +52,14 @@ normalRound, heRound, goldRound;
             self.timeBetweenShots = [[dict objectForKey:@"timeBetweenShots"] floatValue];
         }
         self.round = self.shells[0];
+        gunCount++;
     }
     return self;
+}
+
++ (int)count
+{
+    return gunCount;
 }
 
 - (NSArray *)stringShellArray
