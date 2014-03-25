@@ -7,12 +7,15 @@
 //
 
 #import "TankComparisonTableViewController.h"
+#import "TankIPadViewController.h"
+#import "TankIPhoneViewController.h"
 #import "Tank.h"
 #import "AverageTank.h"
 #import "CompareiPadTableViewCell.h"
 #import "RCFormatting.h"
 #import "Stat.h"
 #import "StatStore.h"
+#import "RCButton.h"
 
 @interface TankComparisonTableViewController ()
 
@@ -51,6 +54,11 @@
         self.tankTwoKeys = [self.tankTwo attributesList];
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -135,24 +143,31 @@
     header.frame = CGRectMake(0, 0, width, 60);
     header.backgroundColor = [UIColor whiteColor];
     
-    UILabel *tankOneName = [self.format addLabelToView:header
-                                             withFrame:CGRectMake(10, 24, 100, 18)
-                                                  text:self.tankOne.name
-                                              fontSize:14
-                                             fontColor:self.format.darkColor
-                                      andTextAlignment:NSTextAlignmentCenter];
+    RCButton *tankOneName = [self.format addButtonWithTarget:self
+                                                    selector:@selector(pushTVC:)
+                                             andControlEvent:UIControlEventTouchUpInside
+                                              withButtonData:@"tankOne"
+                                                      toView:header
+                                                   withFrame:CGRectMake(10, 24, 100, 18)
+                                                        text:self.tankOne.name
+                                                    fontSize:14
+                                                   fontColor:self.format.darkColor
+                                         andContentAlignment:UIControlContentHorizontalAlignmentCenter];
     tankOneName.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
     UIViewAutoresizingFlexibleTopMargin |
     UIViewAutoresizingFlexibleBottomMargin |
     UIViewAutoresizingFlexibleRightMargin;
     
-    UILabel *tankTwoName = [self.format addLabelToView:header
-                                             withFrame:CGRectMake(110, 24, 100, 18)
-                                                  text:self.tankTwo.name
-                                              fontSize:14
-                                             fontColor:self.format.darkColor
-                                      andTextAlignment:NSTextAlignmentCenter];
+    RCButton *tankTwoName = [self.format addButtonWithTarget:self
+                                                    selector:@selector(pushTVC:)
+                                             andControlEvent:UIControlEventTouchUpInside
+                                              withButtonData:@"tankTwo"
+                                                      toView:header
+                                                   withFrame:CGRectMake(110, 24, 100, 18)
+                                                        text:self.tankTwo.name fontSize:14
+                                                   fontColor:self.format.darkColor
+                                         andContentAlignment:UIControlContentHorizontalAlignmentCenter];
     tankTwoName.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
     UIViewAutoresizingFlexibleTopMargin |
@@ -174,7 +189,7 @@
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         tankOneName.frame = CGRectMake(320, 24, 140, 18);
-        tankOneName.font = [UIFont systemFontOfSize:17];
+        tankOneName.titleLabel.font = [UIFont systemFontOfSize:17];
         tankOneName.autoresizingMask =
         UIViewAutoresizingFlexibleTopMargin |
         UIViewAutoresizingFlexibleBottomMargin |
@@ -183,7 +198,7 @@
         UIViewAutoresizingFlexibleWidth;
         
         tankTwoName.frame = CGRectMake(470, 24, 140, 18);
-        tankTwoName.font = [UIFont systemFontOfSize:17];
+        tankTwoName.titleLabel.font = [UIFont systemFontOfSize:17];
         tankTwoName.autoresizingMask =
         UIViewAutoresizingFlexibleTopMargin |
         UIViewAutoresizingFlexibleBottomMargin |
@@ -360,6 +375,29 @@
     } else {
         UIViewController *vc = [self.format iPhoneStatViewControllerForStat:stat];
         [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)pushTVC:(RCButton *)sender
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        TankIPadViewController *tvc = [[TankIPadViewController alloc] init];
+        [tvc setCompare:YES];
+        if ([sender.dataString isEqualToString:@"tankOne"]) {
+            [tvc setTank:self.tankOne];
+        } else {
+            [tvc setTank:self.tankTwo];
+        }
+        [self.navigationController pushViewController:tvc animated:YES];
+    } else {
+        TankIPhoneViewController *tvc = [[TankIPhoneViewController alloc] init];
+        [tvc setCompare:YES];
+        if ([sender.dataString isEqualToString:@"tankOne"]) {
+            [tvc setTank:self.tankOne];
+        } else {
+            [tvc setTank:self.tankTwo];
+        }
+        [self.navigationController pushViewController:tvc animated:YES];
     }
 }
 

@@ -13,6 +13,7 @@
 @interface TankIPadViewController : UIViewController
 
 @property (nonatomic) Tank *tank;
+@property (nonatomic) BOOL compare;
 
 - (void)tankCompare;
 

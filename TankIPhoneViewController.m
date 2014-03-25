@@ -34,6 +34,7 @@
         self.turretedIndex = [Tank turretedIndex];
         self.nonTurretedIndex = [Tank nonTurretedIndex];
         self.format = [RCFormatting store];
+        self.compare = NO;
     }
     return self;
 }

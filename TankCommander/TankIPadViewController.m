@@ -27,13 +27,14 @@
 
 @implementation TankIPadViewController
 
-@synthesize tank;
+@synthesize tank, compare;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Override
+        self.compare = NO;
     }
     return self;
 }
@@ -74,11 +75,14 @@
         origin.x += 150;
     }
     
-    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare"
-                                                                      style:UIBarButtonItemStyleBordered
-                                                                     target:self
-                                                                     action:@selector(tankCompare)];
-    [self.navigationItem setRightBarButtonItem:compareButton];
+    if (!self.compare) {
+        UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare"
+                                                                          style:UIBarButtonItemStyleBordered
+                                                                         target:self
+                                                                         action:@selector(tankCompare)];
+        [self.navigationItem setRightBarButtonItem:compareButton];
+    }
+    
     
     TankHeaderView *headerView = [[TankHeaderView alloc] initWithPoint:origin andTank:tank];
     [self.view addSubview:headerView];
