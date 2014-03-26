@@ -42,4 +42,26 @@ static int engineCount = 0;
             self.horsepower];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Engine *copy = [super copyWithZone:zone];
+    copy.horsepower = self.horsepower;
+    copy.fireChance = self.fireChance;
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,8 +13,8 @@
 @interface TankComparisonTableViewController : UITableViewController
 
 // The tanks
-@property (nonatomic, weak) Tank *tankOne;
-@property (nonatomic, weak) Tank *tankTwo;
+@property (nonatomic) Tank *tankOne;
+@property (nonatomic) Tank *tankTwo;
 
 // The keys
 @property (nonatomic) NSDictionary *compareDict;
@@ -30,7 +30,7 @@
 
 - (id)initWithTankOne:(Tank *)t1 andTwo:(Tank *)t2;
 - (void)popToTankViewController;
-- (void)popToRootViewController;
+- (void)popToRootVC;
 - (UIView *)tableHeaderView;
 
 @end

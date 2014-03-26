@@ -10,7 +10,7 @@
 #import "Shell.h"
 #import "Module.h"
 
-@interface Gun : Module
+@interface Gun : Module <NSCopying>
 
 @property (nonatomic) NSArray *shells;
 @property (nonatomic) Shell *round;

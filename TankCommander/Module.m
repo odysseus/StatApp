@@ -52,6 +52,18 @@ static int moduleCount = 0;
     return [[NSNumber numberWithInt:self.modScore] compare:[NSNumber numberWithInt:otherModule.modScore]];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Module *copy = [[[self class] allocWithZone:zone] init];
+    NSArray *attributes = @[@"tier", @"weight", @"stockModule", @"topModule", @"experienceNeeded", @"cost", @"modScore"];
+    for (NSString *key in attributes) {
+        [copy setValue:[self valueForKey:key] forKey:key];
+    }
+    copy.name = [self.name copyWithZone:zone];
+    
+    return copy;
+}
+
 @end
 
 

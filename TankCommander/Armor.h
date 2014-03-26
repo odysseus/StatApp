@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Armor : NSObject
+@interface Armor : NSObject <NSCopying>
 
 @property (nonatomic) float thickness;
 @property (nonatomic) float angle;

@@ -11,7 +11,7 @@
 
 @class Armor, Gun;
 
-@interface Turret : Module
+@interface Turret : Module <NSCopying>
 
 @property (nonatomic) float viewRange;
 @property (nonatomic) float traverseSpeed;

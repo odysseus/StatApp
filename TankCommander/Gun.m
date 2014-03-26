@@ -128,4 +128,32 @@ normalRound, heRound, goldRound;
     }
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Gun *copy = [super copyWithZone:zone];
+    NSArray *primitives = @[@"rateOfFire", @"accuracy", @"aimTime", @"gunDepression", @"gunElevation",
+                            @"autoloader", @"roundsInDrum", @"drumReload", @"timeBetweenShots"];
+    for (NSString *key in primitives) {
+        [copy setValue:[self valueForKey:key] forKey:key];
+    }
+    NSArray *pointers = @[@"shells", @"round", @"normalRound", @"heRound", @"goldRound"];
+    for (NSString *key in pointers) {
+        [copy setValue:[[self valueForKey:key] copyWithZone:zone] forKey:key];
+    }
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+

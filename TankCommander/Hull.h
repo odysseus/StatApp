@@ -10,7 +10,7 @@
 
 @class Armor, Gun;
 
-@interface Hull : NSObject
+@interface Hull : NSObject <NSCopying>
 
 @property (nonatomic) Armor *frontArmor;
 @property (nonatomic) Armor *sideArmor;

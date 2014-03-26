@@ -50,5 +50,20 @@ static int hullCount = 0;
     return hullCount;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Hull *copy = [[[self class] allocWithZone:zone] init];
+    NSArray *attributes = @[@"frontArmor", @"sideArmor", @"rearArmor", @"viewRange"];
+    for (NSString *key in attributes) {
+        [copy setValue:[[self valueForKey:key] copyWithZone:zone] forKey:key];
+    }
+    copy.weight = self.weight;
+    copy.viewRange = self.viewRange;
+    
+    copy.availableGuns = [[NSMutableArray alloc] initWithArray:self.availableGuns copyItems:YES];
+    
+    return copy;
+}
+
 
 @end

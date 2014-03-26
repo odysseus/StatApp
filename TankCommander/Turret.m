@@ -63,4 +63,32 @@ static int turretCount = 0;
     }
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Turret *copy = [super copyWithZone:zone];
+    NSArray *keys = @[@"frontArmor", @"sideArmor", @"rearArmor", @"gun"];
+    for (NSString *key in keys) {
+        [copy setValue:[[self valueForKey:key] copyWithZone:zone] forKey:key];
+    }
+    copy.viewRange = self.viewRange;
+    copy.traverseSpeed = self.traverseSpeed;
+    copy.additionalHP = self.additionalHP;
+    
+    copy.availableGuns = [[NSMutableArray alloc] initWithArray:self.availableGuns copyItems:YES];
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+

@@ -401,7 +401,7 @@ camoValueMoving, camoValueShooting;
     [turretArr addObject:@"sideTurretArmor"];
     [turretArr addObject:@"rearTurretArmor"];
     [turretArr addObject:@"turretTraverse"];
-
+    
     
     // Engine
     NSMutableArray *engineArr = [final objectForKey:@"engine"];
@@ -1147,4 +1147,60 @@ NSString *romanStringFromInt (long convert)
     return totalExp;
 }
 
+-(id)copyWithZone:(NSZone *)zone
+{
+    Tank *copy = [[[self class] allocWithZone:zone] init];
+    
+    // Primitive attributes
+    NSArray *primitives = @[@"nationality", @"tier", @"hasTurret", @"premiumTank", @"available", @"experienceNeeded",
+                            @"cost", @"crewLevel", @"baseHitpoints", @"topWeight", @"stockWeight", @"gunTraverseArc",
+                            @"speedLimit", @"camoValueStationary", @"camoValueMoving", @"camoValueShooting"];
+    for (NSString *key in primitives) {
+        [copy setValue:[self valueForKey:key] forKey:key];
+    }
+    
+    NSArray *strings = @[@"name", @"parent", @"child"];
+    for (NSString *key in strings) {
+        [copy setValue:[[self valueForKey:key] copyWithZone:zone] forKey:key];
+    }
+    
+    // Hull
+    copy.hull = [self.hull copyWithZone:zone];
+    
+    // Arrays
+    NSArray *arrays = @[@"availableTurrets", @"availableEngines", @"availableRadios", @"availableSuspensions"];
+    for (NSString *key in arrays) {
+        [copy setValue:[[NSMutableArray alloc] initWithArray:[self valueForKey:key] copyItems:YES] forKey:key];
+    }
+    
+    // Modules
+    [copy setAllValuesTop];
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

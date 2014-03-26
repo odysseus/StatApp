@@ -46,4 +46,26 @@ static int suspensionCount = 0;
             self.loadLimit];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Suspension *copy = [super copyWithZone:zone];
+    NSArray *primitives = @[@"loadLimit", @"traverseSpeed", @"hardTerrainResistance", @"mediumTerrainResistance", @"softTerrainResistance"];
+    for (NSString *key in primitives) {
+        [copy setValue:[self valueForKey:key] forKey:key];
+    }
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+

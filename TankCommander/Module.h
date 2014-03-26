@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Module : NSObject
+@interface Module : NSObject <NSCopying>
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) int tier;

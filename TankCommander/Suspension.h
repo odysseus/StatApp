@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Module.h"
 
-@interface Suspension : Module
+@interface Suspension : Module <NSCopying>
 
 @property (nonatomic) float loadLimit;
 @property (nonatomic) int traverseSpeed;

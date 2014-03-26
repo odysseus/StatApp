@@ -49,4 +49,28 @@
     }
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Shell *copy = [[[self class] allocWithZone:zone] init];
+    copy.penetration = self.penetration;
+    copy.damage = self.damage;
+    copy.cost = self.cost;
+    copy.isPremiumShell = self.isPremiumShell;
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

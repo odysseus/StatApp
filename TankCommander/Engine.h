@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Module.h"
 
-@interface Engine : Module
+@interface Engine : Module <NSCopying>
 
 @property (nonatomic) float horsepower;
 @property (nonatomic) float fireChance;

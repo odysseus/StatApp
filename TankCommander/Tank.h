@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class Hull, Turret, Gun, Engine, Radio, Suspension, TankGroup, AverageTank;
 
-@interface Tank : NSObject
+@interface Tank : NSObject <NSCopying>
 
 typedef enum TankType : NSUInteger {
     LightTank,      // 0

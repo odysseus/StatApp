@@ -41,4 +41,27 @@ static int radioCount = 0;
             self.signalRange];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Radio *copy = [super copyWithZone:zone];
+    copy.signalRange = self.signalRange;
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

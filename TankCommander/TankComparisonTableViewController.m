@@ -43,6 +43,10 @@
         self.tankOne = t1;
         self.tankTwo = t2;
         
+        if (tankOne == tankTwo) {
+            self.tankTwo = [tankOne copyWithZone:nil];
+        }
+        
         // Grab the singleton data stores for formatting and tooltips
         self.format = [RCFormatting store];
         
@@ -83,7 +87,7 @@
     UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithTitle:@"Home"
                                                              style:UIBarButtonItemStyleBordered
                                                             target:self.navigationController
-                                                            action:@selector(popToRootViewController)];
+                                                            action:@selector(popToRootViewControllerAnimated:)];
     UIBarButtonItem *tank = [[UIBarButtonItem alloc] initWithTitle:self.tankOne.name
                                                                 style:UIBarButtonItemStyleBordered
                                                                target:self
@@ -100,7 +104,7 @@
     [self.navigationController popToViewController:self.tankViewController animated:YES];
 }
 
-- (void)popToRootViewController
+- (void)popToRootVC
 {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

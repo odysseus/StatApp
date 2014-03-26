@@ -32,4 +32,29 @@ float cosineWithDegrees(float radians)
     return (thickness / cosineWithDegrees(angle - 5));
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    Armor *copy = [[[self class] allocWithZone:zone] init];
+    copy.thickness = self.thickness;
+    copy.angle = self.angle;
+    
+    return copy;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

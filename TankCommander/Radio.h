@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Module.h"
 
-@interface Radio : Module
+@interface Radio : Module <NSCopying>
 
 @property (nonatomic) float signalRange;
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Shell : NSObject
+@interface Shell : NSObject <NSCopying>
 
 typedef enum ShellType : NSUInteger {
     ShellTypeNormal,
