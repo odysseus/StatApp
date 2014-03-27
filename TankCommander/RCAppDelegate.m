@@ -45,14 +45,13 @@
     // BEGIN DEBUGGING/LOGGING
     //
     // TODO
-    // Incorporate accuracy stats based on turret/tread movement
-    // Double check the proper inclusion of all stats
     // Add a glossary VC and the data to populate it, place that in the footer of the tiersVC
-    // Possibly add a new root VC to deal with the new stuff being added
     
     // Things for the Ruby project
     // TankScore
-    // Add ability to get sorted lists of individual stats?
+    
+    // Future Versions
+    // Superlative lists: sort all tanks by penetration, damage, etc.
     // Add a screen that compares the stats between types of tanks in a tier (Eg: Tier 8 mediums have X
     // penetration, heavies have Y avg. pen, etc. etc.)
     //

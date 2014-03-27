@@ -284,6 +284,7 @@ camoValueMoving, camoValueShooting;
     [gunArr addObject:@"damagePerMinute"];
     [gunArr addObject:@"gunDepression"];
     [gunArr addObject:@"gunElevation"];
+    [gunArr addObject:@"movementDispersionGun"];
     if (self.autoloader) {
         [gunArr addObject:@"roundsInDrum"];
         [gunArr addObject:@"timeBetweenShots"];
@@ -335,19 +336,20 @@ camoValueMoving, camoValueShooting;
     [suspensionArr addObject:@"hardTerrainResistance"];
     [suspensionArr addObject:@"mediumTerrainResistance"];
     [suspensionArr addObject:@"softTerrainResistance"];
+    [suspensionArr addObject:@"movementDispersionSuspension"];
     
     return final;
 }
 
 + (NSArray *)turretedIndex
 {
-    NSArray *final = @[@"gun", @"hull", @"turret", @"engine", @"suspension", @"radio"];
+    NSArray *final = @[@"gun", @"hull", @"turret", @"suspension", @"engine", @"radio"];
     return final;
 }
 
 + (NSArray *)nonTurretedIndex
 {
-    NSArray *final = @[@"gun", @"hull", @"engine", @"suspension", @"radio"];
+    NSArray *final = @[@"gun", @"hull", @"suspension", @"engine", @"radio"];
     return final;
 }
 
@@ -381,6 +383,7 @@ camoValueMoving, camoValueShooting;
     [gunArr addObject:@"timeBetweenShots"];
     [gunArr addObject:@"drumReload"];
     [gunArr addObject:@"burstDamage"];
+    [gunArr addObject:@"movementDispersionGun"];
     
     // Hull
     NSMutableArray *hullArr = [final valueForKey:@"hull"];
@@ -419,6 +422,7 @@ camoValueMoving, camoValueShooting;
     [suspensionArr addObject:@"hardTerrainResistance"];
     [suspensionArr addObject:@"mediumTerrainResistance"];
     [suspensionArr addObject:@"softTerrainResistance"];
+    [suspensionArr addObject:@"movementDispersionSuspension"];
     
     return final;
 }
@@ -758,6 +762,16 @@ camoValueMoving, camoValueShooting;
 - (float)signalRange
 {
     return self.radio.signalRange;
+}
+
+- (float)movementDispersionGun
+{
+    return self.gun.movementDispersionGun;
+}
+
+- (float)movementDispersionSuspension
+{
+    return  self.suspension.movementDispersionSuspension;
 }
 
 // CALCULATED PROPERTIES

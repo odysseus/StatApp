@@ -44,6 +44,8 @@
 @property (nonatomic) float hardTerrainResistance;
 @property (nonatomic) float mediumTerrainResistance;
 @property (nonatomic) float softTerrainResistance;
+@property (nonatomic) float movementDispersionGun;
+@property (nonatomic) float movementDispersionSuspension;
 
 // Armor Properties
 @property (nonatomic) float frontalHullArmor;

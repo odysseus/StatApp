@@ -12,7 +12,8 @@ static int suspensionCount = 0;
 
 @implementation Suspension
 
-@synthesize loadLimit, traverseSpeed, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance;
+@synthesize loadLimit, traverseSpeed, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance,
+movementDispersionSuspension;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -24,6 +25,7 @@ static int suspensionCount = 0;
         self.hardTerrainResistance = [terrainResistance[0] floatValue];
         self.mediumTerrainResistance = [terrainResistance[1] floatValue];
         self.softTerrainResistance = [terrainResistance[2] floatValue];
+        self.movementDispersionSuspension = [[dict objectForKey:@"movementDispersion"] floatValue];
         
         suspensionCount++;
     }
@@ -49,7 +51,8 @@ static int suspensionCount = 0;
 - (id)copyWithZone:(NSZone *)zone
 {
     Suspension *copy = [super copyWithZone:zone];
-    NSArray *primitives = @[@"loadLimit", @"traverseSpeed", @"hardTerrainResistance", @"mediumTerrainResistance", @"softTerrainResistance"];
+    NSArray *primitives = @[@"loadLimit", @"traverseSpeed", @"hardTerrainResistance", @"mediumTerrainResistance",
+                            @"softTerrainResistance", @"movementDispersionSuspension"];
     for (NSString *key in primitives) {
         [copy setValue:[self valueForKey:key] forKey:key];
     }

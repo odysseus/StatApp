@@ -219,7 +219,7 @@
                                @"turretTraverse", @"viewRange", @"horsepower", @"fireChance", @"signalRange",
                                @"loadLimit", @"hardTerrainResistance", @"mediumTerrainResistance",
                                @"softTerrainResistance", @"camoValueStationary", @"camoValueMoving",
-                               @"camoValueShooting"];
+                               @"camoValueShooting", @"movementDispersionGun", @"movementDispersionSuspension"];
         for (NSString *key in floatKeys) {
             [average setValue:[self medianValueForKey:key] forKey:key];
         }

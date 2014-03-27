@@ -289,12 +289,15 @@ highlightYellow;
     
     RCFormatting *format = [RCFormatting store];
     
-    [format addLabelToView:[statView view]
-                 withFrame:CGRectMake((format.screenWidth - 200) / 2, 80, 200, 44)
-                      text:stat.glossaryName
-                  fontSize:format.fontSize * 1.5
-                 fontColor:format.darkColor
-          andTextAlignment:NSTextAlignmentCenter];
+    UILabel *nameLabel = [format addLabelToView:[statView view]
+                                      withFrame:CGRectMake((format.screenWidth - 200) / 2, 80, 200, 44)
+                                           text:stat.glossaryName
+                                       fontSize:format.fontSize * 1.5
+                                      fontColor:format.darkColor
+                               andTextAlignment:NSTextAlignmentCenter];
+    nameLabel.minimumScaleFactor = 0.5;
+    nameLabel.numberOfLines = 1;
+    nameLabel.adjustsFontSizeToFitWidth = YES;
     
     // Text view with the stat description
     UITextView *textField = [[UITextView alloc]

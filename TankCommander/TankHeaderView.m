@@ -56,24 +56,26 @@
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
         
+        // No way to get XP needed without manually inputting it all, so this is commented out until
+        // a better solution is found
         // Experience fields will only show on non-premium tanks
-        if (!tank.premiumTank) {
-            // Experience Needed Label
-            [format addLabelToView:self
-                         withFrame:CGRectMake(565, 10, 40, 20)
-                              text:NSLocalizedString(@"XP:", nil)
-                          fontSize:(format.fontSize * 0.75)
-                         fontColor:format.lightColor
-                  andTextAlignment:NSTextAlignmentRight];
-            
-            // Experience Needed Value
-            [format addLabelToView:self
-                         withFrame:CGRectMake(615, 10, 75, 20)
-                              text:[numberFormatter stringFromNumber:[NSNumber numberWithInteger:tank.experienceNeeded]]
-                          fontSize:(format.fontSize * 0.75)
-                         fontColor:format.lightColor
-                  andTextAlignment:NSTextAlignmentLeft];
-        }
+//        if (!tank.premiumTank) {
+//            // Experience Needed Label
+//            [format addLabelToView:self
+//                         withFrame:CGRectMake(565, 10, 40, 20)
+//                              text:NSLocalizedString(@"XP:", nil)
+//                          fontSize:(format.fontSize * 0.75)
+//                         fontColor:format.lightColor
+//                  andTextAlignment:NSTextAlignmentRight];
+//            
+//            // Experience Needed Value
+//            [format addLabelToView:self
+//                         withFrame:CGRectMake(615, 10, 75, 20)
+//                              text:[numberFormatter stringFromNumber:[NSNumber numberWithInteger:tank.experienceNeeded]]
+//                          fontSize:(format.fontSize * 0.75)
+//                         fontColor:format.lightColor
+//                  andTextAlignment:NSTextAlignmentLeft];
+//        }
         
         // Cost label
         [format addLabelToView:self

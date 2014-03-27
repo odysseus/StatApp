@@ -218,6 +218,34 @@
                      fontColor:format.lightColor
               andTextAlignment:NSTextAlignmentLeft];
         
+        // Row 3, Column 1
+        y += format.rowHeight;
+        
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"movementDispersionSuspension"
+                             toView:self
+                          withFrame:CGRectMake(format.columnOneXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Mvmt Dispersion:"
+                           fontSize:format.fontSize * 0.8
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnOneXValue, y, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.movementDispersionSuspension]
+                      fontSize:format.fontSize
+                     fontColor:format.darkColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
+        [format addLabelToView:self
+                     withFrame:CGRectMake(format.columnOneXValue, y+15, format.valueWidth, format.valueHeight)
+                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.movementDispersionSuspension]
+                      fontSize:format.fontSize
+                     fontColor:format.lightColor
+              andTextAlignment:NSTextAlignmentLeft];
+        
         // Finally, set the frame for the entire view
         y += format.rowHeight;
         self.frame = CGRectMake(point.x, point.y, screenWidth, y);

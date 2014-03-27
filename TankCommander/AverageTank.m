@@ -16,6 +16,6 @@
     effectiveFrontalHullArmor, effectiveSideHullArmor, effectiveRearHullArmor, effectiveFrontalTurretArmor,
     effectiveSideTurretArmor, effectiveRearTurretArmor, hullTraverse, turretTraverse, viewRange, fireChance,
     horsepower, signalRange, loadLimit, hardTerrainResistance, mediumTerrainResistance, softTerrainResistance,
-    camoValueStationary, camoValueMoving, camoValueShooting;
+    camoValueStationary, camoValueMoving, camoValueShooting, movementDispersionGun, movementDispersionSuspension;
 
 @end

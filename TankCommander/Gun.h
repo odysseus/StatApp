@@ -23,6 +23,7 @@
 @property (nonatomic) float roundsInDrum;
 @property (nonatomic) float drumReload;
 @property (nonatomic) float timeBetweenShots;
+@property (nonatomic) float movementDispersionGun;
 
 @property (nonatomic) Shell *normalRound;
 @property (nonatomic) Shell *heRound;

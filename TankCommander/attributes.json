@@ -258,7 +258,21 @@
                               "float",
                               "The relative ability of a tank to stay hidden. Camo values were retrieved from, and calculated by, wotinfo.net. A higher camo value makes a tank harder to detect when in an enemy tank's view range. Being stationary (not moving the tracks for 3 seconds) grants the most camo, moving reduces this, and shooting reduces it even more.  Light tanks keep the same camo value when stationary and when moving (but not shooting). Camo value can be improved by cover, equipment, and skills.",
                               "increasing"
-                              ]
+                              ],
+        "movementDispersionGun": [
+                                  "Gun Movement Dispersion",
+                                  "Mvmt Dispersion",
+                                  "float",
+                                  "The amount of accuracy that can be lost by moving the gun or turret. For example, the Löwe has an accuracy of 0.33 and a gun movement dispersion of 0.12. So the accuracy of a stationary Löwe can go as low as 0.45 solely from moving the gun. Accuracy can also be reduced by moving the tracks, shooting, or having a damaged gun or injured gunner.",
+                                  "decreasing"
+                                  ],
+        "movementDispersionSuspension": [
+                                         "Tread Movement Dispersion",
+                                         "Mvmt Dispersion",
+                                         "float",
+                                         "The amount of accuracy lost by moving the tracks, either rotating the tank or moving forwards or backwards. Example: A fully upgraded ISU-152 has an accuracy of 0.41 and a tread movement dispersion of 0.2, so rotating the vehicle to face another target can cause the accuracy to drop as low as 0.61. Accuracy can also be reduced by moving the gun, shooting, or having a damaged gun or injured gunner.",
+                                         "decreasing"
+                                         ]
     }
 }
 

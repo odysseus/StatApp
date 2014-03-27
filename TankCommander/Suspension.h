@@ -16,6 +16,7 @@
 @property (nonatomic) float hardTerrainResistance;
 @property (nonatomic) float mediumTerrainResistance;
 @property (nonatomic) float softTerrainResistance;
+@property (nonatomic) float movementDispersionSuspension;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

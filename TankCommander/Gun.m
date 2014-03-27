@@ -14,7 +14,7 @@ static int gunCount = 0;
 @implementation Gun
 
 @synthesize shells, round, rateOfFire, accuracy, aimTime, roundsInDrum, drumReload, timeBetweenShots,
-normalRound, heRound, goldRound;
+normalRound, heRound, goldRound, movementDispersionGun;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -45,6 +45,8 @@ normalRound, heRound, goldRound;
         self.aimTime = [[dict objectForKey:@"aimTime"] floatValue];
         self.gunDepression = [[dict objectForKey:@"gunDepression"] floatValue];
         self.gunElevation = [[dict objectForKey:@"gunElevation"] floatValue];
+        NSDictionary *dispersionValues = [dict objectForKey:@"dispersion"];
+        self.movementDispersionGun = [[dispersionValues objectForKey:@"gunMovement"] floatValue];
         self.autoloader = [[dict objectForKey:@"autoloader"] boolValue];
         if (self.autoloader) {
             self.roundsInDrum = [[dict objectForKey:@"roundsInDrum"] floatValue];
@@ -132,7 +134,7 @@ normalRound, heRound, goldRound;
 {
     Gun *copy = [super copyWithZone:zone];
     NSArray *primitives = @[@"rateOfFire", @"accuracy", @"aimTime", @"gunDepression", @"gunElevation",
-                            @"autoloader", @"roundsInDrum", @"drumReload", @"timeBetweenShots"];
+                            @"autoloader", @"roundsInDrum", @"drumReload", @"timeBetweenShots", @"movementDispersionGun"];
     for (NSString *key in primitives) {
         [copy setValue:[self valueForKey:key] forKey:key];
     }
