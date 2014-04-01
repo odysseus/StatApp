@@ -43,18 +43,6 @@
     NSLog(@"Modules: %d", [Module count]);
     
     // BEGIN DEBUGGING/LOGGING
-    //
-    // TODO
-    // Add a glossary VC and the data to populate it, place that in the footer of the tiersVC
-    
-    // Things for the Ruby project
-    // TankScore
-    
-    // Future Versions
-    // Superlative lists: sort all tanks by penetration, damage, etc.
-    // Add a screen that compares the stats between types of tanks in a tier (Eg: Tier 8 mediums have X
-    // penetration, heavies have Y avg. pen, etc. etc.)
-    //
     
     // iPad Dimensions: 1024x768
     // iPhone 4" Dimensions: 320x568

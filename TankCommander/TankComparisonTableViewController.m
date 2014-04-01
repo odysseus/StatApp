@@ -152,11 +152,12 @@
                                              andControlEvent:UIControlEventTouchUpInside
                                               withButtonData:@"tankOne"
                                                       toView:header
-                                                   withFrame:CGRectMake(10, 24, 100, 18)
+                                                   withFrame:CGRectMake(10, 24, 100, 40)
                                                         text:self.tankOne.name
                                                     fontSize:14
                                                    fontColor:self.format.darkColor
-                                         andContentAlignment:UIControlContentHorizontalAlignmentCenter];
+                                         andContentAlignment:UIControlContentHorizontalAlignmentCenter |
+                                            UIControlContentVerticalAlignmentCenter];
     tankOneName.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
     UIViewAutoresizingFlexibleTopMargin |
@@ -168,10 +169,11 @@
                                              andControlEvent:UIControlEventTouchUpInside
                                               withButtonData:@"tankTwo"
                                                       toView:header
-                                                   withFrame:CGRectMake(110, 24, 100, 18)
-                                                        text:self.tankTwo.name fontSize:14
+                                                   withFrame:CGRectMake(110, 24, 100, 40)
+                                                        text:self.tankTwo.name
+                                                    fontSize:14
                                                    fontColor:self.format.darkColor
-                                         andContentAlignment:UIControlContentHorizontalAlignmentCenter];
+                                         andContentAlignment:UIControlContentHorizontalAlignmentCenter | UIControlContentVerticalAlignmentCenter];
     tankTwoName.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
     UIViewAutoresizingFlexibleTopMargin |
@@ -180,7 +182,7 @@
     UIViewAutoresizingFlexibleLeftMargin;
     
     UILabel *averageLabel = [self.format addLabelToView:header
-                                              withFrame:CGRectMake(210, 24, 100, 18)
+                                              withFrame:CGRectMake(210, 24, 100, 40)
                                                    text:@"Average"
                                                fontSize:14
                                               fontColor:self.format.darkColor
