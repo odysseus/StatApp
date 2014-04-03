@@ -50,6 +50,26 @@
 		9429658D18ECE5F300620D71 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9429658B18ECE5F300620D71 /* Icon@2x.png */; };
 		9429659018ECE8C400620D71 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 9429658E18ECE8C400620D71 /* Icon-Small.png */; };
 		9429659118ECE8C400620D71 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9429658F18ECE8C400620D71 /* Icon-Small@2x.png */; };
+		942965C718ED258300620D71 /* TankCommanderLaunch_320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965BF18ED258300620D71 /* TankCommanderLaunch_320x480.png */; };
+		942965C818ED258300620D71 /* TankCommanderLaunch_320x480@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C018ED258300620D71 /* TankCommanderLaunch_320x480@2x.png */; };
+		942965C918ED258300620D71 /* TankCommanderLaunch_640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C118ED258300620D71 /* TankCommanderLaunch_640x1136.png */; };
+		942965CA18ED258300620D71 /* TankCommanderLaunch_640x1136@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C218ED258300620D71 /* TankCommanderLaunch_640x1136@2x.png */; };
+		942965CB18ED258300620D71 /* TankCommanderLaunch_768x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C318ED258300620D71 /* TankCommanderLaunch_768x1024.png */; };
+		942965CC18ED258300620D71 /* TankCommanderLaunch_768x1024@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C418ED258300620D71 /* TankCommanderLaunch_768x1024@2x.png */; };
+		942965CD18ED258300620D71 /* TankCommanderLaunch_1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C518ED258300620D71 /* TankCommanderLaunch_1024x768.png */; };
+		942965CE18ED258300620D71 /* TankCommanderLaunch_1024x768@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965C618ED258300620D71 /* TankCommanderLaunch_1024x768@2x.png */; };
+		942965DB18ED29BF00620D71 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965CF18ED29BF00620D71 /* default.png */; };
+		942965DC18ED29BF00620D71 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D018ED29BF00620D71 /* default@2x.png */; };
+		942965DD18ED29BF00620D71 /* heavyTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D118ED29BF00620D71 /* heavyTank.png */; };
+		942965DE18ED29BF00620D71 /* heavyTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D218ED29BF00620D71 /* heavyTank@2x.png */; };
+		942965DF18ED29BF00620D71 /* lightTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D318ED29BF00620D71 /* lightTank.png */; };
+		942965E018ED29BF00620D71 /* lightTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D418ED29BF00620D71 /* lightTank@2x.png */; };
+		942965E118ED29BF00620D71 /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D518ED29BF00620D71 /* mediumTank.png */; };
+		942965E218ED29BF00620D71 /* mediumTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D618ED29BF00620D71 /* mediumTank@2x.png */; };
+		942965E318ED29BF00620D71 /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D718ED29BF00620D71 /* spg.png */; };
+		942965E418ED29BF00620D71 /* spg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D818ED29BF00620D71 /* spg@2x.png */; };
+		942965E518ED29BF00620D71 /* tankDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D918ED29BF00620D71 /* tankDestroyer.png */; };
+		942965E618ED29BF00620D71 /* tankDestroyer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965DA18ED29BF00620D71 /* tankDestroyer@2x.png */; };
 		944377031838054D00E1451C /* TiersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377021838054D00E1451C /* TiersViewController.m */; };
 		944377061838081600E1451C /* TypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377051838081600E1451C /* TypesViewController.m */; };
 		94437709183812B600E1451C /* TierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94437708183812B600E1451C /* TierCell.m */; };
@@ -84,18 +104,6 @@
 		94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BF603F18D4F06F0007D0BC /* CompareiPadTableViewCell.xib */; };
 		94BF604318D4F1C60007D0BC /* CompareiPadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF604218D4F1C60007D0BC /* CompareiPadTableViewCell.m */; };
 		94C75C5118E8B07200AE5FF3 /* percentiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C5018E8B07200AE5FF3 /* percentiles.json */; };
-		94C75C7518EA8DB700AE5FF3 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C6A18EA8DB700AE5FF3 /* default.png */; };
-		94C75C7618EA8DB700AE5FF3 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C6B18EA8DB700AE5FF3 /* default@2x.png */; };
-		94C75C7718EA8DB700AE5FF3 /* heavyTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C6C18EA8DB700AE5FF3 /* heavyTank@2x.png */; };
-		94C75C7818EA8DB700AE5FF3 /* lightTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C6D18EA8DB700AE5FF3 /* lightTank.png */; };
-		94C75C7918EA8DB700AE5FF3 /* lightTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C6E18EA8DB700AE5FF3 /* lightTank@2x.png */; };
-		94C75C7A18EA8DB700AE5FF3 /* mediumTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C6F18EA8DB700AE5FF3 /* mediumTank.png */; };
-		94C75C7B18EA8DB700AE5FF3 /* mediumTank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C7018EA8DB700AE5FF3 /* mediumTank@2x.png */; };
-		94C75C7C18EA8DB700AE5FF3 /* spg.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C7118EA8DB700AE5FF3 /* spg.png */; };
-		94C75C7D18EA8DB700AE5FF3 /* spg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C7218EA8DB700AE5FF3 /* spg@2x.png */; };
-		94C75C8118EA8EFF00AE5FF3 /* heavyTank.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C8018EA8EFF00AE5FF3 /* heavyTank.png */; };
-		94C75C8418EC899E00AE5FF3 /* tankDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C8218EC899E00AE5FF3 /* tankDestroyer.png */; };
-		94C75C8518EC899E00AE5FF3 /* tankDestroyer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C75C8318EC899E00AE5FF3 /* tankDestroyer@2x.png */; };
 		94C8C770183969A600B23D8A /* TankSubheaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C76F183969A600B23D8A /* TankSubheaderView.m */; };
 		94C8C7731839739A00B23D8A /* HullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7721839739A00B23D8A /* HullView.m */; };
 		94C8C7761839CF4F00B23D8A /* EngineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8C7751839CF4F00B23D8A /* EngineView.m */; };
@@ -182,6 +190,26 @@
 		9429658B18ECE5F300620D71 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		9429658E18ECE8C400620D71 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		9429658F18ECE8C400620D71 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		942965BF18ED258300620D71 /* TankCommanderLaunch_320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankCommanderLaunch_320x480.png; sourceTree = "<group>"; };
+		942965C018ED258300620D71 /* TankCommanderLaunch_320x480@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TankCommanderLaunch_320x480@2x.png"; sourceTree = "<group>"; };
+		942965C118ED258300620D71 /* TankCommanderLaunch_640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankCommanderLaunch_640x1136.png; sourceTree = "<group>"; };
+		942965C218ED258300620D71 /* TankCommanderLaunch_640x1136@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TankCommanderLaunch_640x1136@2x.png"; sourceTree = "<group>"; };
+		942965C318ED258300620D71 /* TankCommanderLaunch_768x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankCommanderLaunch_768x1024.png; sourceTree = "<group>"; };
+		942965C418ED258300620D71 /* TankCommanderLaunch_768x1024@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TankCommanderLaunch_768x1024@2x.png"; sourceTree = "<group>"; };
+		942965C518ED258300620D71 /* TankCommanderLaunch_1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TankCommanderLaunch_1024x768.png; sourceTree = "<group>"; };
+		942965C618ED258300620D71 /* TankCommanderLaunch_1024x768@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TankCommanderLaunch_1024x768@2x.png"; sourceTree = "<group>"; };
+		942965CF18ED29BF00620D71 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		942965D018ED29BF00620D71 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		942965D118ED29BF00620D71 /* heavyTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyTank.png; sourceTree = "<group>"; };
+		942965D218ED29BF00620D71 /* heavyTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heavyTank@2x.png"; sourceTree = "<group>"; };
+		942965D318ED29BF00620D71 /* lightTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightTank.png; sourceTree = "<group>"; };
+		942965D418ED29BF00620D71 /* lightTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightTank@2x.png"; sourceTree = "<group>"; };
+		942965D518ED29BF00620D71 /* mediumTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumTank.png; sourceTree = "<group>"; };
+		942965D618ED29BF00620D71 /* mediumTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mediumTank@2x.png"; sourceTree = "<group>"; };
+		942965D718ED29BF00620D71 /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
+		942965D818ED29BF00620D71 /* spg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spg@2x.png"; sourceTree = "<group>"; };
+		942965D918ED29BF00620D71 /* tankDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankDestroyer.png; sourceTree = "<group>"; };
+		942965DA18ED29BF00620D71 /* tankDestroyer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tankDestroyer@2x.png"; sourceTree = "<group>"; };
 		944377011838054D00E1451C /* TiersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiersViewController.h; sourceTree = "<group>"; };
 		944377021838054D00E1451C /* TiersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiersViewController.m; sourceTree = "<group>"; };
 		944377041838081600E1451C /* TypesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypesViewController.h; sourceTree = "<group>"; };
@@ -233,18 +261,6 @@
 		94BF604118D4F1C60007D0BC /* CompareiPadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareiPadTableViewCell.h; sourceTree = "<group>"; };
 		94BF604218D4F1C60007D0BC /* CompareiPadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareiPadTableViewCell.m; sourceTree = "<group>"; };
 		94C75C5018E8B07200AE5FF3 /* percentiles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = percentiles.json; sourceTree = "<group>"; };
-		94C75C6A18EA8DB700AE5FF3 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
-		94C75C6B18EA8DB700AE5FF3 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
-		94C75C6C18EA8DB700AE5FF3 /* heavyTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heavyTank@2x.png"; sourceTree = "<group>"; };
-		94C75C6D18EA8DB700AE5FF3 /* lightTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightTank.png; sourceTree = "<group>"; };
-		94C75C6E18EA8DB700AE5FF3 /* lightTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightTank@2x.png"; sourceTree = "<group>"; };
-		94C75C6F18EA8DB700AE5FF3 /* mediumTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumTank.png; sourceTree = "<group>"; };
-		94C75C7018EA8DB700AE5FF3 /* mediumTank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mediumTank@2x.png"; sourceTree = "<group>"; };
-		94C75C7118EA8DB700AE5FF3 /* spg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spg.png; sourceTree = "<group>"; };
-		94C75C7218EA8DB700AE5FF3 /* spg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spg@2x.png"; sourceTree = "<group>"; };
-		94C75C8018EA8EFF00AE5FF3 /* heavyTank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyTank.png; sourceTree = "<group>"; };
-		94C75C8218EC899E00AE5FF3 /* tankDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankDestroyer.png; sourceTree = "<group>"; };
-		94C75C8318EC899E00AE5FF3 /* tankDestroyer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tankDestroyer@2x.png"; sourceTree = "<group>"; };
 		94C8C76E183969A600B23D8A /* TankSubheaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankSubheaderView.h; sourceTree = "<group>"; };
 		94C8C76F183969A600B23D8A /* TankSubheaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankSubheaderView.m; sourceTree = "<group>"; };
 		94C8C7711839739A00B23D8A /* HullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HullView.h; sourceTree = "<group>"; };
@@ -332,6 +348,7 @@
 				947B490018B43A5900718680 /* Data */,
 				941A7626181494D50072089F /* Images.xcassets */,
 				9429655918ECDF8500620D71 /* TankIcons */,
+				942965BE18ED257600620D71 /* LaunchImage */,
 				9429655818ECDF6500620D71 /* AppIcon */,
 				941A761B181494D50072089F /* Supporting Files */,
 			);
@@ -391,20 +408,35 @@
 		9429655918ECDF8500620D71 /* TankIcons */ = {
 			isa = PBXGroup;
 			children = (
-				94C75C6A18EA8DB700AE5FF3 /* default.png */,
-				94C75C6B18EA8DB700AE5FF3 /* default@2x.png */,
-				94C75C8018EA8EFF00AE5FF3 /* heavyTank.png */,
-				94C75C6C18EA8DB700AE5FF3 /* heavyTank@2x.png */,
-				94C75C6D18EA8DB700AE5FF3 /* lightTank.png */,
-				94C75C6E18EA8DB700AE5FF3 /* lightTank@2x.png */,
-				94C75C6F18EA8DB700AE5FF3 /* mediumTank.png */,
-				94C75C7018EA8DB700AE5FF3 /* mediumTank@2x.png */,
-				94C75C7118EA8DB700AE5FF3 /* spg.png */,
-				94C75C7218EA8DB700AE5FF3 /* spg@2x.png */,
-				94C75C8218EC899E00AE5FF3 /* tankDestroyer.png */,
-				94C75C8318EC899E00AE5FF3 /* tankDestroyer@2x.png */,
+				942965CF18ED29BF00620D71 /* default.png */,
+				942965D018ED29BF00620D71 /* default@2x.png */,
+				942965D118ED29BF00620D71 /* heavyTank.png */,
+				942965D218ED29BF00620D71 /* heavyTank@2x.png */,
+				942965D318ED29BF00620D71 /* lightTank.png */,
+				942965D418ED29BF00620D71 /* lightTank@2x.png */,
+				942965D518ED29BF00620D71 /* mediumTank.png */,
+				942965D618ED29BF00620D71 /* mediumTank@2x.png */,
+				942965D718ED29BF00620D71 /* spg.png */,
+				942965D818ED29BF00620D71 /* spg@2x.png */,
+				942965D918ED29BF00620D71 /* tankDestroyer.png */,
+				942965DA18ED29BF00620D71 /* tankDestroyer@2x.png */,
 			);
 			name = TankIcons;
+			sourceTree = "<group>";
+		};
+		942965BE18ED257600620D71 /* LaunchImage */ = {
+			isa = PBXGroup;
+			children = (
+				942965BF18ED258300620D71 /* TankCommanderLaunch_320x480.png */,
+				942965C018ED258300620D71 /* TankCommanderLaunch_320x480@2x.png */,
+				942965C118ED258300620D71 /* TankCommanderLaunch_640x1136.png */,
+				942965C218ED258300620D71 /* TankCommanderLaunch_640x1136@2x.png */,
+				942965C318ED258300620D71 /* TankCommanderLaunch_768x1024.png */,
+				942965C418ED258300620D71 /* TankCommanderLaunch_768x1024@2x.png */,
+				942965C518ED258300620D71 /* TankCommanderLaunch_1024x768.png */,
+				942965C618ED258300620D71 /* TankCommanderLaunch_1024x768@2x.png */,
+			);
+			name = LaunchImage;
 			sourceTree = "<group>";
 		};
 		946FC7451831AB9E0016708A /* Models */ = {
@@ -616,54 +648,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94C75C7918EA8DB700AE5FF3 /* lightTank@2x.png in Resources */,
 				9429658D18ECE5F300620D71 /* Icon@2x.png in Resources */,
 				9429658318ECE5C800620D71 /* Icon-72@2x.png in Resources */,
+				942965DF18ED29BF00620D71 /* lightTank.png in Resources */,
 				946FC75518330C980016708A /* TankIPadViewController.xib in Resources */,
 				9429658518ECE5C800620D71 /* Icon-76@2x.png in Resources */,
 				9429658718ECE5C800620D71 /* Icon-Small-40@2x.png in Resources */,
 				941E81D118CA9EFD00939CB7 /* StatCell.xib in Resources */,
-				94C75C8118EA8EFF00AE5FF3 /* heavyTank.png in Resources */,
 				9429658818ECE5C800620D71 /* Icon-Small-50.png in Resources */,
+				942965E618ED29BF00620D71 /* tankDestroyer@2x.png in Resources */,
 				941A761F181494D50072089F /* InfoPlist.strings in Resources */,
+				942965DE18ED29BF00620D71 /* heavyTank@2x.png in Resources */,
 				9443770B183812CA00E1451C /* TierCell.xib in Resources */,
+				942965C918ED258300620D71 /* TankCommanderLaunch_640x1136.png in Resources */,
+				942965CD18ED258300620D71 /* TankCommanderLaunch_1024x768.png in Resources */,
 				94B87C3E18BD9A0200D6E395 /* tier8.json in Resources */,
-				94C75C7D18EA8DB700AE5FF3 /* spg@2x.png in Resources */,
 				9429658918ECE5C800620D71 /* Icon-Small-50@2x.png in Resources */,
 				94B87C3718BD9A0200D6E395 /* tier1.json in Resources */,
 				941A7627181494D50072089F /* Images.xcassets in Resources */,
-				94C75C7A18EA8DB700AE5FF3 /* mediumTank.png in Resources */,
 				94B87C3D18BD9A0200D6E395 /* tier7.json in Resources */,
-				94C75C7618EA8DB700AE5FF3 /* default@2x.png in Resources */,
+				942965E518ED29BF00620D71 /* tankDestroyer.png in Resources */,
+				942965DC18ED29BF00620D71 /* default@2x.png in Resources */,
 				94B87C3F18BD9A0200D6E395 /* tier9.json in Resources */,
-				94C75C7B18EA8DB700AE5FF3 /* mediumTank@2x.png in Resources */,
+				942965DD18ED29BF00620D71 /* heavyTank.png in Resources */,
 				9429659018ECE8C400620D71 /* Icon-Small.png in Resources */,
 				94C75C5118E8B07200AE5FF3 /* percentiles.json in Resources */,
+				942965CC18ED258300620D71 /* TankCommanderLaunch_768x1024@2x.png in Resources */,
 				9429658118ECE5C800620D71 /* Icon-60@2x.png in Resources */,
+				942965E218ED29BF00620D71 /* mediumTank@2x.png in Resources */,
 				94B87C3918BD9A0200D6E395 /* tier3.json in Resources */,
 				9429658418ECE5C800620D71 /* Icon-76.png in Resources */,
 				9455E24F18D7C5620089C74E /* CompareiPhoneTableViewCell.xib in Resources */,
 				940744D118D5479C00183DF4 /* attributes.json in Resources */,
-				94C75C7718EA8DB700AE5FF3 /* heavyTank@2x.png in Resources */,
+				942965E018ED29BF00620D71 /* lightTank@2x.png in Resources */,
 				94B87C3B18BD9A0200D6E395 /* tier5.json in Resources */,
 				94C8C78A183AEC1000B23D8A /* ModuleCell.xib in Resources */,
 				94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */,
+				942965CE18ED258300620D71 /* TankCommanderLaunch_1024x768@2x.png in Resources */,
 				94B87C3A18BD9A0200D6E395 /* tier4.json in Resources */,
+				942965CA18ED258300620D71 /* TankCommanderLaunch_640x1136@2x.png in Resources */,
+				942965E418ED29BF00620D71 /* spg@2x.png in Resources */,
 				9429658618ECE5C800620D71 /* Icon-Small-40.png in Resources */,
-				94C75C8518EC899E00AE5FF3 /* tankDestroyer@2x.png in Resources */,
-				94C75C7518EA8DB700AE5FF3 /* default.png in Resources */,
 				9429658C18ECE5F300620D71 /* Icon.png in Resources */,
+				942965C718ED258300620D71 /* TankCommanderLaunch_320x480.png in Resources */,
+				942965E118ED29BF00620D71 /* mediumTank.png in Resources */,
 				94B87C3C18BD9A0200D6E395 /* tier6.json in Resources */,
 				9429658018ECE5C800620D71 /* Icon-60.png in Resources */,
-				94C75C7C18EA8DB700AE5FF3 /* spg.png in Resources */,
 				94B87C4018BD9A0200D6E395 /* tier10.json in Resources */,
 				946FC74E1831CC5C0016708A /* TankCell.xib in Resources */,
-				94C75C8418EC899E00AE5FF3 /* tankDestroyer.png in Resources */,
+				942965C818ED258300620D71 /* TankCommanderLaunch_320x480@2x.png in Resources */,
+				942965CB18ED258300620D71 /* TankCommanderLaunch_768x1024.png in Resources */,
+				942965E318ED29BF00620D71 /* spg.png in Resources */,
 				9429658218ECE5C800620D71 /* Icon-72.png in Resources */,
 				94437710183816A200E1451C /* TypeCell.xib in Resources */,
 				9429659118ECE8C400620D71 /* Icon-Small@2x.png in Resources */,
-				94C75C7818EA8DB700AE5FF3 /* lightTank.png in Resources */,
 				94B87C3818BD9A0200D6E395 /* tier2.json in Resources */,
+				942965DB18ED29BF00620D71 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
