@@ -36,7 +36,7 @@
         CGFloat y = 20;
         
         // Row 1, Column 1        
-        [format addButtonWithTarget:tankViewController
+        [format addButtonWithTarget:format
                            selector:@selector(fullscreenPopupFromButton:)
                     andControlEvent:UIControlEventTouchUpInside
                      withButtonData:@"hitpoints" toView:self
@@ -83,7 +83,21 @@
         } else {
             [loadLimit setTextColor:format.darkGreenColor];
         }
+        
+        // Row 1, Column 3
+        [format addButtonWithTarget:format
+                           selector:@selector(fullscreenPopupFromButton:)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"howTo"
+                             toView:self
+                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
+                               text:@"Help"
+                           fontSize:format.fontSize
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
     }
+
+    
     
     return self;
 }

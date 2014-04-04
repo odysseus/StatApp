@@ -125,29 +125,16 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 44)];
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [format addButtonWithTarget:self
-                           selector:@selector(presentHelpView)
-                    andControlEvent:UIControlEventTouchUpInside
-                     withButtonData:@"howTo"
-                             toView:footer
-                          withFrame:CGRectMake(20, 0, 100, 24)
-                               text:@"HELP"
-                           fontSize:13
-                          fontColor:format.darkColor
-                andContentAlignment:UIControlContentVerticalAlignmentTop | UIControlContentHorizontalAlignmentLeft];
-    } else {
-        [format addButtonWithTarget:self
-                           selector:@selector(presentHelpView)
-                    andControlEvent:UIControlEventTouchUpInside
-                     withButtonData:@"howTo"
-                             toView:footer
-                          withFrame:CGRectMake(20, 0, 100, 24)
-                               text:@"HELP"
-                           fontSize:13
-                          fontColor:format.darkColor
-                andContentAlignment:UIControlContentVerticalAlignmentTop | UIControlContentHorizontalAlignmentLeft];
-    }
+    [format addButtonWithTarget:self
+                       selector:@selector(presentHelpView)
+                andControlEvent:UIControlEventTouchUpInside
+                 withButtonData:@"howTo"
+                         toView:footer
+                      withFrame:CGRectMake(20, 0, 100, 24)
+                           text:@"HELP"
+                       fontSize:13
+                      fontColor:format.darkColor
+            andContentAlignment:UIControlContentVerticalAlignmentTop | UIControlContentHorizontalAlignmentLeft];
     
     return footer;
 }

@@ -301,7 +301,7 @@ highlightYellow;
     
     // Text view with the stat description
     UITextView *textField = [[UITextView alloc]
-                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, 300)];
+                             initWithFrame:CGRectMake((format.screenWidth - 300) / 2, 130, 300, (format.screenHeight - 140))];
     [textField setText:stat.definition];
     [textField setFont:[UIFont systemFontOfSize:format.fontSize]];
     [textField setTextColor:format.darkColor];

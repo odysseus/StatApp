@@ -101,6 +101,7 @@
     self.navigationItem.rightBarButtonItems = rightBarButtons;
     
     self.tableView.tableHeaderView = [self tableHeaderView];
+    self.tableView.tableFooterView = [self footerView];
 }
 
 - (void)popToTankViewController
@@ -408,6 +409,41 @@
             [tvc setTank:self.tankTwo];
         }
         [self.navigationController pushViewController:tvc animated:YES];
+    }
+}
+
+- (UIView *)footerView
+{
+    RCFormatting *format = [RCFormatting store];
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 44)];
+    
+    [format addButtonWithTarget:self
+                       selector:@selector(presentHelpView)
+                andControlEvent:UIControlEventTouchUpInside
+                 withButtonData:@"howTo"
+                         toView:footer
+                      withFrame:CGRectMake(20, 0, 100, 24)
+                           text:@"HELP"
+                       fontSize:13
+                      fontColor:format.darkColor
+            andContentAlignment:UIControlContentVerticalAlignmentTop | UIControlContentHorizontalAlignmentLeft];
+    
+    return footer;
+}
+
+- (void)presentHelpView
+{
+    RCFormatting *format = [RCFormatting store];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        CGPoint presOrigin = [self.view.layer.presentationLayer bounds].origin;
+        UIView *popup = [format fullscreenPopupForKey:@"howTo"
+                               fromPresentationOrigin:presOrigin];
+        [self.view addSubview:popup];
+    } else {
+        UIViewController *vc = [format iPhoneStatViewControllerForKey:@"howTo"];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

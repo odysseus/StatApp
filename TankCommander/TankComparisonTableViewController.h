@@ -32,5 +32,24 @@
 - (void)popToTankViewController;
 - (void)popToRootVC;
 - (UIView *)tableHeaderView;
+- (UIView *)footerView;
+- (void)presentHelpView;
+
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
