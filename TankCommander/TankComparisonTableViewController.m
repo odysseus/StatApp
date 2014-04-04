@@ -84,14 +84,18 @@
     // Other Setup
     // Create a bar button item that pops to the root view controller so you don't have to hit
     // "Back" seven times when going from a comparison view
-    UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithTitle:@"Home"
-                                                             style:UIBarButtonItemStyleBordered
-                                                            target:self.navigationController
-                                                            action:@selector(popToRootViewControllerAnimated:)];
     UIBarButtonItem *tank = [[UIBarButtonItem alloc] initWithTitle:self.tankOne.name
                                                                 style:UIBarButtonItemStyleBordered
                                                                target:self
                                                                action:@selector(popToTankViewController)];
+    UIImage *homeImg = [UIImage imageNamed:@"homeBlue"];
+    UIImage *homePressed = [UIImage imageNamed:@"homeGrey"];
+    UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
+    [homeBtn setBackgroundImage:homeImg forState:UIControlStateNormal];
+    [homeBtn setBackgroundImage:homePressed forState:UIControlStateHighlighted];
+    [homeBtn addTarget:self action:@selector(popToRootVC) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithCustomView:homeBtn];
     
     NSArray *rightBarButtons = @[home, tank];
     self.navigationItem.rightBarButtonItems = rightBarButtons;

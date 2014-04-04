@@ -66,6 +66,17 @@
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"TankCell"];
+    
+    UIImage *homeImg = [UIImage imageNamed:@"homeBlue"];
+    UIImage *homePressed = [UIImage imageNamed:@"homeGrey"];
+    UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
+    [homeBtn setBackgroundImage:homeImg forState:UIControlStateNormal];
+    [homeBtn setBackgroundImage:homePressed forState:UIControlStateHighlighted];
+    [homeBtn addTarget:self action:@selector(popToRootVC) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *home = [[UIBarButtonItem alloc] initWithCustomView:homeBtn];
+    
+    self.navigationItem.rightBarButtonItem = home;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -122,6 +133,11 @@
             [[self navigationController] pushViewController:tvc animated:YES];
         }
     }
+}
+
+- (void)popToRootVC
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

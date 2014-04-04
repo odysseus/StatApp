@@ -83,29 +83,6 @@
         } else {
             [loadLimit setTextColor:format.darkGreenColor];
         }
-        
-        // Row 1, Column 3
-        [format addButtonWithTarget:tankViewController
-                           selector:@selector(fullscreenPopupFromButton:)
-                    andControlEvent:UIControlEventTouchUpInside
-                     withButtonData:@"camoValue"
-                             toView:self
-                          withFrame:CGRectMake(format.columnThreeXLabel, y, format.labelWidth, format.labelHeight)
-                               text:@"Camo Value Stationary:"
-                           fontSize:format.fontSize
-                          fontColor:format.darkColor
-                andContentAlignment:UIControlContentHorizontalAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXValue, y, format.valueWidth, format.valueHeight)
-                          text:[NSString stringWithFormat:@"%0.2f", tank.camoValueStationary]
-                      fontSize:format.fontSize
-                     fontColor:format.darkColor andTextAlignment:NSTextAlignmentLeft];
-        [format addLabelToView:self
-                     withFrame:CGRectMake(format.columnThreeXValue, y+15, format.valueWidth, format.valueHeight)
-                          text:[NSString stringWithFormat:@"%0.2f", tank.averageTank.camoValueStationary]
-                      fontSize:format.fontSize
-                     fontColor:format.lightColor
-              andTextAlignment:NSTextAlignmentLeft];
     }
     
     return self;

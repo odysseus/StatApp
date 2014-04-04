@@ -70,6 +70,10 @@
 		942965E418ED29BF00620D71 /* spg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D818ED29BF00620D71 /* spg@2x.png */; };
 		942965E518ED29BF00620D71 /* tankDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965D918ED29BF00620D71 /* tankDestroyer.png */; };
 		942965E618ED29BF00620D71 /* tankDestroyer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942965DA18ED29BF00620D71 /* tankDestroyer@2x.png */; };
+		9430763C18EE104900053B4B /* homeBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430763818EE104900053B4B /* homeBlue.png */; };
+		9430763D18EE104900053B4B /* homeBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430763918EE104900053B4B /* homeBlue@2x.png */; };
+		9430763E18EE104900053B4B /* homeGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430763A18EE104900053B4B /* homeGrey.png */; };
+		9430763F18EE104900053B4B /* homeGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9430763B18EE104900053B4B /* homeGrey@2x.png */; };
 		944377031838054D00E1451C /* TiersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377021838054D00E1451C /* TiersViewController.m */; };
 		944377061838081600E1451C /* TypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944377051838081600E1451C /* TypesViewController.m */; };
 		94437709183812B600E1451C /* TierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94437708183812B600E1451C /* TierCell.m */; };
@@ -135,7 +139,7 @@
 		940744D018D5479C00183DF4 /* attributes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = attributes.json; sourceTree = "<group>"; };
 		941289C71818AC53008C69E7 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		941289C81818AC53008C69E7 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
-		941A7611181494D50072089F /* TankCommander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankCommander.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		941A7611181494D50072089F /* Tank Cmdr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tank Cmdr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		941A7614181494D50072089F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		941A7616181494D50072089F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		941A7618181494D50072089F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -210,6 +214,10 @@
 		942965D818ED29BF00620D71 /* spg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spg@2x.png"; sourceTree = "<group>"; };
 		942965D918ED29BF00620D71 /* tankDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankDestroyer.png; sourceTree = "<group>"; };
 		942965DA18ED29BF00620D71 /* tankDestroyer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tankDestroyer@2x.png"; sourceTree = "<group>"; };
+		9430763818EE104900053B4B /* homeBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeBlue.png; sourceTree = "<group>"; };
+		9430763918EE104900053B4B /* homeBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeBlue@2x.png"; sourceTree = "<group>"; };
+		9430763A18EE104900053B4B /* homeGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeGrey.png; sourceTree = "<group>"; };
+		9430763B18EE104900053B4B /* homeGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeGrey@2x.png"; sourceTree = "<group>"; };
 		944377011838054D00E1451C /* TiersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiersViewController.h; sourceTree = "<group>"; };
 		944377021838054D00E1451C /* TiersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiersViewController.m; sourceTree = "<group>"; };
 		944377041838081600E1451C /* TypesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypesViewController.h; sourceTree = "<group>"; };
@@ -321,7 +329,7 @@
 		941A7612181494D50072089F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				941A7611181494D50072089F /* TankCommander.app */,
+				941A7611181494D50072089F /* Tank Cmdr.app */,
 				941A762C181494D50072089F /* TankCommanderTests.xctest */,
 			);
 			name = Products;
@@ -347,6 +355,10 @@
 				946FC7451831AB9E0016708A /* Models */,
 				947B490018B43A5900718680 /* Data */,
 				941A7626181494D50072089F /* Images.xcassets */,
+				9430763818EE104900053B4B /* homeBlue.png */,
+				9430763918EE104900053B4B /* homeBlue@2x.png */,
+				9430763A18EE104900053B4B /* homeGrey.png */,
+				9430763B18EE104900053B4B /* homeGrey@2x.png */,
 				9429655918ECDF8500620D71 /* TankIcons */,
 				942965BE18ED257600620D71 /* LaunchImage */,
 				9429655818ECDF6500620D71 /* AppIcon */,
@@ -575,9 +587,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		941A7610181494D50072089F /* Tank Commander */ = {
+		941A7610181494D50072089F /* Tank Cmdr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 941A763D181494D50072089F /* Build configuration list for PBXNativeTarget "Tank Commander" */;
+			buildConfigurationList = 941A763D181494D50072089F /* Build configuration list for PBXNativeTarget "Tank Cmdr" */;
 			buildPhases = (
 				941A760D181494D50072089F /* Sources */,
 				941A760E181494D50072089F /* Frameworks */,
@@ -587,9 +599,9 @@
 			);
 			dependencies = (
 			);
-			name = "Tank Commander";
+			name = "Tank Cmdr";
 			productName = TankCommander;
-			productReference = 941A7611181494D50072089F /* TankCommander.app */;
+			productReference = 941A7611181494D50072089F /* Tank Cmdr.app */;
 			productType = "com.apple.product-type.application";
 		};
 		941A762B181494D50072089F /* TankCommanderTests */ = {
@@ -637,7 +649,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				941A7610181494D50072089F /* Tank Commander */,
+				941A7610181494D50072089F /* Tank Cmdr */,
 				941A762B181494D50072089F /* TankCommanderTests */,
 			);
 		};
@@ -661,6 +673,7 @@
 				942965DE18ED29BF00620D71 /* heavyTank@2x.png in Resources */,
 				9443770B183812CA00E1451C /* TierCell.xib in Resources */,
 				942965C918ED258300620D71 /* TankCommanderLaunch_640x1136.png in Resources */,
+				9430763D18EE104900053B4B /* homeBlue@2x.png in Resources */,
 				942965CD18ED258300620D71 /* TankCommanderLaunch_1024x768.png in Resources */,
 				94B87C3E18BD9A0200D6E395 /* tier8.json in Resources */,
 				9429658918ECE5C800620D71 /* Icon-Small-50@2x.png in Resources */,
@@ -671,6 +684,7 @@
 				942965DC18ED29BF00620D71 /* default@2x.png in Resources */,
 				94B87C3F18BD9A0200D6E395 /* tier9.json in Resources */,
 				942965DD18ED29BF00620D71 /* heavyTank.png in Resources */,
+				9430763F18EE104900053B4B /* homeGrey@2x.png in Resources */,
 				9429659018ECE8C400620D71 /* Icon-Small.png in Resources */,
 				94C75C5118E8B07200AE5FF3 /* percentiles.json in Resources */,
 				942965CC18ED258300620D71 /* TankCommanderLaunch_768x1024@2x.png in Resources */,
@@ -686,6 +700,7 @@
 				94BF604018D4F06F0007D0BC /* CompareiPadTableViewCell.xib in Resources */,
 				942965CE18ED258300620D71 /* TankCommanderLaunch_1024x768@2x.png in Resources */,
 				94B87C3A18BD9A0200D6E395 /* tier4.json in Resources */,
+				9430763E18EE104900053B4B /* homeGrey.png in Resources */,
 				942965CA18ED258300620D71 /* TankCommanderLaunch_640x1136@2x.png in Resources */,
 				942965E418ED29BF00620D71 /* spg@2x.png in Resources */,
 				9429658618ECE5C800620D71 /* Icon-Small-40.png in Resources */,
@@ -694,6 +709,7 @@
 				942965E118ED29BF00620D71 /* mediumTank.png in Resources */,
 				94B87C3C18BD9A0200D6E395 /* tier6.json in Resources */,
 				9429658018ECE5C800620D71 /* Icon-60.png in Resources */,
+				9430763C18EE104900053B4B /* homeBlue.png in Resources */,
 				94B87C4018BD9A0200D6E395 /* tier10.json in Resources */,
 				946FC74E1831CC5C0016708A /* TankCell.xib in Resources */,
 				942965C818ED258300620D71 /* TankCommanderLaunch_320x480@2x.png in Resources */,
@@ -782,7 +798,7 @@
 /* Begin PBXTargetDependency section */
 		941A7632181494D50072089F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 941A7610181494D50072089F /* Tank Commander */;
+			target = 941A7610181494D50072089F /* Tank Cmdr */;
 			targetProxy = 941A7631181494D50072089F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -887,7 +903,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TankCommander/TankCommander-Prefix.pch";
 				INFOPLIST_FILE = "TankCommander/TankCommander-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -901,7 +917,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TankCommander/TankCommander-Prefix.pch";
 				INFOPLIST_FILE = "TankCommander/TankCommander-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -959,7 +975,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		941A763D181494D50072089F /* Build configuration list for PBXNativeTarget "Tank Commander" */ = {
+		941A763D181494D50072089F /* Build configuration list for PBXNativeTarget "Tank Cmdr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				941A763E181494D50072089F /* Debug */,

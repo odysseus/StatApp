@@ -177,7 +177,7 @@
     
     // Configure the cell...
     NSDictionary *tankHash = tank.attributesHash;
-    NSArray *attArr = [[NSArray alloc] init];
+    NSArray *attArr;
     if (tank.hasTurret) {
         attArr = [tankHash objectForKey:turretedIndex[indexPath.section]];
     } else {
@@ -200,7 +200,7 @@
     }
     
     // Conditional sets the average value string based on the result of the above loop
-    NSString *average = [[NSString alloc] init];
+    NSString *average;
     if (!needsAverage) {
         // Doesn't need an average, so set a placeholder string
         average = @"--";
@@ -224,7 +224,7 @@
 {
     // Grab the data and push a viewController with the information about the stat
     NSDictionary *tankHash = tank.attributesHash;
-    NSArray *attArr = [[NSArray alloc] init];
+    NSArray *attArr;
     if (tank.hasTurret) {
         attArr = [tankHash objectForKey:turretedIndex[indexPath.section]];
     } else {

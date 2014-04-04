@@ -19,5 +19,6 @@
 
 - (id)initWithTankGroup:(TankGroup *)group;
 - (id)initForCompareWithTankGroup:(TankGroup *)group andTank:(Tank *)tank;
+- (void)popToRootVC;
 
 @end

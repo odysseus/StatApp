@@ -11,6 +11,7 @@
 #import "TypesViewController.h"
 #import "TierCell.h"
 #import "Tank.h"
+#import "RCFormatting.h"
 
 @interface TiersViewController ()
 
@@ -62,6 +63,8 @@
     // Register this NIB which contains the cell
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"TierCell"];
+    
+    self.tableView.tableFooterView = self.footerView;
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +111,64 @@
     }
     
     [self.navigationController pushViewController:tvc animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UIView *)footerView
+{
+    RCFormatting *format = [RCFormatting store];
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 44)];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [format addButtonWithTarget:self
+                           selector:@selector(presentHelpView)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"howTo"
+                             toView:footer
+                          withFrame:CGRectMake(20, 0, 100, 24)
+                               text:@"HELP"
+                           fontSize:13
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentVerticalAlignmentTop | UIControlContentHorizontalAlignmentLeft];
+    } else {
+        [format addButtonWithTarget:self
+                           selector:@selector(presentHelpView)
+                    andControlEvent:UIControlEventTouchUpInside
+                     withButtonData:@"howTo"
+                             toView:footer
+                          withFrame:CGRectMake(20, 0, 100, 24)
+                               text:@"HELP"
+                           fontSize:13
+                          fontColor:format.darkColor
+                andContentAlignment:UIControlContentVerticalAlignmentTop | UIControlContentHorizontalAlignmentLeft];
+    }
+    
+    return footer;
+}
+
+- (void)presentHelpView
+{
+    RCFormatting *format = [RCFormatting store];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        CGPoint presOrigin = [self.view.layer.presentationLayer bounds].origin;
+        UIView *popup = [format fullscreenPopupForKey:@"howTo"
+                               fromPresentationOrigin:presOrigin];
+        [self.view addSubview:popup];
+    } else {
+        UIViewController *vc = [format iPhoneStatViewControllerForKey:@"howTo"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)popToRootVC
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

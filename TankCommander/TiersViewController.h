@@ -19,5 +19,7 @@
 @property (nonatomic, weak) UIViewController *tankViewController;
 
 - (id)initForCompareWithTank:(Tank *)t;
+- (UIView *)footerView;
+- (void)presentHelpView;
 
 @end

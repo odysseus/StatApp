@@ -20,5 +20,6 @@
 
 - (id)initWithTier:(Tier *)t;
 - (id)initForCompareWithTier:(Tier *)t andTank:(Tank *)tank;
+- (void)popToRootVC;
 
 @end

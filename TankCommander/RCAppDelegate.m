@@ -33,23 +33,6 @@
         NSLog(@"Tanks loaded");
     }
     
-    NSLog(@"Tanks: %d", [Tank count]);
-    NSLog(@"Hulls: %d", [Hull count]);
-    NSLog(@"Turrets: %d", [Turret count]);
-    NSLog(@"Guns: %d", [Gun count]);
-    NSLog(@"Engines: %d", [Engine count]);
-    NSLog(@"Radios: %d", [Radio count]);
-    NSLog(@"Suspensions: %d", [Suspension count]);
-    NSLog(@"Modules: %d", [Module count]);
-    
-    // BEGIN DEBUGGING/LOGGING
-    
-    // iPad Dimensions: 1024x768
-    // iPhone 4" Dimensions: 320x568
-    // iPhone 3.5" Dimensions: 320x480
-    
-    // END DEBUGGING/LOGGING
-    
     // MAIN EXECUTION
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

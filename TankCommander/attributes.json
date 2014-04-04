@@ -272,7 +272,14 @@
                                          "float",
                                          "The amount of accuracy lost by moving the tracks, either rotating the tank or moving forwards or backwards. Example: A fully upgraded ISU-152 has an accuracy of 0.41 and a tread movement dispersion of 0.2, so rotating the vehicle to face another target can cause the accuracy to drop as low as 0.61. Accuracy can also be reduced by moving the gun, shooting, or having a damaged gun or injured gunner.",
                                          "decreasing"
-                                         ]
+                                         ],
+        "howTo": [
+                  "How to use this app",
+                  "How to use this app",
+                  "int",
+                  "Select a tank by choosing a tier, then class.\n\nTo change the equipped modules, tap the module name.\n\nTo get more information on a statistic, tap the stat's name.\n\nCompare two tanks by selecting 'Compare' in the top right of the tank info page.\n\nTo change the equipped modules on the comparison tanks, tap the tank's name at the top of the comparison and change modules or rounds as you would normally.",
+                  "increasing"
+                  ]
     }
 }
 

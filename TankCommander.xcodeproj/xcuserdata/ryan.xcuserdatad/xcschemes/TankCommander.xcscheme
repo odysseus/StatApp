@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "941A7610181494D50072089F"
-               BuildableName = "TankCommander.app"
-               BlueprintName = "Tank Commander"
+               BuildableName = "Tank Cmdr.app"
+               BlueprintName = "Tank Cmdr"
                ReferencedContainer = "container:TankCommander.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "941A7610181494D50072089F"
-            BuildableName = "TankCommander.app"
-            BlueprintName = "Tank Commander"
+            BuildableName = "Tank Cmdr.app"
+            BlueprintName = "Tank Cmdr"
             ReferencedContainer = "container:TankCommander.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "941A7610181494D50072089F"
-            BuildableName = "TankCommander.app"
-            BlueprintName = "Tank Commander"
+            BuildableName = "Tank Cmdr.app"
+            BlueprintName = "Tank Cmdr"
             ReferencedContainer = "container:TankCommander.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "941A7610181494D50072089F"
-            BuildableName = "TankCommander.app"
-            BlueprintName = "Tank Commander"
+            BuildableName = "Tank Cmdr.app"
+            BlueprintName = "Tank Cmdr"
             ReferencedContainer = "container:TankCommander.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

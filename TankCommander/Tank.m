@@ -429,7 +429,7 @@ camoValueMoving, camoValueShooting;
 
 - (NSArray *)combinedModulesKeyArrayWithTank:(Tank *)t
 {
-    NSArray *keys = [[NSArray alloc] init];
+    NSArray *keys;
     if (self.hasTurret || t.hasTurret) {
         keys = [Tank turretedIndex];
     } else {
@@ -1143,7 +1143,7 @@ NSString *romanStringFromInt (long convert)
 - (int)totalExperienceNeeded
 {
     int totalExp = 0;
-    NSArray *modules = [[NSArray alloc] init];
+    NSArray *modules;
     if (self.hasTurret) {
         modules = [NSArray arrayWithObjects:
                    @"availableTurrets", @"availableGuns", @"availableSuspensions", @"availableEngines",

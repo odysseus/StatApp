@@ -209,7 +209,7 @@ highlightYellow;
     
     // Ensure the popup frame
     CGRect bounds = [UIScreen mainScreen].bounds;
-    CGPoint popupOrigin = CGPointMake(0, 0);
+    CGPoint popupOrigin;
     if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
         popupOrigin = CGPointMake(((bounds.size.height - popupSize.width) / 2), 200 + presentationOrigin.y);
     } else {
