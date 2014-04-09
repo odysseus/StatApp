@@ -54,4 +54,43 @@
     return final;
 }
 
+- (int)compareStatTo:(Stat *)otherStat
+{
+    if (self.largerValuesAreBetter) {
+        if ([self.value floatValue] > [otherStat.value floatValue]) {
+            return 1;
+        } else if ([self.value floatValue] < [otherStat.value floatValue]) {
+            return -1;
+        } else {
+            return 0;
+        }
+    } else {
+        if ([self.value floatValue] > [otherStat.value floatValue]) {
+            return -1;
+        } else if ([self.value floatValue] < [otherStat.value floatValue]) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

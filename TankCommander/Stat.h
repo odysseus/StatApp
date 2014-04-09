@@ -26,5 +26,6 @@ typedef enum StatType : NSUInteger {
 - (id)initWithKey:(NSString *)k andValue:(NSNumber *)v;
 - (id)initWithStat:(Stat *)s andValue:(NSNumber *)v;
 - (NSString *)formatted;
+- (int)compareStatTo:(Stat *)otherStat;
 
 @end

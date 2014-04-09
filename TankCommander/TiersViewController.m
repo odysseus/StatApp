@@ -36,7 +36,7 @@
                        @"Tier 6", @"Tier 7", @"Tier 8", @"Tier 9", @"Tier 10"];
         allTanks = [TankStore allTanks];
         UINavigationItem *n = [self navigationItem];
-        [n setTitle:NSLocalizedString(@"Tanks", nil)];
+        [n setTitle:NSLocalizedString(@"WOT Tank Commander", nil)];
     }
     return self;
 }

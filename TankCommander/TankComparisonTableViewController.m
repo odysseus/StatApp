@@ -329,41 +329,27 @@
     
     // Setting the colors
     // Highlight the better stat with green
+    int comparisonResult = [tankOneStat compareStatTo:tankTwoStat];
     if (tankOneStat && tankTwoStat) {
         // If both compare tanks have the stat we can continue
         // REFACTORING CAVEAT: Don't be tempted to remove the seemingly redundant code that
         // sets the color for both labels every time. Because iOS dequeues and reuses cells,
         // once the background color has been set it will stay that way if it is not set
         // every time, leading to a lot of erroneous highlighting when you scroll back up
-        if (stat.largerValuesAreBetter) {
-            // If the better value is the larger one:
-            if ([tankOneStat.value floatValue] == [tankTwoStat.value floatValue]) {
-                // Make them both yellow if they are equal
-                [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
-                [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
-            } else if ([tankOneStat.value floatValue] > [tankTwoStat.value floatValue]) {
-                // Place a light green highlight background on whichever cell wins the comparison
-                [[cell tankOneValue] setBackgroundColor:self.format.highlightGreen];
-                [[cell tankTwoValue] setBackgroundColor:[UIColor clearColor]];
-            } else {
-                [[cell tankTwoValue] setBackgroundColor:self.format.highlightGreen];
-                [[cell tankOneValue] setBackgroundColor:[UIColor clearColor]];
-            }
+        if (comparisonResult == 1) {
+            // Place a light green highlight background on whichever cell wins the comparison
+            [[cell tankOneValue] setBackgroundColor:self.format.highlightGreen];
+            [[cell tankTwoValue] setBackgroundColor:[UIColor clearColor]];
+        } else if (comparisonResult == -1) {
+            [[cell tankTwoValue] setBackgroundColor:self.format.highlightGreen];
+            [[cell tankOneValue] setBackgroundColor:[UIColor clearColor]];
         } else {
-            // The better value is the smaller one
-            if ([tankOneStat.value floatValue] == [tankTwoStat.value floatValue]) {
-                [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
-                [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
-            } else if ([tankOneStat.value floatValue] < [tankTwoStat.value floatValue]) {
-                // Place a light green highlight background on whichever cell wins the comparison
-                [[cell tankOneValue] setBackgroundColor:self.format.highlightGreen];
-                [[cell tankTwoValue] setBackgroundColor:[UIColor clearColor]];
-            } else {
-                [[cell tankTwoValue] setBackgroundColor:self.format.highlightGreen];
-                [[cell tankOneValue] setBackgroundColor:[UIColor clearColor]];
-            }
+            // Make them both yellow if they are equal
+            [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
+            [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
         }
     }
+    
     // Set the average value to a light gray
     [[cell averageValue] setTextColor:self.format.lightColor];
     
