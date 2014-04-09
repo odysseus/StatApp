@@ -50,11 +50,13 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"StatCell"];
     
-    UIBarButtonItem *tankCompare = [[UIBarButtonItem alloc] initWithTitle:@"Compare"
-                                                                    style:UIBarButtonItemStyleBordered
-                                                                   target:self
-                                                                   action:@selector(tankCompare)];
-    [self.navigationItem setRightBarButtonItem:tankCompare];
+    if (!self.compare) {
+        UIBarButtonItem *tankCompare = [[UIBarButtonItem alloc] initWithTitle:@"Compare"
+                                                                        style:UIBarButtonItemStyleBordered
+                                                                       target:self
+                                                                       action:@selector(tankCompare)];
+        [self.navigationItem setRightBarButtonItem:tankCompare];
+    }
     
     // Reload data to deal with changed modules, etc.
     [self.tableView reloadData];
