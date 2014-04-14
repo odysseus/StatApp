@@ -23,6 +23,7 @@ typedef enum StatType : NSUInteger {
 @property (nonatomic) StatType statType;
 @property (nonatomic) BOOL largerValuesAreBetter;
 
+- (id)initWithKey:(NSString *)k;
 - (id)initWithKey:(NSString *)k andValue:(NSNumber *)v;
 - (id)initWithStat:(Stat *)s andValue:(NSNumber *)v;
 - (NSString *)formatted;

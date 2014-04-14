@@ -261,65 +261,38 @@
     }
     
     // If it needs an average, begin that process
-    Stat *averageStat;
+    Stat *averageStat = [[Stat alloc] initWithKey:key];
     if (needsAverage) {
         // We know that one tank or the other has this attribute, so we need to figure out which
         // Default to tankOne
         if ([self.tankOneKeys containsObject:key]) {
-            averageStat = [[Stat alloc] initWithStat:stat
-                                            andValue:[self.tankOne.averageTank valueForKey:key]];
+            averageStat.value = [NSNumber numberWithFloat:
+                                 [[self.tankOne.averageTank valueForKey:key] floatValue]];
         } else {
             // Because the key exists in the combinedKeys, we know it exists on one or the other so
             // we can call this without fear of raising an error
-            averageStat = [[Stat alloc] initWithStat:stat
-                                            andValue:[self.tankTwo.averageTank valueForKey:key]];
+            averageStat.value = [NSNumber numberWithFloat:
+                                 [[self.tankTwo.averageTank valueForKey:key] floatValue]];
         }
     }
     
     // Next find the stat for tankOne
-    Stat *tankOneStat;
+    Stat *tankOneStat = [[Stat alloc] initWithKey:key];
     if ([self.tankOneKeys containsObject:key]) {
-        // The key exists on tankOne, so init the stat with the value
-        tankOneStat = [[Stat alloc] initWithStat:stat
-                                        andValue:[NSNumber numberWithFloat:
-                                                  [[self.tankOne valueForKey:key] floatValue]]];
+        // The key exists on tankOne, so add the value to the stat
+        tankOneStat.value = [NSNumber numberWithFloat:[[self.tankOne valueForKey:key] floatValue]];
     }
     
     // And the stat for tankTwo
-    Stat *tankTwoStat;
+    Stat *tankTwoStat = [[Stat alloc] initWithKey:key];
     if ([self.tankTwoKeys containsObject:key]) {
-        tankTwoStat = [[Stat alloc] initWithStat:stat
-                                        andValue:[NSNumber numberWithFloat:
-                                                  [[self.tankTwo valueForKey:key] floatValue]]];
+        tankTwoStat.value = [NSNumber numberWithFloat:[[self.tankTwo valueForKey:key] floatValue]];
     }
-    
-    // Now that we have all three stats (if they exist) we need to format them
-    
-    // tankOne
-    NSString *tankOneStatString;
-    if (tankOneStat) {
-        // Use the Stat method to return a formatted string
-        tankOneStatString = [tankOneStat formatted];
-    } else {
-        // If the stat doesn't exist, just use dashes
-        tankOneStatString = @"--";
-    }
-    
-    // tankTwo
-    NSString *tankTwoStatString;
-    if (tankTwoStat) {
-        tankTwoStatString = [tankTwoStat formatted];
-    } else {
-        tankTwoStatString = @"--";
-    }
-    
-    // average
-    NSString *averageStatString;
-    if (averageStat) {
-        averageStatString = [averageStat formatted];
-    } else {
-        averageStatString = @"--";
-    }
+
+    // Grab the formatted strings, if the stat is nil it defaults to "--"
+    NSString *tankOneStatString = [tankOneStat formatted];
+    NSString *tankTwoStatString = [tankTwoStat formatted];
+    NSString *averageStatString = [averageStat formatted];
     
     // Setting the strings
     [[cell statName] setText:stat.displayName];

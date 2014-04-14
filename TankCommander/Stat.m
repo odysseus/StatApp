@@ -13,6 +13,21 @@
 
 @synthesize key, displayName, glossaryName, definition, value, statType, largerValuesAreBetter;
 
+- (id)initWithKey:(NSString *)k
+{
+    self = [super init];
+    if (self) {
+        StatStore *store = [StatStore store];
+        Stat *data = [store statForKey:k];
+        self.key = data.key;
+        self.definition = data.definition;
+        self.displayName = data.displayName;
+        self.glossaryName = data.glossaryName;
+        self.statType = data.statType;
+    }
+    return self;
+}
+
 - (id)initWithKey:(NSString *)k andValue:(NSNumber *)v
 {
     self = [super init];
@@ -45,11 +60,13 @@
 
 - (NSString *)formatted
 {
-    NSString *final;
-    if (self.statType ==FloatStat) {
-        final = [NSString stringWithFormat:@"%0.2f", [self.value floatValue]];
-    } else {
-        final = [NSString stringWithFormat:@"%ld", (long)[self.value integerValue]];
+    NSString *final = @"--";
+    if (self.value) {
+        if (self.statType == FloatStat) {
+            final = [NSString stringWithFormat:@"%0.2f", [self.value floatValue]];
+        } else {
+            final = [NSString stringWithFormat:@"%ld", (long)[self.value integerValue]];
+        }
     }
     return final;
 }
