@@ -24,6 +24,7 @@
         self.displayName = data.displayName;
         self.glossaryName = data.glossaryName;
         self.statType = data.statType;
+        self.largerValuesAreBetter = data.largerValuesAreBetter;
     }
     return self;
 }
@@ -40,6 +41,7 @@
         self.displayName = data.displayName;
         self.glossaryName = data.glossaryName;
         self.statType = data.statType;
+        self.largerValuesAreBetter = data.largerValuesAreBetter;
     }
     return self;
 }
@@ -53,6 +55,7 @@
         self.displayName = s.displayName;
         self.glossaryName = s.glossaryName;
         self.statType = s.statType;
+        self.largerValuesAreBetter = s.largerValuesAreBetter;
         self.value = v;
     }
     return self;

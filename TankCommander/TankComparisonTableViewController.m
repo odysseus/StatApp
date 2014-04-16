@@ -309,15 +309,18 @@
         // sets the color for both labels every time. Because iOS dequeues and reuses cells,
         // once the background color has been set it will stay that way if it is not set
         // every time, leading to a lot of erroneous highlighting when you scroll back up
+        
+        // Place a light green highlight background on whichever cell wins the comparison
         if (comparisonResult == 1) {
-            // Place a light green highlight background on whichever cell wins the comparison
+            // Tank one is better
             [[cell tankOneValue] setBackgroundColor:self.format.highlightGreen];
             [[cell tankTwoValue] setBackgroundColor:[UIColor clearColor]];
         } else if (comparisonResult == -1) {
+            // Tank two is better
             [[cell tankTwoValue] setBackgroundColor:self.format.highlightGreen];
             [[cell tankOneValue] setBackgroundColor:[UIColor clearColor]];
         } else {
-            // Make them both yellow if they are equal
+            // They are equal, make them both yellow
             [[cell tankOneValue] setBackgroundColor:self.format.highlightYellow];
             [[cell tankTwoValue] setBackgroundColor:self.format.highlightYellow];
         }
